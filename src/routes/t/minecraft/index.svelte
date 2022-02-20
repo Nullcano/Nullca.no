@@ -18,7 +18,7 @@
         <div class="post">
           <div class="image">
             <a sveltekit:prefetch href={`/p/${post.slug}`}>
-              <img src={post.image} alt={post.title}>
+              <img src="../assets/thumbs/{post.slug}.png" alt={post.title}>
             </a>
             <a href={`/t/${post.category.toLowerCase()}`}>
               <div class="category">{post.category}</div>
@@ -30,7 +30,7 @@
             </h3>
             <div class="excerpt">{@html post.content}</div>
             <div class="meta">
-              <span>Posted <Time relative timestamp={post.date} format="YYYY/MM" /></span>
+              <span>Posted <Time relative timestamp={post.date} /></span>
             </div>
           </div>
         </div>

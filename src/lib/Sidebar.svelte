@@ -1,9 +1,35 @@
-<aside>
+<script>
+  import { posts } from '../data.js'
+
+  let minecraftPosts = posts.filter(post => post.category.includes('Minecraft'))
+
+  let closed = false
+</script>
+
+<aside class:closed={closed}>
   <div class="inner">
-    <h2>Topics</h2>
+    <div class="title">
+      <h2>Topics</h2>
+      <div class="toggle" on:click={() => closed = !closed}>
+        <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="m15 6-6 6 6 6" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
     <ul>
       <a href="/t/minecraft">
-        <li>Minecraft</li>
+        <li>
+          <div class="left">
+            <img src="../assets/topics/minecraft.webp" alt="Minecraft Logo">
+            <span>Minecraft</span>  
+          </div>
+          <div class="right">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentcolor" d="M20 17a1 1 0 0 1-2 0V5a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v13a2 2 0 0 0 2 2h15c1.654 0 3-1.346 3-3V7h-2v10zM12 7h3v2h-3V7zm0 4h3v2h-3v-2zM5 7h5v6H5V7zm0 10v-2h10v2H5z"/>
+            </svg>
+            <span>{minecraftPosts.length}</span>
+          </div>
+        </li>
       </a>
     </ul>
   </div>
@@ -12,17 +38,72 @@
 <style>
   aside {
     position: relative;
-    top: 6rem;
-    padding: 1rem;
+    width: 248px;
+    min-height: 100%;
+    background: hsl(0, 0%, 6%);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  aside.closed {
+    width: 4rem;
+  }
+  h2 {
+    font-size: 1.25rem;
   }
   .inner {
     position: sticky;
-    top: 3rem;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  aside .title {
+    padding: 1rem;
+    displaY: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toggle {
+    cursor: pointer;
+  }
+  aside.closed .title {
+    flex-direction: column;
+  }
+  aside.closed .toggle {
+    order: 1;
+    transform: rotateZ(180deg);
+  }
+  aside.closed h2 {
+    display: none;
+  }
+  .title svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
   }
   li {
     padding: .5rem 1rem;
-    background: hsl(0, 0%, 8%);
     border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  li .left {
+    display: flex;
+    align-items: center;
+  }
+  li .left img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 10%);
+  }
+  li .right {
+    display: flex;
+    align-items: center;
+  }
+  li .right svg {
+    margin-right: .5rem;
   }
   a {
     color: hsl(0, 0%, 70%);

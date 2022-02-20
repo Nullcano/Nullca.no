@@ -1,20 +1,45 @@
 <script>
   import { posts } from '../data.js'
-  import About from '$lib/About.svelte'
   import Time from 'svelte-time'
+  import { paginate, PaginationNav } from 'svelte-paginate'
+
+  function goTop() {
+    document.body.scrollIntoView();
+  }
+  
+  export let showOnPx = 150
+  let hidden = true
 
   let sortedPosts = posts.sort((a, b) => {
     return new Date(b.date) - new Date(a.date)
   })
+
+  let items = sortedPosts
+  let currentPage = 1
+  let pageSize = 4
+  $: paginatedItems = paginate({ items, pageSize, currentPage })
+
+  function scrollContainer() {
+    return document.documentElement || document.body;
+  }
+  
+  function handleOnScroll() {
+    if (!scrollContainer()) {
+      return;
+    }
+    if (scrollContainer().scrollTop > showOnPx) {
+      hidden = false;
+    } else {
+      hidden = true;
+    }
+  }
 </script>
 
-<About />
-
-<h3>Recent posts</h3>
+<svelte:window on:scroll={handleOnScroll} />
 
 <div class="container">
   <div class="post-grid">
-    {#each sortedPosts as post}
+    {#each paginatedItems as post}
       <div class="grid-item">
         <div class="post">
           <div class="image">
@@ -37,5 +62,15 @@
         </div>
       </div>
     {/each}
-  </div>  
+  </div>
+  <div on:click={goTop}>
+    <PaginationNav
+      totalItems="{items.length}"
+      pageSize="{pageSize}"
+      currentPage="{currentPage}"
+      limit="{1}"
+      showStepOptions="{true}"
+      on:setPage="{(e) => currentPage = e.detail.page}"
+    />
+  </div>
 </div>
