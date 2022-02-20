@@ -1,5 +1,21 @@
 <script>
+  import { posts } from '../data.js';
+
   let active = false
+
+  const stripHTML = (str) => {
+    if ((str===null) || (str===''))
+        return false;
+    else
+      str = str.toString();
+    return str.replace( /(<([^>]+)>)/ig, '')
+  }
+
+  let searchTerm = ''
+
+  $: searchedPosts = posts.filter((post) => {
+    return stripHTML(post.content).toLowerCase().includes(searchTerm.toLowerCase()) || post.title.toLowerCase().includes(searchTerm.toLowerCase())
+  })
 </script>
 
 <div class="navbar-container">
@@ -26,6 +42,9 @@
         <a href="/about">About</a>
       </li>
     </ul>
+    <div class="searchbar">
+      <input type="text" placeholder="Search all posts..." bind:value={searchTerm} />
+    </div>
     <ul class="right">
       <li>
         <a href="https://ko-fi.com/nullcano" target="_blank">
@@ -79,6 +98,19 @@
       </a>
     </li>
   </ul>
+  {#if searchTerm !== ''}
+    <ul class="search-results">
+      <span>Results for "{searchTerm}"</span>
+      {#each searchedPosts as post}
+        <a href="../p/{post.slug}" on:click={() => { searchTerm = '' }}>
+          <li>
+            <h2>{post.title}</h2>
+            <p>{@html post.content}</p>
+          </li>
+        </a>
+      {/each}
+    </ul>
+  {/if}
 </div>
 
 <style>
@@ -165,6 +197,19 @@
     height: 1.5rem;
     fill: currentColor;
   }
+  input {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 9px;
+    background: hsla(0, 0%, 12%, .9);
+    color: hsl(0, 0%, 95%);
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin: 0;
+    outline: none;
+    transition: all .3s ease-in-out;
+  }
   .toggle {
     padding: .5rem;
     cursor: pointer;
@@ -177,7 +222,7 @@
   nav .right {
     margin: 0 2rem;
   }
-  a {
+  .navbar a {
     padding: .5rem;
     text-decoration: none;
     color: #fff;
@@ -186,7 +231,7 @@
     gap: .5rem;
     transition: all .2s ease-in-out;
   }
-  a:hover {
+  .navbar a:hover {
     transform: scale(1.05);
     border: 0;
   }
@@ -204,7 +249,27 @@
     font-size: 1.5rem;
     font-weight: 400;
   }
-
+  .search-results {
+    position: fixed;
+    top: calc(3rem + 4px);
+    right: 0;
+    padding: 1rem;
+    max-width: 900px;
+    max-height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: hsla(0, 0%, 8%, .9);
+    color: hsl(0, 0%, 95%);
+    z-index: 9;
+    transition: all .3s ease-in-out;
+    overflow-y: auto;
+  }
+  .search-results li {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background:hsl(0, 0%, 10%);
+  }
   @media (max-width: 1140px) {
 
   }
