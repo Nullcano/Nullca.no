@@ -1,41 +1,33 @@
-<script>
-  import { posts } from '../data.js'
-  import Time from 'svelte-time'
-  import { paginate, PaginationNav } from 'svelte-paginate'
-
-  function goTop() {
-    document.body.scrollIntoView();
-  }
-  
-  export let showOnPx = 150
-  let hidden = true
-
-  let sortedPosts = posts.sort((a, b) => {
-    return new Date(b.date) - new Date(a.date)
-  })
-
-  let items = sortedPosts
-  let currentPage = 1
-  let pageSize = 4
-  $: paginatedItems = paginate({ items, pageSize, currentPage })
-
-  function scrollContainer() {
-    return document.documentElement || document.body;
-  }
-  
-  function handleOnScroll() {
-    if (!scrollContainer()) {
-      return;
-    }
-    if (scrollContainer().scrollTop > showOnPx) {
-      hidden = false;
-    } else {
-      hidden = true;
+<script context="module">
+  import { posts } from '../../data.js'
+  export async function load({ params }) {
+    const { category } = params
+    return {
+      props: {
+        posts: posts.filter(post => post.category === category),
+        title: category.charAt(0).toUpperCase() + category.slice(1)
+      }
     }
   }
 </script>
 
-<svelte:window on:scroll={handleOnScroll} />
+<script>  
+  import Time from 'svelte-time'
+  import { paginate, PaginationNav } from 'svelte-paginate'
+
+  let sortedPosts = posts.sort((a, b) => { return new Date(b.date) - new Date(a.date) })
+  let items = sortedPosts
+  let currentPage = 1
+  let pageSize = 9
+
+  $: paginatedItems = paginate({ items, pageSize, currentPage })
+
+  export let title
+</script>
+
+<div class="page-title">
+  <h1 class="title">{title} articles</h1>
+</div>
 
 <div class="post-grid">
   {#each paginatedItems as post}
@@ -62,13 +54,11 @@
     </div>
   {/each}
 </div>
-<div on:click={goTop}>
-  <PaginationNav
-    totalItems="{items.length}"
-    pageSize="{pageSize}"
-    currentPage="{currentPage}"
-    limit="{1}"
-    showStepOptions="{true}"
-    on:setPage="{(e) => currentPage = e.detail.page}"
-  />
-</div>
+<PaginationNav
+  totalItems="{items.length}"
+  pageSize="{pageSize}"
+  currentPage="{currentPage}"
+  limit="{1}"
+  showStepOptions="{true}"
+  on:setPage="{(e) => currentPage = e.detail.page}"
+/>

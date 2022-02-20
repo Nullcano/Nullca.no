@@ -51,7 +51,7 @@ export const posts = [
     category: 'Minecraft',
     tags: [''],
     content: `
-      <p><a href="https://www.minecraftskinstealer.com" target="_blank">Minecraft Tools</a> provides some online tools for Minecraft players like crafting list, flat world generator, enchant calculator, colored armor crafting, firework crafting, etc.</p>
+      <p><a href="https://minecraft.tools" target="_blank">Minecraft Tools</a> provides some online tools for Minecraft players like crafting list, flat world generator, enchant calculator, colored armor crafting, firework crafting, etc.</p>
     `
   }, {
     slug: 'digminecraft',
@@ -62,5 +62,16 @@ export const posts = [
     content: `
       <p><a href="https://digminecraft.com" target="_blank">DigMinecraft</a> is a Minecraft resource for finding and crafting Minecraft recipes, mobs, and game commands.</p>
     `
+  }, {
+    slug: 'minecraft-skin-stealer',
+    title: 'Minecraft Skin Stealer',
+    date: '2013-01-01',
+    category: 'Minecraft',
+    tags: [],
+    content: `
+      <p><a href="https://minecraftskinstealer.com" target="_blank">Minecraft Skin Stealer</a> lets you view and steal any minecraft skin with this easy online skin viewer and skin stealer tool.</p>
+    `
   }
 ]
+
+export let favorites = []

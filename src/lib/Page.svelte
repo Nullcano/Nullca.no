@@ -2,20 +2,12 @@
   import Footer from '$lib/Footer.svelte'
 </script>
 
-<section>
-  <div class="bg"></div>
-  <div class="container">
-    <slot></slot>
-  </div>
-  <Footer />
-</section>
+<div class="bg"></div>
+<div class="container">
+  <slot></slot>
+</div>
 
 <style>
-  section {
-    position: relative;
-    max-height: calc(100vh - 3rem);
-    overflow-y: auto;
-  }
   .bg {
     position: absolute;
     top: 0;
@@ -26,6 +18,7 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: .5;
+    z-index: 0;
   }
   .bg:after {
     content: '';

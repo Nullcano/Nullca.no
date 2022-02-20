@@ -118,8 +118,12 @@ a:hover {
 }
 
 .post .content .title {
+  width: 100%;
   font-size: 1.25rem;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post .content .excerpt p {

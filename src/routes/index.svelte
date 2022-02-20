@@ -10,7 +10,7 @@
 
 <About />
 
-<h3>Recent posts</h3>
+<h3>Recent articles</h3>
 
 <div class="container">
   <div class="post-grid">
@@ -18,16 +18,16 @@
       <div class="grid-item">
         <div class="post">
           <div class="image">
-            <a sveltekit:prefetch href={`/p/${post.slug}`}>
+            <a sveltekit:prefetch href={`/${post.category.toLowerCase()}/${post.slug}`}>
               <img src="../assets/thumbs/{post.slug}.png" alt={post.title}>
             </a>
-            <a href={`/t/${post.category.toLowerCase()}`}>
+            <a href={`/${post.category.toLowerCase()}`}>
               <div class="category">{post.category}</div>
             </a>
           </div>
           <div class="content">
             <h3 class="title">
-              <a sveltekit:prefetch href={`/p/${post.slug}`}>{post.title}</a>
+              <a sveltekit:prefetch href={`/${post.category.toLowerCase()}/${post.slug}`}>{post.title}</a>
             </h3>
             <div class="excerpt">{@html post.content}</div>
             <div class="meta">
