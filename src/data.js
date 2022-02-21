@@ -74,4 +74,11 @@ export const posts = [
   }
 ]
 
-export let favorites = []
+export const categories = [
+  {
+    slug: 'minecraft',
+    title: 'Minecraft',
+    description: 'Minecraft is a game created by Markus Persson, and developed by Mojang. It is a sandbox game, where players can build and explore a world of their own design. The game is played in a world made up of blocks, and players can move around and interact with the world. The game is played in a sandbox environment, where players can build and explore a world of their own design. The game is played in a sandbox environment, where players can build and explore a world of their own design.',
+    image: '../assets/topic/minecraft.png'
+  }
+]

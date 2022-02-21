@@ -64,6 +64,7 @@
   }
   section.page {
     position: relative;
+    max-height: 100vh;
     overflow-y: auto;
   }
   footer {

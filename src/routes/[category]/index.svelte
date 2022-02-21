@@ -1,11 +1,12 @@
 <script context="module">
-  import { posts } from '../../data.js'
+  import { posts, categories } from '../../data.js'
   export async function load({ params }) {
     const { category } = params
     return {
       props: {
         posts: posts.filter(post => post.category === category),
-        title: category.charAt(0).toUpperCase() + category.slice(1)
+        title: category.charAt(0).toUpperCase() + category.slice(1),
+        description: categories.filter(cat => cat.slug === category)[0].description
       }
     }
   }
@@ -22,12 +23,17 @@
 
   $: paginatedItems = paginate({ items, pageSize, currentPage })
 
-  export let title
+  export let title, description
 </script>
 
 <div class="page-title">
-  <h1 class="title">{title} articles</h1>
+  <h1 class="title">{title}</h1>
+  <p class="description">{description}</p>
 </div>
+
+<h2>
+  {title} articles
+</h2>
 
 <div class="post-grid">
   {#each paginatedItems as post}
@@ -62,3 +68,10 @@
   showStepOptions="{true}"
   on:setPage="{(e) => currentPage = e.detail.page}"
 />
+
+<style>
+  .description {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+</style>

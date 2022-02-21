@@ -16,6 +16,20 @@
         </svg>
       </div>
     </div>
+    <ul>
+      <a href="/all">
+        <li>
+          <div class="left">
+            <div class="title">
+              <h3>All articles</h3>
+            </div>
+          </div>
+          <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 20.4v-5.8a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6h-5.8a.6.6 0 0 1-.6-.6ZM3 20.4v-5.8a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6ZM14 9.4V3.6a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6h-5.8a.6.6 0 0 1-.6-.6ZM3 9.4V3.6a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6Z" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </li>
+      </a>
+    </ul>
     <div class="title">
       <h3 class="label">Topics</h3>
     </div>
