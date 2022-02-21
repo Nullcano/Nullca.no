@@ -134,7 +134,7 @@
   }
   @media only screen and (max-width: 768px) {
     aside {
-      position: sticky;
+      position: relative;
       bottom: 0;
       width: 100%;
       height: 3.5rem;
