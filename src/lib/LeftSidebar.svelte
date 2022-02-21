@@ -63,6 +63,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     box-shadow: 0 0 .25rem hsl(200, 15%, 3%);
+    z-index: 9;
   }
   h3 {
     font-size: 1.25rem;
