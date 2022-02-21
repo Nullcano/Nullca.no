@@ -2,6 +2,7 @@ export const posts = [
   {
     slug: 'plotz',
     title: 'Plotz',
+    description: 'Plotz is the classic free HTML5 modeller for Minecraft.',
     date: '2011-05-01',
     category: 'Minecraft',
     tags: ['models', 'voxel', 'shapes', '3d'],
@@ -11,6 +12,7 @@ export const posts = [
   }, {
     slug: 'optifine',
     title: 'Optifine',
+    description: 'Optifine is a mod for Minecraft that improves the performance of Minecraft.',
     date: '2012-01-01',
     category: 'Minecraft',
     tags: ['mods', 'optimization', 'performance', 'minecraft'],
@@ -20,15 +22,17 @@ export const posts = [
   }, {
     slug: 'namemc',
     title: 'NameMC',
+    description: 'NameMC lets you check the availability of Minecraft names and look up player skins.',
     date: '2015-02-01',
     category: 'Minecraft',
     tags: ['mods', 'optimization', 'performance', 'minecraft'],
     content: `
-      <p><a href="https://namemc.com" target="_blank">NameMC</a> lets you check the availability of Minecraft names, look up the name history of Minecraft accounts, view Minecraft skins in 3D, convert UUIDs, and much more! Check out our collection of the best Minecraft skins for PC and Mobile! Download the skin that suits you best!</p>
+      <p><a href="https://namemc.com" target="_blank">NameMC</a> lets you check the availability of Minecraft names, look up the name history of Minecraft accounts, view Minecraft skins in 3D, convert UUIDs, and much more.</p>
     `
   }, {
     slug: 'vanilla-tweaks',
     title: 'Vanilla Tweaks',
+    description: 'Vanilla Tweaks help you tweak parts of vanilla Minecraft through resource packs and more.',
     date: '2018-05-01',
     category: 'Minecraft',
     tags: ['vanilla', 'tweaks', 'vanillatweaks', 'vanilla tweaks', 'minecraft', 'texture pack', 'minecraft 1.14', 'vanilla tweaks 1.13', 'vanilla tweaks 1.14', 'vanilla tweaks 1.15', 'vanilla tweaks 1.16', 'vanilla tweaks download', 'vanilla tweaks minecraft download', 'vanilla tweaks minecraft 1.12 download', 'vanilla tweaks minecraft', 'vanilla tweaks 1.14', 'vanilla tweaks 1.12 download', 'vanilla tweaks 1.12.1', 'minecraft vanilla tweaks 1.13'],
@@ -38,6 +42,7 @@ export const posts = [
   }, {
     slug: 'block-palettes',
     title: 'Block Palettes',
+    description: 'Block Palettes is an online tool for Minecraft that lets you create custom palettes with blocks.',
     date: '2020-10-01',
     category: 'Minecraft',
     tags: ['block', 'palette', 'editor'],
@@ -47,6 +52,7 @@ export const posts = [
   }, {
     slug: 'minecraft-tools',
     title: 'Minecraft Tools',
+    description: 'Minecraft Tools is a collection of online tools for Minecraft.',
     date: '2015-02-01',
     category: 'Minecraft',
     tags: [''],
@@ -56,6 +62,7 @@ export const posts = [
   }, {
     slug: 'digminecraft',
     title: 'DigMinecraft',
+    description: 'DigMinecraft is a Minecraft resource for finding and crafting Minecraft recipes and more.',
     date: '2015-02-01',
     category: 'Minecraft',
     tags: ['digminecraft', 'minecraft', 'crafting recipes', 'mobs', 'game commands'],
@@ -65,6 +72,7 @@ export const posts = [
   }, {
     slug: 'minecraft-skin-stealer',
     title: 'Minecraft Skin Stealer',
+    description: 'Minecraft Skin Stealer is an online tool for Minecraft that lets you steal skins from other players.',
     date: '2013-01-01',
     category: 'Minecraft',
     tags: [],
@@ -74,6 +82,7 @@ export const posts = [
   }, {
     slug: 'forge-mod-loader',
     title: 'Forge Mod Loader',
+    description: 'Forge Mod Loader is a mod loader for Minecraft that lets you load certain mods in Minecraft.',
     date: '2015-02-01',
     category: 'Minecraft',
     tags: [],

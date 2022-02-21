@@ -12,19 +12,22 @@
     }
     return {
       status: 301,
-      redirect: `/${category}`
+      body: { message: 'This page is not currently archived.' }
     }
   }
 </script>
 
 <script>
+  import PageTitle from '$lib/PageTitle.svelte'
+
   function stripHTML(str) {
     if ((str===null) || (str===''))
-        return false;
+      return false;
     else
-        str = str.toString();
+      str = str.toString();
     return str.replace( /(<([^>]+)>)/ig, '').replace(/\n/g, '');
   }
+
   export let post
 </script>
 
@@ -38,8 +41,8 @@
   <meta property="og:image" content="https://nullca.no/assets/thumb/{post.slug}.png">
 </svelte:head>
 
-<div class="post">
-  <h2>{post.title}</h2>
+<article class="post">
+  <PageTitle title={post.title} description={post.description} />
   <div class="body">
     {@html post.content}
   </div>
@@ -47,7 +50,7 @@
     <a href="/{post.category.toLowerCase()}">More {post.category} articles</a>
     <a href="/all">All articles</a>
   </div>
-</div>
+</article>
 
 <style>
   .body {

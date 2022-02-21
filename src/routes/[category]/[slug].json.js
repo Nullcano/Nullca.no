@@ -9,6 +9,7 @@ export async function get({ params }) {
     }
   }
   return {
-    status: 404
+    status: 404,
+    body: { message: 'This page is not currently archived.' }
   }
 }

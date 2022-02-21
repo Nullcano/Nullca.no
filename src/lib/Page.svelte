@@ -27,7 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, hsla(0, 0%, 5%, .5) 0%, hsla(0, 0%, 5%, 1) 100%);
+    background: linear-gradient(to bottom, hsla(200, 15%, 8%, .75) 0%, hsla(200, 15%, 8%, 1) 100%);
   }
   .container {
     position: relative;

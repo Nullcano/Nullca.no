@@ -1,7 +1,8 @@
 <script>
+  import PageTitle from '$lib/PageTitle.svelte'
   import AllPosts from '$lib/AllPosts.svelte'
 </script>
 
-<h1>All articles</h1>
+<PageTitle title="All articles" description="Browse all articles from all archives." />
 
 <AllPosts />

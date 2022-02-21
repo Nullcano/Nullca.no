@@ -59,9 +59,10 @@
     position: relative;
     width: 230px;
     min-height: 100%;
-    background: hsl(0, 0%, 6%);
+    background: hsl(200, 15%, 6%);
     overflow-x: hidden;
     overflow-y: auto;
+    box-shadow: 0 0 .25rem hsl(200, 15%, 3%);
   }
   aside.closed {
     width: 4rem;

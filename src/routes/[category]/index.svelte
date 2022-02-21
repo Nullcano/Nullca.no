@@ -13,13 +13,15 @@
 </script>
 
 <script>  
-  import Time from 'svelte-time'
   import { paginate, PaginationNav } from 'svelte-paginate'
+  import PageTitle from '$lib/PageTitle.svelte'
+  import PostGrid from '$lib/PostGrid.svelte'
+  import PostCard from '$lib/PostCard.svelte'
 
   let sortedPosts = posts.sort((a, b) => { return new Date(b.date) - new Date(a.date) })
   let items = sortedPosts
   let currentPage = 1
-  let pageSize = 9
+  let pageSize = 12
 
   $: paginatedItems = paginate({ items, pageSize, currentPage })
 
@@ -36,38 +38,16 @@
   <meta property="og:image" content="https://nullca.no/assets/topic/{title.toLowerCase()}.png">
 </svelte:head>
 
-<div class="page-title">
-  <h1 class="title">{title}</h1>
-  <p class="description">{description}</p>
-</div>
+<PageTitle title={title} description={description} />
 
 <h2>All {title} articles</h2>
 
-<div class="post-grid">
+<PostGrid>
   {#each paginatedItems as post}
-    <div class="grid-item">
-      <div class="post">
-        <div class="image">
-          <a sveltekit:prefetch href={`/${post.category.toLowerCase()}/${post.slug}`}>
-            <img src="../assets/thumbs/{post.slug}.png" alt={post.title}>
-          </a>
-          <a href={`/${post.category.toLowerCase()}`}>
-            <div class="category">{post.category}</div>
-          </a>
-        </div>
-        <div class="content">
-          <h3 class="title">
-            <a sveltekit:prefetch href={`/${post.category.toLowerCase()}/${post.slug}`}>{post.title}</a>
-          </h3>
-          <div class="excerpt">{@html post.content}</div>
-          <div class="meta">
-            <span>Posted <Time relative timestamp={post.date} /></span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <PostCard slug={post.slug} title={post.title} category={post.category} date={post.date} description={post.description} />
   {/each}
-</div>
+</PostGrid>
+
 <PaginationNav
   totalItems="{items.length}"
   pageSize="{pageSize}"

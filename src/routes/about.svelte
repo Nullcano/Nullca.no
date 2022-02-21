@@ -1,8 +1,8 @@
 <script>
-  import About from '$lib/About.svelte'
+  import PageTitle from '$lib/PageTitle.svelte'
 </script>
 
-<About />
+<PageTitle title="About" description="Nullcano is a personally curated video game archive that I am constantly growing. I sincerely hope you will find something useful. My goal is to index as much content and information about everything in the realm of video games and make them easily accessible with my global search filter." />
 
 <div class="content">
   <h3>Legal</h3>

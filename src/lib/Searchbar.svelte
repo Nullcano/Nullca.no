@@ -16,7 +16,7 @@
   })
 </script>
 
-<input type="text" placeholder="Search all posts..." bind:value={searchTerm} />
+<input type="text" placeholder="Search all articles..." bind:value={searchTerm} />
 
 {#if searchTerm !== ''}
   <ul class="search-results">
@@ -37,10 +37,9 @@
 
 <style>
   input {
-    width: calc(100% - 1rem);
+    width: 100%;
     border: none;
-    border-radius: 9px;
-    background: hsla(0, 0%, 12%, 0);
+    background: hsl(200, 15%, 6%);
     color: hsl(0, 0%, 95%);
     font-size: 1.5rem;
     padding: .5rem 1rem;
@@ -61,7 +60,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: hsla(0, 0%, 4%, .9);
+    background: hsla(200, 15%, 4%, .95);
     color: hsl(0, 0%, 95%);
     transition: all .3s ease-in-out;
     overflow-y: auto;
@@ -70,10 +69,14 @@
   .search-results li {
     margin: 1rem;
     padding: 1rem 2rem;
-    background:hsl(0, 0%, 10%);
+    background:hsl(200, 15%, 8%);
     display: flex;
     align-items: center;
     gap: 1rem;
+    border-radius: 1rem;
+  }
+  .search-results li:hover {
+    background: hsl(200, 15%, 6%);
   }
   .search-results .icon {
     width: 5rem;
