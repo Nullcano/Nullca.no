@@ -31,9 +31,7 @@
   <p class="description">{description}</p>
 </div>
 
-<h2>
-  {title} articles
-</h2>
+<h2>All {title} articles</h2>
 
 <div class="post-grid">
   {#each paginatedItems as post}
@@ -73,5 +71,8 @@
   .description {
     padding: 0 1rem;
     margin-bottom: 3rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
   }
 </style>
