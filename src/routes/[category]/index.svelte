@@ -26,6 +26,16 @@
   export let title, description
 </script>
 
+<svelte:head>
+  <title>{title} - Nullcano</title>
+  <meta property="og:title" content="{title} - Nullcano">
+  <meta property="og:site_name" content="Nullcano">
+  <meta property="og:url" content="https://nullca.no/{title.toLowerCase()}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://nullca.no/assets/topic/{title.toLowerCase()}.png">
+</svelte:head>
+
 <div class="page-title">
   <h1 class="title">{title}</h1>
   <p class="description">{description}</p>
