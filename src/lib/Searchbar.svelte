@@ -27,7 +27,7 @@
           <img class="icon" src="../assets/thumbs/{post.slug}.png" alt={post.title} />
           <div>
             <h2>{post.title}</h2>
-            {@html post.content}
+            <p>{post.description}</p>
           </div>
         </li>
       </a>
@@ -71,7 +71,7 @@
     padding: 1rem 2rem;
     background:hsl(200, 15%, 8%);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     border-radius: 1rem;
   }
@@ -82,5 +82,23 @@
     width: 5rem;
     margin-right: 1rem;
     border-radius: .5rem;
+  }
+  @media only screen and (max-width: 768px) {
+    input {
+      width: 100%;
+      font-size: 1.25rem;
+    }
+    .search-results {
+      top: 3rem;
+      font-size: .8rem;
+    }
+    .search-results li {
+      margin: 1rem 0;
+      padding: 1rem;
+    }
+    .search-results .icon {
+      width: 4rem;
+      margin-right: .5rem;
+    }
   }
 </style>

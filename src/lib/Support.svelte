@@ -24,4 +24,18 @@
   svg {
     margin-right: .5rem;
   }
+  @media only screen and (max-width: 768px) {
+    a {
+      min-width: auto;
+    }
+    .button-wrap {
+      margin: 0 1rem;
+    }
+    svg {
+      margin-right: 0;
+    }
+    span {
+      display: none;
+    }
+  }
 </style>

@@ -64,12 +64,6 @@
     overflow-y: auto;
     box-shadow: 0 0 .25rem hsl(200, 15%, 3%);
   }
-  aside.closed {
-    width: 4rem;
-  }
-  aside.closed .label {
-    display: none;
-  }
   h3 {
     font-size: 1.25rem;
   }
@@ -79,12 +73,18 @@
   }
   aside .title {
     padding: 1rem;
-    displaY: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .toggle {
     cursor: pointer;
+  }
+  aside.closed {
+    width: 4rem;
+  }
+  aside.closed .label {
+    display: none;
   }
   aside.closed .title {
     flex-direction: column;
@@ -92,9 +92,6 @@
   aside.closed .toggle {
     order: 1;
     transform: rotateZ(180deg);
-  }
-  aside.closed h2 {
-    display: none;
   }
   .title svg {
     width: 2rem;
@@ -113,6 +110,7 @@
     align-items: center;
   }
   li .left img, li .left svg {
+    display: block;
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
@@ -132,5 +130,76 @@
   }
   a:hover {
     color: hsl(0, 0%, 80%);
+  }
+  @media only screen and (max-width: 768px) {
+    aside {
+      position: relative;
+      width: 100%;
+      height: 3.5rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    aside .inner {
+      height: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    aside .title {
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-content: center;
+    }
+    aside .toggle {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 3.5rem;
+      height: 3.5rem;
+      transform: rotateZ(90deg);
+      display: grid;
+      place-content: center;
+    }
+    aside h3, aside .label {
+      display: none;
+    }
+    li {
+      padding: .5rem;
+      border-radius: .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    aside.closed {
+      width: 100%;
+      height: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    aside.closed .inner {
+      position: relative;
+      left: 2rem;
+      padding: 1rem;
+      max-height: 70vh;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    aside.closed h3, aside.closed .label {
+      display: flex;
+    }
+    aside.closed .title {
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    aside.closed .toggle {
+      transform: rotateZ(-90deg);
+    }
+    aside.closed li {
+      width: 80vw;
+    }
   }
 </style>

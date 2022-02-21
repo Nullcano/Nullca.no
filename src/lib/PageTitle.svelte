@@ -19,4 +19,10 @@
   p {
     max-width: 720px;
   }
+  @media only screen and (max-width: 768px) {
+    .page-title {
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+  }
 </style>

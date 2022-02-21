@@ -64,4 +64,15 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
+  @media only screen and (max-width: 768px) {
+    .body {
+      margin: 1rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    .buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 </style>

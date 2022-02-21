@@ -14,9 +14,9 @@
 
 <style>
   .content {
+    margin: 1rem;
     padding: 1em;
     max-width: 800px;
-    margin: 0 auto;
   }
   p {
     margin: .5rem 0;

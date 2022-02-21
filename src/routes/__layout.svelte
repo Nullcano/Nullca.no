@@ -21,9 +21,9 @@
     <Support />
   </header>
   <div class="wrapper">
-    <aside class="left">
+    <div class="navigation">
       <LeftSidebar />
-    </aside>
+    </div>
     <section class="page">
       <Page>
         <slot></slot>
@@ -64,11 +64,11 @@
   }
   section.page {
     position: relative;
-    max-height: 100vh;
+    max-height: calc(100vh - 3.5rem);
     overflow-y: auto;
   }
   footer {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   footer .inner {
     margin: 0 auto;
@@ -76,5 +76,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  @media only screen and (max-width: 768px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 3rem 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    header {
+      height: 3rem;
+    }
+    .navigation {
+      order: 2;
+    }
+    .wrapper {
+      height: calc(100vh - 3rem);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    footer {
+      padding: 1rem .5rem;
+    }
+    footer .inner {
+      margin: 0 auto;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: .5rem;
+    }
   }
 </style>

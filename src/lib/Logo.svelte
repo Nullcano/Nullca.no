@@ -36,4 +36,15 @@
     font-size: 1.5rem;
     font-weight: 400;
   }
+  @media only screen and (max-width: 768px) {
+    a {
+      min-width: auto;
+    }
+    .title-wrap {
+      margin: 0 1rem;
+    }
+    h1 {
+      display: none;
+    }
+  }
 </style>
