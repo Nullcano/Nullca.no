@@ -92,6 +92,16 @@ export const posts = [
     content: `
       <p><a href="https://files.minecraftforge.net/net/minecraftforge/forge" target="_blank">Forge Mod Loader</a> is a loader for Minecraft mods. It was recently merged into Minecraft Forge, and is no longer developed on its own. FML was compatible with Risugami's ModLoader mods until 1.6, when ModLoader was discontinued. FML is itself a cleanroom rewrite of Risugami's ModLoader. Additionally, FML provides the mod list button added to the main screen when Forge is installed. It allows mods to use ASM to further change vanilla code, and also provides the Argo and Guava libraries. It also provides handlers for some features in a similar way to Forge, such as crafting and chat handlers.</p>
     `
+  }, {
+    slug: 'op-gg',
+    title: 'OP.GG',
+    description: 'Real-time LoL stats. Check your Summoner, live spectate and see global League of Legends statistics.',
+    date: '2018-05-01',
+    category: 'League of Legends',
+    tags: ['Website', 'Statistics', 'Tool'],
+    content: `
+      <p><a href="https://op.gg" target="_blank">OP.GG</a> provides insights to gamers for League of Legends, PlayerUnknown's Battlegrounds, Overwatch and eSports. We are building a platform where gamers can express and share their game identities and experiences.</p>
+    `
   }
 ]
 

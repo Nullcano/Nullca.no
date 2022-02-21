@@ -6,13 +6,13 @@
   scrollbar-width: thin;
   scrollbar-color: hsl(200, 15%, 4%) hsl(200, 15%, 8%);
 }
-:root::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 12px;
 }
-:root::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: hsl(200, 15%, 8%);
 }
-:root::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background: hsl(200, 15%, 4%);
 }
 
