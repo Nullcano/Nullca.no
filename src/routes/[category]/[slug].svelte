@@ -22,13 +22,7 @@
   import SEO from '$lib/SEO/index.svelte'
   import website from '$lib/config/website.js'
   const { author, siteUrl } = website;
-  let title = `${post.title} - Nullcano`
-  const breadcrumbs = [
-    {
-      name: post.title,
-      slug: post.slug,
-    },
-  ];
+  let title = post.title
   function stripHTML(str) {
     if ((str===null) || (str===''))
       return false

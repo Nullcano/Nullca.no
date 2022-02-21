@@ -9,16 +9,8 @@
     return new Date(b.date) - new Date(a.date)
   })
 
-  const { author, siteUrl } = website
-
-  let title = 'Home'
-
-  const breadcrumbs = [
-    {
-      name: 'Home',
-      slug: '',
-    },
-  ]
+  const { author, siteUrl } = website;
+  let title = `Nullcano`
 
   let metadescription = 'The purpose of this website is to provide a comprehensive and up to date archive of media and information about the video game industry while also preserve its history.';
   const featuredImageAlt = 'The purpose of this website is to provide a comprehensive and up to date archive of media and information about the video game industry while also preserve its history.';
@@ -53,7 +45,6 @@
     entityMeta,
     datePublished: '2022-01-03T14:19:33.000+0100',
     lastUpdated: '2022-01-03T14:19:33.000+0100',
-    breadcrumbs,
     metadescription,
     featuredImage,
     ogImage,
