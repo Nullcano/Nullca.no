@@ -18,60 +18,25 @@
 </script>
 
 <script>
-  export let post
-  import SEO from '$lib/SEO/index.svelte'
-  import website from '$lib/config/website.js'
-  const { author, siteUrl } = website;
-  let title = post.title
   function stripHTML(str) {
     if ((str===null) || (str===''))
-      return false
+        return false;
     else
-      str = str.toString()
-    return str.replace( /(<([^>]+)>)/ig, '').replace(/\n/g, '')
+        str = str.toString();
+    return str.replace( /(<([^>]+)>)/ig, '').replace(/\n/g, '');
   }
-  let metadescription = stripHTML(post.content)
-  const featuredImageAlt = post.title
-  const featuredImage = {
-    url: `../assets/thumbs/${post.slug}.png`,
-    alt: stripHTML(post.content),
-    width: 672,
-    height: 448,
-    caption: stripHTML(post.content),
-  };
-  const ogImage = {
-    url: `../assets/thumbs/${post.slug}.png`,
-    alt: featuredImageAlt,
-  };
-  const ogSquareImage = {
-    url: `../assets/thumbs/${post.slug}.png`,
-    alt: featuredImageAlt,
-  };
-  const twitterImage = {
-    url: `../assets/thumbs/${post.slug}.png`,
-    alt: featuredImageAlt,
-  };
-  const entityMeta = {
-    url: `${siteUrl}/`,
-    faviconWidth: 512,
-    faviconHeight: 512,
-    caption: author,
-  };
-  const seoProps = {
-    title,
-    slug: post.slug,
-    entityMeta,
-    datePublished: '2022-01-03T14:19:33.000+0100',
-    lastUpdated: '2022-01-03T14:19:33.000+0100',
-    metadescription,
-    featuredImage,
-    ogImage,
-    ogSquareImage,
-    twitterImage,
-  };
+  export let post
 </script>
 
-<SEO {...seoProps} />
+<svelte:head>
+  <title>{post.title} - Nullcano</title>
+  <meta property="og:title" content="{post.title} - Nullcano">
+  <meta property="og:site_name" content="Nullcano">
+  <meta property="og:url" content="https://nullca.no/{post.category.toLowerCase()}/{post.slug}">
+  <meta property="og:description" content="{stripHTML(post.content)}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/thumb/{post.slug}.png">
+</svelte:head>
 
 <div class="post">
   <h2>{post.title}</h2>
