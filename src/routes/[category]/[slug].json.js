@@ -1,7 +1,7 @@
 import { posts } from '../../data.js'
 
 export async function get({ params }) {
-  const post = posts.find((g) => g.slug == params.slug)
+  const post = posts.find(p => p.slug == params.slug)
   if (post) {
     return {
       status: 200,

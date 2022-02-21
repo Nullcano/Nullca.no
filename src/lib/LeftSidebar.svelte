@@ -37,7 +37,7 @@
       <h3>Topics</h3>
     </div>
     <ul>
-      <a href="/league-of-legeds">
+      <a href="/league-of-legends">
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" class="league" width="30" height="32" viewBox="0 0 30 32" fill="none">
             <g>

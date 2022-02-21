@@ -111,5 +111,10 @@ export const categories = [
     title: 'Minecraft',
     description: 'Minecraft is a game created by Markus Persson, and developed by Mojang. It is a sandbox game, where players can build and explore a world of their own design. The game is played in a world made up of blocks, and players can move around and interact with the world. The game is played in a sandbox environment, where players can build and explore a world of their own design. The game is played in a sandbox environment, where players can build and explore a world of their own design.',
     image: '../assets/topic/minecraft.png'
+  }, {
+    slug: 'league-of-legends',
+    title: 'League of Legends',
+    description: 'League of Legends is a multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows, macOS, PlayStation 4, Xbox One, and Nintendo Switch. The game is free to play, and is supported on PC, PlayStation 4, Xbox One, and Nintendo Switch.',
+    image: '../assets/topic/league-of-legends.png'
   }
 ]
