@@ -35,7 +35,7 @@
   <meta property="og:url" content="https://nullca.no/{post.category.toLowerCase()}/{post.slug}">
   <meta property="og:description" content="{stripHTML(post.content)}">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../assets/thumb/{post.slug}.png">
+  <meta property="og:image" content="https://nullca.no/assets/thumb/{post.slug}.png">
 </svelte:head>
 
 <div class="post">
