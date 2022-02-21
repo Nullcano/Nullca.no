@@ -71,6 +71,15 @@ export const posts = [
     content: `
       <p><a href="https://minecraftskinstealer.com" target="_blank">Minecraft Skin Stealer</a> lets you view and steal any minecraft skin with this easy online skin viewer and skin stealer tool.</p>
     `
+  }, {
+    slug: 'forge-mod-loader',
+    title: 'Forge Mod Loader',
+    date: '2015-02-01',
+    category: 'Minecraft',
+    tags: [],
+    content: `
+      <p><a href="https://files.minecraftforge.net/net/minecraftforge/forge" target="_blank">Forge Mod Loader</a> is a loader for Minecraft mods. It was recently merged into Minecraft Forge, and is no longer developed on its own. FML was compatible with Risugami's ModLoader mods until 1.6, when ModLoader was discontinued. FML is itself a cleanroom rewrite of Risugami's ModLoader. Additionally, FML provides the mod list button added to the main screen when Forge is installed. It allows mods to use ASM to further change vanilla code, and also provides the Argo and Guava libraries. It also provides handlers for some features in a similar way to Forge, such as crafting and chat handlers.</p>
+    `
   }
 ]
 

@@ -20,9 +20,7 @@
       <a href="/all">
         <li>
           <div class="left">
-            <svg width="32px" height="32px" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 20.4v-5.8a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6h-5.8a.6.6 0 0 1-.6-.6ZM3 20.4v-5.8a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6ZM14 9.4V3.6a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6h-5.8a.6.6 0 0 1-.6-.6ZM3 9.4V3.6a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v5.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6Z" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58" xml:space="preserve"><path style="fill:#0e3260" d="M28.792 35.406c5.327 0 9.771-3.744 10.797-8.768H18a11.012 11.012 0 0 0 10.792 8.768zM28.792 51.362c5.327 0 9.771-3.744 10.797-8.768H18a11.012 11.012 0 0 0 10.792 8.768z"/><path style="fill:#13649b" d="M1 12.044v15.045l56-.022V12L44 0H14L1 12z"/><path style="fill:#209aed" d="M38.797 12.012C37.866 16.571 33.833 20 29 20c-4.826 0-8.853-3.452-9.792-8l-18.17.012A.038.038 0 0 0 1 12.05v15.039l56-.022V12.038a.038.038 0 0 0-.038-.038l-18.165.012z"/><path style="fill:#1081e0" d="M38.797 27.012C37.866 31.571 33.833 35 29 35c-4.826 0-8.853-3.419-9.792-7.968L1 27.044V43h56V27l-18.203.012z"/><path style="fill:#0f71d3" d="M38.797 43c-.931 4.558-4.964 8-9.797 8-4.826 0-8.853-3.452-9.792-8H1v15l56-.022V43H38.797z"/></svg>
             <span class="label">All articles</span>
           </div>
           <div class="right label">
@@ -34,8 +32,8 @@
         </li>
       </a>
     </ul>
-    <div class="title">
-      <h3 class="label">Topics</h3>
+    <div class="title label">
+      <h3>Topics</h3>
     </div>
     <ul>
       <a href="/minecraft">
