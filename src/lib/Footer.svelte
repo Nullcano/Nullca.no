@@ -1,3 +1,3 @@
 <span>
-  <a href="/about">Nullcano</a> &copy; {new Date().getFullYear()}
+  <a href="/">Nullcano</a> &copy; {new Date().getFullYear()} &mdash; <a href="/about">About</a>
 </span>

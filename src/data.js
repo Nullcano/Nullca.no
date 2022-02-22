@@ -96,7 +96,7 @@ export const posts = [
     slug: 'op-gg',
     title: 'OP.GG',
     description: 'Real-time LoL stats. Check your Summoner, live spectate and see global League of Legends statistics.',
-    date: '2018-05-01',
+    date: '2013-01-01',
     category: 'League of Legends',
     tags: ['Website', 'Statistics', 'Tool'],
     content: `

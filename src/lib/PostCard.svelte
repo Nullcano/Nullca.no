@@ -30,11 +30,10 @@
   .post-card {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
     border-radius: 1rem;
     overflow: hidden;
-    background: hsl(200, 15%, 12%);
-    box-shadow: .5rem .5rem 1rem hsla(0, 0%, 0%, .1);
+    background: var(--lighten-dark);
+    box-shadow: 0 0 1rem var(--darken-dark);
   }
   .post-card__thumbnail {
     position: relative;

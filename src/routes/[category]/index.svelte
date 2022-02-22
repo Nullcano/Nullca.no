@@ -16,6 +16,7 @@
 
 <script>  
   import { paginate, PaginationNav } from 'svelte-paginate'
+  import Pagination from '$lib/Pagination.svelte'
   import PageTitle from '$lib/PageTitle.svelte'
   import PageSubtitle from '$lib/PageSubtitle.svelte'
   import PostGrid from '$lib/PostGrid.svelte'
@@ -23,11 +24,7 @@
 
   export let categoryPosts, title, description, slug
 
-  let items = categoryPosts
-  let currentPage = 1
-  let pageSize = 12
-
-  $: paginatedItems = paginate({ items, pageSize, currentPage })
+  let items  
 </script>
 
 <svelte:head>
@@ -44,17 +41,12 @@
 
 <PageSubtitle title="All {title} articles" />
 
-<PostGrid>
-  {#each paginatedItems as post}
-    <PostCard slug={post.slug} title={post.title} category={post.category} date={post.date} description={post.description} />
-  {/each}
-</PostGrid>
+{#if items}
+  <PostGrid>
+    {#each items as item}
+      <PostCard slug={item.slug} title={item.title} category={item.category} date={item.date} description={item.description} />
+    {/each}
+  </PostGrid>
+{/if}
 
-<PaginationNav
-  totalItems="{items.length}"
-  pageSize="{pageSize}"
-  currentPage="{currentPage}"
-  limit="{1}"
-  showStepOptions="{true}"
-  on:setPage="{(e) => currentPage = e.detail.page}"
-/>
+<Pagination rows={categoryPosts} perPage={8} bind:trimmedRows={items} />

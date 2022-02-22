@@ -9,10 +9,13 @@
 
 <style>
   a {
-    min-width: 130px;
+    margin: 2rem;
+    padding: 1rem 2rem;
     display: grid;
     place-content: center;
-    background: hsl(200, 15%, 4%);
+    background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+    border-radius: 1rem;
+    text-shadow: 0 0 .25rem var(--darken-dark);
   }
   a:hover {
     border: 0;
@@ -23,19 +26,5 @@
   }
   svg {
     margin-right: .5rem;
-  }
-  @media only screen and (max-width: 768px) {
-    a {
-      min-width: auto;
-    }
-    .button-wrap {
-      margin: 0 1rem;
-    }
-    svg {
-      margin-right: 0;
-    }
-    span {
-      display: none;
-    }
   }
 </style>

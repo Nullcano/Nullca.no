@@ -16,11 +16,23 @@
   })
 </script>
 
+<svelte:head>
+  {#if searchTerm !== ''}
+    <style>
+      .wrapper {
+        filter: blur(3px);
+      }
+    </style>
+  {/if}
+</svelte:head>
+
 <input type="text" placeholder="Search all articles..." bind:value={searchTerm} />
 
 {#if searchTerm !== ''}
   <ul class="search-results">
-    <span>Results for "{searchTerm}"</span>
+    <div class="label">
+      <span>Results for "{searchTerm}"</span>
+    </div>
     {#each searchedPosts as post}
       <a href="/{post.category.toLowerCase()}/{post.slug}" on:click={() => { searchTerm = '' }}>
         <li>
@@ -39,9 +51,9 @@
   input {
     width: 100%;
     border: none;
-    background: hsl(200, 15%, 6%);
-    color: hsl(0, 0%, 95%);
-    font-size: 1.5rem;
+    background: var(--darken-dark);
+    color: var(--lighten-light);
+    font-size: 1.25rem;
     padding: .5rem 1rem;
     outline: none;
     opacity: .5;
@@ -52,34 +64,45 @@
   }
   .search-results {
     position: absolute;
-    top: 3.5rem;
+    top: 3rem;
     left: 0;
-    padding: 1rem;
     width: 100%;
-    height: calc(100vh - 3.5rem);
+    height: calc(100vh - 3rem);
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: hsla(200, 15%, 4%, .95);
-    color: hsl(0, 0%, 95%);
+    background: hsla(200, 15%, 10%, .95);
     transition: all .3s ease-in-out;
     overflow-y: auto;
     z-index: 9;
   }
+  .search-results .label {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: var(--darken-dark);
+    font-size: 1.25rem;
+  }
+  .search-results .label span {
+    display: block;
+    padding: .5rem 4rem;
+  }
   .search-results li {
     margin: 1rem;
     padding: 1rem 2rem;
-    background:hsl(200, 15%, 8%);
+    background: var(--darken-dark);
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     border-radius: 1rem;
+    transition: all .2s ease-in-out;
   }
   .search-results li:hover {
-    background: hsl(200, 15%, 6%);
+    background: var(--reset-dark);
   }
   .search-results .icon {
     width: 5rem;
+    height: auto;
     margin-right: 1rem;
     border-radius: .5rem;
   }

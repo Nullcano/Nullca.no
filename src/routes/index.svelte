@@ -1,5 +1,5 @@
 <script>
-  import PageTitle from '$lib/PageTitle.svelte'
+  import LogoText from '$lib/LogoText.svelte'
   import PageSubtitle from '$lib/PageSubtitle.svelte'
   import AllPosts from '$lib/AllPosts.svelte'
 </script>
@@ -14,8 +14,27 @@
   <meta property="og:image" content="">
 </svelte:head>
 
-<PageTitle title="Nullcano" description="This is a personally curated video game archive that is always growing. The goal is to index all types of media, files and articles about video games, the community surrounding it and make it easily accessible while also preserving its history." />
+<div class="intro-section">
+  <h2>Welcome to</h2>
+  <LogoText />
+</div>
 
 <PageSubtitle title="Recent posts" />
 
 <AllPosts />
+
+<style>
+  .intro-section {
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  h2 {
+    position: relative;
+    top: -2rem;
+    font-style: italic;
+  }
+</style>
