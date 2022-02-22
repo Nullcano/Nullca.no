@@ -34,7 +34,7 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["animation.webp", "assets/thumbs/block-palettes.png", "assets/thumbs/digminecraft.png", "assets/thumbs/forge-mod-loader.png", "assets/thumbs/minecraft-skin-stealer.png", "assets/thumbs/minecraft-tools.png", "assets/thumbs/namemc.png", "assets/thumbs/op-gg.png", "assets/thumbs/optifine.png", "assets/thumbs/plotz.png", "assets/thumbs/vanilla-tweaks.png", "assets/topics/minecraft.webp", "favicon.ico", "intro-logo.webp", "logo.webp"]),
   _: {
     mime: { ".webp": "image/webp", ".png": "image/png", ".ico": "image/vnd.microsoft.icon" },
-    entry: { "file": "start-7279919e.js", "js": ["start-7279919e.js", "chunks/vendor-4e70ec7c.js"], "css": ["assets/vendor-b92e0941.css"] },
+    entry: { "file": "start-e8d3c176.js", "js": ["start-e8d3c176.js", "chunks/vendor-fa02d1b2.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),

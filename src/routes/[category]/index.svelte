@@ -15,7 +15,6 @@
 </script>
 
 <script>  
-  import { paginate, PaginationNav } from 'svelte-paginate'
   import Pagination from '$lib/Pagination.svelte'
   import PageTitle from '$lib/PageTitle.svelte'
   import PageSubtitle from '$lib/PageSubtitle.svelte'

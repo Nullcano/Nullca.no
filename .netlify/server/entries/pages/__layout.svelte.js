@@ -26,7 +26,6 @@ __export(stdin_exports, {
 });
 var import_index_b7314c68 = require("../../chunks/index-b7314c68.js");
 var import_data_fbba73f1 = require("../../chunks/data-fbba73f1.js");
-var nullstrap = "";
 var global = "";
 var LogoBackground_svelte_svelte_type_style_lang = "";
 const css$7 = {

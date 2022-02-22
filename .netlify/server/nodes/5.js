@@ -33,7 +33,7 @@ __export(stdin_exports, {
   module: () => module2
 });
 var module2 = __toESM(require("../entries/pages/wiki/minecraft.svelte.js"));
-const entry = "pages/wiki/minecraft.svelte-c7ec38a9.js";
-const js = ["pages/wiki/minecraft.svelte-c7ec38a9.js", "chunks/vendor-4e70ec7c.js"];
-const css = ["assets/vendor-b92e0941.css"];
+const entry = "pages/wiki/minecraft.svelte-e99486e6.js";
+const js = ["pages/wiki/minecraft.svelte-e99486e6.js", "chunks/vendor-fa02d1b2.js"];
+const css = [];
 module.exports = __toCommonJS(stdin_exports);

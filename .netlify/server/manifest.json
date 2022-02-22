@@ -32,7 +32,7 @@
       "_data-fbba73f1.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-1cac5369.css"
+      "assets/entries/pages/__layout.svelte-c848154d.css"
     ]
   },
   "src/routes/__error.svelte": {
@@ -108,9 +108,6 @@
       "_PostCard-55647a7c.js",
       "_PageTitle-4e007c1e.js",
       "_PageSubtitle-4e85ee87.js"
-    ],
-    "css": [
-      "assets/entries/pages/_category_/index.svelte-da3540d6.css"
     ]
   },
   "src/routes/[category]/[slug].svelte": {

@@ -1,5 +1,4 @@
 <script>
-  import '../styles/nullstrap.css'
   import '../styles/global.css'
   import LogoBackground from '$lib/LogoBackground.svelte'
   import LogoIcon from '$lib/LogoIcon.svelte'

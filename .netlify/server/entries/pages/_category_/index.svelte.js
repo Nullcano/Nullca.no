@@ -36,8 +36,6 @@ function slugify(text) {
   const newText = text.split("").map((letter, i) => letter.replace(new RegExp(from.charAt(i), "g"), to.charAt(i)));
   return newText.toString().toLowerCase().trim().replace(/\s+/g, "-").replace(/&/g, "-y-").replace(/[^\w\-]+/g, "").replace(/\-\-+/g, "-");
 }
-var LightPaginationNav_svelte_svelte_type_style_lang = "";
-var DarkPaginationNav_svelte_svelte_type_style_lang = "";
 async function load({ params }) {
   const { category } = params;
   return {
