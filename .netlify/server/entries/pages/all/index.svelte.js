@@ -22,30 +22,19 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 })(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
 var stdin_exports = {};
 __export(stdin_exports, {
-  default: () => U5Bslugu5D,
-  load: () => load
+  default: () => All
 });
-var import_index_d395a30e = require("../../../chunks/index-d395a30e.js");
-async function load({ fetch, params }) {
-  const slug = params.slug;
-  const res = await fetch(`/p/${slug}.json`);
-  const { post } = await res.json();
-  if (res.ok) {
-    return { props: { post } };
-  }
-  return {
-    status: 301,
-    redirect: "/p"
-  };
-}
-const U5Bslugu5D = (0, import_index_d395a30e.c)(($$result, $$props, $$bindings, slots) => {
-  let { post } = $$props;
-  let categorySlug = post.category.toLowerCase();
-  if ($$props.post === void 0 && $$bindings.post && post !== void 0)
-    $$bindings.post(post);
-  return `<div class="${"single-post"}"><h2 class="${"title"}">${(0, import_index_d395a30e.e)(post.title)}</h2>
-  <div class="${"body"}"><!-- HTML_TAG_START -->${post.content}<!-- HTML_TAG_END --></div>
-  <div class="${"buttons"}"><a href="${"/t/" + (0, import_index_d395a30e.e)(categorySlug)}">More ${(0, import_index_d395a30e.e)(post.category)} posts</a>
-    <a href="${"/p"}">All posts</a></div></div>`;
+var import_index_b7314c68 = require("../../../chunks/index-b7314c68.js");
+var import_PageTitle_4e007c1e = require("../../../chunks/PageTitle-4e007c1e.js");
+var import_AllPosts_cf09654a = require("../../../chunks/AllPosts-cf09654a.js");
+var import_data_fbba73f1 = require("../../../chunks/data-fbba73f1.js");
+var import_PostCard_55647a7c = require("../../../chunks/PostCard-55647a7c.js");
+const All = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slots) => {
+  return `${(0, import_index_b7314c68.v)(import_PageTitle_4e007c1e.P, "PageTitle").$$render($$result, {
+    title: "All articles",
+    description: "Browse all articles from all archives."
+  }, {}, {})}
+
+${(0, import_index_b7314c68.v)(import_AllPosts_cf09654a.A, "AllPosts").$$render($$result, {}, {}, {})}`;
 });
 module.exports = __toCommonJS(stdin_exports);

@@ -22,19 +22,10 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 })(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
 var stdin_exports = {};
 __export(stdin_exports, {
-  get: () => get
+  default: () => Minecraft
 });
-var import_data_2ca15c9b = require("../../../chunks/data-2ca15c9b.js");
-async function get({ params }) {
-  const post = import_data_2ca15c9b.p.find((g) => g.slug == params.slug);
-  if (post) {
-    return {
-      status: 200,
-      body: { post }
-    };
-  }
-  return {
-    status: 404
-  };
-}
+var import_index_b7314c68 = require("../../../chunks/index-b7314c68.js");
+const Minecraft = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slots) => {
+  return ``;
+});
 module.exports = __toCommonJS(stdin_exports);

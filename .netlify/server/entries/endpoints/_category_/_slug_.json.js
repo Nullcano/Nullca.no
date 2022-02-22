@@ -24,11 +24,18 @@ var stdin_exports = {};
 __export(stdin_exports, {
   get: () => get
 });
-var import_data_2ca15c9b = require("../../../chunks/data-2ca15c9b.js");
-async function get() {
+var import_data_fbba73f1 = require("../../../chunks/data-fbba73f1.js");
+async function get({ params }) {
+  const post = import_data_fbba73f1.p.find((p) => p.slug == params.slug);
+  if (post) {
+    return {
+      status: 200,
+      body: { post }
+    };
+  }
   return {
-    status: 200,
-    body: { posts: import_data_2ca15c9b.p }
+    status: 404,
+    body: { message: "This page is not currently archived." }
   };
 }
 module.exports = __toCommonJS(stdin_exports);

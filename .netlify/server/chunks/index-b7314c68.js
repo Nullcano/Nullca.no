@@ -22,8 +22,8 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 })(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
 var stdin_exports = {};
 __export(stdin_exports, {
-  a: () => each,
-  b: () => add_attribute,
+  a: () => add_attribute,
+  b: () => each,
   c: () => create_ssr_component,
   d: () => compute_rest_props,
   e: () => escape,

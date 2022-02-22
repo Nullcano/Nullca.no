@@ -22,10 +22,12 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 })(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
 var stdin_exports = {};
 __export(stdin_exports, {
-  default: () => _error
+  default: () => Wiki
 });
-var import_index_b7314c68 = require("../../chunks/index-b7314c68.js");
-const _error = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slots) => {
-  return `<h3>This page is not currently archived.</h3>`;
+var import_index_b7314c68 = require("../../../chunks/index-b7314c68.js");
+const Wiki = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slots) => {
+  return `<h1>Wikis</h1>
+
+<a href="${"/wiki/minecraft"}">Minecraft Wiki</a>`;
 });
 module.exports = __toCommonJS(stdin_exports);

@@ -32,8 +32,8 @@ __export(stdin_exports, {
   js: () => js,
   module: () => module2
 });
-var module2 = __toESM(require("../entries/pages/wiki/minecraft.svelte.js"));
-const entry = "pages/wiki/minecraft.svelte-c7ec38a9.js";
-const js = ["pages/wiki/minecraft.svelte-c7ec38a9.js", "chunks/vendor-4e70ec7c.js"];
-const css = ["assets/vendor-b92e0941.css"];
+var module2 = __toESM(require("../entries/pages/_category_/index.svelte.js"));
+const entry = "pages/_category_/index.svelte-27eaa969.js";
+const js = ["pages/_category_/index.svelte-27eaa969.js", "chunks/vendor-4e70ec7c.js", "chunks/data-fbba73f1.js", "chunks/PostCard-3aefb2fe.js", "chunks/PageTitle-9787c7cb.js", "chunks/PageSubtitle-a23b5281.js"];
+const css = ["assets/vendor-b92e0941.css", "assets/PostCard-966038be.css", "assets/PageTitle-bcabc3f1.css", "assets/PageSubtitle-b1ddd8f2.css"];
 module.exports = __toCommonJS(stdin_exports);

@@ -22,19 +22,20 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 })(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
 var stdin_exports = {};
 __export(stdin_exports, {
-  A: () => About
+  P: () => PageSubtitle
 });
-var import_index_d395a30e = require("./index-d395a30e.js");
-var About_svelte_svelte_type_style_lang = "";
+var import_index_b7314c68 = require("./index-b7314c68.js");
+var PageSubtitle_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "h1.svelte-15uc4vz{margin:0 .5rem}p.svelte-15uc4vz{margin:.25rem .5rem}article.svelte-15uc4vz{margin:1.5rem;padding:.5rem 1rem;border-radius:1rem;background-color:hsla(0, 0%, 8%);color:hsl(0, 0%, 80%);font-size:.8rem}",
+  code: ".subtitle.svelte-1raxp6t{margin:2rem 0 1rem 0;padding:1rem}h2.svelte-1raxp6t{max-width:720px}",
   map: null
 };
-const About = (0, import_index_d395a30e.c)(($$result, $$props, $$bindings, slots) => {
+const PageSubtitle = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slots) => {
+  let { title } = $$props;
+  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+    $$bindings.title(title);
   $$result.css.add(css);
-  return `<article class="${"svelte-15uc4vz"}"><h1 class="${"svelte-15uc4vz"}">Welcome to Nullcano</h1>
-  <p class="${"svelte-15uc4vz"}">For clarification, Nullcano is my name and I maintain this website. This a self-hosted and self-posted video game archive that I am constantly growing. I sincerely hope you will find something useful.</p>
-  <p class="${"svelte-15uc4vz"}">My goal is to index as much content and information about everything in the realm of video games and make them easily accessible with my global search filter.</p>
-</article>`;
+  return `<div class="${"subtitle svelte-1raxp6t"}"><h2 class="${"svelte-1raxp6t"}">${(0, import_index_b7314c68.e)(title)}</h2>
+</div>`;
 });
 module.exports = __toCommonJS(stdin_exports);

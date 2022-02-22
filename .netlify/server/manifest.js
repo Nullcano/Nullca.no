@@ -31,10 +31,10 @@ __export(stdin_exports, {
 });
 const manifest = {
   appDir: "_app",
-  assets: /* @__PURE__ */ new Set(["favicon.png"]),
+  assets: /* @__PURE__ */ new Set(["animation.webp", "assets/thumbs/block-palettes.png", "assets/thumbs/digminecraft.png", "assets/thumbs/forge-mod-loader.png", "assets/thumbs/minecraft-skin-stealer.png", "assets/thumbs/minecraft-tools.png", "assets/thumbs/namemc.png", "assets/thumbs/op-gg.png", "assets/thumbs/optifine.png", "assets/thumbs/plotz.png", "assets/thumbs/vanilla-tweaks.png", "assets/topics/minecraft.webp", "favicon.ico", "intro-logo.webp", "logo.webp"]),
   _: {
-    mime: { ".png": "image/png" },
-    entry: { "file": "start-ed1b8997.js", "js": ["start-ed1b8997.js", "chunks/vendor-3745afc3.js"], "css": [] },
+    mime: { ".webp": "image/webp", ".png": "image/png", ".ico": "image/vnd.microsoft.icon" },
+    entry: { "file": "start-7279919e.js", "js": ["start-7279919e.js", "chunks/vendor-4e70ec7c.js"], "css": ["assets/vendor-b92e0941.css"] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
@@ -42,7 +42,9 @@ const manifest = {
       () => Promise.resolve().then(() => __toESM(require("./nodes/3.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/4.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/5.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/6.js")))
+      () => Promise.resolve().then(() => __toESM(require("./nodes/6.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/7.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/8.js")))
     ],
     routes: [
       {
@@ -55,6 +57,12 @@ const manifest = {
         b: [1]
       },
       {
+        type: "endpoint",
+        pattern: /^\/sitemap\.xml$/,
+        params: null,
+        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/sitemap.xml.js")))
+      },
+      {
         type: "page",
         pattern: /^\/about\/?$/,
         params: null,
@@ -64,42 +72,54 @@ const manifest = {
         b: [1]
       },
       {
-        type: "endpoint",
-        pattern: /^\/p\.json$/,
-        params: null,
-        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/p/index.json.js")))
-      },
-      {
         type: "page",
-        pattern: /^\/p\/?$/,
+        pattern: /^\/wiki\/?$/,
         params: null,
-        path: "/p",
+        path: "/wiki",
         shadow: null,
         a: [0, 4],
         b: [1]
       },
       {
-        type: "endpoint",
-        pattern: /^\/p\/([^/]+?)\.json$/,
-        params: (m) => ({ slug: m[1] }),
-        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/p/_slug_.json.js")))
-      },
-      {
         type: "page",
-        pattern: /^\/p\/([^/]+?)\/?$/,
-        params: (m) => ({ slug: m[1] }),
-        path: null,
+        pattern: /^\/wiki\/minecraft\/?$/,
+        params: null,
+        path: "/wiki/minecraft",
         shadow: null,
         a: [0, 5],
         b: [1]
       },
       {
         type: "page",
-        pattern: /^\/t\/minecraft\/?$/,
+        pattern: /^\/all\/?$/,
         params: null,
-        path: "/t/minecraft",
+        path: "/all",
         shadow: null,
         a: [0, 6],
+        b: [1]
+      },
+      {
+        type: "page",
+        pattern: /^\/([^/]+?)\/?$/,
+        params: (m) => ({ category: m[1] }),
+        path: null,
+        shadow: null,
+        a: [0, 7],
+        b: [1]
+      },
+      {
+        type: "endpoint",
+        pattern: /^\/([^/]+?)\/([^/]+?)\.json$/,
+        params: (m) => ({ category: m[1], slug: m[2] }),
+        load: () => Promise.resolve().then(() => __toESM(require("./entries/endpoints/_category_/_slug_.json.js")))
+      },
+      {
+        type: "page",
+        pattern: /^\/([^/]+?)\/([^/]+?)\/?$/,
+        params: (m) => ({ category: m[1], slug: m[2] }),
+        path: null,
+        shadow: null,
+        a: [0, 8],
         b: [1]
       }
     ]
