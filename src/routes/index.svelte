@@ -1,40 +1,23 @@
 <script>
-  import LogoText from '$lib/LogoText.svelte'
-  import PageSubtitle from '$lib/PageSubtitle.svelte'
-  import AllPosts from '$lib/AllPosts.svelte'
+  import Header from '$lib/Header.svelte'
+  import JournalScroll from '$lib/JournalScroll.svelte'
+  import Profile from '$lib/Profile.svelte'
 </script>
 
 <svelte:head>
-  <title>Frontpage - Nullcano</title>
-  <meta property="og:title" content="Frontpage - Nullcano">
-  <meta property="og:site_name" content="Nullcano">
-  <meta property="og:url" content="https://nullca.no">
-  <meta property="og:description" content="Nullcano is a personally curated video game archive that is always growing. The goal is to index all types of media, files and articles about video games, the community surrounding it and make it easily accessible while also preserving its history.">
+  <title>Steffen Wold</title>
+  <meta property="og:title" content="Steffen Wold">
+  <meta property="og:site_name" content="Steffen Wold">
+  <meta property="og:url" content="https://steffen.id">
+  <meta property="og:description" content="Steffen Wold's personal website.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="">
 </svelte:head>
 
-<div class="intro-section">
-  <h2>Welcome to</h2>
-  <LogoText />
-</div>
-
-<PageSubtitle title="Recent posts" />
-
-<AllPosts />
+<Header />
+<JournalScroll />
+<Profile />
 
 <style>
-  .intro-section {
-    position: relative;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  h2 {
-    position: relative;
-    top: -2rem;
-    font-style: italic;
-  }
+
 </style>

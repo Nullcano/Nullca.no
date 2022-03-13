@@ -6,14 +6,16 @@
   <h1 class="title">
     {title}
   </h1>
+  {#if description}
   <p>
-    {description}
+    {@html description}
   </p>
+  {/if}
 </div>
 
 <style>
   .page-title {
-    margin-bottom: 2rem;
+    position: relative;
     padding: 2rem;
   }
   p {

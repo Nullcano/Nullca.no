@@ -1,120 +1,56 @@
-export const posts = [
+export const journal = [
   {
-    slug: 'plotz',
-    title: 'Plotz',
-    description: 'Plotz is the classic free HTML5 modeller for Minecraft.',
-    date: '2011-05-01',
-    category: 'Minecraft',
-    type: 'Website',
-    tags: ['Website', 'Editor', 'Tool'],
-    content: `
-      <p><a href="https://plotz.co.uk" target="_blank">Plotz</a> is the classic free HTML5 modeller for Minecraft. Generate spheres, ellipsoids, torus and more in your web browser.</p>
-    `
+    slug: 'first-weekly-update',
+    title: 'First Weekly Update',
+    date: '2022-03-11',
+    image: 'https://c.tenor.com/v59uPIpJvkUAAAAS/sushichaeng-reaction.gif',
+    content: [
+      `This week I have gotten to know the mentors and the participants of the IKOMM Academy course.`,
+      `It has been a complete change in my life as I got a new schedule in a new city.`,
+      `Been a few sleepy days but I am Looking forward to blow my mind with C# lectures next week as long as I get enough rest this weekend.`,
+      `There isn't a lot more to say about this week than it has been a new and exciting experience.`,
+    ]
   }, {
-    slug: 'optifine',
-    title: 'Optifine',
-    description: 'Optifine is a mod for Minecraft that improves the performance of Minecraft.',
-    date: '2012-01-01',
-    category: 'Minecraft',
-    type: 'Mod',
-    tags: ['Website', 'Editor', 'Mod'],
-    content: `
-      <p><a href="https://optifine.net" target="_blank">Optifine</a> is a mod for Minecraft that improves the performance of Minecraft by improving the graphics and performance of the game.</p>
-    `
+    slug: 'git-api',
+    title: 'Git and API',
+    date: '2022-03-10',
+    image: 'https://c.tenor.com/Mfamt2u-Mb0AAAAC/il-paradiso-delle-signore-vittorio-conti.gif',
+    content: [
+      `Today we got introduced to what Git is and how to use the basic commands. I already knew how to use Git, but I was still intrigued.`,
+      `After lunch we had a simple introduction to API, what they are, and how to use them. This was also something I was familiar with.`,
+      `These are still very important topics in development and I'm happy they made us all aware of these this early in the course.`
+    ]
   }, {
-    slug: 'namemc',
-    title: 'NameMC',
-    description: 'NameMC lets you check the availability of Minecraft names and look up player skins.',
-    date: '2015-02-01',
-    category: 'Minecraft',
-    type: 'Website',
-    tags: ['Website', 'Tool'],
-    content: `
-      <p><a href="https://namemc.com" target="_blank">NameMC</a> lets you check the availability of Minecraft names, look up the name history of Minecraft accounts, view Minecraft skins in 3D, convert UUIDs, and much more.</p>
-    `
+    slug: 'no-code-journal-writing',
+    title: 'No-Code and Journal Writing',
+    date: '2022-03-09',
+    image: 'https://c.tenor.com/UiKDGrO_6XAAAAAM/nocode-quixy.gif',
+    content: [
+      `Today our mentor, Aksel, showed us what he likes to do with modern technology.`,
+      `He introduced us to the no-code concept where you build applications without code.`,
+      `We got assinged a couple tasks including setting up a Carrd website and setting up our journal entries in Airtable.`,
+      `Combining these together we got a free and functional blog application.`,
+    ]
   }, {
-    slug: 'vanilla-tweaks',
-    title: 'Vanilla Tweaks',
-    description: 'Vanilla Tweaks help you tweak parts of vanilla Minecraft through resource packs and more.',
-    date: '2018-05-01',
-    category: 'Minecraft',
-    tags: ['Website', 'Editor', 'Mod'],
-    content: `
-      <p><a href="https://vanillatweaks.net" target="_blank">Vanilla Tweaks</a> help you tweak parts of vanilla Minecraft through resource packs, data packs, and crafting tweaks.</p>
-    `
+    slug: 'standup-setup',
+    title: 'Standup and Setup',
+    date: '2022-03-08',
+    image: 'https://c.tenor.com/2c7diqh1oVIAAAAM/anime-computer.gif',
+    content: [
+      `Today we had a standup which is a routine where we tell everyone what we did yesterday, any issues we had and what we will be doing today.`,
+      `We also got our computers set up for the course. This was a fairly quiet day so we had some time playing games like Codewars and Jackbox`,
+      `Fun day over all and looking forward for more.`,
+    ]
   }, {
-    slug: 'block-palettes',
-    title: 'Block Palettes',
-    description: 'Block Palettes is an online tool for Minecraft that lets you create custom palettes with blocks.',
-    date: '2020-10-01',
-    category: 'Minecraft',
-    tags: ['Website', 'Editor', 'Tool'],
-    content: `
-      <p><a href="https://www.blockpalettes.com" target="_blank">Block Palettes</a> lets you find eye pleasing palettes to build with as well as create a place to connect with submitting your own palettes and monthly building contest!</p>
-    `
-  }, {
-    slug: 'minecraft-tools',
-    title: 'Minecraft Tools',
-    description: 'Minecraft Tools is a collection of online tools for Minecraft.',
-    date: '2015-02-01',
-    category: 'Minecraft',
-    tags: ['Website', 'Editor', 'Tool'],
-    content: `
-      <p><a href="https://minecraft.tools" target="_blank">Minecraft Tools</a> provides some online tools for Minecraft players like crafting list, flat world generator, enchant calculator, colored armor crafting, firework crafting, etc.</p>
-    `
-  }, {
-    slug: 'digminecraft',
-    title: 'DigMinecraft',
-    description: 'DigMinecraft is a Minecraft resource for finding crafting recipes and more.',
-    date: '2015-02-01',
-    category: 'Minecraft',
-    tags: ['Website', 'Tool'],
-    content: `
-      <p><a href="https://digminecraft.com" target="_blank">DigMinecraft</a> is a Minecraft resource for finding crafting recipes, mobs, and game commands.</p>
-    `
-  }, {
-    slug: 'minecraft-skin-stealer',
-    title: 'Minecraft Skin Stealer',
-    description: 'Minecraft Skin Stealer is an online tool for Minecraft that lets you steal skins from other players.',
-    date: '2013-01-01',
-    category: 'Minecraft',
-    tags: ['Website', 'Tool'],
-    content: `
-      <p><a href="https://minecraftskinstealer.com" target="_blank">Minecraft Skin Stealer</a> lets you view and steal any minecraft skin with this easy online skin viewer and skin stealer tool.</p>
-    `
-  }, {
-    slug: 'forge-mod-loader',
-    title: 'Forge Mod Loader',
-    description: 'Forge Mod Loader is a mod loader for Minecraft that lets you load certain mods in Minecraft.',
-    date: '2015-02-01',
-    category: 'Minecraft',
-    tags: ['Website', 'Mod'],
-    content: `
-      <p><a href="https://files.minecraftforge.net/net/minecraftforge/forge" target="_blank">Forge Mod Loader</a> is a loader for Minecraft mods. It was recently merged into Minecraft Forge, and is no longer developed on its own. FML was compatible with Risugami's ModLoader mods until 1.6, when ModLoader was discontinued. FML is itself a cleanroom rewrite of Risugami's ModLoader. Additionally, FML provides the mod list button added to the main screen when Forge is installed. It allows mods to use ASM to further change vanilla code, and also provides the Argo and Guava libraries. It also provides handlers for some features in a similar way to Forge, such as crafting and chat handlers.</p>
-    `
-  }, {
-    slug: 'op-gg',
-    title: 'OP.GG',
-    description: 'Real-time LoL stats. Check your Summoner, live spectate and see global League of Legends statistics.',
-    date: '2013-01-01',
-    category: 'League of Legends',
-    tags: ['Website', 'Statistics', 'Tool'],
-    content: `
-      <p><a href="https://op.gg" target="_blank">OP.GG</a> provides insights to gamers for League of Legends, PlayerUnknown's Battlegrounds, Overwatch and eSports. We are building a platform where gamers can express and share their game identities and experiences.</p>
-    `
-  }
-]
-
-export const categories = [
-  {
-    slug: 'minecraft',
-    title: 'Minecraft',
-    description: 'Minecraft is a game created by Markus Persson, and developed by Mojang. It is a sandbox game, where players can build and explore a world of their own design. The game is played in a world made up of blocks, and players can move around and interact with the world. The game is played in a sandbox environment, where players can build and explore a world of their own design. The game is played in a sandbox environment, where players can build and explore a world of their own design.',
-    image: '../assets/topic/minecraft.png'
-  }, {
-    slug: 'league-of-legends',
-    title: 'League of Legends',
-    description: 'League of Legends is a multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows, macOS, PlayStation 4, Xbox One, and Nintendo Switch. The game is free to play, and is supported on PC, PlayStation 4, Xbox One, and Nintendo Switch.',
-    image: '../assets/topic/league-of-legends.png'
+    slug: 'meet-greet-tour',
+    title: 'Meet, Greet and Tour',
+    date: '2022-03-07',
+    image: 'https://c.tenor.com/9JA98bXvDqgAAAAC/workingonit-socialanxiety.gif',
+    content: [
+      `Today was my first day of IKOMM Academy. This is a programming course that focuses on the C# programming language.`,
+      `The first day I got to the mentors and the other participants. Then we got a tour through the workplace. Very exciting.`,
+      `It's a scary new start with a new place to live, new languages and technologies to learn and new people to meet.`,
+      `With this I want to give some big props to all our friendly and helpful mentors that made everything surprisingly tolerable.`,
+    ]
   }
 ]

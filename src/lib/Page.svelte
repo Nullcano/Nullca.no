@@ -1,9 +1,12 @@
-<div class="container">
+<section>
   <slot></slot>
-</div>
+</section>
 
 <style>
-  .container {
+  section {
     position: relative;
+    margin: 0 auto;
+    width: 950px;
+    max-width: 90%;
   }
 </style>

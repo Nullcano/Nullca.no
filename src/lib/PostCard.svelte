@@ -1,86 +1,94 @@
 <script>
   import Time from 'svelte-time'
-  export let slug, title, category, date, description
+  import { stripHTML, slugify } from '$lib/utils'
+  export let item
 </script>
 
 <article class="post-card">
   <figure class="post-card__thumbnail">
-    <a href={`/${category.toLowerCase()}/${slug}`} class="post-card__link">
-      <img src={`../assets/thumbs/${slug}.png`} alt={title} class="post-card__img">
+    <a href={`/journal/${item.slug}`} class="post-card__link">
+      {#if item.image}
+        <img src={item.image} alt={item.title} class="post-card__img" />
+        {:else}
+        <img src="../no-cover.webp" alt={item.title} class="post-card__img" />
+      {/if}
     </a>
   </figure>
   <div class="post-card__content">
     <h2 class="post-card__title">
-      <a href={`/${category.toLowerCase()}/${slug}`} class="post-card__link">
-        {title}
+      <a href={`/journal/${item.slug}`} class="post-card__link">
+        {item.title}
       </a>
     </h2>
-    <p class="post-card__description">
-      {description}
-    </p>
-    <div class="post-card__meta">
-      <span class="post-card__time">
-        Archived in <a href={`/${category.toLowerCase()}`}>{category}</a>  <Time relative timestamp={date} />
-      </span>
+    <div class="post-card__time">
+      Posted <Time relative timestamp={item.date} />
     </div>
+    <p class="post-card__description">
+      {stripHTML(item.content.join(' '))}
+    </p>
+    {#if item.tags}
+    <div class="post-card__tags">
+      {#each item.tags.slice(0, 5) as tag}
+        <a href={`/tags/${slugify(tag)}`} class="post-card__tag">
+          {tag}
+        </a>
+      {/each}
+    </div>
+    {/if}
   </div>
 </article>
 
 <style>
   .post-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    overflow: hidden;
-    background: var(--lighten-dark);
-    box-shadow: 0 0 1rem var(--darken-dark);
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
   }
   .post-card__thumbnail {
     position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: 50%;
-    overflow: hidden;
-    background-color: hsl(200, 15%, 4%);
+    width: 20rem;
+    height: 10rem;
   }
   .post-card__thumbnail img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) scale(1.5) rotate(15deg);
-    width: 100%;
-    height: auto;
-  }
-  .post-card__thumbnail::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-35deg, hsla(200, 15%, 8%, .5), hsla(200, 15%, 16%, .5));
-    transition: opacity .5s;
-    pointer-events: none;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: all .2s ease-in-out;
+  }
+  .post-card:hover .post-card__thumbnail img {
+    transform: scale(1.25) rotate(5deg);
   }
   .post-card__content {
-    flex: 1;
     padding: 1rem;
+  }
+  .post-card__time {
+    margin-bottom: .5rem;
   }
   .post-card__title {
     margin-bottom: 0.5rem;
-    font-weight: 500;
-    font-size: 1.25rem;
   }
   .post-card__description {
     margin-bottom: 1rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
+    line-height: 1.5;
     overflow: hidden;
-    font-size: 1rem;
   }
-  .post-card__meta {
+  .post-card__tags {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     font-size: .8rem;
+    gap: .5rem;
+  }
+  .post-card__tag {
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    background: var(--reset-dark);
+  }
+  .post-card__tag:hover {
+    background: var(--darken-dark);
   }
 </style>

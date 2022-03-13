@@ -1,22 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
-:root {
-  --darken-dark: hsla(200, 15%, 5%);
-  --reset-dark: hsla(200, 15%, 7.5%);
-  --lighten-dark: hsla(200, 15%, 10%);
-  --darken-light: hsla(200, 15%, 60%);
-  --reset-light: hsla(200, 15%, 75%);
-  --lighten-light: hsla(200, 15%, 90%);
-  --primary-accent: hsla(250, 50%, 50%);
-  --secondary-accent: hsla(190, 50%, 50%);
-}
-
-*,::after,::before{box-sizing:border-box;margin:0;padding:0;font-weight:inherit}
-
 * {
+  box-sizing: border-box;
+  position: relative;
   scrollbar-width: thin;
   scrollbar-color: hsl(200, 15%, 4%) hsl(200, 15%, 8%);
 }
+
 *::-webkit-scrollbar {
   width: 12px;
 }
@@ -27,53 +17,59 @@
   background: hsl(200, 15%, 4%);
 }
 
-html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}.border-box,a,article,aside,blockquote,body,code,dd,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],legend,li,main,nav,ol,p,pre,section,table,td,textarea,th,tr,ul{box-sizing:border-box}
-
 body {
-  background: var(--reset-dark);
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--darken-light);
-  font-family: 'Rubik', sans-serif;
-}
-
-a, button, img, input {
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  outline: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-ul {
-  margin: 0;
   padding: 0;
-  list-style: none;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(160, 25%, 75%);
+  background: hsl(160, 25%, 25%);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {
   text-decoration: none;
-  color: var(--reset-light);
+  color: #fff;
 }
 
 a:hover {
-  color: var(--lighten-light);
+  color: #fff;
 }
 
-.app {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 3rem 1fr;
+a:active, a:hover {
+  outline-width: 0;
+}
+
+.marquee {
   overflow: hidden;
 }
 
-.container {
-  margin: 1rem;
+.marquee * {
+  margin: 0 .5rem;
+}
+
+.contained {
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  max-width: 1280px;
+}
+
+.icon-link svg {
+  padding: 1.25rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: var(--primary-accent);
+}
+
+.active svg {
+  fill: #fff;
+  background: radial-gradient(circle, var(--secondary-accent) -50%, transparent 50%);
 }
 
 .post-grid {

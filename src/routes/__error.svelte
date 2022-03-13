@@ -1,1 +1,1 @@
-<h3>This page is not currently archived.</h3>
+<h1>404 - Not found.</h1>

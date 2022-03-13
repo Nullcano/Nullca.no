@@ -1,1 +1,0 @@
-<small>All trademarks and copyrights on this page are owned by their respective parties.</small>
