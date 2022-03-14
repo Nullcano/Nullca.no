@@ -34,7 +34,7 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["avatar.gif", "favicon.ico", "heidal-sjoa.jpg"]),
   _: {
     mime: { ".gif": "image/gif", ".ico": "image/vnd.microsoft.icon", ".jpg": "image/jpeg" },
-    entry: { "file": "start-b83030c2.js", "js": ["start-b83030c2.js", "chunks/vendor-8b2b82ac.js"], "css": ["assets/vendor-c786f850.css"] },
+    entry: { "file": "start-a2dfe3df.js", "js": ["start-a2dfe3df.js", "chunks/vendor-8b2b82ac.js"], "css": ["assets/vendor-c786f850.css"] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
@@ -47,6 +47,7 @@ const manifest = {
     routes: [
       {
         type: "page",
+        key: "",
         pattern: /^\/$/,
         params: null,
         path: "/",
@@ -56,6 +57,7 @@ const manifest = {
       },
       {
         type: "page",
+        key: "projects",
         pattern: /^\/projects\/?$/,
         params: null,
         path: "/projects",
@@ -65,6 +67,7 @@ const manifest = {
       },
       {
         type: "page",
+        key: "journal",
         pattern: /^\/journal\/?$/,
         params: null,
         path: "/journal",
@@ -74,6 +77,7 @@ const manifest = {
       },
       {
         type: "page",
+        key: "journal/[slug]",
         pattern: /^\/journal\/([^/]+?)\/?$/,
         params: (m) => ({ slug: m[1] }),
         path: null,
@@ -83,6 +87,7 @@ const manifest = {
       },
       {
         type: "page",
+        key: "about",
         pattern: /^\/about\/?$/,
         params: null,
         path: "/about",

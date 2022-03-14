@@ -32,7 +32,7 @@
     "isEntry": true,
     "imports": [
       "_index-b7314c68.js",
-      "_Profile-a0d7d59f.js"
+      "_Profile-9b1f7acd.js"
     ],
     "css": [
       "assets/entries/pages/index.svelte-0a2d8248.css"
@@ -76,7 +76,7 @@
     "isEntry": true,
     "imports": [
       "_index-b7314c68.js",
-      "_Profile-a0d7d59f.js"
+      "_Profile-9b1f7acd.js"
     ],
     "css": [
       "assets/entries/pages/about.svelte-c40d07d8.css"
@@ -85,13 +85,13 @@
   "_index-b7314c68.js": {
     "file": "chunks/index-b7314c68.js"
   },
-  "_Profile-a0d7d59f.js": {
-    "file": "chunks/Profile-a0d7d59f.js",
+  "_Profile-9b1f7acd.js": {
+    "file": "chunks/Profile-9b1f7acd.js",
     "imports": [
       "_index-b7314c68.js"
     ],
     "css": [
-      "assets/Profile-718c2ded.css"
+      "assets/Profile-a4db1138.css"
     ]
   },
   "_utils-ff59a956.js": {

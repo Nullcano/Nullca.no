@@ -5,7 +5,7 @@ exports.handler = init({
 	assets: new Set(["avatar.gif","favicon.ico","heidal-sjoa.jpg"]),
 	_: {
 		mime: {".gif":"image/gif",".ico":"image/vnd.microsoft.icon",".jpg":"image/jpeg"},
-		entry: {"file":"start-b83030c2.js","js":["start-b83030c2.js","chunks/vendor-8b2b82ac.js"],"css":["assets/vendor-c786f850.css"]},
+		entry: {"file":"start-a2dfe3df.js","js":["start-a2dfe3df.js","chunks/vendor-8b2b82ac.js"],"css":["assets/vendor-c786f850.css"]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
@@ -18,6 +18,7 @@ exports.handler = init({
 		routes: [
 			{
 				type: 'page',
+				key: "",
 				pattern: /^\/$/,
 				params: null,
 				path: "/",
@@ -27,6 +28,7 @@ exports.handler = init({
 			},
 			{
 				type: 'page',
+				key: "projects",
 				pattern: /^\/projects\/?$/,
 				params: null,
 				path: "/projects",
@@ -36,6 +38,7 @@ exports.handler = init({
 			},
 			{
 				type: 'page',
+				key: "journal",
 				pattern: /^\/journal\/?$/,
 				params: null,
 				path: "/journal",
@@ -45,6 +48,7 @@ exports.handler = init({
 			},
 			{
 				type: 'page',
+				key: "journal/[slug]",
 				pattern: /^\/journal\/([^/]+?)\/?$/,
 				params: (m) => ({ slug: m[1]}),
 				path: null,
@@ -54,6 +58,7 @@ exports.handler = init({
 			},
 			{
 				type: 'page',
+				key: "about",
 				pattern: /^\/about\/?$/,
 				params: null,
 				path: "/about",

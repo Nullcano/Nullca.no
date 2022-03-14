@@ -1507,6 +1507,7 @@ async function respond_with_error({
   }
 }
 async function respond$1(opts) {
+  var _a;
   const { event, options, state, $session, route, resolve_opts } = opts;
   let nodes;
   if (!resolve_opts.ssr) {
@@ -1538,10 +1539,13 @@ async function respond$1(opts) {
   }
   const leaf = nodes[nodes.length - 1].module;
   let page_config = get_page_config(leaf, options);
-  if (!leaf.prerender && state.prerender && !state.prerender.all) {
-    return new Response(void 0, {
-      status: 204
-    });
+  if (state.prerender) {
+    const should_prerender = (_a = leaf.prerender) != null ? _a : state.prerender.default;
+    if (!should_prerender) {
+      return new Response(void 0, {
+        status: 204
+      });
+    }
   }
   let branch = [];
   let status = 200;
@@ -1842,7 +1846,14 @@ async function respond(request, options, state = {}) {
           const normalized2 = normalize_path(url.pathname.slice(0, -DATA_SUFFIX.length), options.trailing_slash);
           event2.url = new URL(event2.url.origin + normalized2 + event2.url.search);
         }
+        const key2 = request.headers.get("x-sveltekit-load");
         for (const route of options.manifest._.routes) {
+          if (key2) {
+            if (route.type !== "page")
+              continue;
+            if (route.key !== key2)
+              continue;
+          }
           const match = route.pattern.exec(decoded);
           if (!match)
             continue;
@@ -1850,7 +1861,7 @@ async function respond(request, options, state = {}) {
           let response2;
           if (is_data_request && route.type === "page" && route.shadow) {
             response2 = await render_endpoint(event2, await route.shadow());
-            if (request.headers.get("x-sveltekit-load") === "true") {
+            if (key2) {
               if (response2) {
                 if (response2.status >= 300 && response2.status < 400) {
                   const location = response2.headers.get("location");
@@ -1864,7 +1875,8 @@ async function respond(request, options, state = {}) {
                   }
                 }
               } else {
-                response2 = new Response("{}", {
+                response2 = new Response(void 0, {
+                  status: 204,
                   headers: {
                     "content-type": "application/json"
                   }
@@ -1883,16 +1895,16 @@ async function respond(request, options, state = {}) {
               const etag = response2.headers.get("etag");
               if (if_none_match_value === etag) {
                 const headers = new Headers({ etag });
-                for (const key2 of [
+                for (const key3 of [
                   "cache-control",
                   "content-location",
                   "date",
                   "expires",
                   "vary"
                 ]) {
-                  const value = response2.headers.get(key2);
+                  const value = response2.headers.get(key3);
                   if (value)
-                    headers.set(key2, value);
+                    headers.set(key3, value);
                 }
                 return new Response(void 0, {
                   status: 304,
@@ -2011,7 +2023,7 @@ class Server {
   }
   respond(request, options = {}) {
     if (!(request instanceof Request)) {
-      throw new Error("The first argument to app.render must be a Request object. See https://github.com/sveltejs/kit/pull/3384 for details");
+      throw new Error("The first argument to server.respond must be a Request object. See https://github.com/sveltejs/kit/pull/3384 for details");
     }
     return respond(request, this.options, options);
   }
