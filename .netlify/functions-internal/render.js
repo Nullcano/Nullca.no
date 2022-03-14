@@ -5,7 +5,7 @@ exports.handler = init({
 	assets: new Set(["avatar.gif","dust-overlay.png","favicon.ico","heidal-sjoa.jpg","logo.webp","no-cover.webp","no-icon.webp","waves.webp"]),
 	_: {
 		mime: {".gif":"image/gif",".png":"image/png",".ico":"image/vnd.microsoft.icon",".jpg":"image/jpeg",".webp":"image/webp"},
-		entry: {"file":"start-83ad8eda.js","js":["start-83ad8eda.js","chunks/vendor-8b2b82ac.js"],"css":["assets/vendor-c786f850.css"]},
+		entry: {"file":"start-fe198192.js","js":["start-fe198192.js","chunks/vendor-8b2b82ac.js"],"css":["assets/vendor-c786f850.css"]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
