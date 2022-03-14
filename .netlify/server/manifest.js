@@ -31,10 +31,10 @@ __export(stdin_exports, {
 });
 const manifest = {
   appDir: "_app",
-  assets: /* @__PURE__ */ new Set(["avatar.gif", "dust-overlay.png", "favicon.ico", "heidal-sjoa.jpg", "logo.webp", "no-cover.webp", "no-icon.webp", "waves.webp"]),
+  assets: /* @__PURE__ */ new Set(["avatar.gif", "favicon.ico", "heidal-sjoa.jpg"]),
   _: {
-    mime: { ".gif": "image/gif", ".png": "image/png", ".ico": "image/vnd.microsoft.icon", ".jpg": "image/jpeg", ".webp": "image/webp" },
-    entry: { "file": "start-157d8c2b.js", "js": ["start-157d8c2b.js", "chunks/vendor-8b2b82ac.js"], "css": ["assets/vendor-c786f850.css"] },
+    mime: { ".gif": "image/gif", ".ico": "image/vnd.microsoft.icon", ".jpg": "image/jpeg" },
+    entry: { "file": "start-b83030c2.js", "js": ["start-b83030c2.js", "chunks/vendor-8b2b82ac.js"], "css": ["assets/vendor-c786f850.css"] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
