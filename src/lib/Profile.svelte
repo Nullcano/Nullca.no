@@ -51,7 +51,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../heidal-sjoa.jpg') no-repeat center;
+    background: url('../../heidal-sjoa.jpg') no-repeat center;
     background-size: cover;
     filter: saturate(.5);
     mix-blend-mode: overlay;
