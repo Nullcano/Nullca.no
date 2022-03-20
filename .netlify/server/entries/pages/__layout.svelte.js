@@ -29,16 +29,17 @@ var normalize = "";
 var global = "";
 var Navbar_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: "nav.svelte-pgdc2n{position:sticky;width:100%;top:1rem;padding:.5rem;display:flex;align-items:center;justify-content:space-evenly;gap:1rem;color:hsl(160, 25%, 75%);background:hsl(160, 25%, 5%);border:2px solid hsl(160, 25%, 25%);border-radius:1rem;text-transform:uppercase;font-size:1.25rem;z-index:9}.sep.svelte-pgdc2n{font-size:2rem}",
+  code: "nav.svelte-7rc98x{position:sticky;width:100%;top:1rem;padding:.5rem;display:flex;align-items:center;gap:1rem;color:hsl(160, 25%, 75%);background:hsl(160, 25%, 5%);border:2px solid hsl(160, 25%, 25%);border-radius:1rem;text-align:center;text-transform:uppercase;font-size:1.25rem;z-index:9}ul.svelte-7rc98x{margin:0;width:100%;list-style:none;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-evenly}.sep.svelte-7rc98x{font-size:2rem}.only-mobile.svelte-7rc98x{display:none}@media(max-width: 768px){nav.svelte-7rc98x{display:flex;flex-direction:column}ul.svelte-7rc98x{padding:0;order:1;display:none}ul.active.svelte-7rc98x{display:flex;flex-direction:column}a.svelte-7rc98x{width:100%;padding:1rem}.sep.svelte-7rc98x{display:none}.only-mobile.svelte-7rc98x{order:0;width:100%;display:grid;place-content:center;cursor:pointer}}",
   map: null
 };
 const Navbar = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$2);
-  return `<nav class="${"svelte-pgdc2n"}"><a href="${"/"}">Home</a> <span class="${"sep svelte-pgdc2n"}">\u25A8</span>
-  <a href="${"/about"}">About</a> <span class="${"sep svelte-pgdc2n"}">\u25A8</span> 
-  <a href="${"/projects"}">Projects</a> <span class="${"sep svelte-pgdc2n"}">\u25A7</span> 
-  <a href="${"/journal"}">Academy Journal</a> <span class="${"sep svelte-pgdc2n"}">\u25A7</span> 
-  <a href="${"mailto:woldsteffen@gmail.com"}">Mail</a>
+  return `<nav class="${"svelte-7rc98x"}"><ul class="${["svelte-7rc98x", ""].join(" ").trim()}"><a href="${"/"}" class="${"svelte-7rc98x"}">Home</a> <span class="${"sep svelte-7rc98x"}">\u25A8</span>
+    <a href="${"/about"}" class="${"svelte-7rc98x"}">About</a> <span class="${"sep svelte-7rc98x"}">\u25A8</span> 
+    <a href="${"/projects"}" class="${"svelte-7rc98x"}">Projects</a> <span class="${"sep svelte-7rc98x"}">\u25A7</span> 
+    <a href="${"/journal"}" class="${"svelte-7rc98x"}">Academy Journal</a> <span class="${"sep svelte-7rc98x"}">\u25A7</span> 
+    <a href="${"mailto:woldsteffen@gmail.com"}" class="${"svelte-7rc98x"}">Mail</a></ul>
+  <div class="${"only-mobile svelte-7rc98x"}"><span>Menu \u2261</span></div>
 </nav>`;
 });
 var Footer_svelte_svelte_type_style_lang = "";

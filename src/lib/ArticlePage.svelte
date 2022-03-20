@@ -155,9 +155,15 @@
     border: 2px solid hsl(160, 25%, 25%);
   }
   @media (max-width: 768px) {
+    .cover {
+      display: none;
+    }
     .title {
       flex-direction: column;
       gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
     }
   }
 </style>

@@ -5,7 +5,7 @@ exports.handler = init({
 	assets: new Set(["avatar.gif","favicon.ico","heidal-sjoa.jpg"]),
 	_: {
 		mime: {".gif":"image/gif",".ico":"image/vnd.microsoft.icon",".jpg":"image/jpeg"},
-		entry: {"file":"start-a2dfe3df.js","js":["start-a2dfe3df.js","chunks/vendor-8b2b82ac.js"],"css":["assets/vendor-c786f850.css"]},
+		entry: {"file":"start-5b498c57.js","js":["start-5b498c57.js","chunks/vendor-19f553c6.js"],"css":["assets/vendor-c786f850.css"]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),

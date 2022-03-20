@@ -2,7 +2,7 @@
   import FeedJournal from '$lib/FeedJournal.svelte'
 </script>
 
-<h1>Daily Academy Journal</h1>
+<h1>Academy Journal</h1>
 
 <FeedJournal/>
 

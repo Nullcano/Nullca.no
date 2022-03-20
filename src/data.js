@@ -1,5 +1,18 @@
 export const journal = [
   {
+    slug: 'second-weekly-update',
+    title: 'Second Weekly Update',
+    date: '2022-03-18',
+    image: 'https://c.tenor.com/dlp5H9WSXkAAAAAd/me-myself-irene-charlie.gif',
+    content: [
+      `So this has been the first week of lectures with Erik, our Dutch programming teacher.`,
+      `He introduced us to the core concepts of C# and everything made sense until we started the exercises.`,
+      `This was very hard to implement into a functioning program and also very confusing with the new scoping.`,
+      `Whatever I tried during the exercies I saw red lines everywhere, but I kept my hopes up and asked for help when needed.`,
+      `I did get a good grasp on the language overall though. Atleast I learned something.`,
+      `Next week we will build on top of that and start to learn more about the language. See you in the next post.`,
+    ]
+  }, {
     slug: 'first-weekly-update',
     title: 'First Weekly Update',
     date: '2022-03-11',
@@ -27,7 +40,7 @@ export const journal = [
     image: 'https://c.tenor.com/UiKDGrO_6XAAAAAM/nocode-quixy.gif',
     content: [
       `Today our mentor, Aksel, showed us what he likes to do with modern technology.`,
-      `He introduced us to the no-code concept where you build applications without code.`,
+      `He introduced us to the no-code concept where you build applications without coding.`,
       `We got assinged a couple tasks including setting up a Carrd website and setting up our journal entries in Airtable.`,
       `Combining these together we got a free and functional blog application.`,
     ]
@@ -48,7 +61,7 @@ export const journal = [
     image: 'https://c.tenor.com/9JA98bXvDqgAAAAC/workingonit-socialanxiety.gif',
     content: [
       `Today was my first day of IKOMM Academy. This is a programming course that focuses on the C# programming language.`,
-      `The first day I got to the mentors and the other participants. Then we got a tour through the workplace. Very exciting.`,
+      `The first day I got to know the mentors and the other participants, then we got a tour through the workplace. Very exciting.`,
       `It's a scary new start with a new place to live, new languages and technologies to learn and new people to meet.`,
       `With this I want to give some big props to all our friendly and helpful mentors that made everything surprisingly tolerable.`,
     ]

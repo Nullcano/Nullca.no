@@ -25,7 +25,7 @@ __export(stdin_exports, {
   default: () => About
 });
 var import_index_b7314c68 = require("../../chunks/index-b7314c68.js");
-var import_Profile_9b1f7acd = require("../../chunks/Profile-9b1f7acd.js");
+var import_Profile_8cdc8bef = require("../../chunks/Profile-8cdc8bef.js");
 var Toolbox_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".toolbox.svelte-1c29f5r{position:relative;width:100%;margin-top:2rem;padding:1em;background:hsl(160, 25%, 5%);border-radius:1rem;border:2px solid hsl(160, 25%, 25%)}svg.svelte-1c29f5r{width:3rem;height:3rem;fill:currentColor}h1.svelte-1c29f5r{font-family:'Krona One', sans-serif}h3.svelte-1c29f5r{margin-top:2rem}ul.svelte-1c29f5r{display:flex;gap:1.5rem}li.svelte-1c29f5r{margin:.5rem;display:flex;align-items:center;gap:1rem;font-size:1rem}@media(max-width: 768px){ul.svelte-1c29f5r{flex-direction:column}li.svelte-1c29f5r{margin:.5rem 0}}",
@@ -60,7 +60,7 @@ const Toolbox = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slo
       <span>Blazor framework</span></li></ul></section>`;
 });
 const About = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slots) => {
-  return `${(0, import_index_b7314c68.v)(import_Profile_9b1f7acd.P, "Profile").$$render($$result, {}, {}, {})}
+  return `${(0, import_index_b7314c68.v)(import_Profile_8cdc8bef.P, "Profile").$$render($$result, {}, {}, {})}
 ${(0, import_index_b7314c68.v)(Toolbox, "Toolbox").$$render($$result, {}, {}, {})}`;
 });
 module.exports = __toCommonJS(stdin_exports);

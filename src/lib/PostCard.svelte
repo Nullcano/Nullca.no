@@ -21,7 +21,7 @@
       </a>
     </h2>
     <div class="post-card__time">
-      Posted <Time relative timestamp={item.date} />
+      Posted <Time timestamp={item.date} />
     </div>
     <p class="post-card__description">
       {stripHTML(item.content.join(' '))}
@@ -90,5 +90,46 @@
   }
   .post-card__tag:hover {
     background: var(--darken-dark);
+  }
+  @media (max-width: 768px) {
+    .post-card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      border-bottom: 2px solid var(--reset-dark);
+    }
+    .post-card__thumbnail {
+      display: none;
+    }
+    .post-card__content {
+      padding: 0 1rem;
+    }
+    .post-card__time {
+      margin-bottom: .5rem;
+    }
+    .post-card__title {
+      margin-bottom: 0.5rem;
+    }
+    .post-card__description {
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      line-height: 1.5;
+      overflow: hidden;
+    }
+    .post-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: .8rem;
+      gap: .5rem;
+    }
+    .post-card__tag {
+      padding: .25rem .5rem;
+      border-radius: .25rem;
+      background: var(--reset-dark);
+    }
+    .post-card__tag:hover {
+      background: var(--darken-dark);
+    }
   }
 </style>

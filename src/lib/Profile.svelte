@@ -125,10 +125,7 @@
       border-bottom-left-radius: 0;
     }
     .row {
-      grid-template-rows: 1fr;
-      grid-column-gap: 1rem;
-      grid-row-gap: 1rem;
-      font-size: 1.5rem;
+      display: none;
     }
     .row div {
       display: flex;
@@ -145,11 +142,11 @@
     }
     .box-wrap {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       grid-template-rows: 1fr;
     }
     .avatar {
-      border-right: 0;
+      display: none;
     }
     .info {
       padding: 1.5rem;
@@ -159,7 +156,7 @@
     .info h1 {
       margin: 0;
       padding-bottom: 1rem;
-      font-size: 3vw;
+      font-size: 2rem;
       text-transform: uppercase;
       font-family: 'Krona One', sans-serif;
     }

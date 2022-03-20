@@ -25,7 +25,7 @@ __export(stdin_exports, {
   default: () => Routes
 });
 var import_index_b7314c68 = require("../../chunks/index-b7314c68.js");
-var import_Profile_9b1f7acd = require("../../chunks/Profile-9b1f7acd.js");
+var import_Profile_8cdc8bef = require("../../chunks/Profile-8cdc8bef.js");
 var Header_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: "header.svelte-16hge5h.svelte-16hge5h{width:100%;display:flex;flex-direction:column}.title.svelte-16hge5h.svelte-16hge5h{width:100%;height:16vw}.title.svelte-16hge5h svg.svelte-16hge5h{width:100%;height:100%;transform:translate3d(0px, 0px, 0px)}svg.svelte-16hge5h text.svelte-16hge5h{position:relative;stroke:hsl(160, 25%, 75%);stroke-width:3;font-family:'Krona One', sans-serif;animation:svelte-16hge5h-text 3s linear forwards;pointer-events:none;user-select:none}@keyframes svelte-16hge5h-text{0%{stroke-dasharray:0 50%;stroke-dashoffset:30%;fill:transparent}50%{stroke-dasharray:25% 25%;stroke-dashoffset:0%;fill:transparent}100%{stroke-dasharray:50% 0;stroke-dashoffset:-30%;fill:hsl(160, 25%, 75%)}}",
@@ -110,6 +110,6 @@ const Routes = (0, import_index_b7314c68.c)(($$result, $$props, $$bindings, slot
 
 ${(0, import_index_b7314c68.v)(Header, "Header").$$render($$result, {}, {}, {})}
 ${(0, import_index_b7314c68.v)(JournalScroll, "JournalScroll").$$render($$result, {}, {}, {})}
-${(0, import_index_b7314c68.v)(import_Profile_9b1f7acd.P, "Profile").$$render($$result, {}, {}, {})}`;
+${(0, import_index_b7314c68.v)(import_Profile_8cdc8bef.P, "Profile").$$render($$result, {}, {}, {})}`;
 });
 module.exports = __toCommonJS(stdin_exports);
