@@ -3,7 +3,7 @@
 
 </script>
 <nav>
-  <ul class:active={active}>
+  <ul class:active={active} on:click="{() => active = !active}">
     <a href="/">Home</a> <span class="sep">▨</span>
     <a href="/about">About</a> <span class="sep">▨</span> 
     <a href="/projects">Projects</a> <span class="sep">▧</span> 

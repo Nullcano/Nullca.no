@@ -34,7 +34,7 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["avatar.gif", "favicon.ico", "heidal-sjoa.jpg"]),
   _: {
     mime: { ".gif": "image/gif", ".ico": "image/vnd.microsoft.icon", ".jpg": "image/jpeg" },
-    entry: { "file": "start-5b498c57.js", "js": ["start-5b498c57.js", "chunks/vendor-19f553c6.js"], "css": ["assets/vendor-c786f850.css"] },
+    entry: { "file": "start-0bb78716.js", "js": ["start-0bb78716.js", "chunks/vendor-674f7602.js"], "css": ["assets/vendor-c786f850.css"] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
