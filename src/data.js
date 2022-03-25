@@ -1,5 +1,19 @@
 export const journal = [
   {
+    slug: 'third-weekly-update',
+    title: 'Third Weekly Update',
+    date: '2022-03-25',
+    image: 'https://c.tenor.com/qNxVs9Eo0E4AAAAC/list-amazinggrace.gif',
+    content: [
+      `Third week is (nearly) over. This week we learned about lists, events, lambdas, and more advanced C# concepts.`,
+      `Most of it was really familiar, lambdas in particular, as I have been using arrow-functions a lot in JavaScript.`,
+      `I also studied more Blazor so I can eventually make some web apps using C#.`,
+      `Eventually I will rewrite this site to use Blazor instead of SvelteKit which I am currently using.`,
+      `As a conclusion for all the past three weeks I have learned a lot about C#, however I still got a few difficulties implementing some concepts into real applications.`,
+      `Google is my best friend after all so I will continue my own research and improve my skills.`,
+      `I just need to repeat what I have supposedly learned in the past weeks, since I got a short-term memory.`,
+    ]
+  }, {
     slug: 'second-weekly-update',
     title: 'Second Weekly Update',
     date: '2022-03-18',
