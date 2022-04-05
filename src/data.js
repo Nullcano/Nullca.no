@@ -2,6 +2,7 @@ export const journal = [
   {
     slug: 'third-weekly-update',
     title: 'Third Weekly Update',
+<<<<<<< Updated upstream
     date: '2022-03-25',
     image: 'https://c.tenor.com/qNxVs9Eo0E4AAAAC/list-amazinggrace.gif',
     content: [
@@ -12,6 +13,17 @@ export const journal = [
       `As a conclusion for all the past three weeks I have learned a lot about C#, however I still got a few difficulties implementing some concepts into real applications.`,
       `Google is my best friend after all so I will continue my own research and improve my skills.`,
       `I just need to repeat what I have supposedly learned in the past weeks, since I got a short-term memory.`,
+=======
+    date: '2022-04-01',
+    image: 'https://c.tenor.com/7GwaUZNvyK8AAAAC/building.gif',
+    content: [
+      `The third week is over and most of the lectures are done. Yesterday we got assigned a mini-prjoect that we are currently working on.`,
+      `In this project we are going to implement most of the core language features we have learned. The type of project is optional.`,
+      `I decided to go with Blazor Webassembly since I'm a front-end developer at heart. I will be making and idle/incremental game since it will use most of the core features quite rapidly.`,
+      `I am also a state management nerd, so this is going to be a fun challenge.`,
+      `We will be working on this for a couple weeks and then we will show the teacher and get a little review.`,
+      `I hope to deploy the application I am building and add it to my project page.`,
+>>>>>>> Stashed changes
     ]
   }, {
     slug: 'second-weekly-update',
