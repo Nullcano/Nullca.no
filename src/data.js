@@ -1,10 +1,11 @@
 export const journal = [
   {
     slug: 'fourth-weekly-update',
+    title: 'Fourth Weekly Update',
     date: '2022-04-01',
     image: 'https://c.tenor.com/7GwaUZNvyK8AAAAC/building.gif',
     content: [
-      `The third week is over and most of the lectures are done. Yesterday we got assigned a mini-prjoect that we are currently working on.`,
+      `The fourth week is over and most of the lectures are done. Yesterday we got assigned a mini-prjoect that we are currently working on.`,
       `In this project we are going to implement most of the core language features we have learned. The type of project is optional.`,
       `I decided to go with Blazor Webassembly since I'm a front-end developer at heart. I will be making and idle/incremental game since it will use most of the core features quite rapidly.`,
       `I am also a state management nerd, so this is going to be a fun challenge.`,
