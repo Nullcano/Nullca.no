@@ -1,5 +1,17 @@
 export const journal = [
   {
+    slug: 'fifth-weekly-update',
+    title: 'Fifth Weekly Update',
+    date: '2022-04-08',
+    image: 'https://c.tenor.com/DBqjevyA2o4AAAAd/bongo-cat-codes.gif',
+    content: [
+      `Week five is nearly over and I am still working on the project I mentioned in the last post.`,
+      `I have learned a lot about the Blazor framework, webassembly and how to implement C# code (for the most part).`,
+      `Obviously there has been some problems and minor issues I have faced during this project, but I always got Google and StackOverflow by my side.`,
+      `The mentors has also been very helpful and I can't give them enough credit.`,
+      `Hopefully I will finish this project with a satisfying result.`,
+    ]
+  }, {
     slug: 'fourth-weekly-update',
     title: 'Fourth Weekly Update',
     date: '2022-04-01',
