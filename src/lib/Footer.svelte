@@ -1,20 +1,14 @@
 <footer>
-  <div class="contained">
-    <span>
-      Steffen Wold &copy; 2022
-    </span>
-  </div>
+  <span>
+    Steffen Wold &copy; 2022
+  </span>
 </footer>
 
 <style>
   footer {
-    position: relative;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    padding: 3rem;
-  }
-  .contained {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1rem;
   }
 </style>

@@ -57,9 +57,8 @@
   .toolbox {
     position: relative;
     width: 100%;
-    margin-top: 2rem;
+    margin: 2rem 0 4rem 0;
     padding: 1em;
-    background: hsl(160, 25%, 5%);
     border-radius: 1rem;
     border: 2px solid hsl(160, 25%, 25%);
   }

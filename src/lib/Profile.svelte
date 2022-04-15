@@ -14,9 +14,6 @@
       <div>21-11-92</div>
     </div>
     <div class="box-wrap">
-      <div class="avatar">
-        <img src="../avatar.gif" alt="Steffen pixel portrait"/>
-      </div>
       <div class="info">
         <h1>Steffen Wold</h1>
         <p>▢ Front-end developer from Innlandet, Norway.</p>
@@ -32,10 +29,9 @@
     position: relative;
     margin-top: 2rem;
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     border-radius: 1rem;
-    background-color: hsla(160, 25%, 5%);
-    border: 2px solid hsla(160, 25%, 25%);
+    border: 2px solid rgb(0, 0, 0);
     overflow: hidden;
     display: flex;
     align-items: flex-start;
@@ -51,6 +47,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 50vh;
     background: url('../../heidal-sjoa.jpg') no-repeat center;
     background-size: cover;
     filter: saturate(.5);
@@ -58,9 +55,12 @@
   }
   .content {
     width: 66.666%;
-    background: hsla(160, 25%, 5%);
-    border-bottom: 2px solid hsla(160, 25%, 25%);
-    border-left: 2px solid hsla(160, 25%, 25%);
+    background-color: white;
+    background-image: url('../noise.svg');
+    background-position: 0 0;
+    animation: grain .5s infinite;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-left: 2px solid rgb(0, 0, 0);
     border-bottom-left-radius: 1rem;
   }
   .row {
@@ -70,7 +70,7 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    border-bottom: 2px solid hsla(160, 25%, 25%);
+    border-bottom: 2px solid rgb(0, 0, 0);
     font-size: 1.5rem;
   }
   .row div {
@@ -78,28 +78,13 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    border-right: 2px solid hsla(160, 25%, 25%);
+    border-right: 2px solid rgb(0, 0, 0);
   }
   .row div:last-child {
     border: 0;
   }
   svg {
     height: 2rem;
-  }
-  .box-wrap {
-    display: grid;
-    grid-template-columns: 1.09fr 2fr;
-    grid-template-rows: 1fr;
-  }
-  .avatar {
-    border-right: 2px solid hsla(160, 25%, 25%);
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .avatar img {
-    filter: saturate(.5);
-    object-fit: cover;
   }
   .info {
     position: relative;

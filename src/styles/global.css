@@ -25,19 +25,29 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: hsl(160, 25%, 75%);
-  background: hsl(160, 25%, 25%);
+  color: black;
+  background-color: white;
+  background-image: url('../noise.svg');
+  background-position: 0 0;
+  animation: grain .5s infinite;
   overflow-x: hidden;
   overflow-y: auto;
 }
-
+@keyframes grain {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
 a {
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 
 a:hover {
-  color: #fff;
+  color: black;
 }
 
 a:active, a:hover {

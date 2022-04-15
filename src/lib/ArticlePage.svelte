@@ -7,27 +7,12 @@
 
 <svelte:window bind:scrollY={y} />
 
-<figure class="splash">
-  {#if item.gallery}
-    <img 
-    style="transform: translate(0, -{y / 2}px); will-change:transform; transition:none" src={item.gallery[0]} alt={item.title}>
-    {:else}
-    <img src="../no-cover.webp" alt={item.title}>
-  {/if}
-</figure>
-
 <article class="item-page">
   <div class="content">
     <div class="title">
-      {#if item.image}
-        <figure class="cover">
-          <img src={item.image} alt={item.title}>
-        </figure>
-      {:else}
-        <figure class="cover">
-          <img src="../no-icon.webp" alt={item.title}>
-        </figure>
-      {/if}
+      <figure class="cover">
+        <img src="../thumb/{item.slug}.jpg" alt={item.title}>
+      </figure>
       <div class="info">
         <h1>{item.title}</h1>
         <div class="date-info">
@@ -59,32 +44,6 @@
   .back {
     padding: 2rem;
     font-size: 1.5rem;
-  }
-  .splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
-    z-index: -1;
-  }
-  .splash::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, hsla(220, 25%, 3%, .5) 0%, hsla(220, 25%, 3%, 1) 90%);
-  }
-  .splash img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.2;
   }
   .item-page {
     position: relative;
@@ -129,8 +88,10 @@
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 1rem;
+    filter: grayscale(1);
+    opacity: .5;
   }
   .tags {
     margin-bottom: 1rem;
@@ -142,7 +103,6 @@
   .tag {
     padding: .25rem .5rem;
     border-radius: 999px;
-    background: var(--reset-dark);
     border: 2px solid var(--darken-dark);
   }
   .tag:hover {
@@ -151,7 +111,6 @@
   .body {
     padding: 1rem;
     border-radius: 1rem;
-    background: hsl(160, 25%, 5%);
     border: 2px solid hsl(160, 25%, 25%);
   }
   @media (max-width: 768px) {

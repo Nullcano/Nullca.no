@@ -1,6 +1,7 @@
 <script>
   import Header from '$lib/Header.svelte'
   import JournalScroll from '$lib/JournalScroll.svelte'
+  import Cube from '$lib/Cube.svelte'
   import Profile from '$lib/Profile.svelte'
 </script>
 
@@ -14,10 +15,5 @@
   <meta property="og:image" content="">
 </svelte:head>
 
-<Header />
+<Cube />
 <JournalScroll />
-<Profile />
-
-<style>
-
-</style>

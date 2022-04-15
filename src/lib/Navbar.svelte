@@ -2,79 +2,79 @@
   let active = false;
 
 </script>
+
 <nav>
+  <div class="toggle" on:click="{() => active = !active}">
+    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zm11.5 0a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zm-1.25 7a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm1.25 4.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM2.25 9.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm7-1.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM8 15a1.25 1.25 0 100-2.5A1.25 1.25 0 008 15zM9.25 2.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM2.25 15a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" fill="#000"/>
+    </svg>
+  </div>
   <ul class:active={active} on:click="{() => active = !active}">
-    <a href="/">Home</a> <span class="sep">▨</span>
-    <a href="/about">About</a> <span class="sep">▨</span> 
-    <a href="/projects">Projects</a> <span class="sep">▧</span> 
-    <a href="/journal">Academy Journal</a> <span class="sep">▧</span> 
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/journal">Academy Journal</a>
     <a href="mailto:woldsteffen@gmail.com">Mail</a>
   </ul>
-  <div class="only-mobile" on:click="{() => active = !active}">
-    <span>Menu ≡</span>
-  </div>
 </nav>
 
 <style>
   nav {
-    position: sticky;
-    width: 100%;
+    position: fixed;
     top: 1rem;
-    padding: .5rem;
+    right: 1rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 1rem;
-    color: hsl(160, 25%, 75%);
-    background: hsl(160, 25%, 5%);
-    border: 2px solid hsl(160, 25%, 25%);
-    border-radius: 1rem;
-    text-align: center;
-    text-transform: uppercase;
     font-size: 1.25rem;
     z-index: 9;
   }
   ul {
-    margin: 0;
-    width: 100%;
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    max-width: 400px;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    background-image: url('../noise.svg');
+    background-position: 0 0;
+    animation: grain .5s infinite;
+    overflow: hidden;
   }
-  .sep {
-    font-size: 2rem;
+
+  ul.active {
+    width: 100%;
+    height: auto;
+    transition: all .25s ease-in-out;
   }
-  .only-mobile {
-    display: none;
+
+  a {
+    padding: 0;
+    font-size: 1.5rem;
   }
+
+  .active a {
+    padding: 1rem;
+    transition: all .25s ease-in-out;
+  }
+
+  .active a:hover {
+    padding: 1rem 2rem;
+  }
+
+  .toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
-    nav {
-      display: flex;
-      flex-direction: column;
-    }
-    ul {
-      padding: 0;
-      order: 1;
-      display: none;
-    }
-    ul.active {
-      display: flex;
-      flex-direction: column;
-    }
-    a {
-      width: 100%;
-      padding: 1rem;
-    }
-    .sep {
-      display: none;
-    }
-    .only-mobile {
-      order: 0;
-      width: 100%;
-      display: grid;
-      place-content: center;
-      cursor: pointer;
-    }
+ 
   }
 </style>

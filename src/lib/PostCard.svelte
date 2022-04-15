@@ -7,11 +7,7 @@
 <article class="post-card">
   <figure class="post-card__thumbnail">
     <a href={`/journal/${item.slug}`} class="post-card__link">
-      {#if item.image}
-        <img src={item.image} alt={item.title} class="post-card__img" />
-        {:else}
-        <img src="../no-cover.webp" alt={item.title} class="post-card__img" />
-      {/if}
+      <img src="../thumb/{item.slug}.jpg" alt={item.title} />
     </a>
   </figure>
   <div class="post-card__content">
@@ -56,6 +52,8 @@
     object-fit: contain;
     border-radius: 1rem;
     transition: all .2s ease-in-out;
+    filter: grayscale(1);
+    opacity: .5;
   }
   .post-card:hover .post-card__thumbnail img {
     transform: scale(1.25) rotate(5deg);

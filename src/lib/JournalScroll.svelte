@@ -3,73 +3,46 @@
 </script>
 
 <a href="./journal">
-  <div class="row journal">
-    <Marquee>
-      <img src="https://www.ikomm.no/wp-content/uploads/2019/09/MicrosoftTeams-image-11-e1638183518928.png" alt="IKOMM" />
-      <span>Academy</span>
+  <div class="button">
+    <div class="icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16"><path d="M15.09 12.79a1 1 0 0 0-.086-1.638L15 5.33 14 6v5.15a1.001 1.001 0 0 0-.092 1.629l-.378.502a2.48 2.48 0 0 0-.53 1.498v1.222H13.815a.88.88 0 0 0 .853-.664l.331-1.336v2h1v-1.21a2.486 2.486 0 0 0-.534-1.505zM8 0 0 4l8 5 8-5-8-4z"/><path d="M8 10 3 6.67v1.71C3 9.29 5.94 12 8 12s5-2.71 5-3.62V6.67z"/></svg>
-      <span>Journal</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489.6 489.6"><path d="M64.75 82.1h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.7 10.1 10.1 10.1zM64.75 182.4h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.7 10.1 10.1 10.1zM64.75 327.8h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.5 4.7 10.1 10.1 10.1zM131.25 418.1c0-5.4-4.3-10.1-10.1-10.1h-56.4c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.3 10.1 10.1 10.1h56.8c5.5-.4 9.7-4.7 9.7-10.1z"/><path d="M93.15 0v42h28.4c16.3 0 29.9 13.2 29.9 29.9s-13.2 29.9-29.9 29.9h-28.4v40.4h28.4c16.3 0 29.9 13.2 29.9 29.9s-13.6 29.9-29.9 29.9h-28.4v85.6h28.4c16.3 0 29.9 13.2 29.9 29.9 0 16.3-13.2 29.9-29.9 29.9h-28.4v40.4h28.4c16.3 0 29.9 13.2 29.9 29.9 0 16.3-13.2 29.9-29.9 29.9h-28.4v42h341.8V0H93.15z"/></svg>
-      <img src="https://www.ikomm.no/wp-content/uploads/2019/09/MicrosoftTeams-image-11-e1638183518928.png" alt="IKOMM" />
+    </div>
+    <div class="text">
       <span>Academy</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16"><path d="M15.09 12.79a1 1 0 0 0-.086-1.638L15 5.33 14 6v5.15a1.001 1.001 0 0 0-.092 1.629l-.378.502a2.48 2.48 0 0 0-.53 1.498v1.222H13.815a.88.88 0 0 0 .853-.664l.331-1.336v2h1v-1.21a2.486 2.486 0 0 0-.534-1.505zM8 0 0 4l8 5 8-5-8-4z"/><path d="M8 10 3 6.67v1.71C3 9.29 5.94 12 8 12s5-2.71 5-3.62V6.67z"/></svg>
       <span>Journal</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489.6 489.6"><path d="M64.75 82.1h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.7 10.1 10.1 10.1zM64.75 182.4h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.7 10.1 10.1 10.1zM64.75 327.8h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.5 4.7 10.1 10.1 10.1zM131.25 418.1c0-5.4-4.3-10.1-10.1-10.1h-56.4c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.3 10.1 10.1 10.1h56.8c5.5-.4 9.7-4.7 9.7-10.1z"/><path d="M93.15 0v42h28.4c16.3 0 29.9 13.2 29.9 29.9s-13.2 29.9-29.9 29.9h-28.4v40.4h28.4c16.3 0 29.9 13.2 29.9 29.9s-13.6 29.9-29.9 29.9h-28.4v85.6h28.4c16.3 0 29.9 13.2 29.9 29.9 0 16.3-13.2 29.9-29.9 29.9h-28.4v40.4h28.4c16.3 0 29.9 13.2 29.9 29.9 0 16.3-13.2 29.9-29.9 29.9h-28.4v42h341.8V0H93.15z"/></svg>
-      <img class="not-mobile" src="https://www.ikomm.no/wp-content/uploads/2019/09/MicrosoftTeams-image-11-e1638183518928.png" alt="IKOMM" />
-      <span class="not-mobile">Academy</span>
-      <svg class="not-mobile" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16"><path d="M15.09 12.79a1 1 0 0 0-.086-1.638L15 5.33 14 6v5.15a1.001 1.001 0 0 0-.092 1.629l-.378.502a2.48 2.48 0 0 0-.53 1.498v1.222H13.815a.88.88 0 0 0 .853-.664l.331-1.336v2h1v-1.21a2.486 2.486 0 0 0-.534-1.505zM8 0 0 4l8 5 8-5-8-4z"/><path d="M8 10 3 6.67v1.71C3 9.29 5.94 12 8 12s5-2.71 5-3.62V6.67z"/></svg>
-      <span class="not-mobile">Journal</span>
-      <svg class="not-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489.6 489.6"><path d="M64.75 82.1h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.7 10.1 10.1 10.1zM64.75 182.4h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.7 10.1 10.1 10.1zM64.75 327.8h56.8c5.4 0 10.1-4.3 10.1-10.1 0-5.4-4.3-10.1-10.1-10.1h-56.8c-5.4 0-10.1 4.3-10.1 10.1 0 5.5 4.7 10.1 10.1 10.1zM131.25 418.1c0-5.4-4.3-10.1-10.1-10.1h-56.4c-5.4 0-10.1 4.3-10.1 10.1 0 5.4 4.3 10.1 10.1 10.1h56.8c5.5-.4 9.7-4.7 9.7-10.1z"/><path d="M93.15 0v42h28.4c16.3 0 29.9 13.2 29.9 29.9s-13.2 29.9-29.9 29.9h-28.4v40.4h28.4c16.3 0 29.9 13.2 29.9 29.9s-13.6 29.9-29.9 29.9h-28.4v85.6h28.4c16.3 0 29.9 13.2 29.9 29.9 0 16.3-13.2 29.9-29.9 29.9h-28.4v40.4h28.4c16.3 0 29.9 13.2 29.9 29.9 0 16.3-13.2 29.9-29.9 29.9h-28.4v42h341.8V0H93.15z"/></svg>
-    </Marquee>
+    </div>
   </div>
 </a>
 
 <style>
-  .row {
-    width: 100%;
-    padding: 1rem 0;
+  .button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .5rem 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
-    flex-wrap: nowrap;
-    flex-flow: row wrap;
     gap: 1rem;
     color: hsl(160, 25%, 75%);
     background: hsl(160, 25%, 5%);
     border: 2px solid hsl(160, 25%, 25%);
-    border-radius: 1rem;
+    border-radius: 999px;
   }
-  .journal {
-    font-size: 2.5rem;
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  span {
+    font-size: 1rem;
     font-family: 'Righteous', sans-serif;
     text-transform: uppercase;
   }
-  .row img {
-    height: 2rem;
-    opacity: .8;
-  }
-  .row svg {
+  svg {
     height: 2rem;
     fill: currentColor;
   }
   @media (max-width: 768px) {
-    .row {
-      gap: .5rem;
-    }
-    .journal {
-      font-size: 1.25rem;
-    }
-    .row img {
-      height: 1rem;
-      opacity: .8;
-    }
-    .row svg {
-      height: 1rem;
-      fill: currentColor;
-    }
-    .not-mobile {
-      display: none;
-    }
+
   }
 </style>

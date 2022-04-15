@@ -1,9 +1,18 @@
 export const journal = [
   {
+    slug: 'sixth-weekly-update',
+    title: 'Sixth Weekly Update',
+    date: '2022-04-15',
+    content: [
+      `Easter vacation week. I went back to my hometown last weekend to visit my family.`,
+      `This have just been a relaxing week overall, but I have been updating my website now and then.`,
+      `I have looked into more Blazor things this week as well, but I don't have the proper workstation to play around with it.`,
+      `Rolling back to Lillehammer tomorrow and then I will be back in business.`,
+    ]
+  }, {
     slug: 'fifth-weekly-update',
     title: 'Fifth Weekly Update',
     date: '2022-04-08',
-    image: 'https://c.tenor.com/DBqjevyA2o4AAAAd/bongo-cat-codes.gif',
     content: [
       `Week five is nearly over and I am still working on the project I mentioned in the last post.`,
       `I have learned a lot about the Blazor framework, webassembly and how to implement C# code (for the most part).`,
@@ -15,7 +24,6 @@ export const journal = [
     slug: 'fourth-weekly-update',
     title: 'Fourth Weekly Update',
     date: '2022-04-01',
-    image: 'https://c.tenor.com/7GwaUZNvyK8AAAAC/building.gif',
     content: [
       `The fourth week is over and most of the lectures are done. Yesterday we got assigned a mini-prjoect that we are currently working on.`,
       `In this project we are going to implement most of the core language features we have learned. The type of project is optional.`,
@@ -29,7 +37,6 @@ export const journal = [
     slug: 'third-weekly-update',
     title: 'Third Weekly Update',
     date: '2022-03-25',
-    image: 'https://c.tenor.com/qNxVs9Eo0E4AAAAC/list-amazinggrace.gif',
     content: [
       `Third week is (nearly) over. This week we learned about lists, events, lambdas, and more advanced C# concepts.`,
       `Most of it was really familiar, lambdas in particular, as I have been using arrow-functions a lot in JavaScript.`,
@@ -43,7 +50,6 @@ export const journal = [
     slug: 'second-weekly-update',
     title: 'Second Weekly Update',
     date: '2022-03-18',
-    image: 'https://c.tenor.com/dlp5H9WSXkAAAAAd/me-myself-irene-charlie.gif',
     content: [
       `So this has been the first week of lectures with Erik, our Dutch programming teacher.`,
       `He introduced us to the core concepts of C# and everything made sense until we started the exercises.`,
@@ -56,7 +62,6 @@ export const journal = [
     slug: 'first-weekly-update',
     title: 'First Weekly Update',
     date: '2022-03-11',
-    image: 'https://c.tenor.com/v59uPIpJvkUAAAAS/sushichaeng-reaction.gif',
     content: [
       `This week I have gotten to know the mentors and the participants of the IKOMM Academy course.`,
       `It has been a complete change in my life as I got a new schedule in a new city.`,
@@ -67,7 +72,6 @@ export const journal = [
     slug: 'git-api',
     title: 'Git and API',
     date: '2022-03-10',
-    image: 'https://c.tenor.com/Mfamt2u-Mb0AAAAC/il-paradiso-delle-signore-vittorio-conti.gif',
     content: [
       `Today we got introduced to what Git is and how to use the basic commands. I already knew how to use Git, but I was still intrigued.`,
       `After lunch we had a simple introduction to API, what they are, and how to use them. This was also something I was familiar with.`,
@@ -77,7 +81,6 @@ export const journal = [
     slug: 'no-code-journal-writing',
     title: 'No-Code and Journal Writing',
     date: '2022-03-09',
-    image: 'https://c.tenor.com/UiKDGrO_6XAAAAAM/nocode-quixy.gif',
     content: [
       `Today our mentor, Aksel, showed us what he likes to do with modern technology.`,
       `He introduced us to the no-code concept where you build applications without coding.`,
@@ -88,7 +91,6 @@ export const journal = [
     slug: 'standup-setup',
     title: 'Standup and Setup',
     date: '2022-03-08',
-    image: 'https://c.tenor.com/2c7diqh1oVIAAAAM/anime-computer.gif',
     content: [
       `Today we had a standup which is a routine where we tell everyone what we did yesterday, any issues we had and what we will be doing today.`,
       `We also got our computers set up for the course. This was a fairly quiet day so we had some time playing games like Codewars and Jackbox`,
@@ -98,7 +100,6 @@ export const journal = [
     slug: 'meet-greet-tour',
     title: 'Meet, Greet and Tour',
     date: '2022-03-07',
-    image: 'https://c.tenor.com/9JA98bXvDqgAAAAC/workingonit-socialanxiety.gif',
     content: [
       `Today was my first day of IKOMM Academy. This is a programming course that focuses on the C# programming language.`,
       `The first day I got to know the mentors and the other participants, then we got a tour through the workplace. Very exciting.`,
