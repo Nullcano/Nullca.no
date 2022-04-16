@@ -48,9 +48,8 @@
     position: absolute;
     width: 16rem;
     height: 16rem;
-    background: url('https://media.giphy.com/media/kL5AAxpDpSvUJWR3xf/giphy-downsized-large.gif');
+    background: url('../slices.webp');
     background-size: cover;
-    filter: grayscale(1) brightness(0.25) invert(1);
   }
 
   .box-front {
