@@ -48,7 +48,8 @@
     position: absolute;
     width: 16rem;
     height: 16rem;
-    background: url('../slices.webp');
+    background-image: url('../slices.webp');
+    background-position: center center;
     background-size: cover;
   }
 

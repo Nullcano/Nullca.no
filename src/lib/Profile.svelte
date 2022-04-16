@@ -130,9 +130,6 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
     }
-    .avatar {
-      display: none;
-    }
     .info {
       padding: 1.5rem;
       display: flex;
