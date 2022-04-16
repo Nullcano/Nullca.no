@@ -48,7 +48,7 @@
     width: 100%;
     height: 100%;
     min-height: 50vh;
-    background: url('../../heidal-sjoa.jpg') no-repeat center;
+    background: url('/heidal-sjoa.jpg') no-repeat center;
     background-size: cover;
     filter: saturate(.5);
     mix-blend-mode: overlay;
@@ -56,7 +56,7 @@
   .content {
     width: 66.666%;
     background-color: white;
-    background-image: url('../noise.svg');
+    background-image: url('/noise.svg');
     background-position: 0 0;
     animation: grain .5s infinite;
     border-bottom: 2px solid rgb(0, 0, 0);

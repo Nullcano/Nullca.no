@@ -27,7 +27,7 @@ body {
   font-weight: 400;
   color: black;
   background-color: white;
-  background-image: url('../noise.svg');
+  background-image: url('/noise.svg');
   background-position: 0 0;
   animation: grain .5s infinite;
   overflow-x: hidden;

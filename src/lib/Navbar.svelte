@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    background-image: url('../noise.svg');
+    background-image: url('/noise.svg');
     background-position: 0 0;
     animation: grain .5s infinite;
     overflow: hidden;
