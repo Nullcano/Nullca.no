@@ -1,26 +1,26 @@
 <script>
-  export let title, description
+  export let title
 </script>
 
 <div class="page-title">
   <h1 class="title">
     {title}
   </h1>
-  {#if description}
-  <p>
-    {@html description}
-  </p>
-  {/if}
 </div>
 
 <style>
   .page-title {
     position: relative;
     padding: 2rem;
+    font-size: 2vw;
+    font-family: 'Krona One', sans-serif;
+    text-transform: uppercase;
   }
-  p {
-    max-width: 720px;
+
+  h1 {
+    margin: 0;
   }
+
   @media only screen and (max-width: 768px) {
     .page-title {
       margin-bottom: 1rem;

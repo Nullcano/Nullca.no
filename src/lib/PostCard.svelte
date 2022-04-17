@@ -1,56 +1,60 @@
 <script>
   import Time from 'svelte-time'
-  import { stripHTML, slugify } from '$lib/utils'
+  import { stripHTML, slugify, idfy } from '$lib/utils'
   export let item
 </script>
 
 <article class="post-card">
+  <div class="post-id">
+    <span>{idfy(item.id)}</span>
+  </div>
   <figure class="post-card__thumbnail">
     <a href={`/journal/${item.slug}`} class="post-card__link">
-      <img src="../thumb/{item.slug}.jpg" alt={item.title} />
+      <img src="/thumb/{item.slug}.jpg" alt={item.title} />
     </a>
   </figure>
   <div class="post-card__content">
+    <div class="post-card__time">
+      Posted <Time timestamp={item.date} />
+    </div>
     <h2 class="post-card__title">
       <a href={`/journal/${item.slug}`} class="post-card__link">
         {item.title}
       </a>
     </h2>
-    <div class="post-card__time">
-      Posted <Time timestamp={item.date} />
-    </div>
     <p class="post-card__description">
-      {stripHTML(item.content.join(' '))}
+      {stripHTML(item.content[0])}
     </p>
-    {#if item.tags}
-    <div class="post-card__tags">
-      {#each item.tags.slice(0, 5) as tag}
-        <a href={`/tags/${slugify(tag)}`} class="post-card__tag">
-          {tag}
-        </a>
-      {/each}
-    </div>
-    {/if}
   </div>
 </article>
 
 <style>
   .post-card {
+    position: relative;
+    padding: 2rem 1rem;
     display: grid;
-    grid-template-columns: 20rem 1fr;
+    grid-template-columns: 3rem 20rem 1fr;
     grid-template-rows: auto;
-    gap: 1.5rem;
+    grid-column-gap: 1.5rem;
+    border-bottom: 1px solid #000;
+  }
+  .post-card:last-child {
+    margin-bottom: 4rem;
+    border: 0;
   }
   .post-card__thumbnail {
+    margin: 0;
+    padding: 0;
     position: relative;
-    width: 20rem;
+    width: 100%;
     height: 10rem;
+    border-radius: 1rem;
+    overflow: hidden;
   }
   .post-card__thumbnail img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 1rem;
+    object-fit: cover;
     transition: all .2s ease-in-out;
     filter: grayscale(1);
     opacity: .5;
@@ -75,30 +79,21 @@
     line-height: 1.5;
     overflow: hidden;
   }
-  .post-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: .8rem;
-    gap: .5rem;
-  }
-  .post-card__tag {
-    padding: .25rem .5rem;
-    border-radius: .25rem;
-    background: var(--reset-dark);
-  }
-  .post-card__tag:hover {
-    background: var(--darken-dark);
-  }
   @media (max-width: 768px) {
     .post-card {
+      padding: 1rem 0;
       grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      border-bottom: 2px solid var(--reset-dark);
     }
     .post-card__thumbnail {
-      display: none;
+      order: -1;
+    }
+    .post-id {
+      position: absolute;
+      top: 13rem;
     }
     .post-card__content {
+      margin-top: 2rem;
+      margin-left: 2rem;
       padding: 0 1rem;
     }
     .post-card__time {
@@ -114,20 +109,6 @@
       -webkit-line-clamp: 3;
       line-height: 1.5;
       overflow: hidden;
-    }
-    .post-card__tags {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: .8rem;
-      gap: .5rem;
-    }
-    .post-card__tag {
-      padding: .25rem .5rem;
-      border-radius: .25rem;
-      background: var(--reset-dark);
-    }
-    .post-card__tag:hover {
-      background: var(--darken-dark);
     }
   }
 </style>

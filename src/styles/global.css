@@ -29,16 +29,13 @@ body {
   background-color: white;
   background-image: url('/noise.svg');
   background-position: 0 0;
-  animation: grain .5s infinite;
+  animation: grain .1s infinite;
   overflow-x: hidden;
   overflow-y: auto;
 }
 @keyframes grain {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 0;
+  to {
+    background-position: 500px 500px;
   }
 }
 a {

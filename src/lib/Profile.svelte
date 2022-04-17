@@ -58,7 +58,7 @@
     background-color: white;
     background-image: url('/noise.svg');
     background-position: 0 0;
-    animation: grain .5s infinite;
+    animation: grain .1s infinite;
     border-bottom: 2px solid rgb(0, 0, 0);
     border-left: 2px solid rgb(0, 0, 0);
     border-bottom-left-radius: 1rem;

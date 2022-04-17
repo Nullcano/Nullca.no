@@ -1,5 +1,6 @@
 export const journal = [
   {
+    id: 10,
     slug: 'sixth-weekly-update',
     title: 'Sixth Weekly Update',
     date: '2022-04-15',
@@ -10,6 +11,7 @@ export const journal = [
       `Rolling back to Lillehammer tomorrow and then I will be back in business.`,
     ]
   }, {
+    id: 9,
     slug: 'fifth-weekly-update',
     title: 'Fifth Weekly Update',
     date: '2022-04-08',
@@ -21,6 +23,7 @@ export const journal = [
       `Hopefully I will finish this project with a satisfying result.`,
     ]
   }, {
+    id: 8,
     slug: 'fourth-weekly-update',
     title: 'Fourth Weekly Update',
     date: '2022-04-01',
@@ -34,6 +37,7 @@ export const journal = [
       `(Disclaimer: This is not an April Fool's joke.)`,
     ]
   }, {
+    id: 7,
     slug: 'third-weekly-update',
     title: 'Third Weekly Update',
     date: '2022-03-25',
@@ -47,6 +51,7 @@ export const journal = [
       `I just need to repeat what I have supposedly learned in the past weeks, since I got a short-term memory.`,
     ]
   }, {
+    id: 6,
     slug: 'second-weekly-update',
     title: 'Second Weekly Update',
     date: '2022-03-18',
@@ -59,6 +64,7 @@ export const journal = [
       `Next week we will build on top of that and start to learn more about the language. See you in the next post.`,
     ]
   }, {
+    id: 5,
     slug: 'first-weekly-update',
     title: 'First Weekly Update',
     date: '2022-03-11',
@@ -69,6 +75,7 @@ export const journal = [
       `There isn't a lot more to say about this week than it has been a new and exciting experience.`,
     ]
   }, {
+    id: 4,
     slug: 'git-api',
     title: 'Git and API',
     date: '2022-03-10',
@@ -78,6 +85,7 @@ export const journal = [
       `These are still very important topics in development and I'm happy they made us all aware of these this early in the course.`
     ]
   }, {
+    id: 3,
     slug: 'no-code-journal-writing',
     title: 'No-Code and Journal Writing',
     date: '2022-03-09',
@@ -88,6 +96,7 @@ export const journal = [
       `Combining these together we got a free and functional blog application.`,
     ]
   }, {
+    id: 2,
     slug: 'standup-setup',
     title: 'Standup and Setup',
     date: '2022-03-08',
@@ -97,6 +106,7 @@ export const journal = [
       `Fun day over all and looking forward for more.`,
     ]
   }, {
+    id: 1,
     slug: 'meet-greet-tour',
     title: 'Meet, Greet and Tour',
     date: '2022-03-07',

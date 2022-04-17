@@ -111,7 +111,7 @@
   .body {
     padding: 1rem;
     border-radius: 1rem;
-    border: 2px solid hsl(160, 25%, 25%);
+    background: #fff;
   }
   @media (max-width: 768px) {
     .cover {

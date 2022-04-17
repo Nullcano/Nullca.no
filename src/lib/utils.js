@@ -10,3 +10,14 @@ export const stripHTML = (str) => {
   else { str = '' + str }
   return str.replace( /(<([^>]+)>)/ig, '')
 }
+
+export const idfy = (num) => {
+  if (num < 10) {
+    num = `00${num}`
+  } else if (num >= 10 && num < 100) {
+    num = `0${num}`
+  } else {
+    num = `${num}`
+  }
+  return num
+}
