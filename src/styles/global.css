@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -27,12 +27,23 @@ body {
   font-weight: 400;
   color: black;
   background-color: white;
-  background-image: url('/noise.svg');
-  background-position: 0 0;
-  animation: grain .1s infinite;
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/noise.svg');
+  background-position: 0 0;
+  animation: grain .1s infinite;
+  z-index: -1;
+}
+
 @keyframes grain {
   to {
     background-position: 500px 500px;

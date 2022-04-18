@@ -22,9 +22,8 @@
     padding: .5rem 1rem;
     display: flex;
     gap: 1rem;
-    color: hsl(160, 25%, 75%);
-    background: hsl(160, 25%, 5%);
-    border: 2px solid hsl(160, 25%, 25%);
+    color: white;
+    background: black;
     border-radius: 999px;
   }
   .text {

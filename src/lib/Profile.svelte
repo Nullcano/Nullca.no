@@ -1,4 +1,4 @@
-<section>
+<div class="profile">
   <figure></figure>
   <div class="content">
     <div class="row">
@@ -22,12 +22,11 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <style>
-  section {
+  .profile {
     position: relative;
-    margin-top: 2rem;
     width: 100%;
     min-height: 50vh;
     border-radius: 1rem;
@@ -50,7 +49,7 @@
     min-height: 50vh;
     background: url('/heidal-sjoa.jpg') no-repeat center;
     background-size: cover;
-    filter: saturate(.5);
+    filter: grayscale(1);
     mix-blend-mode: overlay;
   }
   .content {
@@ -100,7 +99,7 @@
     font-family: 'Krona One', sans-serif;
   }
   @media (max-width: 768px) {
-    section {
+    .profile {
       min-height: auto;
     }
     .content {
