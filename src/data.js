@@ -1,5 +1,17 @@
 export const journal = [
   {
+    id: 11,
+    slug: 'seventh-weekly-update',
+    title: 'Sixth Weekly Update',
+    date: '2022-04-22',
+    content: [
+      `This week has been mostly about APIs. What they are, how they work, and how to create them.`,
+      `We looked also got familiar with some design patterns which we also used to create various API structures.`,
+      `I have used APIs before but never made one myself. This was an interesting journey as most weeks.`,
+      `Today my teacher finally saw my mini-project as well, and told me my creative skills were really important.`,
+      `As mainly being a creative designer I was happy to hear that.`,
+    ]
+  }, {
     id: 10,
     slug: 'sixth-weekly-update',
     title: 'Sixth Weekly Update',
