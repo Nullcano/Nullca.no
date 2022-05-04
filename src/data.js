@@ -1,5 +1,15 @@
 export const journal = [
   {
+    id: 12,
+    slug: 'twelfth-weekly-update',
+    title: 'Twelfth Weekly Update',
+    date: '2022-04-29',
+    content: [
+      `We had our final lectures this week including more API structures, design patterns and Git workflow.`,
+      `Our case study requirements has been set as well so we looked into project planning and methodologies like waterfall and agile.`,
+      `Next week we will be planning what to do for the case study. Exciting times ahead.`,
+    ]
+  }, {
     id: 11,
     slug: 'seventh-weekly-update',
     title: 'Seventh Weekly Update',
