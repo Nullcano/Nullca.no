@@ -1,8 +1,8 @@
 export const journal = [
   {
     id: 12,
-    slug: 'twelfth-weekly-update',
-    title: 'Twelfth Weekly Update',
+    slug: 'eighth-weekly-update',
+    title: 'Eighth Weekly Update',
     date: '2022-04-29',
     content: [
       `We had our final lectures this week including more API structures, design patterns and Git workflow.`,
