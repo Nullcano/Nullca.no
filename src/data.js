@@ -1,5 +1,35 @@
 export const journal = [
   {
+    id: 15,
+    slug: 'eleventh-weekly-update',
+    title: 'Eleventh Weekly Update',
+    date: '2022-05-20',
+    content: [
+      `This week has been a lot of tweaking and refactoring in the case study application.`,
+      `We are currently in the progress of implementing the backend to the frontend.`,
+      `When we have figured out how to use our API collections we will aim to make a working demo.`,
+    ]
+  }, {
+    id: 14,
+    slug: 'tenth-weekly-update',
+    title: 'Tenth Weekly Update',
+    date: '2022-05-13',
+    content: [
+      `Our case study is in rapid development and I am currently in charge of the frontend.`,
+      `My team partner is working with MongoDB in the backend which we will eventually start using.`,
+      `We got feedback and ideas from mentors and our case study product owner that we will start implement.`,
+    ]
+  }, {
+    id: 13,
+    slug: 'ninth-weekly-update',
+    title: 'Ninth Weekly Update',
+    date: '2022-05-06',
+    content: [
+      `We have been planning our case study this week and we had a lot of fun ideas for games.`,
+      `During the last weeked I had seconds thoughts about the game ideas and we got some ideas for a more useful application.`,
+      `The application we will be building will be an app for volunteers to request and offer help for people in need.`,
+    ]
+  }, {
     id: 12,
     slug: 'eighth-weekly-update',
     title: 'Eighth Weekly Update',
