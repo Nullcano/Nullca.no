@@ -8,7 +8,7 @@
 
 <script>
 	import { stripHTML } from '$lib/utils';
-	import ArticlePage from '$lib/Journal/PostPage.svelte';
+	import ArticlePage from '$lib/Blog/PostPage.svelte';
 	export let item;
 </script>
 
@@ -16,7 +16,7 @@
 	<title>{item.title} - Steffen Wold</title>
 	<meta property="og:title" content="{item.title} - Steffen Wold" />
 	<meta property="og:site_name" content="Steffen Wold" />
-	<meta property="og:url" content="https://steffen.id/journal/{item.slug}" />
+	<meta property="og:url" content="https://steffen.id/blog/{item.slug}" />
 	<meta property="og:description" content={stripHTML(item.content[0])} />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content={item.cover} />

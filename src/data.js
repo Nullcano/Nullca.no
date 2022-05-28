@@ -1,5 +1,28 @@
-export const journal = [
+export const data = [
   {
+    type: 'projects',
+    id: 0,
+    slug: 'steffen-id',
+    title: 'Steffen.id',
+    date: '2022-05-28',
+    content: [
+      `Steffen.id is my personal website which you are currently on.`,
+      `The website is built with SvelteKit and uses local data for posts.`,
+      `The website is hosted on Netlify.`,
+    ]
+  }, {
+    type: 'blog',
+    id: 16,
+    slug: 'lets-try-blogging',
+    title: `Let's try blogging`,
+    date: '2022-05-28',
+    content: [
+      `Hello! I have been adding more layers for publishing content.`,
+      `The project page is now online along with this simple blog.`,
+      `Not sure what I will post about here yet but time will show.`,
+    ]
+  }, {
+    type: 'journal',
     id: 15,
     slug: 'eleventh-weekly-update',
     title: 'Eleventh Weekly Update',
@@ -10,6 +33,7 @@ export const journal = [
       `When we have figured out how to use our API collections we will aim to make a working demo.`,
     ]
   }, {
+    type: 'journal',
     id: 14,
     slug: 'tenth-weekly-update',
     title: 'Tenth Weekly Update',
@@ -20,6 +44,7 @@ export const journal = [
       `We got feedback and ideas from mentors and our case study product owner that we will start implement.`,
     ]
   }, {
+    type: 'journal',
     id: 13,
     slug: 'ninth-weekly-update',
     title: 'Ninth Weekly Update',
@@ -30,6 +55,7 @@ export const journal = [
       `The application we will be building will be an app for volunteers to request and offer help for people in need.`,
     ]
   }, {
+    type: 'journal',
     id: 12,
     slug: 'eighth-weekly-update',
     title: 'Eighth Weekly Update',
@@ -40,6 +66,7 @@ export const journal = [
       `Next week we will be planning what to do for the case study. Exciting times ahead.`,
     ]
   }, {
+    type: 'journal',
     id: 11,
     slug: 'seventh-weekly-update',
     title: 'Seventh Weekly Update',
@@ -52,6 +79,7 @@ export const journal = [
       `As mainly being a creative designer I was happy to hear that.`,
     ]
   }, {
+    type: 'journal',
     id: 10,
     slug: 'sixth-weekly-update',
     title: 'Sixth Weekly Update',
@@ -63,6 +91,7 @@ export const journal = [
       `Rolling back to Lillehammer tomorrow and then I will be back in business.`,
     ]
   }, {
+    type: 'journal',
     id: 9,
     slug: 'fifth-weekly-update',
     title: 'Fifth Weekly Update',
@@ -75,6 +104,7 @@ export const journal = [
       `Hopefully I will finish this project with a satisfying result.`,
     ]
   }, {
+    type: 'journal',
     id: 8,
     slug: 'fourth-weekly-update',
     title: 'Fourth Weekly Update',
@@ -89,6 +119,7 @@ export const journal = [
       `(Disclaimer: This is not an April Fool's joke.)`,
     ]
   }, {
+    type: 'journal',
     id: 7,
     slug: 'third-weekly-update',
     title: 'Third Weekly Update',
@@ -103,6 +134,7 @@ export const journal = [
       `I just need to repeat what I have supposedly learned in the past weeks, since I got a short-term memory.`,
     ]
   }, {
+    type: 'journal',
     id: 6,
     slug: 'second-weekly-update',
     title: 'Second Weekly Update',
@@ -116,6 +148,7 @@ export const journal = [
       `Next week we will build on top of that and start to learn more about the language. See you in the next post.`,
     ]
   }, {
+    type: 'journal',
     id: 5,
     slug: 'first-weekly-update',
     title: 'First Weekly Update',
@@ -127,6 +160,7 @@ export const journal = [
       `There isn't a lot more to say about this week than it has been a new and exciting experience.`,
     ]
   }, {
+    type: 'journal',
     id: 4,
     slug: 'git-api',
     title: 'Git and API',
@@ -137,6 +171,7 @@ export const journal = [
       `These are still very important topics in development and I'm happy they made us all aware of these this early in the course.`
     ]
   }, {
+    type: 'journal',
     id: 3,
     slug: 'no-code-journal-writing',
     title: 'No-Code and Journal Writing',
@@ -148,6 +183,7 @@ export const journal = [
       `Combining these together we got a free and functional blog application.`,
     ]
   }, {
+    type: 'journal',
     id: 2,
     slug: 'standup-setup',
     title: 'Standup and Setup',
@@ -158,6 +194,7 @@ export const journal = [
       `Fun day over all and looking forward for more.`,
     ]
   }, {
+    type: 'journal',
     id: 1,
     slug: 'meet-greet-tour',
     title: 'Meet, Greet and Tour',
