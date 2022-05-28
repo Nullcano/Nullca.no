@@ -9,7 +9,7 @@
 		<span>{idfy(item.id)}</span>
 	</div>
 	<figure class="post-card__thumbnail">
-		<a href={`/${item.type}/${item.slug}`} class="post-card__link">
+		<a href={`/journal/${item.slug}`} class="post-card__link">
 			<img src="/thumb/{item.slug}.jpg" alt={item.title} />
 		</a>
 	</figure>
@@ -18,7 +18,7 @@
 			Posted <Time timestamp={item.date} />
 		</div>
 		<h2 class="post-card__title">
-			<a href={`/${item.type}/${item.slug}`} class="post-card__link">
+			<a href={`/journal/${item.slug}`} class="post-card__link">
 				{item.title}
 			</a>
 		</h2>
@@ -32,9 +32,11 @@
 	.post-card {
 		position: relative;
 		padding: 2rem 1rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
+		display: grid;
+		grid-template-columns: 3rem 20rem 1fr;
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;
+		border-bottom: 1px solid #000;
 	}
 	.post-card:last-child {
 		margin-bottom: 4rem;
