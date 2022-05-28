@@ -1,13 +1,7 @@
 <script>
-  import PageTitle from '$lib/PageTitle.svelte'
+	import PageTitle from '$lib/PageTitle.svelte';
+	import FeedAll from '$lib/Projects/FeedAll.svelte';
 </script>
 
-<PageTitle title="Projects"></PageTitle>
-
-<h4>Coming soon...</h4>
-
-<style>
-  h4 {
-    margin: 2rem
-  }
-</style>
+<PageTitle title="Projects" />
+<FeedAll />
