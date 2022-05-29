@@ -23,7 +23,7 @@ export const data = [
       `The main purpose was to use the fundamentals of C# we had learned that far in a "real" application.`,
       `I created this game where you click on a cat to gain "Lines of Code (LoC)" and then you can buy upgrades to increase your LoC.`,
       `This was built with Blazor WebAssembly and C#.`,
-      `<a href="https://github.com/Nullcano/Mini-Project" target="_blank">Source code here.</a>.`,
+      `<a href="https://github.com/Nullcano/Mini-Project" target="_blank">Source code here</a>.`,
     ]
   }, {
     type: 'projects',
@@ -31,10 +31,11 @@ export const data = [
     fileType: 'jpg',
     slug: 'steffen-id',
     title: 'Steffen.id',
-    date: '2022-05-28',
+    date: '2021-11-01',
     content: [
       `Steffen.id is my personal website which you are currently on.`,
       `The website is built with SvelteKit and uses local data for posts.`,
+      `The website has gone through many revisions and redesigns.`,
       `The website is hosted on Netlify.`,
     ]
   }, {

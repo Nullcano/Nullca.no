@@ -30,7 +30,7 @@
   </div>
   <div class="body">
     {#each item.content as p}
-      <p>{p}</p>
+      <p>{@html p}</p>
     {/each}
   </div>
   <a href="/">

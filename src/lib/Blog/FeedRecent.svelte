@@ -2,7 +2,8 @@
 	import { data } from '../../data';
 	import ItemsGrid from '$lib/ItemsGrid.svelte';
 	import PostCard from '$lib/PostCard.svelte';
-	let entries = data.filter((entry) => entry.type === 'blog').sort((a, b) => b.date - a.date).slice(0, 4);
+	let entries = data.filter((entry) => entry.type === 'blog')
+	entries.sort((a, b) => b.date - a.date);
 </script>
 
 <ItemsGrid>
