@@ -96,8 +96,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
-    filter: grayscale(1);
-    opacity: .5;
+    overflow: hidden;
   }
   .tags {
     margin-bottom: 1rem;

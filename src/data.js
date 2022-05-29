@@ -1,7 +1,7 @@
 export const data = [
   {
     type: 'journal',
-    id: 18,
+    id: 19,
     fileType: 'jpg',
     slug: 'twelfth-weekly-update',
     title: 'Twelfth Weekly Update',
@@ -10,6 +10,20 @@ export const data = [
       `Mostly hard work on the case study application this week to connect backend with frontend.`,
       `The application is coming along nicely and we got a lot of positive feedback in our meetings.`,
       `We are going to be working on the case study application until the third of june and then we will present it to the team.`,
+    ]
+  }, {
+    type: 'projects',
+    id: 18,
+    fileType: 'png',
+    slug: 'fe-lines-of-code',
+    title: 'Fe:Lines of Code',
+    date: '2022-05-28',
+    content: [
+      `Fe:Lines of Code is a mini-project I did at IKOMM Academy 2022.`,
+      `The main purpose was to use the fundamentals of C# we had learned that far in a "real" application.`,
+      `I created this game where you click on a cat to gain "Lines of Code (LoC)" and then you can buy upgrades to increase your LoC.`,
+      `This was built with Blazor WebAssembly and C#.`,
+      `<a href="https://github.com/Nullcano/Mini-Project" target="_blank">Source code here.</a>.`,
     ]
   }, {
     type: 'projects',
