@@ -86,7 +86,7 @@
     right: 240px;
     width: 80px;
     height: 232px;
-    background: url('../avatar.gif');
+    background: url('/avatar.gif');
     background-size: cover;
     image-rendering: crisp-edges;
   }
@@ -96,7 +96,7 @@
     right: 0;
     width: 448px;
     height: 360px;
-    background: url('../ground.gif');
+    background: url('/ground.gif');
     background-size: cover;
     image-rendering: crisp-edges;
   }
