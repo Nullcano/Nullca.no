@@ -11,8 +11,8 @@
 <style>
   .page-title {
     position: relative;
-    padding: 2rem;
-    font-size: 2vw;
+    padding: 3rem;
+    font-size: 2rem;
     font-family: 'Krona One', sans-serif;
     text-transform: uppercase;
   }
@@ -21,10 +21,12 @@
     margin: 0;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .page-title {
+      font-size: 1rem;
       margin-bottom: 1rem;
       padding: 1rem;
+      text-align: center;
     }
   }
 </style>

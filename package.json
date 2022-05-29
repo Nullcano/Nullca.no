@@ -22,5 +22,8 @@
     "svelte-fast-marquee": "^0.4.1",
     "svelte-time": "^0.6.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "atropos": "^1.0.2"
+  }
 }
