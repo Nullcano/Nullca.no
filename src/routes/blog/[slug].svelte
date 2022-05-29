@@ -8,7 +8,7 @@
 
 <script>
 	import { stripHTML } from '$lib/utils';
-	import ArticlePage from '$lib/Blog/PostPage.svelte';
+	import PostPage from '$lib/PostPage.svelte';
 	export let item;
 </script>
 
@@ -22,4 +22,4 @@
 	<meta property="og:image" content={item.cover} />
 </svelte:head>
 
-<ArticlePage {item} />
+<PostPage {item} />
