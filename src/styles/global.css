@@ -10,21 +10,21 @@
   box-sizing: border-box;
   position: relative;
   scrollbar-width: thin;
-  scrollbar-color: hsl(200, 15%, 4%) hsl(200, 15%, 8%);
+  scrollbar-color: var(--accent-color) hsl(260, 8%, 8%);
 }
 
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 *::-webkit-scrollbar-track {
-  background: hsl(200, 15%, 8%);
+  background: hsl(260, 8%, 8%);
 }
 *::-webkit-scrollbar-thumb {
-  background: hsl(200, 15%, 4%);
+  background: var(--accent-color);
 }
 ::selection {
-  background: hsl(200, 15%, 4%);
-  color: hsl(200, 15%, 50%);
+  background: hsl(260, 8%, 4%);
+  color: #fff;
 }
 body {
   padding: 0;
