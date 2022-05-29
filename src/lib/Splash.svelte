@@ -156,6 +156,14 @@
     .title {
       font-size: 2.5rem;
     }
+    .title::after {
+      top: 4rem;
+      width: 0;
+      height: .75rem;
+    }
+    .alt-title {
+      font-size: 0;
+    }
     .location {
       font-size: 1.25rem;
     }
@@ -167,6 +175,22 @@
       width: 100%;
       height: 60vh;
       flex-direction: column;
+    }
+    @keyframes scrap {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 19rem;
+      }
+    }
+    @keyframes appear {
+      0% {
+        font-size: 0;
+      }
+      100% {
+        font-size: 3rem;
+      }
     }
   }
 </style>
