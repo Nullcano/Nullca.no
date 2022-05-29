@@ -30,7 +30,7 @@
 		color: hsl(260, 8%, 60%);
 	}
 	.post-card-link:hover {
-		background: hsl(260, 8%, 16%);
+		background: linear-gradient(135deg, hsl(260, 8%, 12%), hsl(260, 8%, 16%));
 		color: hsl(260, 8%, 80%);
 	}
 	.post-card {
@@ -38,7 +38,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
-		transition: all .25s linear;
 	}
 	.post-card-thumb {
 		margin: 0;
