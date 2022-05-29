@@ -1,134 +1,90 @@
-<script>
-  import CTA from '$lib/CTA.svelte'
-</script>
-
-<div class="profile">
-  <div class="contained">
-    <div class="intro">
-      <div class="name">Steffen Wold</div>
-      <div class="title">Frontend <br/>developer</div>
-      <div class="location">
-        <span>Innlandet, </span>
-        <span class="flag">Norway</span>
-      </div>
-    </div>
-    <div class="cta">
-      <CTA />
+<section class="profile-header">
+  <div class="cover"></div>
+  <div class="contained container">
+    <div class="avatar"></div>
+    <div class="info">
+      <h1 class="name">Steffen Wold</h1>
+      <h2 class="title">Frontend developer</h2>
+      <h3 class="location">Innlandet, Norway</h3>
     </div>
   </div>
-  <figure>
-    <div class="ground"></div>
-    <div class="avatar"></div>
-  </figure>
-</div>
+</section>
 
 <style>
-  .profile {
-    position: relative;
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-  }
-  .contained {
-    margin: 0 auto;
-    padding: 2rem 4rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .intro {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Rammetto One';
-    text-transform: uppercase;
-    line-height: 1.2;
-  }
-  .name {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  .title {
-    font-size: 3.5rem;
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
-  }
-  .location {
-    font-size: 1.75rem;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-  }
-  .flag {
-    padding: 0 1rem;
-    display: inline-flex;
-    background-image: linear-gradient(to right, #f74444, #f74444 25%, #fff 25%, #fff 40%, #0051ff 40%, #0051ff 60%, #fff 60%, #fff 75%, #f74444 75%, #f74444);
-    background-size: 100%;
-    border-radius: 999px;
-    color: transparent;
-  }
-  .cta {
-    margin-top: 3rem;
-  }
-  figure {
-    pointer-events: none;
+  .cover {
     position: absolute;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    width: 50vw;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    background-color: hsl(260, 8%, 6%);
+    background-image: url('/ground.gif');
+    background-size: 80% auto;
+    background-position: 100% 20%;
+    background-repeat: no-repeat;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
   }
+  .container {
+    position: relative;
+    top: 2.25rem;
+    padding-top: 3rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
   .avatar {
-    position: absolute;
-    bottom: 280px;
-    right: 240px;
-    width: 80px;
-    height: 232px;
-    background: url('/avatar.gif');
-    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+    background-color: hsl(260, 8%, 4%);
+    background-image: url('/avatar.gif');
+    background-size: 100%;
+    background-position: top center;
+    border-radius: 50%;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
   }
-  .ground {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 448px;
-    height: 360px;
-    background: url('/ground.gif');
-    background-size: cover;
+  h1, h2, h3 {
+    margin: 0;
+    font-weight: normal;
   }
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0px 0px .5rem #000;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 0;
 
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: hsl(260, 8%, 60%);
+  }
   @media (max-width: 768px) {
-    .profile {
+    .container {
+      left: 0;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
     }
-    .contained {
-      padding: 2rem 1rem;
+    h1 {
+      font-size: 1.5rem;
     }
-    .intro {
-      width: 100%;
-      margin-bottom: 2rem;
+    h2 {
+      font-size: 1rem;
     }
-    .name {
-      font-size: 1.75rem;
+    h3 {
+      font-size: .75rem;
     }
-    .title {
-      font-size: 2.5rem;
-    }
-    .location {
-      font-size: 1.25rem;
-    }
-    .cta {
-      margin-top: 2rem;
-    }
-    figure {
-      position: relative;
-      width: 100%;
-      height: 60vh;
+    .info {
+      display: flex;
       flex-direction: column;
+      align-items: center;
     }
   }
 </style>

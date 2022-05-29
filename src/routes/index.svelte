@@ -1,5 +1,5 @@
 <script>
-	import Profile from '$lib/Profile.svelte';
+	import Splash from '$lib/Splash.svelte';
 	import ProjectsRecent from '$lib/Projects/FeedRecent.svelte';
 	import JournalRecent from '$lib/Journal/FeedRecent.svelte';
 	import BlogRecent from '$lib/Blog/FeedRecent.svelte';
@@ -16,7 +16,7 @@
 </svelte:head>
 
 <section>
-	<Profile />
+	<Splash />
 </section>
 
 <div class="contained">
