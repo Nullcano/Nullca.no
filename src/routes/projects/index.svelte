@@ -4,4 +4,7 @@
 </script>
 
 <PageTitle title="Projects" />
-<FeedAll />
+
+<div class="contained">
+	<FeedAll />
+</div>
