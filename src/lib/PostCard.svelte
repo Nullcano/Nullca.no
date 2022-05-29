@@ -1,76 +1,83 @@
 <script>
-	import Time from 'svelte-time';
-	import { stripHTML, slugify, idfy } from '$lib/utils';
-	export let item;
+	import Time from 'svelte-time'
+	import { stripHTML } from '$lib/utils'
+	export let item
 </script>
 
-<article class="post-card">
-	<div class="post-id">
-		<span>{idfy(item.id)}</span>
-	</div>
-	<figure class="post-card__thumbnail">
-		<a href={`/${item.type}/${item.slug}`} class="post-card__link">
-			<img src="/thumb/{item.slug}.jpg" alt={item.title} />
-		</a>
-	</figure>
-	<div class="post-card__content">
-		<div class="post-card__time">
-			Posted <Time timestamp={item.date} />
-		</div>
-		<h2 class="post-card__title">
-			<a href={`/${item.type}/${item.slug}`} class="post-card__link">
+<a href={`/${item.type}/${item.slug}`} class="post-card-link">
+	<article class="post-card">
+		<figure class="post-card-thumb" style="background-image: url('../thumb/{item.slug}.{item.fileType}')"></figure>
+		<div class="post-card-content">
+			<h2 class="post-card-title">
 				{item.title}
-			</a>
-		</h2>
-		<p class="post-card__description">
-			{stripHTML(item.content[0])}
-		</p>
-	</div>
-</article>
+			</h2>
+			<p class="post-card-description">
+				{stripHTML(item.content[0])}
+			</p>
+			<div class="post-card-time">
+				Posted <Time timestamp={item.date} />
+			</div>
+		</div>
+	</article>
+</a>
 
 <style>
+	.post-card-link {
+		padding: 1rem;
+		border-radius: 1.5rem;
+		background: hsl(260, 8%, 12%);
+		transition: all .25s linear;
+		color: hsl(260, 8%, 60%);
+	}
+	.post-card-link:hover {
+		background: hsl(260, 8%, 16%);
+		color: hsl(260, 8%, 80%);
+	}
 	.post-card {
 		position: relative;
-		padding: 2rem 1rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
+		transition: all .25s linear;
 	}
-	.post-card:last-child {
-		margin-bottom: 4rem;
-		border: 0;
-	}
-	.post-card__thumbnail {
+	.post-card-thumb {
 		margin: 0;
-		padding: 0;
+		padding-bottom: 75%;
 		position: relative;
 		width: 100%;
-		height: 10rem;
+		height: 0;
 		border-radius: 1rem;
+		background-position: center;
+		background-size: cover;
+		filter: hue-rotate(285deg);
+    opacity: .5;
 		overflow: hidden;
+		transition: all .25s linear;
 	}
-	.post-card__thumbnail img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: all 0.2s ease-in-out;
-		filter: grayscale(1);
-		opacity: 0.5;
+	.post-card-link:hover .post-card-thumb {
+		transform: scale(1.05);
+		filter: hue-rotate(0);
 	}
-	.post-card:hover .post-card__thumbnail img {
-		transform: scale(1.25) rotate(5deg);
+	.post-card-link:hover .post-card-content {
+		transform: translateY(-.5rem);
 	}
-	.post-card__content {
-		padding: 1rem;
+	.post-card-title {
+		margin: 0;
+		padding: 0;
+		font-size: 1rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
-	.post-card__time {
+	.post-card-content {
+		font-size: .8rem;
+		transition: all .25s linear;
+	}
+	.post-card-time {
 		margin-bottom: 0.5rem;
 	}
-	.post-card__title {
-		margin-bottom: 0.5rem;
-	}
-	.post-card__description {
-		margin-bottom: 1rem;
+
+	.post-card-description {
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 3;
@@ -78,35 +85,6 @@
 		overflow: hidden;
 	}
 	@media (max-width: 768px) {
-		.post-card {
-			padding: 1rem 0;
-			grid-template-columns: 1fr;
-		}
-		.post-card__thumbnail {
-			order: -1;
-		}
-		.post-id {
-			position: absolute;
-			top: 13rem;
-		}
-		.post-card__content {
-			margin-top: 2rem;
-			margin-left: 2rem;
-			padding: 0 1rem;
-		}
-		.post-card__time {
-			margin-bottom: 0.5rem;
-		}
-		.post-card__title {
-			margin-bottom: 0.5rem;
-		}
-		.post-card__description {
-			margin-bottom: 1rem;
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 3;
-			line-height: 1.5;
-			overflow: hidden;
-		}
+
 	}
 </style>

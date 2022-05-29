@@ -1,7 +1,8 @@
 export const data = [
   {
     type: 'projects',
-    id: 0,
+    id: 17,
+    fileType: 'jpg',
     slug: 'steffen-id',
     title: 'Steffen.id',
     date: '2022-05-28',
@@ -13,8 +14,9 @@ export const data = [
   }, {
     type: 'blog',
     id: 16,
+    fileType: 'gif',
     slug: 'lets-try-blogging',
-    title: `Let's try blogging`,
+    title: `Let's Try Blogging`,
     date: '2022-05-28',
     content: [
       `Hello! I have been adding more layers for publishing content.`,
@@ -24,6 +26,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 15,
+    fileType: 'jpg',
     slug: 'eleventh-weekly-update',
     title: 'Eleventh Weekly Update',
     date: '2022-05-20',
@@ -35,6 +38,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 14,
+    fileType: 'jpg',
     slug: 'tenth-weekly-update',
     title: 'Tenth Weekly Update',
     date: '2022-05-13',
@@ -46,6 +50,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 13,
+    fileType: 'jpg',
     slug: 'ninth-weekly-update',
     title: 'Ninth Weekly Update',
     date: '2022-05-06',
@@ -57,6 +62,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 12,
+    fileType: 'jpg',
     slug: 'eighth-weekly-update',
     title: 'Eighth Weekly Update',
     date: '2022-04-29',
@@ -68,6 +74,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 11,
+    fileType: 'jpg',
     slug: 'seventh-weekly-update',
     title: 'Seventh Weekly Update',
     date: '2022-04-22',
@@ -81,6 +88,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 10,
+    fileType: 'jpg',
     slug: 'sixth-weekly-update',
     title: 'Sixth Weekly Update',
     date: '2022-04-15',
@@ -93,6 +101,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 9,
+    fileType: 'jpg',
     slug: 'fifth-weekly-update',
     title: 'Fifth Weekly Update',
     date: '2022-04-08',
@@ -106,6 +115,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 8,
+    fileType: 'jpg',
     slug: 'fourth-weekly-update',
     title: 'Fourth Weekly Update',
     date: '2022-04-01',
@@ -121,6 +131,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 7,
+    fileType: 'jpg',
     slug: 'third-weekly-update',
     title: 'Third Weekly Update',
     date: '2022-03-25',
@@ -136,6 +147,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 6,
+    fileType: 'jpg',
     slug: 'second-weekly-update',
     title: 'Second Weekly Update',
     date: '2022-03-18',
@@ -150,6 +162,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 5,
+    fileType: 'jpg',
     slug: 'first-weekly-update',
     title: 'First Weekly Update',
     date: '2022-03-11',
@@ -162,6 +175,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 4,
+    fileType: 'jpg',
     slug: 'git-api',
     title: 'Git and API',
     date: '2022-03-10',
@@ -173,6 +187,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 3,
+    fileType: 'jpg',
     slug: 'no-code-journal-writing',
     title: 'No-Code and Journal Writing',
     date: '2022-03-09',
@@ -185,6 +200,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 2,
+    fileType: 'jpg',
     slug: 'standup-setup',
     title: 'Standup and Setup',
     date: '2022-03-08',
@@ -196,6 +212,7 @@ export const data = [
   }, {
     type: 'journal',
     id: 1,
+    fileType: 'jpg',
     slug: 'meet-greet-tour',
     title: 'Meet, Greet and Tour',
     date: '2022-03-07',

@@ -11,7 +11,7 @@
   <div class="content">
     <div class="title">
       <figure class="cover">
-        <img src="../thumb/{item.slug}.jpg" alt={item.title}>
+        <img src="../thumb/{item.slug}.{item.fileType}" alt={item.title}>
       </figure>
       <div class="info">
         <h1>{item.title}</h1>
@@ -109,20 +109,28 @@
     background: var(--darken-dark);
   }
   .body {
+    margin: 0 auto;
+    width: 700px;
+    max-width: 100%;
     padding: 1rem;
-    border-radius: 1rem;
-    background: #fff;
   }
   @media (max-width: 768px) {
     .cover {
       display: none;
     }
     .title {
+      padding: 0;
       flex-direction: column;
-      gap: 1rem;
     }
     h1 {
+      margin: 1rem;
       font-size: 2rem;
+    }
+    .date-info {
+      margin: 0;
+    }
+    .body {
+      padding: 0 1rem;
     }
   }
 </style>
