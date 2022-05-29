@@ -55,12 +55,22 @@
     display: block;
     margin: 1rem;
     font-style: italic;
+    color: hsl(260, 8%, 60%)
   }
   h1 {
     font-size: 3rem;
     margin: 1rem;
   }
+  .body {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 700px;
+    max-width: 100%;
+    background: hsl(260, 8%, 8%);
+    border-radius: 1rem;
+  }
   p {
+    font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 1rem;
     color: var(--reset-light);
@@ -104,12 +114,6 @@
   .tag:hover {
     background: var(--darken-dark);
   }
-  .body {
-    margin: 0 auto;
-    width: 700px;
-    max-width: 100%;
-    padding: 1rem;
-  }
   @media (max-width: 768px) {
     .cover {
       width: 100%;
@@ -117,6 +121,16 @@
     .title {
       padding: 0;
       flex-direction: column;
+    }
+    .info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    p {
+      font-size: 1.25rem;
     }
     h1 {
       margin: 1rem;
