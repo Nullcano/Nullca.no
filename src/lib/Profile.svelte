@@ -37,6 +37,7 @@
   .avatar {
     width: 6rem;
     height: 6rem;
+    border: 3px solid var(--accent-color);
     background-color: hsl(260, 8%, 4%);
     background-image: url('/avatar.gif');
     background-size: 100%;
