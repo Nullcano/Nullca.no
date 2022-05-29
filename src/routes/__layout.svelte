@@ -59,6 +59,7 @@
     background-position: bottom center;
     background-repeat: repeat-x;
     image-rendering: crisp-edges;
+    image-rendering: pixelated;
     transition: background-position 1s linear;
   }
   i:nth-child(1) {

@@ -79,6 +79,8 @@
     right: 0;
     width: 50vw;
     height: 100%;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
   }
   .avatar {
     position: absolute;
@@ -88,7 +90,6 @@
     height: 232px;
     background: url('/avatar.gif');
     background-size: cover;
-    image-rendering: crisp-edges;
   }
   .ground {
     position: absolute;
@@ -98,7 +99,6 @@
     height: 360px;
     background: url('/ground.gif');
     background-size: cover;
-    image-rendering: crisp-edges;
   }
 
   @media (max-width: 768px) {
