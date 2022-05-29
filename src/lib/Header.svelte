@@ -18,7 +18,7 @@
 		position: sticky;
 		top: 0;
 		height: 5rem;
-		z-index: 5;
+		z-index: 6;
 	}
 	.contained {
 		padding: 1rem 0;
