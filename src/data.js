@@ -17,7 +17,7 @@ export const data = [
     fileType: 'png',
     slug: 'fe-lines-of-code',
     title: 'Fe:Lines of Code',
-    date: '2022-05-28',
+    date: '2022-04-22',
     content: [
       `Fe:Lines of Code is a mini-project I did at IKOMM Academy 2022.`,
       `The main purpose was to use the fundamentals of C# we had learned that far in a "real" application.`,
