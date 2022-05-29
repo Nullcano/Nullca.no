@@ -41,7 +41,7 @@
 {/if}
 
 <style>
-	nav {
+	.navbar {
 		position: fixed;
     width: 100vw;
     height: 100vh;
@@ -50,6 +50,7 @@
     font-size: 4rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #141316;
 		transition: all .25s linear;

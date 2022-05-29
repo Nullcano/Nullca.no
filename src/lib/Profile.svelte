@@ -72,6 +72,7 @@
     margin-top: 3rem;
   }
   figure {
+    pointer-events: none;
     position: absolute;
     margin: 0;
     padding: 0;

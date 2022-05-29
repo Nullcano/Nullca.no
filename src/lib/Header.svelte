@@ -20,6 +20,16 @@
 		height: 5rem;
 		z-index: 6;
 	}
+	header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, hsl(260, 8%, 8%) 100%);
+		pointer-events: none;
+  }
 	.contained {
 		padding: 1rem 0;
 		color: var(--primary-color);
