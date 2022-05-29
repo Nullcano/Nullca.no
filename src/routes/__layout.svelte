@@ -62,18 +62,18 @@
     transition: background-position 1s linear;
   }
   i:nth-child(1) {
-    background-image: url('../parallax/1.png');
+    background-image: url('/parallax/1.png');
   }
   i:nth-child(2) {
-    background-image: url('../parallax/2.png');
+    background-image: url('/parallax/2.png');
   }
   i:nth-child(3) {
-    background-image: url('../parallax/3.png');
+    background-image: url('/parallax/3.png');
   }
   i:nth-child(4) {
-    background-image: url('../parallax/4.png');
+    background-image: url('/parallax/4.png');
   }
   i:nth-child(5) {
-    background-image: url('../parallax/5.png');
+    background-image: url('/parallax/5.png');
   }
 </style>
