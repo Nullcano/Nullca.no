@@ -5,7 +5,7 @@ export const data = [
     fileType: 'jpg',
     slug: 'twelfth-weekly-update',
     title: 'Twelfth Weekly Update',
-    date: '2022-05-20',
+    date: '2022-05-27',
     content: [
       `Mostly hard work on the case study application this week to connect backend with frontend.`,
       `The application is coming along nicely and we got a lot of positive feedback in our meetings.`,
