@@ -7,6 +7,7 @@
     <div class="intro">
       <div class="name">Steffen Wold</div>
       <div class="title">Frontend <br/>developer</div>
+      <div class="alt-title">Explorer</div>
       <div class="location">
         <span>Innlandet, </span>
         <span class="flag">Norway</span>
@@ -38,6 +39,7 @@
     flex-direction: column;
   }
   .intro {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,9 +52,45 @@
     font-size: 2.5rem;
   }
   .title {
+    position: relative;
     font-size: 3.5rem;
     color: transparent;
     -webkit-text-stroke: 2px #fff;
+  }
+  .title::after {
+    content: '';
+    position: absolute;
+    top: 5.5rem;
+    left: -.5rem;
+    width: 0;
+    height: 1rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    animation: .5s scrap 1s linear forwards;
+  }
+  .alt-title {
+    margin: 2rem 0;
+    font-size: 0;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    transform: rotate(5deg);
+    animation: .5s appear 1.5s linear forwards;
+  }
+  @keyframes scrap {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 26rem;
+    }
+  }
+  @keyframes appear {
+    0% {
+      font-size: 0;
+    }
+    100% {
+      font-size: 4rem;
+    }
   }
   .location {
     font-size: 1.75rem;
