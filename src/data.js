@@ -1,5 +1,17 @@
 export const data = [
   {
+    type: 'journal',
+    id: 18,
+    fileType: 'jpg',
+    slug: 'twelfth-weekly-update',
+    title: 'Twelfth Weekly Update',
+    date: '2022-05-20',
+    content: [
+      `Mostly hard work on the case study application this week to connect backend with frontend.`,
+      `The application is coming along nicely and we got a lot of positive feedback in our meetings.`,
+      `We are going to be working on the case study application until the third of june and then we will present it to the team.`,
+    ]
+  }, {
     type: 'projects',
     id: 17,
     fileType: 'jpg',
