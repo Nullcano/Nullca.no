@@ -102,7 +102,7 @@
   }
 
   @media (max-width: 768px) {
-    .profile {
+    .splash {
       flex-direction: column;
     }
     .contained {
