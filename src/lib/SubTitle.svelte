@@ -14,7 +14,6 @@
 		padding: 1.5rem;
 		font-size: 1.5rem;
 		color: #fff;
-		text-transform: uppercase;
 		cursor: default;
 	}
 
@@ -26,6 +25,7 @@
 		.subtitle {
 			font-size: 1rem;
 			padding: 1rem;
+			text-align: center;
 		}
 	}
 </style>

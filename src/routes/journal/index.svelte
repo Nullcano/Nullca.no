@@ -1,6 +1,7 @@
 <script>
-  import PageTitle from '$lib/PageTitle.svelte'
-  import FeedAll from '$lib/Journal/FeedAll.svelte'
+	import PageTitle from '$lib/PageTitle.svelte';
+	import SubTitle from '$lib/SubTitle.svelte';
+	import FeedAll from '$lib/Journal/FeedAll.svelte';
 </script>
 
 <svelte:head>
@@ -14,6 +15,7 @@
 </svelte:head>
 
 <div class="contained">
-  <PageTitle title="Academy Journal" />
-  <FeedAll />
+	<PageTitle title="Academy Journal" />
+	<SubTitle subtitle="My journey through IKOMM Academy 2022" />
+	<FeedAll />
 </div>
