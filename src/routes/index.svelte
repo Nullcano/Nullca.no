@@ -3,6 +3,7 @@
 	import ProjectsRecent from '$lib/Projects/FeedRecent.svelte';
 	import JournalRecent from '$lib/Journal/FeedRecent.svelte';
 	import BlogRecent from '$lib/Blog/FeedRecent.svelte';
+	import SubTitle from '$lib/SubTitle.svelte';
 </script>
 
 <svelte:head>
@@ -21,23 +22,17 @@
 
 <div class="contained">
 	<section class="section">
-		<div class="title">
-			<h2>Experiments</h2>
-		</div>
+		<SubTitle subtitle={'Experiments'} />
 		<ProjectsRecent />
 	</section>
 	<section class="section">
-		<div class="title">
-			<h2>Academy Journal</h2>
-		</div>
+		<SubTitle subtitle={'Academy Journal'} />
 		<JournalRecent />
 	</section>
 	<section class="section">
-		<div class="title">
-			<h2>Recent Blog Articles</h2>
-		</div>
+		<SubTitle subtitle={'Recent Blog Articles'} />
 		<BlogRecent />
-	</section>	
+	</section>
 </div>
 
 <style>
@@ -46,6 +41,6 @@
 		top: -5rem;
 	}
 	.section {
-		margin: 0 2rem;
+		margin: 1rem 0 2rem 0;
 	}
 </style>

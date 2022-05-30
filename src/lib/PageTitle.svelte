@@ -1,32 +1,35 @@
 <script>
-  export let title
+	export let title;
 </script>
 
 <div class="page-title">
-  <h1 class="title">
-    {title}
-  </h1>
+	<h1 class="title">
+		{title}
+	</h1>
 </div>
 
 <style>
-  .page-title {
-    position: relative;
-    padding: 3rem;
-    font-size: 2rem;
-    font-family: 'Krona One', sans-serif;
-    text-transform: uppercase;
-  }
+	.page-title {
+		position: relative;
+		padding: 3rem 1.5rem;
+		font-size: 1.5rem;
+		color: transparent;
+		-webkit-text-stroke: 1px var(--accent-color);
+		font-family: 'Rammetto One', sans-serif;
+		text-transform: uppercase;
+		cursor: default;
+	}
 
-  h1 {
-    margin: 0;
-  }
+	h1 {
+		margin: 0;
+	}
 
-  @media (max-width: 768px) {
-    .page-title {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      text-align: center;
-    }
-  }
+	@media (max-width: 768px) {
+		.page-title {
+			font-size: 1rem;
+			margin-bottom: 1rem;
+			padding: 1rem;
+			text-align: center;
+		}
+	}
 </style>
