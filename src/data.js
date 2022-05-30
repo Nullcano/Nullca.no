@@ -1,7 +1,6 @@
 export const data = [
   {
     type: 'journal',
-    id: 19,
     fileType: 'jpg',
     slug: 'twelfth-weekly-update',
     title: 'Twelfth Weekly Update',
@@ -13,7 +12,6 @@ export const data = [
     ]
   }, {
     type: 'projects',
-    id: 18,
     fileType: 'png',
     slug: 'fe-lines-of-code',
     title: 'Fe:Lines of Code',
@@ -22,12 +20,12 @@ export const data = [
       `Fe:Lines of Code is a mini-project I did at IKOMM Academy 2022.`,
       `The main purpose was to use the fundamentals of C# we had learned that far in a "real" application.`,
       `I created this game where you click on a cat to gain "Lines of Code (LoC)" and then you can buy upgrades to increase your LoC.`,
+      `If you are familiar with cookie clicker you will see that the game is similar to that.`,
       `This was built with Blazor WebAssembly and C#.`,
       `<a href="https://github.com/Nullcano/Mini-Project" target="_blank">Source code here</a>.`,
     ]
   }, {
     type: 'projects',
-    id: 17,
     fileType: 'jpg',
     slug: 'steffen-id',
     title: 'Steffen.id',
@@ -37,6 +35,31 @@ export const data = [
       `The website is built with SvelteKit and uses local data for posts.`,
       `The website has gone through many revisions and redesigns.`,
       `The website is hosted on Netlify.`,
+    ]
+  }, {
+    type: 'projects',
+    fileType: 'webp',
+    slug: 'sodia',
+    title: 'Sodia',
+    date: '2021-10-22',
+    content: [
+      `An idle, incremental clicker game like the famous cookie clicker.`,
+      `The game is developed using HTML, CSS and JavaScript and uses Electron as framework to compile it to an app.`,
+      `I had great ambitions to release this game but it got put on hold as I got more busy with the <a href="/journal">academy</a>.`,
+      `Maybe I will continue on this project in the future.`,
+    ]
+  }, {
+    type: 'projects',
+    fileType: 'jpg',
+    slug: 'coding-garden',
+    title: 'Coding Garden',
+    date: '2020-06-06',
+    content: [
+      `A pixel art animation handdrawn and animated in Adobe Photoshop.`,
+      `This was a commission for coding streamer CJ with channels on <a href="https://www.youtube.com/c/CodingGarden" target="_blank">YouTube</a> and <a href="https://www.twitch.tv/codinggarden" target="_blank">Twitch</a>. Coding Garden.`,
+      `Along with an animation he got all the project files as well to reuse assets in his branding.`,
+      `<div class="container-iframe" data-widget=""><iframe class="responsive-iframe" src="https://www.youtube.com/embed/v6KW35eI9S4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`,
+      `.. and of course as a lofi rickroll music video.`,
     ]
   }, {
     type: 'blog',
