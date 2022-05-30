@@ -11,7 +11,7 @@
 <style>
 	.page-title {
 		position: relative;
-		padding: 3rem 1.5rem;
+		margin: 0 1.5rem;
 		font-size: 1.5rem;
 		color: transparent;
 		-webkit-text-stroke: 1px var(--accent-color);
