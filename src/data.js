@@ -15,7 +15,7 @@ export const data = [
     fileType: 'png',
     slug: 'volunta-case-study',
     title: 'Volunta Case Study',
-    date: '2020-04-28',
+    date: '2022-04-28',
     content: [
       `Me and a team partner from the academy has been working on an application called Volunta.`,
       `Volunta is an organizing and publishing application for individuals and organizations with a common goal to offer or request services or tasks voluntarily. Core features include organizing community events, requesting help in form of work-power or equipment and joining in on topics of interest.`,
