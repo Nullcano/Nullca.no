@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Rammetto+One&display=swap');
 
+@font-face {
+  font-family: 'HypatiaSansPro';
+  src: url('/fonts/HypatiaSansPro-Bold.woff2') format('woff2'),
+    url('/fonts/HypatiaSansPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --darkest-bg: #141316;
-  --accent-color: hsl(141, 27%, 50%);
-  --accent-color-hover: hsl(141, 27%, 60%);
+  --accent-color: hsl(50, 50%, 40%);
+  --accent-color-hover: hsl(50, 50%, 60%);
   --tertiary-color: #00a790;
 }
+
 * {
   box-sizing: border-box;
   position: relative;
@@ -16,16 +26,20 @@
 *::-webkit-scrollbar {
   width: 8px;
 }
+
 *::-webkit-scrollbar-track {
   background: hsl(260, 8%, 8%);
 }
+
 *::-webkit-scrollbar-thumb {
   background: var(--accent-color);
 }
+
 ::selection {
   background: hsl(260, 8%, 4%);
   color: #fff;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -50,7 +64,8 @@ a:hover {
   color: var(--accent-color-hover);
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   outline-width: 0;
 }
 
@@ -58,8 +73,25 @@ svg {
   width: 100%;
   fill: currentColor;
 }
-.container-iframe { position: relative; width: 100%; overflow: hidden; padding-top: 56.25%; }
-.responsive-iframe { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none; }
+
+.container-iframe {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .contained {
   margin: 0 auto;
   width: 1100px;
@@ -138,7 +170,8 @@ svg {
   gap: 1rem;
 }
 
-.post .content .meta .category, .post .content .meta .date {
+.post .content .meta .category,
+.post .content .meta .date {
   display: inline-block;
   background: hsl(0, 0%, 4%);
   color: hsl(0, 0%, 70%);
@@ -161,8 +194,9 @@ svg {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  line-clamp: 2; 
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 

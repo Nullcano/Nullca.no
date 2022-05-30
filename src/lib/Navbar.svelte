@@ -70,7 +70,7 @@
 		left: 0;
 		width: 0;
 		height: 2px;
-		background-color: var(--accent-color);
+		background: linear-gradient(to right, hsl(50, 50%, 40%), hsl(50, 50%, 60%), hsl(50, 50%, 40%));
 		transition: all 0.25s linear;
 	}
 	.active::after {
@@ -92,7 +92,7 @@
 	.icon {
 		width: 1.5rem;
 		height: 1.5rem;
-		fill: var(--accent-color);
+		fill: url(#gradient);
 		cursor: pointer;
 	}
 	.nav-items {
