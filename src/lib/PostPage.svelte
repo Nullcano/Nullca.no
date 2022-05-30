@@ -51,7 +51,6 @@
 	}
 	.date-info {
 		position: relative;
-		top: -2rem;
 		margin: 0 2rem;
 	}
 	.date-info span {

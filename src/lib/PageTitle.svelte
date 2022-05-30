@@ -28,7 +28,6 @@
 		.page-title {
 			font-size: 1rem;
 			padding: 1rem;
-			text-align: center;
 		}
 	}
 </style>
