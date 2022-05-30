@@ -63,7 +63,6 @@ export const data = [
     ]
   }, {
     type: 'blog',
-    id: 16,
     fileType: 'gif',
     slug: 'lets-try-blogging',
     title: `Let's Try Blogging`,
@@ -71,11 +70,25 @@ export const data = [
     content: [
       `Hello! I have been adding more layers for publishing content.`,
       `The project page is now online along with this simple blog.`,
-      `Not sure what I will post about here yet but time will show.`,
+      `I will publish some older projects and articles from other revisions of the website if I can find any.`,
+      `Not sure what else I will post about here yet but time will show.`,
+    ]
+  }, {
+    type: 'blog',
+    fileType: 'webp',
+    slug: 'using-old-tools',
+    title: `Using Old Tools?`,
+    date: '2021-11-25',
+    content: [
+      `Had recently quit the jQuery framework when I started exploring new JavaScript frameworks such as Vue, React and Svelte. All of these frameworks provide a better developer experience but the new "reactive" frameworks are created to produce faster web pages more efficiently.`,
+      `JQuery is an old toolbox for web developers to get more done by writing much less code. The downside of this is that you have a library with very many functions which are then not necessarily used on your web pages but which are still read by the browser after each click. With the new tools, it only retrieves the features you need to display related content on the website that results in a lightning-fast user experience.`,
+      `Old tools can often lead to slower websites in today's standard which will cause you to score lower in search engines and be even slower on mobile devices compared to others using newer technology. JQuery is also a very controversial topic in modern web development due to many of these factors. Even today, most websites still use JQuery.`,
+      `The customers of web developers who have no experience with web technology can then be gullible and think they are getting the best for their money as they can get lots of code delivered that they do not need.`,
+      `This also applies as far as CMS (content management system) such as WordPress, Joomla and the like that run huge amounts of files with a lot of extra you do not need.`,
+      `Fortunately, there are constantly new technologies in web development that I myself will use and hope more people will do the same. The time it takes to load a page is more noticed in recent times where we have higher internet speeds.`
     ]
   }, {
     type: 'journal',
-    id: 15,
     fileType: 'jpg',
     slug: 'eleventh-weekly-update',
     title: 'Eleventh Weekly Update',

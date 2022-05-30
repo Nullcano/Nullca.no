@@ -64,15 +64,14 @@
     left: -.5rem;
     width: 0;
     height: 1rem;
-    background-color: #fff;
+    background-color: var(--accent-color);
     border-radius: .5rem;
     animation: .5s scrap 1s linear forwards;
   }
   .alt-title {
     margin: 2rem 0;
     font-size: 0;
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
+    color: var(--accent-color);
     transform: rotate(5deg);
     animation: .5s appear 1.5s linear forwards;
   }
