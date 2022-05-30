@@ -28,6 +28,16 @@
 <slot />
 <Footer />
 
+<svg>
+	<defs>
+		<linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+			<stop offset="0%" stop-color="hsl(50,50%,40%)" />
+			<stop offset="50%" stop-color="hsl(50,50%,60%)" />
+			<stop offset="100%" stop-color="hsl(50,50%,40%)" />
+		</linearGradient>
+	</defs>
+</svg>
+
 <style>
 	.parallax {
 		position: absolute;
