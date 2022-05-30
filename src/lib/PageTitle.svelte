@@ -27,7 +27,6 @@
 	@media (max-width: 768px) {
 		.page-title {
 			font-size: 1rem;
-			margin-bottom: 1rem;
 			padding: 1rem;
 			text-align: center;
 		}
