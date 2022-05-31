@@ -88,4 +88,9 @@
 	i:nth-child(5) {
 		background-image: url('/parallax/5.png');
 	}
+	svg {
+		position: fixed;
+		visibility: hidden;
+		pointer-events: none;
+	}
 </style>

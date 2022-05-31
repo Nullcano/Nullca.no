@@ -9,29 +9,16 @@
 <svelte:window bind:scrollY={y} />
 
 <article class="contained item-page">
-	<div class="title">
-		<figure class="cover">
-			<img src="../thumb/{item.slug}.{item.fileType}" alt={item.title} />
-		</figure>
-		<div class="info">
+	<div class="body">
+		<div class="cover" style="background-image: url('../thumb/{item.slug}.{item.fileType}')"></div>
+		<div class="title">
 			<PageTitle title={item.title} />
 			<div class="date-info">
 				<span class="date">Posted <Time relative timestamp={item.date} /></span>
 			</div>
-			{#if item.tags}
-				<div class="tags">
-					{#each item.tags.slice(0, 5) as tag}
-						<a href={`/tags/${slugify(tag)}`} class="tag">
-							{tag}
-						</a>
-					{/each}
-				</div>
-			{/if}
 		</div>
-	</div>
-	<div class="body">
 		{#each item.content as p}
-			<p>{@html p}</p>
+		<p>{@html p}</p>
 		{/each}
 	</div>
 	<a href="/{item.type}">
@@ -49,12 +36,13 @@
 		display: flex;
 		flex-direction: column;
 	}
+	.title {
+		position: relative;
+		margin-top: -5rem;
+	}
 	.date-info {
 		position: relative;
 		margin: 0 2rem;
-	}
-	.date-info span {
-		color: hsl(260, 8%, 60%);
 	}
 	.body {
 		margin: 0 auto;
@@ -72,66 +60,43 @@
 	}
 	.title {
 		position: relative;
-		padding: 1rem;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
 		text-transform: uppercase;
-		gap: 1rem;
 	}
 	.cover {
-		margin: 0;
-		width: 24rem;
-		height: 12rem;
-		overflow: hidden;
-	}
-	.cover img {
-		position: relative;
+		padding-bottom: 50%;
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		height: 0;
+		background-position: center;
+		background-size: cover;
 		border-radius: 1rem;
 		overflow: hidden;
 	}
-	.tags {
-		margin-bottom: 1rem;
-		display: flex;
-		flex-wrap: wrap;
-		font-size: 0.8rem;
-		gap: 0.5rem;
+	.cover::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.75));
 	}
-	.tag {
-		padding: 0.25rem 0.5rem;
-		border-radius: 999px;
-		border: 2px solid var(--darken-dark);
-	}
-	.tag:hover {
-		background: var(--darken-dark);
-	}
+
 	@media (max-width: 768px) {
 		.cover {
 			width: 100%;
 		}
-		.title {
-			padding: 0;
-			flex-direction: column;
+		.cover::before {
+			display: none;
 		}
-		.info {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-			align-items: center;
+		.title {
+			margin-top: 0;
 		}
 		p {
 			font-size: 1.25rem;
 		}
 		.date-info {
-			top: auto;
-			margin-bottom: 1rem;
-		}
-		.body {
-			padding: 0 1rem;
+			margin: 0 1rem;
+			font-size: .8rem;
 		}
 	}
 </style>

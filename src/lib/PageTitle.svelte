@@ -31,6 +31,11 @@
 	}
 
 	@media (max-width: 768px) {
+		.page-title {
+			position: relative;
+			margin: 0;
+			cursor: default;
+		}
 		h1 {
 			margin: 1rem;
 			font-size: 1.5rem;

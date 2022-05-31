@@ -22,15 +22,30 @@
 
 <div class="contained">
 	<section class="section">
-		<SubTitle subtitle={'Experiments'} />
+		<div class="title">
+			<SubTitle subtitle={'Experiments'} />
+			<a href="/projects">
+				<div class="link"><span>View all </span>&rArr;</div>
+			</a>
+		</div>
 		<ProjectsRecent />
 	</section>
 	<section class="section">
-		<SubTitle subtitle={'Academy Journal'} />
+		<div class="title">
+			<SubTitle subtitle={'Academy Journal'} />
+			<a href="/journal">
+				<div class="link"><span>View all </span>&rArr;</div>
+			</a>
+		</div>
 		<JournalRecent />
 	</section>
 	<section class="section">
-		<SubTitle subtitle={'Recent Blog Articles'} />
+		<div class="title">
+			<SubTitle subtitle={'Recent Blog Articles'} />
+			<a href="/blog">
+				<div class="link"><span>View all </span>&rArr;</div>
+			</a>
+		</div>
 		<BlogRecent />
 	</section>
 </div>
@@ -42,5 +57,20 @@
 	}
 	.section {
 		margin: 1rem 0 2rem 0;
+	}
+	.title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.link {
+		padding: .5rem 1rem;
+		font-size: 1.25rem;
+		text-transform: uppercase;
+	}
+	@media (max-width: 768px) {
+		.link span {
+			display: none;
+		}
 	}
 </style>
