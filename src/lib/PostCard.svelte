@@ -51,14 +51,13 @@
 		border-radius: 1rem;
 		background-position: center;
 		background-size: cover;
-		filter: hue-rotate(190deg);
-		opacity: 0.5;
+		opacity: 0.66;
 		overflow: hidden;
 		transition: all 0.25s linear;
 	}
 	.post-card-link:hover .post-card-thumb {
 		transform: scale(1.05);
-		filter: hue-rotate(0);
+		opacity: 1;
 	}
 	.post-card-link:hover .post-card-content {
 		transform: translateY(-0.5rem);
