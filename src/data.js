@@ -2,6 +2,18 @@ export const data = [
   {
     type: 'journal',
     fileType: 'jpg',
+    slug: 'thirteenth-weekly-update',
+    title: 'Thirteenth Weekly Update',
+    date: '2022-06-03',
+    content: [
+      `Today we had our case study presentations. I wasn't supposed to talk, but I jumped into it anyway.`,
+      `It went surprisingly well and we had a nice night out after the day was over.`,
+      `I'm not sure if I'll be able to do this again, but I'm glad I did this time.`,
+      `From now on we will keep working on our projects and arrange where we want to apply for apprenticeships.`,
+    ]
+  }, {
+    type: 'journal',
+    fileType: 'jpg',
     slug: 'twelfth-weekly-update',
     title: 'Twelfth Weekly Update',
     date: '2022-05-27',
