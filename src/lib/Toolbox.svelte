@@ -94,7 +94,8 @@
 			<span>Svelte</span>
 		</li>
 	</ul>
-	<h3>Learning</h3>
+
+	<SubTitle subtitle="Learning" />
 	<ul>
 		<li>
 			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -124,25 +125,11 @@
 </div>
 
 <style>
-	.toolbox {
-		position: relative;
-		width: 100%;
-		margin-top: 2rem;
-		padding: 1em;
-	}
 	svg {
 		width: 3rem;
 		height: 3rem;
 		fill: var(--accent-color);
 		transition: all 0.25s linear;
-	}
-	h1 {
-		font-family: 'Krona One', sans-serif;
-		cursor: default;
-	}
-	h3 {
-		margin-top: 2rem;
-		cursor: default;
 	}
 	ul {
 		display: flex;

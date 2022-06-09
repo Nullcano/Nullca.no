@@ -1,7 +1,6 @@
 <script>
-  import PageTitle from '$lib/PageTitle.svelte'
-  import Profile from '$lib/Profile.svelte'
-  import Toolbox from '$lib/Toolbox.svelte'
+	import Profile from '$lib/Profile.svelte';
+	import ProfileTabs from '$lib/ProfileTabs.svelte';
 </script>
 
 <svelte:head>
@@ -16,5 +15,5 @@
 
 <Profile />
 <div class="contained">
-  <Toolbox />
+	<ProfileTabs />
 </div>
