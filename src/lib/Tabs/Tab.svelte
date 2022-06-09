@@ -20,13 +20,13 @@
 		border: none;
 		border-top-left-radius: 0.5rem;
 		border-top-right-radius: 0.5rem;
-		font-size: 1rem;
-		color: var(--accent-color-hover);
+		font-size: 1.25rem;
+		color: rgba(255, 255, 255, 0.5);
 		cursor: pointer;
 	}
 
 	.selected {
 		color: var(--accent-color-hover);
-		background: hsl(260, 8%, 4%);
+		border-bottom: 2px solid var(--accent-color-hover);
 	}
 </style>
