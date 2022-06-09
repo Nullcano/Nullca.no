@@ -17,6 +17,5 @@
 <style>
 	.tab-panel {
 		padding: 1rem;
-		background: hsl(260, 8%, 4%);
 	}
 </style>
