@@ -11,17 +11,34 @@
 <style>
 	.post-card-link {
 		margin-right: 1rem;
+		margin-bottom: 2rem;
 		width: 320px;
 		display: inline-block;
 		position: relative;
-		filter: grayscale(1);
+		filter: grayscale(1) contrast(2);
 		-webkit-transform-origin: bottom;
 		transform-origin: bottom;
 		transition: all .25s linear;
+		box-shadow: -.2rem .2rem 0 white;
 	}
+	.post-card-link:nth-child(odd) {
+		margin-bottom: 5rem;
+	}
+	.post-card-link:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    border-top: 40px solid black;
+    border-left: 40px solid transparent;
+    width: 0;
+}
 	.post-card-link:hover {
-		margin-bottom: 1rem;
-		filter: grayscale(0);
+		margin-bottom: 3rem;
+		filter: contrast(1);
+		box-shadow: -.2rem .2rem 0 #ff0069;
+	}
+	.post-card-link:nth-child(odd):hover {
+		margin-bottom: 4rem;
 	}
 	.post-card-thumb {
 		margin: 0;
