@@ -55,10 +55,8 @@ export const data = [
     title: 'Steffen.id',
     date: '2021-11-01',
     content: [
-      `Steffen.id is my personal website which you are currently on.`,
-      `The website is built with SvelteKit and uses local data for posts.`,
-      `The website has gone through many revisions and redesigns.`,
-      `The website is hosted on Netlify.`,
+      `Steffen.id is where you currently are. This is my personal portfolio website.`,
+      `The site is built with SvelteKit and is hosted on Netlify.`,
     ]
   }, {
     type: 'projects',

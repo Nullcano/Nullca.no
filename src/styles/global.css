@@ -1,26 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Rammetto+One&display=swap');
-
-@font-face {
-  font-family: 'HypatiaSansPro';
-  src: url('/fonts/HypatiaSansPro-Bold.woff2') format('woff2'),
-    url('/fonts/HypatiaSansPro-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --darkest-bg: #141316;
-  --accent-color: hsl(50, 50%, 40%);
-  --accent-color-hover: hsl(50, 50%, 60%);
-  --tertiary-color: #00a790;
-}
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
 
 * {
-  box-sizing: border-box;
-  position: relative;
   scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) hsl(260, 8%, 8%);
+  scrollbar-color: var(--bl) transparent;
 }
 
 *::-webkit-scrollbar {
@@ -28,7 +11,7 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: hsl(260, 8%, 8%);
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -36,8 +19,8 @@
 }
 
 ::selection {
-  background: hsl(260, 8%, 4%);
-  color: #fff;
+  background: var(--ye);
+  color: var(--dddd);
 }
 
 body {
@@ -45,23 +28,26 @@ body {
   margin: 0;
   width: 100%;
   height: 100vh;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Azeret Mono', monospace;
   font-size: 16px;
   font-weight: 400;
+  background-color: black;
   color: #fff;
-  background: hsl(260, 8%, 8%);
   overflow-x: hidden;
   overflow-y: auto;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  letter-spacing: normal;
 }
 
 a {
-  color: var(--accent-color);
-  text-decoration: none;
+  color: white;
   transition: color 0.25s linear;
 }
 
 a:hover {
-  color: var(--accent-color-hover);
+  color: black;
+  background-color: white;
 }
 
 a:active,
@@ -249,4 +235,19 @@ svg {
 .buttons a:hover {
   background: hsl(0, 0%, 24%);
   color: hsl(0, 0%, 100%);
+}
+
+.for-desktop {
+  display: flex;
+}
+.for-mobile {
+  display: none;
+}
+@media screen and (max-width: 60rem) {
+  .for-desktop {
+    display: none;
+  }
+  .for-mobile {
+    display: flex;
+  }
 }

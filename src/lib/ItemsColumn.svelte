@@ -5,8 +5,9 @@
 <style>
 	.items-column {
 		position: relative;
+		margin: 1rem 0;
 		display: flex;
 		flex-direction: column;
-		grid-gap: 1rem;
+		gap: 1rem;
 	}
 </style>
