@@ -16,18 +16,8 @@
 	}
 
 	h1 {
-		margin: 0;
+		margin: 2rem;
 		font-size: 2rem;
-		background-image: linear-gradient(
-			135deg,
-			hsl(50, 55%, 40%),
-			hsl(50, 55%, 80%),
-			hsl(50, 55%, 40%)
-		);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		font-family: 'HypatiaSansPro', sans-serif;
-		text-transform: uppercase;
 	}
 
 	@media (max-width: 768px) {

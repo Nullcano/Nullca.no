@@ -9,94 +9,75 @@
 <svelte:window bind:scrollY={y} />
 
 <article class="contained item-page">
-	<div class="body">
-		<div class="cover" style="background-image: url('../thumb/{item.slug}.{item.fileType}')"></div>
-		<div class="title">
-			<PageTitle title={item.title} />
-			<div class="date-info">
-				<span class="date">Posted <Time relative timestamp={item.date} /></span>
-			</div>
+	<div class="cover" style="background-image: url('../thumb/{item.slug}.{item.fileType}')"></div>
+	<div class="content">
+		<h1>{item.title}</h1>
+		<div class="date-info">
+			<span class="date">Posted <Time relative timestamp={item.date} /></span>
 		</div>
 		{#each item.content as p}
 		<p>{@html p}</p>
 		{/each}
+		<div class="back">
+			<a href="/">Return</a>
+		</div>
 	</div>
-	<a href="/{item.type}">
-		<div class="back">← Back to {item.type}</div>
-	</a>
 </article>
 
 <style>
 	.back {
-		padding: 2rem;
-		font-size: 1.5rem;
+		margin-top: 2rem;
 	}
 	.item-page {
 		position: relative;
+		margin: 2rem auto;
+		width: 40rem;
+		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 	}
-	.title {
+	.content {
 		position: relative;
-		margin-top: -5rem;
+		padding: .5rem 1rem;
+		display: flex;
+		flex-direction: column;
 	}
 	.date-info {
-		position: relative;
-		margin: 0 2rem;
-	}
-	.body {
-		margin: 0 auto;
-		padding: 1rem;
-		width: 700px;
-		max-width: 100%;
-		background: hsl(260, 8%, 8%);
-		border-radius: 1rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: 1rem;
 	}
 	p {
-		font-size: 1.5rem;
-		line-height: 1.5;
-		margin-bottom: 1rem;
-		color: var(--reset-light);
+		margin-bottom: .5rem;
 	}
-	.title {
+	h1 {
 		position: relative;
-		text-transform: uppercase;
+		margin: 1rem 0;
+		font-size: 2rem;
 	}
 	.cover {
 		padding-bottom: 50%;
 		width: 100%;
 		height: 0;
 		background-position: center;
-		background-size: cover;
-		border-radius: 1rem;
+		background-size: contain;
 		overflow: hidden;
 	}
-	.cover::before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 50%;
-		background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.75));
-	}
 
-	@media (max-width: 768px) {
-		.cover {
-			width: 100%;
-		}
-		.cover::before {
-			display: none;
-		}
-		.title {
-			margin-top: 0;
-		}
+	@media screen and (max-width: 60em) {
 		p {
-			font-size: 1.25rem;
+			order: 1;
 		}
 		.date-info {
-			margin: 0 1rem;
-			font-size: .8rem;
+			position: relative;
+			order: 2;
+		}
+		.back {
+			order: 3;
+		}
+		.item-page {
+			margin: 0 auto;
 		}
 	}
 </style>

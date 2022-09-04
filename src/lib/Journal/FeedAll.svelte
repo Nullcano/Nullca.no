@@ -1,12 +1,12 @@
 <script>
 	import { data } from '../../data';
-	import ItemsGrid from '$lib/ItemsGrid.svelte';
-	import PostCard from '$lib/PostCard.svelte';
+	import ItemsColumn from '$lib/ItemsColumn.svelte';
+	import PostListItem from '$lib/PostListItem.svelte';
 	let entries = data.filter((entry) => entry.type === 'journal').sort((a, b) => b.date - a.date);
 </script>
 
-<ItemsGrid>
+<ItemsColumn>
 	{#each entries as item}
-		<PostCard {item} />
+		<PostListItem {item} />
 	{/each}
-</ItemsGrid>
+</ItemsColumn>
