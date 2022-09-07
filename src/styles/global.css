@@ -64,12 +64,12 @@ body:before {
 
 a {
   color: white;
+  text-decoration: none;
   transition: color 0.25s linear;
 }
 
 a:hover {
-  color: black;
-  background-color: white;
+  color: rgb(180, 180, 180);
 }
 
 a:active,

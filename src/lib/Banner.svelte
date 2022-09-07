@@ -2,15 +2,17 @@
   import Emblem from '$lib/Emblem.svelte'
 </script>
 
-<div class="banner" role="banner" aria-roledescription="Banner with logo and title">
-  <div class="emblem">
-    <Emblem />
+<a href="/">
+  <div class="banner" role="banner" aria-roledescription="Banner with logo and title">
+    <div class="emblem">
+      <Emblem />
+    </div>
+    <div class="title featured">
+      <span>Steffen</span>
+    </div>
+    <div class="null"></div>
   </div>
-  <div class="title featured">
-    <span>Steffen</span>
-  </div>
-  <div class="null"></div>
-</div>
+</a>
 
 <style>
   .banner {
@@ -23,6 +25,9 @@
     justify-items: center;
     gap: .5rem;
     color: rgb(22, 22, 22);
+  }
+  a:hover {
+    text-decoration: none;
   }
   .emblem {
     align-self: flex-end;

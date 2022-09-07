@@ -1,12 +1,18 @@
 
 <section>
 	<div class="about">
-		<div class="info-label">
-			<strong>Priority</strong>
-			<span>Frontend Development</span>
+		<div class="left">
+			<div class="info-label">
+				<strong>Priority</strong>
+				<span>Frontend Development</span>
+			</div>
 		</div>
 		<div class="info">
 			<div class="title featured">
+				<svg viewBox="0 0 44 32">
+					<polygon points="2,2 42,2 22,30" />
+					SVG:404
+				</svg>
 				<div class="dob">NO-211192</div>
 				<div class="name">
 					<span>Steffen</span>
@@ -30,7 +36,7 @@
 	}
 	.about {
 		position: relative;
-		top: 20rem;
+		top: 15rem;
 		height: 100vh;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -49,6 +55,12 @@
 		flex-direction: column;
 		gap: 1rem;
 		transform: rotate(-90deg);
+	}
+	svg {
+		width: 2rem;
+		stroke: currentColor;
+		stroke-width: 3;
+		fill: none;
 	}
 	.dob {
 		font-size: 1.5rem;
