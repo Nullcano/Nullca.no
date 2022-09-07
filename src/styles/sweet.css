@@ -14,3 +14,11 @@
 .g1 { gap: .5rem }
 .g2 { gap: 1rem }
 .g3 { gap: 1.5rem }
+
+/* transform */
+.flip-x {
+  transform: rotateY(-180deg);
+}
+.flip-y {
+  transform: rotateX(-180deg);
+}
