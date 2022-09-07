@@ -15,11 +15,11 @@
 		width: 320px;
 		display: inline-block;
 		position: relative;
-		filter: grayscale(1) contrast(2);
 		-webkit-transform-origin: bottom;
 		transform-origin: bottom;
 		transition: all .25s linear;
 		box-shadow: -.2rem .2rem 0 white;
+		mix-blend-mode: luminosity;
 	}
 	.post-card-link:nth-child(odd) {
 		margin-bottom: 5rem;
@@ -28,7 +28,7 @@
     content: '';
     position: absolute;
     top: 0; right: 0;
-    border-top: 40px solid black;
+    border-top: 40px solid hsl(240, 13%, 9%);
     border-left: 40px solid transparent;
     width: 0;
 }

@@ -28,14 +28,6 @@
 	.back {
 		margin-top: 2rem;
 	}
-	.item-page {
-		position: relative;
-		margin: 2rem auto;
-		width: 40rem;
-		max-width: 100%;
-		display: flex;
-		flex-direction: column;
-	}
 	.content {
 		position: relative;
 		padding: .5rem 1rem;

@@ -1,9 +1,6 @@
 <script>
 	import About from '$lib/About.svelte';
-	import ProjectsRecent from '$lib/Projects/FeedRecent.svelte';
-	import JournalRecent from '$lib/Journal/FeedRecent.svelte';
-	import BlogRecent from '$lib/Blog/FeedRecent.svelte';
-	import SubTitle from '$lib/SubTitle.svelte';
+	import ContextBar from '$lib/ContextBar.svelte';
 </script>
 
 <svelte:head>
@@ -16,18 +13,9 @@
 	<meta property="og:image" content="" />
 </svelte:head>
 
-<div class="landing">
-	<About />
-	<ProjectsRecent />
-</div>
+<ContextBar showClose={false}>
+	<div class="filler"></div>
+	<span>Welcome</span>
+</ContextBar>
 
-<style>
-	.landing {
-		width: 100%;
-		height: 100vh;
-		display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-		overflow: hidden;
-	}
-</style>
+<About />
