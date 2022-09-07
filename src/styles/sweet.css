@@ -9,11 +9,14 @@
 /* spacing */
 
 /* display */
-.fl { display: flex }
-.col { flex-direction: column }
-.g1 { gap: .5rem }
-.g2 { gap: 1rem }
-.g3 { gap: 1.5rem }
+.flex { display: flex }
+.column { flex-direction: column }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.content-end { justify-content: flex-end; }
+.gap-1 { gap: .5rem }
+.gap-2 { gap: 1rem }
+.gap-3 { gap: 1.5rem }
 
 /* transform */
 .flip-x {
