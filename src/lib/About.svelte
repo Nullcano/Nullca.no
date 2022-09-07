@@ -6,24 +6,36 @@
 				<strong>Priority</strong>
 				<span>Frontend Development</span>
 			</div>
+			<div class="info-label">
+				<strong>Project</strong>
+				<span>Sweet CSS</span>
+			</div>
 		</div>
 		<div class="info">
-			<div class="title featured">
-				<svg viewBox="0 0 44 32">
-					<polygon points="2,2 42,2 22,30" />
-					SVG:404
-				</svg>
-				<div class="dob">NO-211192</div>
-				<div class="name">
-					<span>Steffen</span>
-					<span>Wold</span>
+			<div class="outer-title">
+				<div class="inner-title">
+					<div class="title">
+						<div class="content featured">
+							<svg viewBox="0 0 44 32">
+								<polygon points="2,2 42,2 22,30" />
+								SVG:404
+							</svg>
+							<div class="dob">NO-211192</div>
+							<div class="name">
+								<span>Steffen</span>
+								<span>Wold</span>
+							</div>	
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="divider"></div>
-			<p>
-				Based in Innlandet, Norway. Passionate about technology, user interfaces, and modern web applications.
-				Inspired by efficiency and productivity. Currently on internship at <a href="https://ikomm.no" target="_blank">Ikomm</a>.
-			</p>
+			<div class="description">
+				<p>
+					Based in Innlandet, Norway. Passionate about technology, user interfaces, and modern web applications.
+					Inspired by efficiency and productivity. Currently on internship at <a href="https://ikomm.no" target="_blank">Ikomm</a>.
+				</p>
+			</div>
 		</div>
 	</div>
 	<div class="filler"></div>
@@ -37,44 +49,24 @@
 	.about {
 		position: relative;
 		top: 15rem;
-		height: 100vh;
+		height: calc(100vh - 15rem);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
-	.info {
-		position: relative;
-		padding-top: 32rem;
+	.left {
+		padding: 5rem;
 		display: flex;
 		flex-direction: column;
-	}
-	.title {
-		position: absolute;
-		top: 10rem;
-		right: 5.6rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		transform: rotate(-90deg);
-	}
-	svg {
-		width: 2rem;
-		stroke: currentColor;
-		stroke-width: 3;
-		fill: none;
-	}
-	.dob {
-		font-size: 1.5rem;
-	}
-	.name {
-		display: flex;
-		flex-direction: column;
-		font-size: 12rem;
-		line-height: .8;
+		justify-content: center;
+		gap: 2rem;
 	}
 	.info-label {
-		margin: 10rem;
+		position: relative;
+		left: 50%;
+		margin-left: -5rem;
 		display: flex;
 		flex-direction: column;
+		align-self: flex-start;
 		text-transform: uppercase;
 	}
 	.info-label strong {
@@ -92,13 +84,66 @@
 		height: 1px;
 		background: rgba(255,255,255,.5);
 	}
+	.info {
+		position: relative;
+		padding: 5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 2rem;
+	}
+	.outer-title {
+		display: table;
+		vertical-align: bottom;
+	}
+	.inner-title {
+		padding: 50% 0;
+		height: 0;
+	}
+	.title {
+		margin-top: -50%;
+		display: block;
+		transform-origin: top left;
+		transform: rotate(-90deg) translate(-100%);
+		white-space: nowrap;
+	}
+	.title .content {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	svg {
+		width: 1.5rem;
+		stroke: currentColor;
+		stroke-width: 4;
+		fill: none;
+	}
+	.dob {
+		font-size: 1.5rem;
+	}
+	.name {
+		display: flex;
+		flex-direction: column;
+		font-size: 14rem;
+		line-height: .8;
+	}
 	.divider {
 		position: relative;
-		right: -5rem;
-		margin: 3rem 0;
-		width: calc(100% - 10rem);
-		height: 2px;
+		width: 100%;
+		height: 1px;
 		background: rgba(255,255,255,.5);
+	}
+	.divider::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 50%;
+		height: 1px;
+		background: #fff;
+	}
+	.description {
+		margin: 0 auto;
+		width: 70%;
 	}
 	p {
 		font-size: 1rem;
