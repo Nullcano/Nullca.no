@@ -79,7 +79,6 @@ a:hover {
 
 svg {
   width: 100%;
-  fill: currentColor;
 }
 
 .featured {
@@ -88,17 +87,73 @@ svg {
   text-transform: uppercase;
 }
 
+.article-page {
+  position: relative;
+  margin-top: 5rem;
+}
+
+.article-page > .inner {
+  margin: 0 auto;
+  width: calc(100% - 30rem);
+}
+
+.cta {
+  position: relative;
+  top: 5rem;
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-content: center;
+}
+.button {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255,255,255,.1);
+  display: grid;
+  place-content: center;
+}
+.button::before, .button::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: #fff;
+}
+.button::before {
+  top: 0;
+  left: 0;
+}
+.button::after {
+  bottom: 0;
+  right: 0;
+}
+.button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .for-desktop {
   display: flex;
 }
 .for-mobile {
   display: none;
 }
+
+@media screen and (max-width: 90rem) { 
+  .article-page > .inner {
+    width: calc(100% - 20rem);
+  }
+}
+
 @media screen and (max-width: 60rem) {
   .for-desktop {
     display: none;
   }
   .for-mobile {
     display: flex;
+  }
+  .article-page > .inner {
+    width: calc(100% - 10rem);
   }
 }
