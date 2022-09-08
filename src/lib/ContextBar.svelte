@@ -14,7 +14,7 @@
 <style>
 	.context-bar {
 		position: absolute;
-		top: 10rem;
+		top: 5rem;
 		right: 0;
 		left: 5rem;
 		height: 5rem;

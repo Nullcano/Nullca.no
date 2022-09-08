@@ -15,7 +15,6 @@
 
 <ContextBar showClose={false}>
 	<div class="filler"></div>
-	<span>Welcome</span>
 </ContextBar>
 
 <About />
