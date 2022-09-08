@@ -86,12 +86,12 @@
 		display: grid;
 		grid-template-columns: 1fr 5rem;
 	}
-  .title {
+  	.title {
 		margin-top: 10rem;
 	}
 	.title svg {
 		margin-bottom: 1rem;
-		width: 1.5vw;
+		width: 1.5rem;
 		stroke: currentColor;
 		stroke-width: 4;
 		fill: none;
@@ -110,7 +110,7 @@
 		justify-content: space-between;
 	}
 	.routes svg {
-		width: 1.5vw;
+		width: 1rem;
 		stroke: currentColor;
 		stroke-width: 4;
 		fill: none;

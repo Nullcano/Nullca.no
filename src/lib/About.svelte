@@ -52,7 +52,7 @@
 	}
 	.title svg {
 		margin-bottom: 1rem;
-		width: 1.5vw;
+		width: 1.5rem;
 		stroke: currentColor;
 		stroke-width: 4;
 		fill: none;
