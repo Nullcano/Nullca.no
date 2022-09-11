@@ -60,6 +60,6 @@
 		color: rgba(255,255,255,.5);
 	}
 	.post-card-title {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 </style>

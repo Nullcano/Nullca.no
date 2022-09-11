@@ -31,14 +31,13 @@ body {
   width: 100%;
   height: 100vh;
   font-family: 'Rajdhani', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   background-color: var(--darkest);
   color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.4;
   letter-spacing: normal;
 }
 

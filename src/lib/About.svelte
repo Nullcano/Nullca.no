@@ -31,7 +31,7 @@
 		</div>
 	</div>
 	<figure>
-		<img src="images/a-photo-of-a-cyborg-in-a-norwegian-landscape.png" alt="Cyborg in a Norwegian landscape" />
+		<img src="images/a-photo-of-a-cyborg-in-a-norwegian-landscape.webp" alt="Cyborg in a Norwegian landscape" />
 	</figure>
 </div>	
 

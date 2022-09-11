@@ -1,5 +1,5 @@
 <script>
-	import { data } from '../../data';
+	import { data } from '$lib/data';
 	import ItemsGrid from '$lib/ItemsGrid.svelte';
 	import PostCard from '$lib/PostCard.svelte';
 	let entries = data.filter((entry) => entry.type === 'projects').sort((a, b) => b.date - a.date);
