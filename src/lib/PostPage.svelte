@@ -9,75 +9,55 @@
 <svelte:window bind:scrollY={y} />
 
 <article class="contained item-page">
-	<div class="cover" style="background-image: url('../thumb/{item.slug}.{item.fileType}')"></div>
 	<div class="content">
-		<h1>{item.title}</h1>
+		<PageTitle title={item.title} />
 		<div class="date-info">
-			<span class="date">Posted <Time relative timestamp={item.date} /></span>
+			<span class="date">&circleddash; Published <Time relative timestamp={item.date} /></span>
 		</div>
 		{#each item.content as p}
 		<p>{@html p}</p>
 		{/each}
-		<div class="back">
-			<a href="/">Return</a>
-		</div>
 	</div>
+	{#if (item.fileType)}
+		<div class="cover" style="background-image: url('../thumb/{item.slug}.{item.fileType}')"></div>
+	{/if}
 </article>
+<div class="h1"></div>
 
 <style>
-	.back {
-		margin-top: 2rem;
-	}
-	.item-page {
-		position: relative;
-		margin: 2rem auto;
-		width: 40rem;
-		max-width: 100%;
-		display: flex;
-		flex-direction: column;
+	article {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 2.5rem;
 	}
 	.content {
 		position: relative;
-		padding: .5rem 1rem;
 		display: flex;
 		flex-direction: column;
 	}
 	.date-info {
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin-top: 1rem;
+		margin: 0 0 2.5rem 0;
 	}
 	p {
 		margin-bottom: .5rem;
 	}
-	h1 {
-		position: relative;
-		margin: 1rem 0;
-		font-size: 2rem;
-	}
 	.cover {
-		padding-bottom: 50%;
 		width: 100%;
-		height: 0;
+		height: 100%;
 		background-position: center;
 		background-size: contain;
+		background-repeat: no-repeat;
 		overflow: hidden;
 	}
 
 	@media screen and (max-width: 60em) {
-		p {
-			order: 1;
+		article {
+			display: flex;
+			flex-direction: column;
 		}
-		.date-info {
-			position: relative;
-			order: 2;
-		}
-		.back {
-			order: 3;
-		}
-		.item-page {
-			margin: 0 auto;
+		.cover {
+			height: 25rem;
 		}
 	}
 </style>

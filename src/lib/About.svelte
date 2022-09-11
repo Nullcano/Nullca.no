@@ -1,144 +1,181 @@
-<div class="about">
-	<div class="info">
-		<div class="title">
-			<h1>Steffen Wold</h1>
-			<div class="links for-desktop">
-				<a href="https://github.com/Nullcano" target="_blank">Github</a>
-				<a href="mailto:woldsteffen@gmail.com">Email</a>
-			</div>
-		</div>
-		<h2>Frontend Developer</h2>
+<script>
+	import { goto } from '$app/navigation';
+</script>
+
+<div class="page">
+	<div class="title">
+		<svg viewBox="0 0 44 32">
+			<polygon points="2,2 42,2 22,30" />
+			SVG:404
+		</svg>
+		<div class="dob featured">NO.211192.53-57</div>
+		<div class="name featured">
+			<span>Steffen</span>
+			<span>Wold</span>
+		</div>			
+	</div>
+	<div class="description">
 		<p>
-			Based in Innlandet, Norway. Passionate about technology, user interfaces, and modern web applications.
+			Frontend developer based in Innlandet, Norway. Passionate about technology, user interfaces and modern web applications.
 			Inspired by efficiency and productivity. Currently on internship at <a href="https://ikomm.no" target="_blank">Ikomm</a>.
 		</p>
-		<div class="links for-mobile">
-			<a href="https://github.com/Nullcano" target="_blank">Github</a>
-			<a href="mailto:woldsteffen@gmail.com">Email</a>
-		</div>
-		<a class="archive" href="/journal">
-			[Archived] Academy Journal
-		</a>
-	</div>
-	<div class="illustration">
-		<div class="machine-code"></div>
-		<div class="paint-layer"></div>
-		<div class="paint-roller">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.776 30.776" style="enable-background:new 0 0 30.776 30.776" xml:space="preserve"><path d="M22.623 1.982V0H3.93v6.137h18.693V4.153h1.285v6.062H11.752v6.661h-1.066v13.9h5.826V16.891h-1.02v-4.272h11.354V1.982h-4.223zM15.387 29.67h-3.812v-.709h3.812v.709z"/></svg>
+		<div class="explore-button flex pointer" on:click={() => goto("/explore")}>
+			<div class="button-text featured">
+				<span>Explore</span>
+			</div>
+			<div class="button">
+				<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.268 4.21a.75.75 0 0 0-1.04 1.08l8.275 7.96H3.75a.75.75 0 0 0 0 1.5h18.752l-8.273 7.959a.75.75 0 0 0 1.04 1.08l9.428-9.069a1 1 0 0 0 0-1.441l-9.428-9.07Z" fill="currentColor" fill-rule="nonzero"/>
+				</svg>
+			</div>
 		</div>
 	</div>
+	<figure>
+		<img src="images/a-photo-of-a-cyborg-in-a-norwegian-landscape.png" alt="Cyborg in a Norwegian landscape" />
+	</figure>
+</div>	
+
+<div class="button cta" on:click={() => goto("/explore")}>
+	<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+		<path d="M15.268 4.21a.75.75 0 0 0-1.04 1.08l8.275 7.96H3.75a.75.75 0 0 0 0 1.5h18.752l-8.273 7.959a.75.75 0 0 0 1.04 1.08l9.428-9.069a1 1 0 0 0 0-1.441l-9.428-9.07Z" fill="currentColor" fill-rule="nonzero"/>
+	</svg>
 </div>
 
 <style>
-	.info {
-		margin: 4rem;
+	.page {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 5rem;
+	}
+	.title {
+		grid-area: 1 / 1 / 2 / 2;
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
 	}
-	.illustration {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 50vw;
-		height: 50vh;
+	.title svg {
+		margin-bottom: 1rem;
+		width: 1.5rem;
+		stroke: currentColor;
+		stroke-width: 4;
+		fill: none;
 	}
-	.machine-code {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		margin-left: -6.5rem;
-		width: 13rem;
-		height: 120%;
-		background-size: 13rem;
-		background-color: white;
-		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 255.642 255.642' style='enable-background:new 0 0 255.642 255.642;' xml:space='preserve'%3E%3Cg%3E%3Cpath id='rect34754' d='M75.067,2.72c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15c-1.975,1.93-2.012,5.096-0.082,7.071 c1.93,1.975,5.096,2.012,7.071,0.082c0.028-0.027,0.056-0.055,0.083-0.083l6.463-6.463v42.928h-10 c-2.761-0.039-5.032,2.168-5.071,4.929s2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182 c0.535,0.088,1.08,0.088,1.615,0h9.203c2.761,0.039,5.032-2.168,5.071-4.929s-2.168-5.032-4.929-5.071 c-0.047-0.001-0.094-0.001-0.141,0h-5v-55c-0.001-2.762-2.241-4.999-5.003-4.998C75.163,2.718,75.115,2.719,75.067,2.72z M130.21,2.72c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15c-1.992,1.913-2.057,5.078-0.144,7.07s5.078,2.057,7.07,0.144 c0.049-0.047,0.097-0.095,0.144-0.144l6.465-6.465v42.93h-10c-2.761-0.039-5.032,2.168-5.071,4.929 c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182c0.537,0.088,1.084,0.088,1.621,0h9.197 c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071c-0.047-0.001-0.094-0.001-0.141,0h-5v-55 c-0.001-2.762-2.241-4.999-5.003-4.998C130.306,2.718,130.258,2.719,130.21,2.72z M17.571,2.754c-9.609,0-17.5,7.891-17.5,17.5v35 c0,9.609,7.891,17.5,17.5,17.5s17.5-7.891,17.5-17.5v-35C35.071,10.645,27.18,2.754,17.571,2.754z M182.999,2.754 c-9.609,0-17.5,7.891-17.5,17.5v35c0,9.609,7.891,17.5,17.5,17.5s17.5-7.891,17.5-17.5v-35 C200.499,10.645,192.607,2.754,182.999,2.754z M238.142,2.754c-9.609,0-17.5,7.891-17.5,17.5v35c0,9.609,7.891,17.5,17.5,17.5 c9.609,0,17.5-7.891,17.5-17.5v-35C255.642,10.645,247.75,2.754,238.142,2.754z M17.571,12.754c4.241,0,7.5,3.259,7.5,7.5v35 c0,4.241-3.259,7.5-7.5,7.5s-7.5-3.259-7.5-7.5v-35C10.071,16.012,13.33,12.754,17.571,12.754z M182.999,12.754 c4.241,0,7.5,3.259,7.5,7.5v35c0,4.241-3.259,7.5-7.5,7.5s-7.5-3.259-7.5-7.5v-35C175.499,16.012,178.757,12.754,182.999,12.754z M238.142,12.754c4.241,0,7.5,3.259,7.5,7.5v35c0,4.241-3.259,7.5-7.5,7.5s-7.5-3.259-7.5-7.5v-35 C230.642,16.012,233.9,12.754,238.142,12.754z M19.925,92.791c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15 c-1.952,1.954-1.949,5.121,0.005,7.072c1.952,1.95,5.115,1.95,7.067,0l6.463-6.463v42.928h-10 c-2.761-0.039-5.032,2.168-5.071,4.929c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182 c0.537,0.088,1.084,0.088,1.621,0h9.197c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071 c-0.047-0.001-0.094-0.001-0.141,0h-5v-55c0-2.762-2.239-5-5.001-5C20.022,92.789,19.973,92.789,19.925,92.791z M130.21,92.791 c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15c-1.976,1.93-2.013,5.095-0.084,7.071c1.93,1.976,5.095,2.013,7.071,0.084 c0.028-0.027,0.056-0.055,0.083-0.083l6.465-6.465v42.93h-10c-2.761-0.039-5.032,2.168-5.071,4.929 c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182c0.537,0.088,1.084,0.088,1.621,0h9.197 c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071c-0.047-0.001-0.094-0.001-0.141,0h-5v-55 c0-2.762-2.239-5-5.001-5C130.307,92.789,130.258,92.789,130.21,92.791z M185.352,92.791c-1.275,0.037-2.487,0.56-3.389,1.461 l-15,15c-1.976,1.93-2.013,5.095-0.084,7.071c1.93,1.976,5.095,2.013,7.071,0.084c0.028-0.027,0.056-0.055,0.083-0.083l6.465-6.465 v42.93h-10c-2.761-0.039-5.032,2.168-5.071,4.929c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182 c0.537,0.088,1.084,0.088,1.621,0h9.197c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071 c-0.047-0.001-0.094-0.001-0.141,0h-5v-55c0-2.762-2.239-5-5.001-5C185.45,92.789,185.401,92.789,185.352,92.791z M72.714,92.824 c-9.609,0-17.5,7.891-17.5,17.5v35c0,9.609,7.891,17.5,17.5,17.5s17.5-7.891,17.5-17.5v-35 C90.214,100.715,82.322,92.824,72.714,92.824z M238.142,92.824c-9.609,0-17.5,7.891-17.5,17.5v35c0,9.609,7.891,17.5,17.5,17.5 c9.609,0,17.5-7.891,17.5-17.5v-35C255.642,100.715,247.75,92.824,238.142,92.824z M72.714,102.824c4.241,0,7.5,3.259,7.5,7.5v35 c0,4.241-3.259,7.5-7.5,7.5s-7.5-3.259-7.5-7.5v-35C65.214,106.082,68.472,102.824,72.714,102.824z M238.142,102.824 c4.241,0,7.5,3.259,7.5,7.5v35c0,4.241-3.259,7.5-7.5,7.5s-7.5-3.259-7.5-7.5v-35C230.642,106.082,233.9,102.824,238.142,102.824z M19.925,182.861c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15c-1.953,1.953-1.953,5.119,0,7.072s5.119,1.953,7.072,0l6.463-6.463 v42.926h-10c-2.761-0.039-5.032,2.168-5.071,4.929c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182 c0.537,0.088,1.084,0.088,1.621,0h9.197c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071 c-0.047-0.001-0.094-0.001-0.141,0h-5v-55c-0.001-2.762-2.241-4.999-5.003-4.998C20.021,182.859,19.973,182.86,19.925,182.861z M75.067,182.861c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15c-1.953,1.953-1.953,5.119,0,7.072s5.119,1.953,7.072,0l6.463-6.463 v42.926h-10c-2.761-0.039-5.032,2.168-5.071,4.929c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182 c0.535,0.088,1.08,0.088,1.615,0h9.203c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071 c-0.047-0.001-0.094-0.001-0.141,0h-5v-55c-0.001-2.762-2.241-4.999-5.003-4.998C75.163,182.859,75.115,182.86,75.067,182.861z M130.21,182.861c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15c-1.976,1.93-2.013,5.095-0.084,7.071 c1.93,1.976,5.095,2.013,7.071,0.084c0.028-0.027,0.056-0.055,0.083-0.083l6.465-6.465v42.928h-10 c-2.761-0.039-5.032,2.168-5.071,4.929c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182 c0.537,0.088,1.084,0.088,1.621,0h9.197c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071 c-0.047-0.001-0.094-0.001-0.141,0h-5v-55c-0.001-2.762-2.241-4.999-5.003-4.998C130.306,182.859,130.258,182.86,130.21,182.861z M185.352,182.861c-1.275,0.037-2.487,0.56-3.389,1.461l-15,15c-1.976,1.93-2.013,5.095-0.084,7.071 c1.93,1.976,5.095,2.013,7.071,0.084c0.028-0.027,0.056-0.055,0.083-0.083l6.465-6.465v42.928h-10 c-2.761-0.039-5.032,2.168-5.071,4.929c-0.039,2.761,2.168,5.032,4.929,5.071c0.047,0.001,0.094,0.001,0.141,0h14.182 c0.537,0.088,1.084,0.088,1.621,0h9.197c2.761,0.039,5.032-2.168,5.071-4.929c0.039-2.761-2.168-5.032-4.929-5.071 c-0.047-0.001-0.094-0.001-0.141,0h-5v-55c-0.001-2.762-2.241-4.999-5.003-4.998C185.448,182.859,185.4,182.86,185.352,182.861z M238.142,182.894c-9.609,0-17.5,7.891-17.5,17.5v35c0,9.609,7.891,17.5,17.5,17.5c9.609,0,17.5-7.891,17.5-17.5v-35 C255.642,190.786,247.75,182.894,238.142,182.894z M238.142,192.894c4.241,0,7.5,3.259,7.5,7.5v35c0,4.241-3.259,7.5-7.5,7.5 s-7.5-3.259-7.5-7.5v-35C230.642,196.153,233.9,192.894,238.142,192.894z'/%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
-		animation: matrix 5s linear infinite;
+	.dob {
+		font-size: 1.5rem;
+		color: rgba(255,255,255,.5);
 	}
-	@keyframes matrix {
-		to {
-			background-position: 13rem 13rem;
-		}
+	.name {
+		display: flex;
+		flex-direction: column;
+		font-size: 7.5rem;
+		font-weight: 700;
+		line-height: 1;
 	}
-	.paint-layer {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		margin-left: -6.5rem;
-		width: 13rem;
-		height: 70%;
-		background: linear-gradient(to bottom, #850037, #ff0069);
-	}
-	.paint-roller {
-		position: absolute;
-		top: 60%;
-		left: 50%;
-		margin-left: -8.5rem;
-		width: 20rem;
-		mix-blend-mode: difference;
-	}
-	.paint-roller::after {
-		position: absolute;
-		top: -.5rem;
-		left: 50%;
-		margin-left: -8rem;
-		content: "";
-		width: 13rem;
-		height: 5rem;
-		background: #850037;
-	}
-	.about {
+	figure {
+		grid-area: 1 / 2 / 3 / 3; 
 		position: relative;
+		width: calc(100% + 10rem);
+		height: 75vh;
+		mix-blend-mode: luminosity;
+		filter: brightness(.5);
+		overflow: hidden;
+	}
+	figure img {
 		width: 100%;
 		height: 100%;
-		display: grid;
-		grid-template-columns: 2fr 1fr;
+		object-fit: cover;
+		overflow: hidden;
 	}
-
-	.title {
+	.description {
+		grid-area: 2 / 1 / 3 / 2;
 		display: flex;
-		align-items: center;
-		gap: 2rem;
-	}
-	.links {
-		align-items: flex-start;
-		gap: 1rem;
-	}
-	.links.for-desktop {
 		flex-direction: column;
+		justify-content: flex-start;
+		gap: 2.5rem;
+		font-size: 1.25rem;
+		color: rgba(255,255,255,.5);
 	}
-	.links.for-mobile {
-		margin-top: 1rem;
+	.explore-button {
+		color: #fff;
+		align-self: flex-end;
 	}
-	h1 {
-		font-size: 3rem;
+	.button-text {
+		position: relative;
+		margin-right: -1px;
+		padding: 0 1rem;
+		height: 2.5rem;
+		border: 1px solid rgba(255,255,255,.1);
+		display: grid;
+		place-content: center;
 	}
-	h2 {
-		font-size: 2.5rem;
+	.button-text::before, .button-text::after {
+		content: '';
+		position: absolute;
+		width: 1rem;
+		height: 1px;
+		background: rgba(255,255,255,.5);
+		transition: all .25s linear;
 	}
-	p {
-		margin-top: 1rem;
-		max-width: 32rem;
-		font-size: 1rem;
+	.button-text::before {
+		top: -1px;
+		left: -1px;
 	}
-	.archive {
-		margin-top: 1rem;
-		align-self: start;
+	.explore-button:hover .button-text::before {
+		left: calc(100% - 1rem);
+	}
+	.explore-button:hover .button-text::after {
+		right: calc(100% - 1rem);
+	}
+	.button-text::after {
+		bottom: -1px;
+		right: -1px;
 	}
 	@media screen and (max-width: 60em) {
-		.info {
-			margin: 1rem;
+		.page {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			gap: 2.5rem;
 		}
-		.about {
-			grid-template-columns: 1fr;
+		.title {
+			margin-top: 5rem;
+			grid-area: auto;
 		}
-		.illustration {
-			display: none;
+		.name {
+			font-size: 5rem;
 		}
-		h1 {
-			font-size: 2rem;
+		.description {
+			grid-area: auto;
 		}
-		h2 {
-			font-size: 1.5rem;
+		.explore-button {
+			align-self: flex-start;
+		}
+		figure {
+			grid-area: auto;
+			position: relative;
+			left: -2.5rem;
+			width: calc(100% + 10rem);
+			height: 20rem;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			overflow: hidden;
+			z-index: 10;
+		}
+	}
+	@media screen and (max-width: 30em) {
+		.title {
+			margin-top: 2.5rem;
+		}
+		.dob {
+			font-size: 1rem;
+		}
+		.name {
+			font-size: 2.5rem;
+		}
+		figure {
+			left: -1rem;
 		}
 	}
 </style>

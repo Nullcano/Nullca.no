@@ -4,7 +4,9 @@
 </script>
 
 <a href={`/${item.type}/${item.slug}`} class="post-card-link">
-	<Time timestamp={item.date} />
+	<div class="timestamp">
+		<Time timestamp={item.date} />
+	</div>
 	<div class="post-card-title featured">
 		<span>{item.title}</span>
 	</div>
@@ -14,7 +16,7 @@
 	.post-card-link {
 		position: relative;
 		width: 100%;
-		height: 20rem;
+		height: 10rem;
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
@@ -28,7 +30,7 @@
     top: 0;
 		left: 0;
 		width: 100%;
-		height: 20rem;
+		height: 10rem;
 		border: 1px solid rgba(255,255,255,.1);
 		transition: all .25s linear;
 	}
@@ -53,7 +55,11 @@
     bottom: -2rem;
 		right: -2rem;
 	}
+	.timestamp {
+		text-transform: uppercase;
+		color: rgba(255,255,255,.5);
+	}
 	.post-card-title {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 </style>

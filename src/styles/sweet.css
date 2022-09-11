@@ -6,11 +6,55 @@
 .fs2 { font-size: 2rem }
 .fs3 { font-size: 3rem }
 
+/* sizing */
+.w0 { width: 0 }
+.w1 { width: 5rem}
+.w2 { width: 10rem }
+.w3 { width: 15rem }
+.w4 { width: 20rem }
+.w5 { width: 25rem }
+
+.h0 { height: 0 }
+.h1 { height: 5rem}
+.h2 { height: 10rem }
+.h3 { height: 15rem }
+.h4 { height: 20rem }
+.h5 { height: 25rem }
+
 /* spacing */
+.mv1 { margin: .5rem auto; }
+.mv2 { margin: 1rem auto; }
+.mv3 { margin: 2.5rem auto; }
+.mv4 { margin: 5rem auto; }
+
+.pa1 { padding: .5rem; }
+.pa2 { padding: 1rem; }
+.pa3 { padding: 2.5rem; }
+.pa4 { padding: 5rem; }
 
 /* display */
-.fl { display: flex }
-.col { flex-direction: column }
-.g1 { gap: .5rem }
-.g2 { gap: 1rem }
-.g3 { gap: 1.5rem }
+.flex { display: flex }
+.column { flex-direction: column }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.content-end { justify-content: flex-end; }
+
+.grid { display: grid; }
+.col-2 { grid-template-columns: repeat(2, 1fr) ; }
+
+.gap-1 { gap: .5rem }
+.gap-2 { gap: 1rem }
+.gap-3 { gap: 2.5rem }
+
+/* cursors */
+.pointer {
+  cursor: pointer;
+}
+
+/* transform */
+.flip-x {
+  transform: rotateY(-180deg);
+}
+.flip-y {
+  transform: rotateX(-180deg);
+}
