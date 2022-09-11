@@ -1,6 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
-	import ContextBar from '$lib/ContextBar.svelte';
+	import PageTitle from '$lib/PageTitle.svelte';
 </script>
 
 <svelte:head>
@@ -13,111 +13,133 @@
 	<meta property="og:image" content="" />
 </svelte:head>
 
-<ContextBar showClose={false}>
-	<div class="filler"></div>
-</ContextBar>
+<div class="page">
+	<PageTitle title="Explore" />
+	<div class="routes">
+		<a href="/concepts">
+			<svg viewBox="0 0 44 32">
+				<polygon points="2,2 42,2 22,30" />
+				SVG:404
+			</svg>
+			<div class="text featured">
+				<span>Concepts</span>
+			</div>
+		</a>
+		<a href="/projects">
+			<svg viewBox="0 0 44 32">
+				<polygon points="2,2 42,2 22,30" />
+				SVG:404
+			</svg>
+			<div class="text featured">
+				<span>Projects</span>
+			</div>
+		</a>
+		<a href="/articles">
+			<svg viewBox="0 0 44 32">
+				<polygon points="2,2 42,2 22,30" />
+				SVG:404
+			</svg>
+			<div class="text featured">
+				<span>Articles</span>
+			</div>
+		</a>
+		<a href="/resources">
+			<svg viewBox="0 0 44 32">
+				<polygon points="2,2 42,2 22,30" />
+				SVG:404
+			</svg>
+			<div class="text featured">
+				<span>Resources</span>
+			</div>
+		</a>
+		<a href="/journal">
+			<svg viewBox="0 0 44 32">
+				<polygon points="2,2 42,2 22,30" />
+				SVG:404
+			</svg>
+			<div class="text featured">
+				<span>Academy Journal</span>
+			</div>
+		</a>
+	</div>
+	<div class="h1"></div>
+</div>
 
-<section>
-	<div class="article-page">
-		<div class="inner">
-      <div class="title flex column content-end gap-2">
-				<svg viewBox="0 0 44 32">
-					<polygon points="2,2 42,2 22,30" />
-					SVG:404
-				</svg>
-        <div class="heading featured">Explore</div>
-      </div>
-			<div class="routes mv3 grid col-2 gap-3">
-				<a class="pa3" href="/projects">
-					<svg viewBox="0 0 32 44">
-						<polygon points="2,2 2,44 30,22" />
-						SVG:404
-					</svg>
-					<div class="text featured">
-						Projects
-					</div>
-				</a>
-				<a class="pa3" href="/journal">
-					<svg viewBox="0 0 32 44">
-						<polygon points="2,2 2,44 30,22" />
-						SVG:404
-					</svg>
-					<div class="text featured">
-						Articles
-					</div>
-				</a>
-			</div>
-			<div class="routes mv3 grid col-2 gap-3">
-				<a class="pa3" href="/projects">
-					<svg viewBox="0 0 32 44">
-						<polygon points="2,2 2,44 30,22" />
-						SVG:404
-					</svg>
-					<div class="text featured">
-						Resources
-					</div>
-				</a>
-				<a class="pa3" href="/journal">
-					<svg viewBox="0 0 32 44">
-						<polygon points="2,2 2,44 30,22" />
-						SVG:404
-					</svg>
-					<div class="text featured">
-						Academy Journal
-					</div>
-				</a>
-			</div>
-    </div>
-  </div>
-  <div class="filler">
-    <div class="cta">
-      <div class="button pointer" on:click={() => goto("/")}>
-        <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
-          <path fill="currentColor" d="m9.207 8.5 6.646 6.646-.707.707L8.5 9.207l-6.646 6.646-.707-.707L7.793 8.5 1.146 1.854l.707-.707L8.5 7.793l6.646-6.646.707.707L9.207 8.5z"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="button cta" on:click={() => goto("/")}>
+	<svg class="flip-x" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+		<path d="M15.268 4.21a.75.75 0 0 0-1.04 1.08l8.275 7.96H3.75a.75.75 0 0 0 0 1.5h18.752l-8.273 7.959a.75.75 0 0 0 1.04 1.08l9.428-9.069a1 1 0 0 0 0-1.441l-9.428-9.07Z" fill="currentColor" fill-rule="nonzero"/>
+	</svg>
+</div>
 
 <style>
-  section {
-    height: 100vh;
+	.routes {
 		display: grid;
-		grid-template-columns: 1fr 5rem;
-	}
-  	.title {
-		margin-top: 10rem;
-	}
-	.title svg {
-		margin-bottom: 1rem;
-		width: 1.5rem;
-		stroke: currentColor;
-		stroke-width: 4;
-		fill: none;
-	}
-	.heading {
-		display: flex;
-		flex-direction: column;
-		font-size: 8rem;
-		line-height: .8;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 1rem;
 	}
 	.routes a {
-		padding-top: 15rem;
-		border: 1px solid #fff;
+		position: relative;
+		padding: 2rem;
+		height: 30rem;
+		border: 1px solid rgba(255,255,255,.1);
 		display: flex;
-		align-items: center;
+		flex-direction: column;
 		justify-content: space-between;
+		overflow: hidden;
+	}
+	.routes a:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 20rem;
+		background: hsla(240, 13%, 50%, .1);
+		transform: skewY(0) translateY(20rem);
+		transition: all .3s linear;
+	}
+	.routes a:hover {
+		color: inherit;
+	}
+	.routes a:hover::after {
+		transform: skewY(15deg) translateY(2.5rem);
 	}
 	.routes svg {
 		width: 1rem;
 		stroke: currentColor;
 		stroke-width: 4;
 		fill: none;
+		transition: transform .3s linear;
+	}
+	.routes a:hover svg {
+		transform: rotate(-90deg);
 	}
 	.text {
-		font-size: 3rem;
-		display: flex;
-		align-items: flex-end;
+		position: relative;
+		font-size: 1.5rem;
+	}
+	.text span {
+		position: absolute;
+		display: block;
+		width: 25rem;
+		transform: rotate(-90deg) translate(0, 0);
+		transform-origin: top left;
+	}
+	@media screen and (max-width: 60em) {
+		.routes {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	@media screen and (max-width: 30em) {
+		.routes {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.routes a {
+			padding: 1rem;
+			gap: 1rem;
+		}
+		.routes a:hover::after {
+			transform: skewY(10deg) translateY(2rem);
+		}
 	}
 </style>

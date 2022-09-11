@@ -7,6 +7,6 @@
 	<meta property="og:image" content="" />
 </svelte:head>
 
-<div class="contained">
+<div class="page">
   <h1 style="margin: 2rem">404 - Not found.</h1>
 </div>

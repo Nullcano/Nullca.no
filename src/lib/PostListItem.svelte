@@ -1,5 +1,5 @@
 <script>
-	export let item
+	export let item;
 </script>
 
 <a href={`/${item.type}/${item.slug}`} class="post-list-item-link">
