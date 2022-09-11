@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Rajdhani/Rajdhani-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Chakra_Petch/ChakraPetch-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/Chakra_Petch/ChakraPetch-SemiBold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Chakra_Petch/ChakraPetch-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/Chakra_Petch/ChakraPetch-BoldItalic.ttf') format('opentype');
+}

@@ -1,5 +1,24 @@
 export const data = [
   {
+    type: 'concepts',
+    fileType: 'png',
+    slug: 'citizens',
+    title: 'Citizens',
+    date: '2022-09-01',
+    content: [
+      `Citizens is an upcoming social media app concept design.`,
+    ]
+  }, {
+    type: 'projects',
+    slug: 'sweet-css',
+    title: 'Sweet CSS',
+    date: '2022-09-01',
+    content: [
+      `Sweet CSS is a small and complex, yet easy to use CSS library that I am constantly expanding by using it in my own projects.`,
+      `If you are interested in testing it out you can steal the sweet.css file from my projects and decipher the classes, or you can wait for the upcoming release with documentation.`,
+      `More information about the project will be announced soon.`
+    ]
+  }, {
     type: 'journal',
     fileType: 'jpg',
     slug: 'thirteenth-weekly-update',
@@ -84,7 +103,7 @@ export const data = [
       `.. and of course as a lofi rickroll music video.`,
     ]
   }, {
-    type: 'blog',
+    type: 'articles',
     fileType: 'gif',
     slug: 'lets-try-blogging',
     title: `Let's Try Blogging`,
@@ -96,7 +115,7 @@ export const data = [
       `Not sure what else I will post about here yet but time will show.`,
     ]
   }, {
-    type: 'blog',
+    type: 'articles',
     fileType: 'webp',
     slug: 'using-old-tools',
     title: `Using Old Tools?`,

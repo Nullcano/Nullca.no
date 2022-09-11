@@ -6,6 +6,21 @@
 .fs2 { font-size: 2rem }
 .fs3 { font-size: 3rem }
 
+/* sizing */
+.w0 { width: 0 }
+.w1 { width: 5rem}
+.w2 { width: 10rem }
+.w3 { width: 15rem }
+.w4 { width: 20rem }
+.w5 { width: 25rem }
+
+.h0 { height: 0 }
+.h1 { height: 5rem}
+.h2 { height: 10rem }
+.h3 { height: 15rem }
+.h4 { height: 20rem }
+.h5 { height: 25rem }
+
 /* spacing */
 .mv1 { margin: .5rem auto; }
 .mv2 { margin: 1rem auto; }
