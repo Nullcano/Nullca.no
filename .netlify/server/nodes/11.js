@@ -32,6 +32,6 @@ __export(stdin_exports, {
 module.exports = __toCommonJS(stdin_exports);
 const index = 11;
 const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/pages/projects/_page.svelte.js")))).default;
-const file = "_app/immutable/components/pages/projects/_page.svelte-f49f687d.js";
-const imports = ["_app/immutable/components/pages/projects/_page.svelte-f49f687d.js", "_app/immutable/chunks/index-e2becc2d.js", "_app/immutable/chunks/navigation-731b22b2.js", "_app/immutable/chunks/singletons-a1c1708b.js", "_app/immutable/chunks/PageTitle-0990701a.js", "_app/immutable/chunks/data-f7bd4d59.js", "_app/immutable/chunks/PostCard-d0bd805a.js", "_app/immutable/chunks/Time-759d754f.js"];
+const file = "_app/immutable/components/pages/projects/_page.svelte-0f495126.js";
+const imports = ["_app/immutable/components/pages/projects/_page.svelte-0f495126.js", "_app/immutable/chunks/index-e2becc2d.js", "_app/immutable/chunks/navigation-09f98d3f.js", "_app/immutable/chunks/singletons-9617b6de.js", "_app/immutable/chunks/PageTitle-0990701a.js", "_app/immutable/chunks/data-f7bd4d59.js", "_app/immutable/chunks/PostCard-d0bd805a.js", "_app/immutable/chunks/Time-759d754f.js"];
 const stylesheets = ["_app/immutable/assets/PageTitle-75dd3c01.css", "_app/immutable/assets/PostCard-3f3af2bb.css"];

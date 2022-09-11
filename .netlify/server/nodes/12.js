@@ -34,6 +34,6 @@ module.exports = __toCommonJS(stdin_exports);
 var shared = __toESM(require("../entries/pages/projects/_slug_/_page.js"));
 const index = 12;
 const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/pages/projects/_slug_/_page.svelte.js")))).default;
-const file = "_app/immutable/components/pages/projects/_slug_/_page.svelte-1c8a4e6b.js";
-const imports = ["_app/immutable/components/pages/projects/_slug_/_page.svelte-1c8a4e6b.js", "_app/immutable/chunks/index-e2becc2d.js", "_app/immutable/chunks/navigation-731b22b2.js", "_app/immutable/chunks/singletons-a1c1708b.js", "_app/immutable/chunks/PostPage-266fb67e.js", "_app/immutable/chunks/PageTitle-0990701a.js", "_app/immutable/chunks/Time-759d754f.js", "_app/immutable/modules/pages/projects/_slug_/_page.js-cf4916ed.js", "_app/immutable/chunks/data-f7bd4d59.js", "_app/immutable/chunks/_page-6e9289a7.js"];
+const file = "_app/immutable/components/pages/projects/_slug_/_page.svelte-75d75399.js";
+const imports = ["_app/immutable/components/pages/projects/_slug_/_page.svelte-75d75399.js", "_app/immutable/chunks/index-e2becc2d.js", "_app/immutable/chunks/navigation-09f98d3f.js", "_app/immutable/chunks/singletons-9617b6de.js", "_app/immutable/chunks/PostPage-266fb67e.js", "_app/immutable/chunks/PageTitle-0990701a.js", "_app/immutable/chunks/Time-759d754f.js", "_app/immutable/modules/pages/projects/_slug_/_page.js-cf4916ed.js", "_app/immutable/chunks/data-f7bd4d59.js", "_app/immutable/chunks/_page-6e9289a7.js"];
 const stylesheets = ["_app/immutable/assets/PostPage-8971c007.css", "_app/immutable/assets/PageTitle-75dd3c01.css"];
