@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: hsl(256, 25%, 8%);
+	color: hsla(0, 0%, 100%, .8);
+	font-family: 'RX100', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+	font-weight: normal;
+}
+h1 {
+	font-size: 4rem;
+}
+h2 {
+	font-size: 2.5rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
