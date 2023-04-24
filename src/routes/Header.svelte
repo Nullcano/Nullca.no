@@ -6,7 +6,7 @@
 
 <style>
 	header {
-		padding: 1rem;
+		margin-block: 2rem;
 		display: grid;
 	}
 	a {
