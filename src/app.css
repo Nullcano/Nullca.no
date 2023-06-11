@@ -1,0 +1,144 @@
+:root {
+	/* font */
+	--font-sans: 'Space Grotesk', sans-serif;
+	--blue-dark: hsl(240, 15%, 10%);
+	--blue: hsl(240, 15%, 15%);
+	--blue-light: hsl(240, 15%, 20%);
+	--light: hsl(240, 30%, 30%);
+	--white: hsl(0, 0%, 100%);
+	--clip-xs: polygon(calc(0% + .25rem) 0%, 100% 0, 100% calc(100% - .25rem), calc(100% - .25rem) 100%, 0 100%, 0 calc(0% + .25rem));
+	--clip-s: polygon(calc(0% + .5rem) 0%, 100% 0, 100% calc(100% - .5rem), calc(100% - .5rem) 100%, 0 100%, 0 calc(0% + .5rem));
+	--clip-m: polygon(calc(0% + 1rem) 0%, 100% 0, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 0 100%, 0 calc(0% + 1rem));
+	--clip-l: polygon(calc(0% + 1.5rem) 0%, 100% 0, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 0 100%, 0 calc(0% + 1.5rem));
+	--clip-xl: polygon(calc(0% + 2rem) 0%, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%, 0 calc(0% + 2rem));
+}
+
+::selection {
+	background-color: black;
+	color: white;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	height: 100%;
+	color: var(--white);
+	background: hsl(256, 24%, 6%);
+	background-size: 100%;
+	background-attachment: fixed;
+  font-family: var(--font-sans);
+	font-size: 16px;
+	font-weight: 300;
+}
+body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 700 700' width='700' height='700'%3E%3Cdefs%3E%3Cfilter id='nnnoise-filter' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.102' numOctaves='4' seed='15' stitchTiles='stitch' x='0%25' y='0%25' width='100%25' height='100%25' result='turbulence'%3E%3C/feTurbulence%3E%3CfeSpecularLighting surfaceScale='15' specularConstant='0.75' specularExponent='20' lighting-color='hsl(256, 25%25, 50%25)' x='0%25' y='0%25' width='100%25' height='100%25' in='turbulence' result='specularLighting'%3E%3CfeDistantLight azimuth='3' elevation='100'%3E%3C/feDistantLight%3E%3C/feSpecularLighting%3E%3C/filter%3E%3C/defs%3E%3Crect width='700' height='700' fill='transparent'%3E%3C/rect%3E%3Crect width='700' height='700' fill='hsl(256, 25%25, 50%25)' filter='url(%23nnnoise-filter)'%3E%3C/rect%3E%3C/svg%3E");
+	opacity: .25;
+	z-index: -1;
+}
+
+a, a:hover, a:focus, a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+button, input {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	padding-inline-start: 0;
+}
+
+canvas {
+	max-width: 100%;
+	max-height: 100%;
+}
+.icon img {
+	width: 100%;
+}
+.achievements {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.achievements li {
+	width: 15rem;
+	height: 5rem;
+	background-color: var(--light-20);
+	display: grid;
+	place-content: center;
+}
+.achievements li.locked {
+	width: 5rem;
+	height: 5rem;
+	background-color: var(--light-10);
+}
+
+.article-tags a {
+	color: hsl(330, 100%, 50%);
+	text-decoration: none;
+}
+.article-tags a:hover {
+	color: hsl(330, 100%, 75%);
+	text-decoration: none;
+}
+
+.subtitle i {
+	display: inline-block;
+	padding-inline: .5rem;
+	font-weight: 600;
+	background-image: url('/images/holo.gif');
+	background-size: 100%;
+	background-position: center;
+	clip-path: var(--clip-m);
+	color: black;
+}
+
+.bio p {
+	margin-bottom: 1rem;
+}
+
+@keyframes fluid {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 -500%;
+	}
+}
+
+@media screen and (max-width:60em) {
+	.subtitle i {
+		clip-path: var(--clip-s);
+	}
+}
