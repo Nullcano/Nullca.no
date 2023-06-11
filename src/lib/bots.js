@@ -1,9 +1,9 @@
-import { posts } from '$lib/api';
+import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
+import { posts } from '$lib/api';
 import { commands } from '$lib/chatCommands';
 import { replies } from '$lib/chatReplies';
 import { messageBank } from '$lib/messageBank';
-import { writable, derived } from 'svelte/store';
 
 let userAgent, userLanguage, screenWidth, screenHeight, timezone, cookiesEnabled, onlineStatus, browserName, browserSlug, formattedLanguage, formattedPlatform;
 
@@ -209,15 +209,3 @@ export let bots = writable([
 ]);
 
 export const selectedBot = writable(null);
-
-export const chatHistory = derived(selectedBot, ($selectedBot, set) => {
-  if ($selectedBot) {
-    set($selectedBot.chat);
-  }
-});
-
-bots.subscribe($bots => {
-  if ($bots.length > 0) {
-    selectedBot.set($bots[0]);
-  }
-});

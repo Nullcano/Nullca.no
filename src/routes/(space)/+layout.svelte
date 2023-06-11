@@ -64,6 +64,5 @@
 			grid-row-gap: 0px;
 			overflow: hidden;
 		}
-
 	}
 </style>
