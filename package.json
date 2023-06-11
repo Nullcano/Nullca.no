@@ -17,10 +17,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"gsap": "^3.12.1",
 		"rehype-slug": "^5.1.0",
 		"remark-toc": "^8.0.1",
-		"remark-unwrap-images": "^3.0.1",
-		"three": "^0.153.0"
+		"remark-unwrap-images": "^3.0.1"
 	}
 }
