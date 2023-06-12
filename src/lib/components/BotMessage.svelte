@@ -1,10 +1,12 @@
 <script>
+  import Avatar from '$lib/components/media/Avatar.svelte'
+
   export let name, portrait, confidence, text;
 </script>
 
 <div class="message">
   <div class="details">
-    <img src={portrait} alt={name}>
+    <Avatar image={portrait} text={name} size="small" />
     <div class="name">{name}</div>
     <div class="confidence {confidence.toLowerCase()}">
       <img src="/images/{confidence.toLowerCase()}.svg" alt={confidence}>
@@ -18,26 +20,24 @@
 
 <style>
   .message {
-    max-width: 18rem;
-    margin: .5rem;
-    padding-block: .5rem;
+    max-width: 20rem;
+    margin-bottom: 1.5rem;
+    margin-inline-start: 1.5rem;
+    padding: .75rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
     align-self: flex-start;
-    background: rgba(0, 0, 0, .25);
-    border-radius: 1rem;
     word-break: break-word;
+    background: rgba(0,0,0,.5);
+    clip-path: var(--clip-m);
   }
   .details {
-    padding-inline: .5rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .75rem;
   }
   .details img {
     max-width: 2.5rem;
-    border-radius: .5rem;
   }
   .name, .confidence {
     display: flex;
@@ -59,7 +59,7 @@
     color: hsl(345, 100%, 50%);
   }
   .content {
-    padding-inline: 1rem;
+    margin-inline-start: 2.75rem;
   }
   p {
     margin: 0;

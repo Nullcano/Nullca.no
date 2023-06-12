@@ -2,6 +2,7 @@
   import { afterUpdate } from 'svelte';
   import { selectedBot } from '$lib/bots';
   import ChatBots from '$lib/components/ChatBots.svelte';
+  import Avatar from '$lib/components/media/Avatar.svelte';
   import Divider from '$lib/components/Divider.svelte';
   import UserMessage from '$lib/components/UserMessage.svelte';
   import BotMessage from '$lib/components/BotMessage.svelte';
@@ -102,7 +103,7 @@
     {#if $selectedBot}
       <div class="title">
         <div class="ai-profile">
-          <img src={$selectedBot.portrait} alt={$selectedBot.name} />
+          <Avatar image={$selectedBot.portrait} text={$selectedBot.name} size="small" />
           <span>{$selectedBot.name}</span>
           <a class="small-button" href={$selectedBot.profileSlug}>Profile</a>
         </div>
@@ -173,10 +174,6 @@
     font-size: 0.8rem;
     text-transform: uppercase;
   }
-  .title img {
-    max-width: 2rem;
-    border-radius: .5rem;
-  }
   .help {
     position: relative;
     height: min-content;
@@ -221,13 +218,11 @@
 
   @media only screen and (max-width: 60em) {
     .chat {
-      bottom: 1rem;
-      right: 1rem;
-      width: 4rem;
-      height: calc(100vh - 6rem - 4px);
-      background: #000;
-      display: grid;
-      grid-template-rows: 4rem 1fr auto;
+      height: calc(100vh - 6rem - 3px);
+    }
+    .sidebar {
+      width: 6rem;
+      border-right: 1px solid rgba(255, 255, 255, .1);
     }
   }
 </style>

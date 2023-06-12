@@ -1,8 +1,9 @@
 <script>
+  import { page } from '$app/stores'
   import { bots, selectedBot } from '$lib/bots'
   import Divider from '$lib/components/Divider.svelte'
+  import Avatar from '$lib/components/media/Avatar.svelte'
   import TitleIconText from '$lib/components/titles/TitleIconText.svelte'
-  import { page } from '$app/stores'
 
   let path
 
@@ -28,7 +29,7 @@
         data-sveltekit-preload-data="off"
         tabindex="0"
         on:click={() => selectBot(bot)}>
-        <img src={bot.portrait} alt={bot.name} />
+        <Avatar image={bot.portrait} text={bot.name} size="medium" />
         <div class="meta">
           <span class="name">{bot.name}</span>
           <span class="role">{bot.role}</span>
@@ -74,11 +75,6 @@
   }
   .role {
     opacity: .5;
-  }
-  a img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1rem;
   }
   a:hover, a.active {
     background-color: rgba(255, 255, 255, .1);

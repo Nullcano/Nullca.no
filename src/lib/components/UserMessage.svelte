@@ -1,11 +1,13 @@
 <script>
   import { bots } from '$lib/bots.js'
+  import Avatar from '$lib/components/media/Avatar.svelte'
+
   export let text
 </script>
 
 <div class="message">
   <div class="details">
-    <img src={$bots[0].portrait} alt={$bots[0].name}>
+    <Avatar image={$bots[0].portrait} text={$bots[0].name} size="small" />
     <div class="name">{$bots[0].name}</div>
   </div>
   <div class="content">
@@ -15,32 +17,28 @@
 
 <style>
   .message {
-    max-width: 18rem;
-    margin: .5rem 1rem;
-    padding-block: .5rem;
+    max-width: 20rem;
+    margin-inline-start: 3rem;
+    margin-bottom: 1.5rem;
+    padding: .75rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
     align-self: flex-start;
-    background: hsl(275, 50%, 25%);
-    border-radius: 1rem;
     word-break: break-word;
+    background: hsla(185, 25%, 25%, 0.25);
+    clip-path: var(--clip-m);
   }
   .details {
-    padding-inline: .5rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
-  }
-  .details img {
-    max-width: 2.5rem;
-    border-radius: .5rem;
+    gap: .75rem;
   }
   .name {
     color: rgba(255, 255, 255, .75);
   }
   .content {
-    padding-inline: 1rem;
+    margin-inline-start: 2.75rem;
   }
   p {
     margin: 0;

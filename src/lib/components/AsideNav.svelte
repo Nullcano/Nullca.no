@@ -35,7 +35,6 @@
   
   @media only screen and (max-width: 60em) {
     .navbar-provider {
-			grid-area: 3 / 1 / 4 / 2; 
 			flex-direction: row;
 		}
   }

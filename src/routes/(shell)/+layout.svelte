@@ -22,10 +22,15 @@
 		overflow: hidden;
 	}
 	.page-provider {
-		grid-area: 2 / 2 / 3 / 3;
 		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: auto;
 		border-left: 1px solid rgba(255,255,255,.1);
+	}
+	@media screen and (max-width: 60em) {
+		.main-layout {
+			grid-template-columns: 1fr;
+			grid-template-rows: 6rem 1fr;
+		}
 	}
 </style>

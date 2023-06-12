@@ -40,8 +40,8 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background: rgba(0,0,0,.5);
-    clip-path: var(--clip-s);
+    background: rgba(255,255,255,.1);
+    clip-path: var(--clip-m);
   }
   .nav-item {
     width: 3rem;
@@ -50,7 +50,7 @@
     place-content: center;
     transition: all .25s linear;
     color: #ffffff50;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.25);
     clip-path: var(--clip-s);
   }
   .nav-item.active, .nav-item:hover {
