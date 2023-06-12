@@ -15,7 +15,7 @@
     tabindex="0"
   >
     <div class="icon nullcano">
-      <img src="/images/npc/Nullcano.png" alt="Nullcano">
+      <img src="/images/npc/Nullcano.webp" alt="Nullcano">
     </div>
   </a>
   <a
@@ -38,7 +38,7 @@
     margin-block: 1rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
     background: rgba(0,0,0,.5);
     border-radius: 999px;
   }
@@ -51,7 +51,7 @@
     justify-content: center;
     transition: all .25s linear;
     color: #ffffff50;
-    background-image: url('/images/holo.gif');
+    background-image: url('/images/holo.webp');
     background-position: center;
     border-radius: 50%;
     overflow: hidden;

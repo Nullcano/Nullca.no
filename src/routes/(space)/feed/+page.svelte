@@ -10,7 +10,7 @@
 </svelte:head>
 
 <section>
-	<figure style="background-image: url('/images/holo-skeleton.png')">
+	<figure style="background-image: url('/images/holo-skeleton.webp')">
 		<h2>Continuously pushing boundaries and igniting creativity in digital design to ensure its vibrant existence...</h2>
 	</figure>
 	<CategoryList />

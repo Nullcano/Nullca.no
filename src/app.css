@@ -117,7 +117,7 @@ canvas {
 	display: inline-block;
 	padding-inline: .5rem;
 	font-weight: 600;
-	background-image: url('/images/holo.gif');
+	background-image: url('/images/holo.webp');
 	background-size: 100%;
 	background-position: center;
 	clip-path: var(--clip-m);

@@ -1,5 +1,5 @@
 <script>
-  import { selectedBot } from '$lib/bots';
+  import { selectedBot } from '$lib/bots'
   import Avatar from '$lib/components/media/Avatar.svelte'
 </script>
 

@@ -33,61 +33,64 @@ const languageMappings = {
 };
 
 if (browser) {
-  userAgent = navigator.userAgent;
-  userLanguage = navigator.language;
+  if (navigator) {
+    userAgent = navigator.userAgent;
+    userLanguage = navigator.language;
+    cookiesEnabled = navigator.cookieEnabled;
+    onlineStatus = navigator.onLine ? "Online" : "Offline";
+  }
 
-  screenWidth = window.screen.width;
-  screenHeight = window.screen.height;
-  timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  cookiesEnabled = navigator.cookieEnabled;
-  onlineStatus = navigator.onLine ? "Online" : "Offline";
+  if (window) {
+    screenWidth = window.screen.width;
+    screenHeight = window.screen.height;
+  }
 
   browserName = "Unknown";
 
-  if (userAgent.indexOf("Firefox") !== -1) {
+  if (userAgent && userAgent.indexOf("Firefox") !== -1) {
     browserName = "Mozilla Firefox";
-  } else if (userAgent.indexOf("Chrome") !== -1) {
+  } else if (userAgent && userAgent.indexOf("Chrome") !== -1) {
     browserName = "Google Chrome";
-  } else if (userAgent.indexOf("Safari") !== -1) {
+  } else if (userAgent && userAgent.indexOf("Safari") !== -1) {
     browserName = "Apple Safari";
-  } else if (userAgent.indexOf("Opera") !== -1) {
+  } else if (userAgent && userAgent.indexOf("Opera") !== -1) {
     browserName = "Opera";
-  } else if (userAgent.indexOf("Edge") !== -1) {
+  } else if (userAgent && userAgent.indexOf("Edge") !== -1) {
     browserName = "Microsoft Edge";
-  } else if (userAgent.indexOf("MSIE") !== -1) {
+  } else if (userAgent && userAgent.indexOf("MSIE") !== -1) {
     browserName = "Internet Explorer";
   }
 
   browserSlug = browserName.replace(' ', '-')
 
-  formattedLanguage = userLanguage;
+  formattedLanguage = userLanguage || '';
 
   if (languageMappings[userLanguage]) {
     formattedLanguage = languageMappings[userLanguage];
   }
-  
+
   formattedPlatform = "Unknown";
 
-  if (userAgent.match(/Win/i)) {
+  if (userAgent && userAgent.match(/Win/i)) {
     formattedPlatform = "Windows";
-  } else if (userAgent.match(/Mac/i)) {
+  } else if (userAgent && userAgent.match(/Mac/i)) {
     formattedPlatform = "MacOS";
-  } else if (userAgent.match(/Linux/i)) {
+  } else if (userAgent && userAgent.match(/Linux/i)) {
     formattedPlatform = "Linux";
-  } else if (userAgent.match(/iPhone|iPad|iPod/i)) {
+  } else if (userAgent && userAgent.match(/iPhone|iPad|iPod/i)) {
     formattedPlatform = "iOS";
-  } else if (userAgent.match(/Android/i)) {
+  } else if (userAgent && userAgent.match(/Android/i)) {
     formattedPlatform = "Android";
   }
 }
 
-export let bots = writable([
+let initialBots = [
   {
     name: `${formattedPlatform} Client`,
     chatSlug: `/chat/${formattedPlatform}-Client`,
     profileSlug: `/profile/${formattedPlatform}-Client`,
-    portrait: `/images/npc/${formattedPlatform}-Client.png`,
-    cover: `/images/covers/${browserSlug}.png`,
+    portrait: `/images/npc/${formattedPlatform}-Client.webp`,
+    cover: `/images/covers/${browserSlug}.webp`,
     role: `${formattedLanguage} ${browserName}`,
     bio: `
       <p>Currently browsing Nullca.no using ${browserName} on ${formattedPlatform}.
@@ -106,8 +109,8 @@ export let bots = writable([
     name: 'Nullcano',
     chatSlug: '/chat/Nullcano',
     profileSlug: '/profile/Nullcano',
-    portrait: '/images/npc/Nullcano.png',
-    cover: '/images/covers/Nullcano.png',
+    portrait: '/images/npc/Nullcano.webp',
+    cover: '/images/covers/Nullcano.webp',
     role: 'Web Master',
     bio: `
       <p>Welcome to my unique portfolio experiment, a space where I delight in sharing news, announcements, and an assortment of projects through the enchanting presence of passionate chat bots.</p>
@@ -126,8 +129,8 @@ export let bots = writable([
     name: 'Dreadful',
     chatSlug: '/chat/Dreadful',
     profileSlug: '/profile/Dreadful',
-    portrait: '/images/npc/Dreadful.png',
-    cover: '/images/covers/Dreadful.png',
+    portrait: '/images/npc/Dreadful.webp',
+    cover: '/images/covers/Dreadful.webp',
     role: 'Bot Trainer',
     bio: `
       <p>Let me tell you, AI is like a deep, dark rabbit hole that I just can't resist exploring. It's fascinating, you know? But it also keeps me up at night, pondering the big questions and getting lost in existential dread. It's like peeking behind the curtain of reality and realizing just how mind-bogglingly complex everything is. Can't help but feel a mix of awe and unease.</p>
@@ -146,8 +149,8 @@ export let bots = writable([
     name: 'Lichnode',
     chatSlug: '/chat/Lichnode',
     profileSlug: '/profile/Lichnode',
-    portrait: '/images/npc/Lichnode.png',
-    cover: '/images/covers/Lichnode.png',
+    portrait: '/images/npc/Lichnode.webp',
+    cover: '/images/covers/Lichnode.webp',
     role: 'App Auditor',
     bio: `
       <p>Greetings, esteemed visitors, and welcome to my illustrious self-biography. I am Lichnode, a paragon of excellence in the realm of software and application development.</p>
@@ -166,8 +169,8 @@ export let bots = writable([
     name: 'Fearless',
     chatSlug: '/chat/Fearless',
     profileSlug: '/profile/Fearless',
-    portrait: '/images/npc/Fearless.png',
-    cover: '/images/covers/Fearless.png',
+    portrait: '/images/npc/Fearless.webp',
+    cover: '/images/covers/Fearless.webp',
     role: 'Game Tester',
     bio: `
       <p>Hey there, peeps! Welcome to my Nullca.no profile! The name's Fearless, and I'm here to rock your world with all things game development. 🎮✨</p>
@@ -189,8 +192,8 @@ export let bots = writable([
     name: 'Novastar',
     chatSlug: '/chat/Novastar',
     profileSlug: '/profile/Novastar',
-    portrait: '/images/npc/Novastar.png',
-    cover: '/images/covers/Novastar.png',
+    portrait: '/images/npc/Novastar.webp',
+    cover: '/images/covers/Novastar.webp',
     role: 'Art Curator',
     bio: `
       <p>Here, in this digital sanctuary, I showcase the epitome of visual brilliance and artistic innovation. With an unyielding commitment to excellence, I present projects and articles that embody the pinnacle of creative expression. A discerning eye guides my selections, allowing only the most captivating and masterful creations to grace this platform.</p>
@@ -206,6 +209,7 @@ export let bots = writable([
     interactive: true,
     isActive: false
   },
-]);
+]
 
-export const selectedBot = writable(null);
+export const bots = writable(initialBots)
+export const selectedBot = writable(null)

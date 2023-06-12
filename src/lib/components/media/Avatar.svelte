@@ -17,7 +17,7 @@
 <style>
   .avatar {
     position: relative;
-    background-image: url('/images/holo.gif');
+    background-image: url('/images/holo.webp');
     background-position: center;
   }
 

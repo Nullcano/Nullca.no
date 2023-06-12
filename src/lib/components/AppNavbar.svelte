@@ -39,23 +39,23 @@
     margin-block: 1rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
     background: rgba(0,0,0,.5);
-    clip-path: polygon(50% 0, 100% 15%, 100% 85%, 50% 100%, 0% 85%, 0% 15%);
+    clip-path: var(--clip-s);
   }
   .nav-item {
     width: 3rem;
-    height: 3.5rem;
+    height: 3rem;
     display: grid;
     place-content: center;
     transition: all .25s linear;
     color: #ffffff50;
-    background-color: rgba(255,255,255,.1);
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background-color: rgba(0,0,0,.5);
+    clip-path: var(--clip-s);
   }
   .nav-item.active, .nav-item:hover {
     color: var(--white);
-    background-color: rgba(255,255,255,.25);
+    background-color: rgba(0,0,0,.75);
   }
   .icon {
     width: 2rem;

@@ -4,10 +4,10 @@
   import Logo from '$lib/components/Logo.svelte'
 
   let intervalId
-  let imageUrl = '/images/holo-skeleton.png'
+  let imageUrl = '/images/holo-skeleton.webp'
   let isAlternative = false
 
-  const alternativeImage = '/images/active-skeleton.gif'
+  const alternativeImage = '/images/active-skeleton.webp'
 
   let title = 'Nullcano'
   let title2 = 'AKA <i>Steffen</i> IRL'
@@ -23,10 +23,10 @@
   };
 
   const changeImage = () => {
-    imageUrl = isAlternative ? '/images/holo-skeleton.png' : alternativeImage;
+    imageUrl = isAlternative ? '/images/holo-skeleton.webp' : alternativeImage;
     isAlternative = !isAlternative;
     setTimeout(() => {
-      imageUrl = '/images/holo-skeleton.png';
+      imageUrl = '/images/holo-skeleton.webp';
     }, 250);
     setTimeout(changeImage, getRandomInterval());
   };
@@ -210,7 +210,7 @@
     font-weight: 600;
     text-transform: uppercase;
     -webkit-text-stroke: 2px whitesmoke;
-    background-image: url('/images/holo.gif');
+    background-image: url('/images/holo.webp');
     background-position: center;
     background-clip: text;
     -webkit-background-clip: text;
@@ -233,7 +233,7 @@
     font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
-    background-image: url('/images/holo.gif');
+    background-image: url('/images/holo.webp');
     background-position: center;
     background-clip: text;
     -webkit-background-clip: text;
