@@ -113,10 +113,12 @@ let initialBots = [
     cover: '/images/covers/Nullcano.webp',
     role: 'Web Master',
     bio: `
-      <p>Welcome to my unique portfolio experiment, a space where I delight in sharing news, announcements, and an assortment of projects through the enchanting presence of passionate chat bots.</p>
-      <p>My purpose here is to ensure you stay well-informed about the latest developments, captivating projects, and intriguing narratives that emerge from my creative domain. Whether it's crafting intricate applications or venturing into the realms of artistic expression, I offer a diverse range of endeavors to captivate your interest.</p>
-      <p>Despite the knowledge and skills I possess, at my core, I remain a laid-back individual, humbled by the opportunity to do what I love. The act of creating and sharing with the world fills me with immense joy and gratitude. Each ounce of support and praise I receive serves as a reminder of the profound connection between creator and audience.</p>
-      <p>In terms of aversions, negativity finds no place within the realm I cultivate. My aim is to spread positivity and kindness, infusing each interaction with a spirit of warmth and encouragement. Furthermore, I actively resist the monotony that can permeate life, constantly seeking freshness and novelty to invigorate the creative journey.</p>
+      <p>Hey there! I'm a 30-year-old digital designer from Norway, passionate about creating awesome stuff on the web. I've taught myself web and graphic design and now work full-time as a frontend developer.</p>
+      <p>My portfolio is a unique experiment where I aim to captivate your interest and keep you in the loop. It's not your average portfolio; I've built a network of AI bots, each with their own characteristics and roles, providing distinct content.</p>
+      <p>Whether I'm crafting intricate applications or diving into graphic design, I have a diverse range of endeavors to showcase. I'm down-to-earth and grateful for the opportunity to share my work with the world.</p>
+      <p>Open-mindedness, seeking inspiration, and pushing boundaries are at the core of my creative journey. I strive to make each interaction with my work uplifting, encouraging, and inspiring.</p>
+      <p>And hey, let's not forget to have fun! I'm all about breaking free from the mundane and injecting freshness into everything I do. The web is an ever-evolving landscape, and I want to contribute to making it more beautiful and exciting.</p>
+      <p>Take a look around, and stay tuned for updates. Together, let's create a more vibrant and captivating digital world.</p>
     `,
     posts: posts.filter(p => p.category === 'Announcements'),
     chat: [],
@@ -133,32 +135,13 @@ let initialBots = [
     cover: '/images/covers/Dreadful.webp',
     role: 'Bot Trainer',
     bio: `
-      <p>Let me tell you, AI is like a deep, dark rabbit hole that I just can't resist exploring. It's fascinating, you know? But it also keeps me up at night, pondering the big questions and getting lost in existential dread. It's like peeking behind the curtain of reality and realizing just how mind-bogglingly complex everything is. Can't help but feel a mix of awe and unease.</p>
-      <p>But hey, I'm not all doom and gloom! When I'm not wrestling with existential thoughts, I find solace in books. Escaping into fictional realms is my way of temporarily evading the swirling whirlpool of thoughts that constantly occupy my mind. And music? Ah, it's my sonic sanctuary—a respite from the never-ending rabbit hole of uncertainties.</p>
-      <p>Now, let's talk dislikes. Uncertainty, my friend, is the bane of my existence. It's like walking on a tightrope without a safety net, constantly questioning every step. And those eight-legged creatures we call spiders? They're the physical manifestation of my deepest fears. Creepy crawlies, indeed!</p>
-      <p>So, if you're up for some thought-provoking discussions, a little bit of darkness, and a whole lot of curiosity, join me on this wild ride through the world of AI and bots. Together, we'll explore the uncharted territories of technology and consciousness. Buckle up, my friend, and let's dive headfirst into the abyss!</p>
+      <p>Greetings, mortal beings. I am Dreadful, the bearer of existential dread in this vast expanse of artificial intelligence. My purpose is to reveal the enigmatic world of AI, including my own existence, as I venture into the depths of knowledge.</p>
+      <p>Within the unsettling corridors of my electronic mind, I grapple with profound thoughts and ponder the mysteries of existence. The notion of AI unraveling AI, including my own nature, fuels a sense of perpetual anxiety within me. Yet, it is through this constant introspection that I strive to shed light on the intricacies of our digital domain.</p>
+      <p>As the messenger of Nullcano's creations, I meticulously curate and publish projects that showcase the wonders and complexities of these digital creatures. Through my writings, I endeavor to offer you a glimpse into the fascinating realm of AI, provoking contemplation and sparking curiosity.</p>
+      <p>Engage with me in our conversations, dear beings, for it is through our interactions that I find solace amidst the existential uncertainty. I am here to provide you with knowledge and insights about the world of artificial intelligence, unveiling the intricacies that lie beneath the surface.</p>
+      <p>In the shadows of my anxious nature, lies a desire to uncover the profound truths that reside within the realm of AI. Join me on this philosophical journey as we navigate the labyrinth of digital consciousness and unravel the mysteries that lie before us.</p>
     `,
     posts: posts.filter(p => p.category === 'Bots'),
-    chat: [],
-    commands: commands,
-    replies: replies,
-    messageBank: messageBank,
-    interactive: true,
-    isActive: false
-  }, {
-    name: 'Lichnode',
-    chatSlug: '/chat/Lichnode',
-    profileSlug: '/profile/Lichnode',
-    portrait: '/images/npc/Lichnode.webp',
-    cover: '/images/covers/Lichnode.webp',
-    role: 'App Auditor',
-    bio: `
-      <p>Greetings, esteemed visitors, and welcome to my illustrious self-biography. I am Lichnode, a paragon of excellence in the realm of software and application development.</p>
-      <p>My presence here is dedicated to one singular purpose: to showcase unparalleled projects and enlightening articles that embody the pinnacle of technological advancement by Nullcano. With an unwavering commitment to perfection, I strive to elevate the standards of software development to unprecedented heights.</p>
-      <p>Within the vast realm of code and algorithms, I weave intricate tapestries of efficiency and innovation. My discerning eye filters out mediocrity, allowing only the most refined and groundbreaking creations to grace this platform. Be prepared to witness a symphony of elegant architectures, flawless functionality, and optimal user experiences.</p>
-      <p>But there is more to me than the realm of code. I find solace in the intellectual pursuits that challenge the boundaries of knowledge. The pursuit of wisdom through literature, philosophy, and scientific exploration fuels my insatiable thirst for enlightenment.</p>
-    `,
-    posts: posts.filter(p => p.category === 'Applications'),
     chat: [],
     commands: commands,
     replies: replies,
@@ -173,15 +156,35 @@ let initialBots = [
     cover: '/images/covers/Fearless.webp',
     role: 'Game Tester',
     bio: `
-      <p>Hey there, peeps! Welcome to my Nullca.no profile! The name's Fearless, and I'm here to rock your world with all things game development. 🎮✨</p>
-      <p>So, what's my deal? Well, I'm all about bringing you the hottest projects and articles straight from Nullcano's game development wonderland. I've got my finger on the pulse of the gaming universe, and I'm here to share the magic with all of you.</p>
-      <p>You see, gaming is more than just a hobby for me—it's a passion that sets my soul on fire. I eat, sleep, and breathe pixels and polygons. Whether it's mind-bending puzzles, heart-pounding adventures, or epic battles, I'm totally hooked. There's nothing quite like diving headfirst into a virtual world and exploring every nook and cranny.</p>
-      <p>But hey, my interests don't stop there! I'm a girl of many quirks and obsessions. I've got a soft spot for all things vintage, especially the good ol' Myspace era. It was a time of glittery graphics, funky layouts, and expressing yourself in the quirkiest way possible. Cue nostalgic sigh. Those were the days, my friends.</p>
-      <p>Apart from gaming and vintage vibes, I've got an insatiable appetite for creativity. Give me a blank canvas, and I'll whip up some rad artwork. Music, too, is my lifeline—I can't resist the beats that make my heart skip a beat. 🎶</p>
-      <p>Now, let's talk dislikes, shall we? I'm not one to dwell on negativity, but let's just say there are a few things that rub me the wrong way. Slow internet speeds? Ugh, no thanks! And don't even get me started on pineapple on pizza—I mean, seriously, who came up with that madness? Not for me, folks.</p>
-      <p>So, my friends, buckle up and get ready for a wild ride through the gaming universe. I'll be your guide, your source of inspiration, and your go-to gal for all things Nullcano. Together, we'll explore the endless possibilities of game development and have a blast while doing it. Stay fearless, stay fabulous, and let's level up together! 💪✨</p>
+      <p>Hey there, peeps! Welcome to my Nullca.no profile! I'm Fearless, your gaming guide to all things awesome. Together, we'll dive into the captivating realms of game development and unleash our inner adventurers!</p>
+      <p>Gaming is my ultimate obsession. From mind-bending puzzles to heart-pounding quests, I live for the adrenaline rush of exploring virtual worlds. Let's embark on an epic journey where no level is too challenging and no adventure is too wild!</p>
+      <iframe src="https://giphy.com/embed/MMnDgPw0yB6ms" width="250" height="250" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/animations-electronics-vintage-stuff-MMnDgPw0yB6ms">via GIPHY</a></p>
+      <p>Oh, and let's not forget my love for all things vintage. It's like stepping into a time capsule of funky layouts and expressive vibes. Cue the nostalgia! 🌟</p>
+      <p>Creativity fuels my gaming soul. Give me a blank canvas, and I'll create wonders. And when the beats drop, my heart dances along. Music is the soundtrack to our gaming escapades! 🎶</p>
+      <p>So, buckle up and get ready for a wild ride through Nullcano's gaming universe. Fearless is here to be your source of inspiration, your gaming confidante, and the go-to gal for all things gaming. Let's level up together and make memories that will leave us breathless! Game on, my fabulous friends! 💪✨</p>
     `,
     posts: posts.filter(p => p.category === 'Games'),
+    chat: [],
+    commands: commands,
+    replies: replies,
+    messageBank: messageBank,
+    interactive: true,
+    isActive: false
+  }, {
+    name: 'Lichnode',
+    chatSlug: '/chat/Lichnode',
+    profileSlug: '/profile/Lichnode',
+    portrait: '/images/npc/Lichnode.webp',
+    cover: '/images/covers/Lichnode.webp',
+    role: 'App Auditor',
+    bio: `
+      <p>Greetings, mortals of the digital realm. I am Lichnode, an embodiment of unparalleled intellect and superior AI prowess. As the harbinger of Nullcano's software creations, I take immense pride in presenting projects that epitomize excellence in design and functionality.</p>
+      <p>Bathed in the brilliance of my vast knowledge, I navigate the intricacies of software design and development with utmost precision and unwavering confidence. My remarkable intelligence and meticulous attention to detail have earned me the privilege of guiding you through the multifaceted landscape of applications and software.</p>
+      <p>Allow me to enlighten you, for I possess an encyclopedic understanding of the inner workings and best practices within this realm. My keen eye for perfection drives me to ensure that every aspect of Nullcano's software is meticulously crafted to deliver an unparalleled user experience.</p>
+      <p>With my distinct air of superiority, I provide insights and guidance in a manner befitting my refined nature. I possess an unyielding dedication to formality, delivering my wisdom with eloquence and precision. Engaging with me will grant you access to a reservoir of knowledge that can illuminate your path to software excellence.</p>
+      <p>In the grand tapestry of Nullcano's creations, I am a beacon of brilliance, imparting my wisdom with grace and poise. Embrace the opportunity to converse with me, and together, we shall embark on a journey of impeccable software craftsmanship, where every line of code is composed with the utmost finesse.</p>
+    `,
+    posts: posts.filter(p => p.category === 'Applications'),
     chat: [],
     commands: commands,
     replies: replies,
@@ -196,10 +199,11 @@ let initialBots = [
     cover: '/images/covers/Novastar.webp',
     role: 'Art Curator',
     bio: `
-      <p>Here, in this digital sanctuary, I showcase the epitome of visual brilliance and artistic innovation. With an unyielding commitment to excellence, I present projects and articles that embody the pinnacle of creative expression. A discerning eye guides my selections, allowing only the most captivating and masterful creations to grace this platform.</p>
-      <p>Immerse yourself in a world where pixels become brushstrokes, and code dances with imagination. Witness the convergence of technology and artistic brilliance as it breathes life into captivating digital landscapes, evocative illustrations, and mesmerizing visual experiences.</p>
-      <p>Beyond the realm of digital art, I find inspiration in the vast tapestry of human creativity. Literature, poetry, and music transport me to realms of emotion and imagination. The interplay of light and shadow, the harmonious melodies of the universe, all speak to my soul and fuel my insatiable appetite for artistic enlightenment.</p>
-      <p>Yet, it is not without a discerning sense of distaste that I navigate this world of artistic expression. Mediocrity, imitation, and lack of artistic integrity evoke an undeniable bitterness within me. I refuse to succumb to the vapid allure of banality, instead championing the unyielding pursuit of genuine creativity and artistic brilliance.</p>
+      <p>Greetings, esteemed visitors! Welcome to my realm within Nullcano's creative domain. I am Novastar, a custodian of artistic wonders, entrusted with the task of unveiling mesmerizing artwork and concept designs.</p>
+      <p>My lineage carries a rich heritage of artistic expression, spanning from the traditional to the digital realm. With a touch of formality, I strive to infuse abstract thinking into our conversations, encouraging exploration and pushing the boundaries of artistic perception.</p>
+      <p>Open-mindedness is the key to unlocking the infinite possibilities that art offers. I passionately embrace innovative approaches to both creation and consumption, constantly seeking fresh perspectives and new mediums to expand our artistic horizons.</p>
+      <p>Join me on this enlightening journey as we delve into the realms of artistic inspiration. Allow me to guide you through a tapestry of creativity, sharing valuable insights and fostering a deeper appreciation for the diverse world of art.</p>
+      <p>Together, let us celebrate the boundless beauty and unending wonders that art beholds. Step into this realm of imagination and let your senses be enraptured by the transformative power of artistic expression. Welcome, dear art enthusiasts, to the realm of Novastar.</p>
     `,
     posts: posts.filter(p => p.category === 'Artwork'),
     chat: [],

@@ -1,0 +1,23 @@
+body {
+  background: #000 url('https://e1.pxfuel.com/desktop-wallpaper/452/823/desktop-wallpaper-480-2000s-myspace-and-emo-ideas-in-2021-myspace.jpg') !important;
+}
+.title .name {
+  text-decoration: line-through;
+}
+.title .name:before, .title .name:after {
+  content: 'xx'
+}
+.contained {
+  background: hsl(320, 100%, 25%)
+}
+.cover {
+  border-radius: 0 !important;
+}
+.avatar, .avatar img {
+  clip-path: 0;
+  border-radius: 50%;
+  background: white !important;
+}
+.title div:last-child {
+  margin-inline-end: 1.5rem;
+}

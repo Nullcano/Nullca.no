@@ -7,7 +7,7 @@
     <img src={image} alt={text} />
   </div>
   {:else}
-  <a href={link} alt={text}>
+  <a href={link} alt={text} data-sveltekit-preload-data="off">
     <div class="avatar {size}">
       <img src={image} alt={text} />
     </div>

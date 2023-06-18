@@ -12,6 +12,8 @@
   function selectBot(bot) {
     selectedBot.set(bot);
   }
+  
+  export let disabled = false
 </script>
 
 <header>
@@ -25,6 +27,7 @@
         role="button"
         href={bot.chatSlug}
         class:active={path === bot.chatSlug}
+        class:disabled={disabled == true}
         class="nav-item"
         data-sveltekit-preload-data="off"
         tabindex="0"
@@ -78,5 +81,10 @@
   }
   a:hover, a.active {
     background-color: rgba(255, 255, 255, .1);
+  }
+  a.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .5;
   }
 </style>

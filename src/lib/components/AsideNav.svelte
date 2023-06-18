@@ -18,7 +18,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		grid-area: 1 / 1 / 3 / 2; 
 		gap: 1rem;
 	}
 	.logo-provider {

@@ -97,12 +97,18 @@
 
 <div class="chat">
   <div class="sidebar">
-    <ChatBots />
+    {#if isTyping}
+      <ChatBots disabled={true} />
+      {:else}
+      <ChatBots />
+    {/if}
   </div>
+
   <div class="content">
     {#if $selectedBot}
       <div class="title">
         <div class="ai-profile">
+          <span>Chatting with</span>
           <Avatar image={$selectedBot.portrait} text={$selectedBot.name} size="small" />
           <span>{$selectedBot.name}</span>
           <a class="small-button" href={$selectedBot.profileSlug}>Profile</a>
@@ -124,7 +130,7 @@
             {#if message.sender === 'user'}
               <UserMessage text={message.text} />
             {:else}
-              <BotMessage name={$selectedBot.name} portrait={$selectedBot.portrait} confidence={message.confidence} text={message.text} />
+              <BotMessage name={$selectedBot.name} portrait={$selectedBot.portrait} confidence={message.confidence} text={message.text} profileSlug={$selectedBot.profileSlug} />
             {/if}
           {/each}
           {#if isTyping}

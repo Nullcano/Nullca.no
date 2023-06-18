@@ -1,7 +1,7 @@
 <script>
   import MiniProfile from "./profiles/MiniProfile.svelte"
 
-  let categories = ['Applications', 'Artwork', 'Bots', 'Games']
+  let categories = ['Articles', 'Applications', 'Artwork', 'Bots', 'Games']
 </script>
 
 <div class="category-list">

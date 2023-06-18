@@ -1,13 +1,15 @@
 <script>
   import Avatar from '$lib/components/media/Avatar.svelte'
 
-  export let name, portrait, confidence, text;
+  export let name, portrait, confidence, text, profileSlug;
 </script>
 
 <div class="message">
   <div class="details">
-    <Avatar image={portrait} text={name} size="small" />
-    <div class="name">{name}</div>
+    <Avatar image={portrait} text={name} link={profileSlug} size="small" />
+    <div class="name">
+      <a href={profileSlug} alt={name} data-sveltekit-preload-data="off">{name}</a>
+    </div>
     <div class="confidence {confidence.toLowerCase()}">
       <img src="/images/{confidence.toLowerCase()}.svg" alt={confidence}>
       <span>{confidence}</span>

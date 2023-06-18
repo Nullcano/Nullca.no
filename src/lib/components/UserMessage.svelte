@@ -7,8 +7,10 @@
 
 <div class="message">
   <div class="details">
-    <Avatar image={$bots[0].portrait} text={$bots[0].name} size="small" />
-    <div class="name">{$bots[0].name}</div>
+    <Avatar image={$bots[0].portrait} text={$bots[0].name} link={$bots[0].profileSlug} size="small" />
+    <div class="name">
+      <a href={$bots[0].profileSlug} alt={$bots[0].name} data-sveltekit-preload-data="off">{$bots[0].name}</a>
+    </div>
   </div>
   <div class="content">
     <p>{text}</p>

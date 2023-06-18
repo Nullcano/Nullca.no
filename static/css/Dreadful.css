@@ -1,0 +1,5 @@
+*, *::before, *::after, div {
+  color: white !important;
+  border-color: rgb(255, 0, 0) !important;
+  background-color: black !important;
+}

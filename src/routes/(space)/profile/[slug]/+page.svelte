@@ -5,6 +5,7 @@
 
 <svelte:head>
   <title>{$selectedBot.name} &middot; Profile &middot; Nullcano</title>
+  <link href="/css/{$selectedBot.name}.css" rel="stylesheet">
 </svelte:head>
 
 <section>
