@@ -1,7 +1,7 @@
 <script>
   import Avatar from '$lib/components/media/Avatar.svelte'
 
-  export let name, portrait, confidence, text, profileSlug;
+  export let name, portrait, confidenceLevel, confidenceValue, text, profileSlug;
 </script>
 
 <div class="message">
@@ -10,9 +10,13 @@
     <div class="name">
       <a href={profileSlug} alt={name} data-sveltekit-preload-data="off">{name}</a>
     </div>
-    <div class="confidence {confidence.toLowerCase()}">
-      <img src="/images/{confidence.toLowerCase()}.svg" alt={confidence}>
-      <span>{confidence}</span>
+    <div class="confidence {confidenceLevel.toLowerCase()}">
+      <img src="/images/{confidenceLevel.toLowerCase()}.svg" alt={confidenceLevel}>
+      {#if confidenceLevel != "Confused"}
+        <span>{confidenceValue}% {confidenceLevel}</span>
+        {:else}
+        <span>{confidenceLevel}</span>
+      {/if}
     </div>
   </div>
   <div class="content">

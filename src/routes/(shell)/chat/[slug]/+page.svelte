@@ -15,8 +15,6 @@
   let currentBotSlug = null;
   let replyTimeout;
 
-  const commandMap = new Map(); // Map for command lookup
-
   afterUpdate(() => {
     if ($selectedBot.chat) scrollToBottom(element);
   });
@@ -25,8 +23,8 @@
     scrollToBottom(element);
   }
 
-  function addMessage(message, sender, confidence) {
-    const newMessage = { text: message, sender, confidence };
+  function addMessage(message, sender, confidenceLevel, confidenceValue) {
+    const newMessage = { text: message, sender, confidenceLevel, confidenceValue };
     $selectedBot.chat = [...$selectedBot.chat, newMessage];
     scrollToBottom(element);
   }
@@ -39,52 +37,128 @@
       clearTimeout(replyTimeout);
     }
 
-    const { response, confidence } = getResponse(message);
+    const { response, confidenceLevel, confidenceValue } = getResponse(message);
 
     addMessage(message, 'user', null);
 
     replyTimeout = setTimeout(() => {
       isTyping = false;
-      addMessage(response, 'bot', confidence);
+      addMessage(response, 'bot', confidenceLevel, confidenceValue);
     }, Math.floor(Math.random() * 2500) + 500);
 
     currentBotSlug = $selectedBot.slug;
   }
 
   function getResponse(message) {
-    let response = $selectedBot.messageBank[Math.floor(Math.random() * $selectedBot.messageBank.length)];
-    let confidence = 'Confused';
+  let response = undefined;
+  let confidenceLevel = '';
+  let confidenceValue = 0;
 
-    // Check if the message fully or partially matches a command
-    for (let i = 0; i < $selectedBot.commands.length; i++) {
-      for (let j = 0; j < $selectedBot.commands[i].length; j++) {
-        const command = $selectedBot.commands[i][j];
+  const matchedCommands = [];
+  const matchedWords = [];
 
-        // Check if the command pattern exists in the command map
-        if (!commandMap.has(command)) {
-          const pattern = new RegExp(`\\b${command}\\b`, 'i');
-          commandMap.set(command, pattern);
-        }
+  // Remove special characters from the message
+  const strippedMessage = message.toLowerCase().replace(/[^\w\s]/g, '');
 
-        // Use the precompiled pattern for matching
-        const pattern = commandMap.get(command);
-        if (pattern.test(message)) {
-          if (message.toLowerCase() === command) {
-            confidence = 'Confident';
-          } else {
-            confidence = 'Conventional';
-          }
-          response = $selectedBot.replies[i][Math.floor(Math.random() * $selectedBot.replies[i].length)];
-          break;
-        }
-      }
-      if (confidence !== 'Confused') {
-        break;
+  for (let i = 0; i < $selectedBot.commands.length; i++) {
+    const contextCommands = $selectedBot.commands[i];
+    const contextReplies = $selectedBot.replies[i];
+
+    for (let j = 0; j < contextCommands.length; j++) {
+      const command = contextCommands[j].toLowerCase();
+
+      if (strippedMessage === command) {
+        matchedCommands.push({ index: i, command });
+      } else if (strippedMessage.split(' ').includes(command)) {
+        matchedWords.push({ index: i, word: command });
+      } else if (strippedMessage.includes(command)) {
+        matchedWords.push({ index: i, word: command });
       }
     }
-
-    return { response, confidence };
   }
+
+  if (matchedCommands.length > 0) {
+    const fullMatch = matchedCommands.find((match) => match.command.toLowerCase() === strippedMessage);
+    if (fullMatch) {
+      const arrayIndex = fullMatch.index;
+      const matchedCommandsCount = matchedCommands.filter((match) => match.index === arrayIndex).length;
+      const matchedWordsCount = matchedWords.filter((match) => match.index === arrayIndex).length;
+      const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+      const unknownWordsCount = matchedWords.filter((match) => match.index === arrayIndex).length;
+
+      const commandsScore = matchedCommandsCount * 70; // High increase
+      const wordsScore = matchedWordsCount * 10; // Medium increase
+      const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
+      const unknownWordsScore = unknownWordsCount * 20; // High decrease
+
+      confidenceValue = Math.max(0, Math.min(100, commandsScore + wordsScore - unrelatedWordsScore - unknownWordsScore));
+      response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
+      confidenceLevel = 'Confident';
+    } else {
+      const confidentArrays = [...new Set(matchedCommands.map((match) => match.index))];
+      if (confidentArrays.length > 1) {
+        const randomIndex = confidentArrays[Math.floor(Math.random() * confidentArrays.length)];
+        const matchedCommandsCount = matchedCommands.filter((match) => match.index === randomIndex).length;
+        const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+
+        const commandsScore = matchedCommandsCount * 30; // Medium increase
+        const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
+
+        confidenceValue = Math.max(0, Math.min(100, commandsScore - unrelatedWordsScore));
+        response = $selectedBot.replies[randomIndex][Math.floor(Math.random() * $selectedBot.replies[randomIndex].length)];
+        confidenceLevel = 'Confident';
+      } else {
+        const arrayIndex = confidentArrays[0];
+        const matchedCommandsCount = matchedCommands.filter((match) => match.index === arrayIndex).length;
+        const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+
+        const commandsScore = matchedCommandsCount * 30; // Medium increase
+        const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
+
+        confidenceValue = Math.max(0, Math.min(100, commandsScore - unrelatedWordsScore));
+        response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
+        confidenceLevel = 'Confident';
+      }
+    }
+  } else if (matchedWords.length > 0) {
+    const confidentArrays = [...new Set(matchedWords.map((match) => match.index))];
+    if (confidentArrays.length > 1) {
+      const randomIndex = confidentArrays[Math.floor(Math.random() * confidentArrays.length)];
+      const matchedWordsCount = matchedWords.filter((match) => match.index === randomIndex).length;
+      const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+
+      const wordsScore = matchedWordsCount * 10; // Medium increase
+      const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
+
+      confidenceValue = Math.max(0, Math.min(100, wordsScore - unrelatedWordsScore));
+      response = $selectedBot.replies[randomIndex][Math.floor(Math.random() * $selectedBot.replies[randomIndex].length)];
+      confidenceLevel = 'Confident';
+    } else {
+      const arrayIndex = confidentArrays[0];
+      const matchedWordsCount = matchedWords.filter((match) => match.index === arrayIndex).length;
+      const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+
+      const wordsScore = matchedWordsCount * 10; // Medium increase
+      const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
+
+      confidenceValue = Math.max(0, Math.min(100, wordsScore - unrelatedWordsScore));
+      response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
+      confidenceLevel = 'Confident';
+    }
+  } else {
+    confidenceValue = 0;
+    confidenceLevel = 'Confused';
+    const randomIndex = Math.floor(Math.random() * $selectedBot.messageBank.length);
+    response = $selectedBot.messageBank[randomIndex];
+  }
+
+  return {
+    response,
+    confidenceLevel,
+    confidenceValue,
+  };
+}
+
 
   const scrollToBottom = async (node) => {
     node.scroll({ top: node.scrollHeight, behavior: 'smooth' });
@@ -130,7 +204,7 @@
             {#if message.sender === 'user'}
               <UserMessage text={message.text} />
             {:else}
-              <BotMessage name={$selectedBot.name} portrait={$selectedBot.portrait} confidence={message.confidence} text={message.text} profileSlug={$selectedBot.profileSlug} />
+              <BotMessage name={$selectedBot.name} portrait={$selectedBot.portrait} confidenceLevel={message.confidenceLevel} confidenceValue={message.confidenceValue} text={message.text} profileSlug={$selectedBot.profileSlug} />
             {/if}
           {/each}
           {#if isTyping}
