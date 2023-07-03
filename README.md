@@ -63,6 +63,7 @@
   <summary>Tech</summary>
   <ul>
     <li><a href="https://kit.svelte.dev">SvelteKit</a></li>
+    <li><a href="https://netlify.com">Netlify</a></li>
   </ul>
 </details>
 
@@ -96,6 +97,6 @@ Project Link: [https://github.com/Nullcano/Nullca.no](https://github.com/Nullcan
 <!-- Acknowledgments -->
 ## :gem: Acknowledgements
 
- - [SvelteKit](https://kit.svelte.dev/)
- - [Figma](https://figma.com/)
- - [ChatGPT](https://chat.openai.com/)
+ - [SvelteKit](https://kit.svelte.dev/) - My trusty app builder
+ - [Figma](https://figma.com/) - App prototyping, logos, icons and other illustrations
+ - [ChatGPT](https://chat.openai.com/) - Filler content and AI babble
