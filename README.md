@@ -1,38 +1,110 @@
-# create-svelte
+<div align="center">
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+  <img src="https://nullca.no/null.svg" width="150">
+  <h1>Nullca.no</h1>
+  
+  <p>
+    My personal website experiment showcasing other experiments 
+  </p>
 
-## Creating a project
+  
+<!-- Badges -->
+<p>
+  <a href="https://github.com/Nullcano/Nullca.no/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Nullcano/Nullca.no" alt="contributors" />
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/Nullcano/Nullca.no" alt="last update" />
+  </a>
+  <a href="https://github.com/Nullcano/Nullca.no/network/members">
+    <img src="https://img.shields.io/github/forks/Nullcano/Nullca.no" alt="forks" />
+  </a>
+  <a href="https://github.com/Nullcano/Nullca.no/stargazers">
+    <img src="https://img.shields.io/github/stars/Nullcano/Nullca.no" alt="stars" />
+  </a>
+  <a href="https://github.com/Nullcano/Nullca.no/issues/">
+    <img src="https://img.shields.io/github/issues/Nullcano/Nullca.no" alt="open issues" />
+  </a>
+  <a href="https://github.com/Nullcano/Nullca.no/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Nullcano/Nullca.no.svg" alt="license" />
+  </a>
+</p>
+   
+<h4>
+    <a href="https://nullca.no">View Project</a>
+  <span> · </span>
+    <a href="https://github.com/Nullcano/Nullca.no">Documentation</a>
+  <span> · </span>
+    <a href="https://github.com/Nullcano/Nullca.no/issues/">Report Bug</a>
+  <span> · </span>
+    <a href="https://github.com/Nullcano/Nullca.no/issues/">Request Feature</a>
+  </h4>
+</div>
 
-If you're seeing this, you've probably already done this step. Congrats!
+<br />
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: Table of Contents
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- [About the Project](#star2-about-the-project)
+  * [Tech Stack](#space_invader-tech-stack)
+  * [Features](#dart-features)
+  * [Color Reference](#art-color-reference)
+  * [Environment Variables](#key-environment-variables)
+- [Getting Started](#toolbox-getting-started)
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Installation](#gear-installation)
+  * [Run Locally](#running-run-locally)
+- [Usage](#eyes-usage)
+- [Roadmap](#compass-roadmap)
+- [Contributing](#wave-contributing)
+  * [Code of Conduct](#scroll-code-of-conduct)
+- [License](#warning-license)
+- [Contact](#handshake-contact)
+- [Acknowledgements](#gem-acknowledgements)
+  
 
-## Developing
+<!-- About the Project -->
+## :star2: About the Project
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+<!-- TechStack -->
+<details>
+  <summary>Tech</summary>
+  <ul>
+    <li><a href="https://kit.svelte.dev">SvelteKit</a></li>
+  </ul>
+</details>
 
-```bash
-npm run dev
+<!-- Features -->
+### :dart: Features
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- Landing page
+- Project feeds
+- AI chatbots with profiles
 
-## Building
+<!-- Roadmap -->
+## :compass: Roadmap
 
-To create a production version of your app:
+* [ ] Structure a better UI in Figma
+* [ ] Implement
+* [ ] Repeat
 
-```bash
-npm run build
-```
+<!-- License -->
+## :warning: License
 
-You can preview the production build with `npm run preview`.
+Distributed under the no License. See LICENSE.txt for more information.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+<!-- Contact -->
+## :handshake: Contact
+
+Nullcano @ everywhere - hi@nullca.no
+
+Project Link: [https://github.com/Nullcano/Nullca.no](https://github.com/Nullcano/Nullca.no)
+
+<!-- Acknowledgments -->
+## :gem: Acknowledgements
+
+ - [SvelteKit](https://kit.svelte.dev/)
+ - [Figma](https://figma.com/)
+ - [ChatGPT](https://chat.openai.com/)
