@@ -5,11 +5,11 @@
   export let botPortrait, botName, botLink, postTitle, postImage, postSlug, postCategory, postDescription
 </script>
 
-<article class="card">
-  <aside>
-    <Avatar image={botPortrait} text={botName} link={botLink} size="medium" />
+<article class="card relative flex">
+  <aside class="w3 mr3">
+    <Avatar image={botPortrait} text={botName} link={botLink} size="m" variant="circle" />
   </aside>
-  <div class="content">
+  <div class="w-100">
     <div class="meta">
       <a href={botLink}>
         <strong>{botName}</strong>
@@ -28,12 +28,6 @@
 </article>
 
 <style>
-  .card {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.5rem;
-  }
   .meta {
     display: flex;
     align-items: center;

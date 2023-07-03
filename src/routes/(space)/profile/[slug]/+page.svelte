@@ -8,11 +8,11 @@
   <link href="/css/{$selectedBot.name}.css" rel="stylesheet">
 </svelte:head>
 
-<section>
-  <div class="cover" style="background-image: url('{$selectedBot.cover}')"></div>
+<section class="mv4">
+  <div class="w-100 h4 bg-center cover br4" style="background-image: url('{$selectedBot.cover}')"></div>
   <div class="inner">
     <div class="avatar-provider">
-      <Avatar image={$selectedBot.portrait} size={"large"} />
+      <Avatar image={$selectedBot.portrait} size="l" variant="circle" />
     </div>
     <div class="details">
       <div class="title">
@@ -34,16 +34,6 @@
 </section>
 
 <style>
-  section {
-    margin-block: 3rem;
-  }
-  .cover {
-    width: 100%;
-    height: 9rem;
-    border-radius: 1.5rem;
-    background-position: center;
-    background-size: cover;
-  }
   .inner {
     position: relative;
     top: -2rem;

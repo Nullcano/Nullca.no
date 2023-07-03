@@ -5,14 +5,14 @@
 	import '../../app.css'
 </script>
 
-<div class="main-layout">
+<div class="main-layout w-100 mw9 vh-100 center">
 	<AsideNav />
 	<div class="page-provider">
 		<header class="top-bar">
 			<Search />
 			<ProfileButton />
 		</header>
-    <div class="contained">
+    <div class="ma4 mw8 center">
       <slot></slot>
     </div>
 	</div>
@@ -20,16 +20,11 @@
 
 <style>
 	.main-layout {
-		margin: auto;
-		width: 100%;
-		max-width: 90em;
-		height: 100vh;
 		display: grid;
 		grid-template-columns: 6rem 1fr;
 		grid-template-rows: 1fr;
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
-		overflow: hidden;
 	}
 	header {
 		position: sticky;
@@ -47,10 +42,6 @@
 		overflow-y: auto;
 		border-left: 1px solid rgba(255,255,255,.1);
 	}
-  .contained {
-    margin: 1.5rem auto;
-    max-width: 60em;
-  }
 	@media screen and (max-width: 60em) {
 		.main-layout {
 			margin: auto;

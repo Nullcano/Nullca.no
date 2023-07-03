@@ -3,26 +3,22 @@
 	import '../../app.css'
 </script>
 
-<div class="main-layout">
+<div class="main-layout vw-100 vh-100 overflow-hidden">
 	<AsideNav />
-	<div class="page-provider">
+	<div class="page-provider vh-100">
 		<slot></slot>
 	</div>
 </div>
 
 <style>
 	.main-layout {
-		width: 100vw;
-		height: 100vh;
 		display: grid;
 		grid-template-columns: 6rem 1fr;
 		grid-template-rows: 1fr;
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
-		overflow: hidden;
 	}
 	.page-provider {
-		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: auto;
 		border-left: 1px solid rgba(255,255,255,.1);

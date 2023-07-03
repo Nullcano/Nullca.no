@@ -50,115 +50,114 @@
   }
 
   function getResponse(message) {
-  let response = undefined;
-  let confidenceLevel = '';
-  let confidenceValue = 0;
+    let response = undefined;
+    let confidenceLevel = '';
+    let confidenceValue = 0;
 
-  const matchedCommands = [];
-  const matchedWords = [];
+    const matchedCommands = [];
+    const matchedWords = [];
 
-  // Remove special characters from the message
-  const strippedMessage = message.toLowerCase().replace(/[^\w\s]/g, '');
+    // Remove special characters from the message
+    const strippedMessage = message.toLowerCase().replace(/[^\w\s]/g, '');
 
-  for (let i = 0; i < $selectedBot.commands.length; i++) {
-    const contextCommands = $selectedBot.commands[i];
-    const contextReplies = $selectedBot.replies[i];
+    for (let i = 0; i < $selectedBot.commands.length; i++) {
+      const contextCommands = $selectedBot.commands[i];
+      const contextReplies = $selectedBot.replies[i];
 
-    for (let j = 0; j < contextCommands.length; j++) {
-      const command = contextCommands[j].toLowerCase();
+      for (let j = 0; j < contextCommands.length; j++) {
+        const command = contextCommands[j].toLowerCase();
 
-      if (strippedMessage === command) {
-        matchedCommands.push({ index: i, command });
-      } else if (strippedMessage.split(' ').includes(command)) {
-        matchedWords.push({ index: i, word: command });
-      } else if (strippedMessage.includes(command)) {
-        matchedWords.push({ index: i, word: command });
+        if (strippedMessage === command) {
+          matchedCommands.push({ index: i, command });
+        } else if (strippedMessage.split(' ').includes(command)) {
+          matchedWords.push({ index: i, word: command });
+        } else if (strippedMessage.includes(command)) {
+          matchedWords.push({ index: i, word: command });
+        }
       }
     }
-  }
 
-  if (matchedCommands.length > 0) {
-    const fullMatch = matchedCommands.find((match) => match.command.toLowerCase() === strippedMessage);
-    if (fullMatch) {
-      const arrayIndex = fullMatch.index;
-      const matchedCommandsCount = matchedCommands.filter((match) => match.index === arrayIndex).length;
-      const matchedWordsCount = matchedWords.filter((match) => match.index === arrayIndex).length;
-      const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
-      const unknownWordsCount = matchedWords.filter((match) => match.index === arrayIndex).length;
+    if (matchedCommands.length > 0) {
+      const fullMatch = matchedCommands.find((match) => match.command.toLowerCase() === strippedMessage);
+      if (fullMatch) {
+        const arrayIndex = fullMatch.index;
+        const matchedCommandsCount = matchedCommands.filter((match) => match.index === arrayIndex).length;
+        const matchedWordsCount = matchedWords.filter((match) => match.index === arrayIndex && strippedMessage.includes(match.word)).length;
+        const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+        const unknownWordsCount = matchedWords.filter((match) => match.index === arrayIndex).length;
 
-      const commandsScore = matchedCommandsCount * 70; // High increase
-      const wordsScore = matchedWordsCount * 10; // Medium increase
-      const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
-      const unknownWordsScore = unknownWordsCount * 20; // High decrease
+        const commandsScore = matchedCommandsCount * 80; // High increase
+        const wordsScore = matchedWordsCount * 30; // Medium increase
+        const unrelatedWordsScore = unrelatedWordsCount * 5; // Low decrease
+        const unknownWordsScore = unknownWordsCount * 10; // High decrease
 
-      confidenceValue = Math.max(0, Math.min(100, commandsScore + wordsScore - unrelatedWordsScore - unknownWordsScore));
-      response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
-      confidenceLevel = 'Confident';
-    } else {
-      const confidentArrays = [...new Set(matchedCommands.map((match) => match.index))];
+        confidenceValue = Math.max(0, Math.min(100, commandsScore + wordsScore - unrelatedWordsScore - unknownWordsScore));
+        response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
+        confidenceLevel = 'Confident';
+      } else {
+        const confidentArrays = [...new Set(matchedCommands.map((match) => match.index))];
+        if (confidentArrays.length > 1) {
+          const randomIndex = confidentArrays[Math.floor(Math.random() * confidentArrays.length)];
+          const matchedCommandsCount = matchedCommands.filter((match) => match.index === randomIndex).length;
+          const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+
+          const commandsScore = matchedCommandsCount * 40; // Medium increase
+          const unrelatedWordsScore = unrelatedWordsCount * 5; // Low decrease
+
+          confidenceValue = Math.max(0, Math.min(100, commandsScore - unrelatedWordsScore));
+          response = $selectedBot.replies[randomIndex][Math.floor(Math.random() * $selectedBot.replies[randomIndex].length)];
+          confidenceLevel = 'Confident';
+        } else {
+          const arrayIndex = confidentArrays[0];
+          const matchedCommandsCount = matchedCommands.filter((match) => match.index === arrayIndex).length;
+          const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
+
+          const commandsScore = matchedCommandsCount * 40; // Medium increase
+          const unrelatedWordsScore = unrelatedWordsCount * 5; // Low decrease
+
+          confidenceValue = Math.max(0, Math.min(100, commandsScore - unrelatedWordsScore));
+          response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
+          confidenceLevel = 'Confident';
+        }
+      }
+    } else if (matchedWords.length > 0) {
+      const confidentArrays = [...new Set(matchedWords.map((match) => match.index))];
       if (confidentArrays.length > 1) {
         const randomIndex = confidentArrays[Math.floor(Math.random() * confidentArrays.length)];
-        const matchedCommandsCount = matchedCommands.filter((match) => match.index === randomIndex).length;
+        const matchedWordsCount = matchedWords.filter((match) => match.index === randomIndex && strippedMessage.includes(match.word)).length;
         const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
 
-        const commandsScore = matchedCommandsCount * 30; // Medium increase
-        const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
+        const wordsScore = matchedWordsCount * 20; // Medium increase
+        const unrelatedWordsScore = unrelatedWordsCount * 5; // Low decrease
 
-        confidenceValue = Math.max(0, Math.min(100, commandsScore - unrelatedWordsScore));
+        confidenceValue = Math.max(0, Math.min(100, wordsScore - unrelatedWordsScore));
         response = $selectedBot.replies[randomIndex][Math.floor(Math.random() * $selectedBot.replies[randomIndex].length)];
         confidenceLevel = 'Confident';
       } else {
         const arrayIndex = confidentArrays[0];
-        const matchedCommandsCount = matchedCommands.filter((match) => match.index === arrayIndex).length;
+        const matchedWordsCount = matchedWords.filter((match) => match.index === arrayIndex && strippedMessage.includes(match.word)).length;
         const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
 
-        const commandsScore = matchedCommandsCount * 30; // Medium increase
-        const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
+        const wordsScore = matchedWordsCount * 20; // Medium increase
+        const unrelatedWordsScore = unrelatedWordsCount * 5; // Low decrease
 
-        confidenceValue = Math.max(0, Math.min(100, commandsScore - unrelatedWordsScore));
+        confidenceValue = Math.max(0, Math.min(100, wordsScore - unrelatedWordsScore));
         response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
         confidenceLevel = 'Confident';
       }
-    }
-  } else if (matchedWords.length > 0) {
-    const confidentArrays = [...new Set(matchedWords.map((match) => match.index))];
-    if (confidentArrays.length > 1) {
-      const randomIndex = confidentArrays[Math.floor(Math.random() * confidentArrays.length)];
-      const matchedWordsCount = matchedWords.filter((match) => match.index === randomIndex).length;
-      const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
-
-      const wordsScore = matchedWordsCount * 10; // Medium increase
-      const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
-
-      confidenceValue = Math.max(0, Math.min(100, wordsScore - unrelatedWordsScore));
-      response = $selectedBot.replies[randomIndex][Math.floor(Math.random() * $selectedBot.replies[randomIndex].length)];
-      confidenceLevel = 'Confident';
     } else {
-      const arrayIndex = confidentArrays[0];
-      const matchedWordsCount = matchedWords.filter((match) => match.index === arrayIndex).length;
-      const unrelatedWordsCount = strippedMessage.split(' ').filter((word) => !matchedWords.map((match) => match.word).includes(word)).length;
-
-      const wordsScore = matchedWordsCount * 10; // Medium increase
-      const unrelatedWordsScore = unrelatedWordsCount * 2; // Low decrease
-
-      confidenceValue = Math.max(0, Math.min(100, wordsScore - unrelatedWordsScore));
-      response = $selectedBot.replies[arrayIndex][Math.floor(Math.random() * $selectedBot.replies[arrayIndex].length)];
-      confidenceLevel = 'Confident';
+      confidenceValue = 0;
+      confidenceLevel = 'Confused';
+      const randomIndex = Math.floor(Math.random() * $selectedBot.messageBank.length);
+      response = $selectedBot.messageBank[randomIndex];
     }
-  } else {
-    confidenceValue = 0;
-    confidenceLevel = 'Confused';
-    const randomIndex = Math.floor(Math.random() * $selectedBot.messageBank.length);
-    response = $selectedBot.messageBank[randomIndex];
+
+    return {
+      response,
+      confidenceLevel,
+      confidenceValue,
+    };
   }
-
-  return {
-    response,
-    confidenceLevel,
-    confidenceValue,
-  };
-}
-
 
   const scrollToBottom = async (node) => {
     node.scroll({ top: node.scrollHeight, behavior: 'smooth' });
@@ -180,10 +179,10 @@
 
   <div class="content">
     {#if $selectedBot}
-      <div class="title">
+      <div class="title ph3 h3 flex items-center justify-between">
         <div class="ai-profile">
           <span>Chatting with</span>
-          <Avatar image={$selectedBot.portrait} text={$selectedBot.name} size="small" />
+          <Avatar image={$selectedBot.portrait} text={$selectedBot.name} size="s" variant="rounded" />
           <span>{$selectedBot.name}</span>
           <a class="small-button" href={$selectedBot.profileSlug}>Profile</a>
         </div>
@@ -233,13 +232,6 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-  }
-  .title {
-    height: 4rem;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
   .ai-profile {
     display: flex;

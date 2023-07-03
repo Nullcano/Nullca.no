@@ -16,11 +16,11 @@
   export let disabled = false
 </script>
 
-<header>
+<header class="ph3 h3 flex items-center">
   <TitleIconText text="Null Chat" icon="/images/icons/null-chat.svg" />
 </header>
 <Divider />
-<ul>
+<ul class="list pa2 flex flex-column">
   {#each $bots as bot}
     {#if bot.interactive}
       <a 
@@ -28,11 +28,11 @@
         href={bot.chatSlug}
         class:active={path === bot.chatSlug}
         class:disabled={disabled == true}
-        class="nav-item"
+        class="nav-item ma2"
         data-sveltekit-preload-data="off"
         tabindex="0"
         on:click={() => selectBot(bot)}>
-        <Avatar image={bot.portrait} text={bot.name} size="medium" />
+        <Avatar image={bot.portrait} text={bot.name} size="m" variant="rounded" />
         <div class="meta">
           <span class="name">{bot.name}</span>
           <span class="role">{bot.role}</span>
@@ -43,19 +43,6 @@
 </ul>
 
 <style>
-  header {
-    padding: 0 1rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-  }
-  ul {
-    margin: 1rem;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
   a {
     display: grid;
     grid-template-columns: auto 1fr;
