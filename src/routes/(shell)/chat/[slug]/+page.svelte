@@ -168,19 +168,18 @@
   <title>{$selectedBot.name} &middot; Chat &middot; Nullcano</title>
 </svelte:head>
 
-<div class="chat">
-  <div class="sidebar">
+<div class="w-100 grid grid-x-auto-fill" style="height:calc(100% - 4rem)">
+  <div class="w5 br b--white-10">
     {#if isTyping}
       <ChatBots disabled={true} />
       {:else}
       <ChatBots />
     {/if}
   </div>
-
-  <div class="content">
+  <div class="flex flex-column min-h-100">
     {#if $selectedBot}
       <div class="title ph3 h3 flex items-center justify-between">
-        <div class="ai-profile">
+        <div class="flex items-center gap-2">
           <span>Chatting with</span>
           <Avatar image={$selectedBot.portrait} text={$selectedBot.name} size="s" variant="rounded" />
           <span>{$selectedBot.name}</span>
@@ -192,12 +191,12 @@
       </div>
       <Divider />
       {#if help}
-        <div class="help">
+        <div class="help h3">
           <span>At the moment, Null AI is not particularly useful. However, please stay tuned for upcoming features such as additional commands, gamification, and more.</span>
           <div class="close-help" on:click={() => help = !help} on:keypress={() => help = !help}>X</div>
         </div>
       {/if}
-      <div class="messages-provider" bind:this={element}>
+      <div class="messages-provider h-100 overflow-y-scroll" bind:this={element}>
         <div class="messages">
           {#each $selectedBot.chat as message, i}
             {#if message.sender === 'user'}
@@ -218,26 +217,6 @@
 </div>
 
 <style>
-  .chat {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    width: 100%;
-    height: calc(100vh - 3px);
-  }
-  .sidebar {
-    width: 20rem;
-    border-right: 1px solid rgba(255, 255, 255, .1);
-  }
-  .content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .ai-profile {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-  }
   .small-button {
     margin-inline-start: 1rem;
     padding: .5rem 1rem;
@@ -269,10 +248,6 @@
     top: .5rem;
     right: .5rem;
   }
-  .messages-provider {
-    height: calc(100vh - 8rem - 2px);
-    overflow-y: auto;
-  }
   .messages {
     min-height: 100%;
     display: flex;
@@ -286,15 +261,5 @@
     color: var(--light-60);
     text-transform: uppercase;
     font-size: 14px;
-  }
-
-  @media only screen and (max-width: 60em) {
-    .chat {
-      height: calc(100vh - 6rem - 3px);
-    }
-    .sidebar {
-      width: 6rem;
-      border-right: 1px solid rgba(255, 255, 255, .1);
-    }
   }
 </style>
