@@ -292,6 +292,8 @@ figure {
 }
 
 svg {
+  width: 100%;
+  height: 100%;
   fill: currentColor;
 }
 
@@ -326,6 +328,10 @@ svg {
 .bg-left {
   background-repeat: no-repeat;
   background-position: center left;
+}
+
+.bd-blur {
+  backdrop-filter: blur(8px);
 }
 
 .outline {
@@ -1119,6 +1125,28 @@ svg {
 .flex-shrink-1 {
   flex-shrink: 1;
 }
+
+.gap-1 {
+  gap: .25rem;
+}
+
+.gap-2 {
+  gap: .5rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.gap-4 {
+  gap: 1.5rem;
+}
+
+.gap-5 {
+  gap: 3rem;
+}
+
+
 
 .fl {
   float: left;
