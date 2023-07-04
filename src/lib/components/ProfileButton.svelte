@@ -7,5 +7,5 @@
   <div class="mr3">
     <div class="playername">{$bots[0].name}</div>
   </div>
-  <Avatar text={$bots[0].name} image={$bots[0].portrait} size="m" variant="rounded" />
+  <Avatar text={$bots[0].name} image={$bots[0].portrait} size="s" variant="rounded" />
 </a>

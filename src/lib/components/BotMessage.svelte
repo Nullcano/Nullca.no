@@ -4,57 +4,27 @@
   export let name, portrait, confidenceLevel, confidenceValue, text, profileSlug;
 </script>
 
-<div class="message">
-  <div class="details">
-    <Avatar image={portrait} text={name} link={profileSlug} size="small" />
-    <div class="name">
-      <a href={profileSlug} alt={name} data-sveltekit-preload-data="off">{name}</a>
+<div class="ml4 mb3 pa3 br3 mw6 grid grid-x-auto-fill gap-2 self-start bg-black-50">
+  <Avatar image={portrait} text={name} link={profileSlug} size="s" variant="rounded" />
+  <div class="w-100">
+    <div class="flex gap-2">
+      <a class="white-50" href={profileSlug} alt={name} data-sveltekit-preload-data="off">{name}</a>
+      <div class="flex gap-2 confidence {confidenceLevel.toLowerCase()} nowrap">
+        <img class="w1 h1" src="/images/{confidenceLevel.toLowerCase()}.svg" alt={confidenceLevel}>
+        {#if confidenceLevel != "Confused"}
+          <span class="db">{confidenceValue}% {confidenceLevel}</span>
+          {:else}
+          <span class="db">{confidenceLevel}</span>
+        {/if}
+      </div>
     </div>
-    <div class="confidence {confidenceLevel.toLowerCase()}">
-      <img src="/images/{confidenceLevel.toLowerCase()}.svg" alt={confidenceLevel}>
-      {#if confidenceLevel != "Confused"}
-        <span>{confidenceValue}% {confidenceLevel}</span>
-        {:else}
-        <span>{confidenceLevel}</span>
-      {/if}
+    <div class="pt2">
+      {text}
     </div>
-  </div>
-  <div class="content">
-    <p>{text}</p>
   </div>
 </div>
 
 <style>
-  .message {
-    max-width: 20rem;
-    margin-bottom: 1.5rem;
-    margin-inline-start: 1.5rem;
-    padding: .75rem;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    word-break: break-word;
-    background: rgba(0,0,0,.5);
-    clip-path: var(--clip-m);
-  }
-  .details {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-  }
-  .details img {
-    max-width: 2.5rem;
-  }
-  .name, .confidence {
-    display: flex;
-    align-items: center;
-    gap: .25rem;
-    text-transform: uppercase;
-    font-size: 14px;
-  }
-  .name {
-    color: var(--light-60);
-  }
   .confident {
     color: hsl(140, 50%, 50%);
   }
@@ -63,11 +33,5 @@
   }
   .confused {
     color: hsl(345, 100%, 50%);
-  }
-  .content {
-    margin-inline-start: 2.75rem;
-  }
-  p {
-    margin: 0;
   }
 </style>

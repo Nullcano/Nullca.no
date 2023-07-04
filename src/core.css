@@ -986,6 +986,26 @@ svg {
   flex-direction: row-reverse;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid-x-auto-fill {
+  grid-template-columns: auto 1fr;
+}
+
+.grid-x-fill-auto {
+  grid-template-columns: 1fr auto;
+}
+
+.grid-y-auto-fill {
+  grid-template-rows: auto 1fr;
+}
+
+.grid-y-fill-auto {
+  grid-template-rows: 1fr auto;
+}
+
 .items-start {
   align-items: flex-start;
 }

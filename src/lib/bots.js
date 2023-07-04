@@ -1,111 +1,11 @@
 import { writable } from 'svelte/store';
-import { browser } from '$app/environment';
 import { posts } from '$lib/api';
 import { commands } from '$lib/chatCommands';
 import { replies } from '$lib/chatReplies';
 import { messageBank } from '$lib/messageBank';
 
-let userAgent, userLanguage, screenWidth, screenHeight, timezone, cookiesEnabled, onlineStatus, browserName, browserSlug, formattedLanguage, formattedPlatform;
-
-const languageMappings = {
-  "en-US": "American",
-  "en-GB": "British",
-  "es-ES": "Spanish",
-  "es-MX": "Spanish",
-  "fr-FR": "French",
-  "fr-CA": "French",
-  "de-DE": "German",
-  "pt-BR": "Portuguese",
-  "pt-PT": "Portuguese",
-  "zh-CN": "Chinese",
-  "zh-TW": "Chinese",
-  "ja-JP": "Japanese",
-  "ko-KR": "Korean",
-  "ru-RU": "Russian",
-  "ar-SA": "Arabic",
-  "hi-IN": "Hindi",
-  "it-IT": "Italian",
-  "da-DK": "Danish",
-  "nb-NO": "Bokmål",
-  "nn-NO": "Nynorsk",
-  "sv-SE": "Swedish",
-  "fi-FI": "Finnish"
-};
-
-if (browser) {
-  if (navigator) {
-    userAgent = navigator.userAgent;
-    userLanguage = navigator.language;
-    cookiesEnabled = navigator.cookieEnabled;
-    onlineStatus = navigator.onLine ? "Online" : "Offline";
-  }
-
-  if (window) {
-    screenWidth = window.screen.width;
-    screenHeight = window.screen.height;
-  }
-
-  browserName = "Unknown";
-
-  if (userAgent && userAgent.indexOf("Firefox") !== -1) {
-    browserName = "Mozilla Firefox";
-  } else if (userAgent && userAgent.indexOf("Chrome") !== -1) {
-    browserName = "Google Chrome";
-  } else if (userAgent && userAgent.indexOf("Safari") !== -1) {
-    browserName = "Apple Safari";
-  } else if (userAgent && userAgent.indexOf("Opera") !== -1) {
-    browserName = "Opera";
-  } else if (userAgent && userAgent.indexOf("Edge") !== -1) {
-    browserName = "Microsoft Edge";
-  } else if (userAgent && userAgent.indexOf("MSIE") !== -1) {
-    browserName = "Internet Explorer";
-  }
-
-  browserSlug = browserName.replace(' ', '-')
-
-  formattedLanguage = userLanguage || '';
-
-  if (languageMappings[userLanguage]) {
-    formattedLanguage = languageMappings[userLanguage];
-  }
-
-  formattedPlatform = "Unknown";
-
-  if (userAgent && userAgent.match(/Win/i)) {
-    formattedPlatform = "Windows";
-  } else if (userAgent && userAgent.match(/Mac/i)) {
-    formattedPlatform = "MacOS";
-  } else if (userAgent && userAgent.match(/Linux/i)) {
-    formattedPlatform = "Linux";
-  } else if (userAgent && userAgent.match(/iPhone|iPad|iPod/i)) {
-    formattedPlatform = "iOS";
-  } else if (userAgent && userAgent.match(/Android/i)) {
-    formattedPlatform = "Android";
-  }
-}
-
 let initialBots = [
   {
-    name: `${formattedPlatform} Client`,
-    chatSlug: `/chat/${formattedPlatform}-Client`,
-    profileSlug: `/profile/${formattedPlatform}-Client`,
-    portrait: `/images/npc/${formattedPlatform}-Client.webp`,
-    cover: `/images/covers/${browserSlug}.webp`,
-    role: `${formattedLanguage} ${browserName}`,
-    bio: `
-      <p>Currently browsing Nullca.no using ${browserName} on ${formattedPlatform}.
-      <p>My preferred language is ${formattedLanguage} and my timezone is ${timezone}.
-      <p>I am using the screen resolution ${screenWidth}x${screenHeight} pixels and cookies are ${cookiesEnabled ? "enabled" : "disabled"}.
-      <p>Currently ${onlineStatus}.</p>
-    `,
-    posts: '',
-    chat: [],
-    commands: '',
-    replies: '',
-    messageBank: '',
-    interactive: false,
-    isActive: false
-  }, {
     name: 'Nullcano',
     chatSlug: '/chat/Nullcano',
     profileSlug: '/profile/Nullcano',

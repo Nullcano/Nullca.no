@@ -20,7 +20,7 @@
   <TitleIconText text="Null Chat" icon="/images/icons/null-chat.svg" />
 </header>
 <Divider />
-<ul class="list pa2 flex flex-column">
+<ul class="list ma0 pa2 flex flex-column">
   {#each $bots as bot}
     {#if bot.interactive}
       <a 
@@ -28,14 +28,14 @@
         href={bot.chatSlug}
         class:active={path === bot.chatSlug}
         class:disabled={disabled == true}
-        class="nav-item ma2"
+        class="pa2 mb2 grid grid-x-auto-fill gap-3 items-center bg-black-50 bg-animate br3"
         data-sveltekit-preload-data="off"
         tabindex="0"
         on:click={() => selectBot(bot)}>
         <Avatar image={bot.portrait} text={bot.name} size="m" variant="rounded" />
         <div class="meta">
-          <span class="name">{bot.name}</span>
-          <span class="role">{bot.role}</span>
+          <span class="name mb2">{bot.name}</span>
+          <span class="role white-50">{bot.role}</span>
         </div>
       </a>
     {/if}
@@ -43,28 +43,10 @@
 </ul>
 
 <style>
-  a {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: rgba(0,0,0,.5);
-    color: var(--light-80);
-    text-decoration: none;
-    transition: all .25s linear;
-  }
+
   .meta {
     display: flex;
     flex-direction: column;
-  }
-  .name {
-    font-weight: 600;
-  }
-  .role {
-    opacity: .5;
   }
   a:hover, a.active {
     background-color: rgba(255, 255, 255, .1);
