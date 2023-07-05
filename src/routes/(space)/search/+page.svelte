@@ -1,7 +1,7 @@
 <script>
   import * as config from '$lib/config';
-  import Stack from '$lib/components/Stack.svelte';
-  import ProjectRow from '$lib/components/ProjectRow.svelte';
+  import PostGrid from '$lib/components/PostGrid.svelte'
+  import FeedCard from '$lib/components/FeedCard.svelte'
 
   export let data;
   let posts = data.posts;
@@ -27,30 +27,33 @@
   <title>{config.title}</title>
 </svelte:head>
 
-<section>
-  <!-- svelte-ignore a11y-autofocus -->
-  <input type="text" placeholder="Search Projects..." bind:value={searchInput} on:input={handleSearch} autofocus />
-  <Stack gap="l">
-    {#if searchResults.length > 0}
-      {#each searchResults as post}
-        <a href="/projects/{post.slug}">
-          <ProjectRow icon={post.icon} title={post.title} image={post.image} body={post.description} />
-        </a>
-      {/each}
-      {:else}
-      <p>No results found</p>
-    {/if}
-  </Stack>
-</section>
+
+<!-- svelte-ignore a11y-autofocus -->
+<input type="text" placeholder="Search Projects..." bind:value={searchInput} on:input={handleSearch} autofocus />
+
+<PostGrid>
+  {#if searchResults.length > 0}
+    {#each searchResults as post}
+      <FeedCard 
+        botPortrait={null}
+        botName={null}
+        botLink={null}
+        postTitle={post.title}
+        postImage={post.image}
+        postIcon={post.icon}
+        postDescription={post.description}
+        postSlug={post.slug}
+        postCategory={post.category}
+      />
+    {/each}
+    <div></div>
+    <div></div>
+    {:else}
+    <p>No results found</p>
+  {/if}
+</PostGrid>
 
 <style>
-	a {
-		color: var(--light-75);
-		text-decoration: none;
-	}
-	a:hover {
-		color: var(--light-100);
-	}
 	input {
     width: 100%;
     margin-bottom: 3rem;
