@@ -1,11 +1,11 @@
 <script>
-  import { posts } from '$lib/api.js'
+  import { bots } from '$lib/bots.js'
   import PostGrid from '$lib/components/PostGrid.svelte'
   import FeedCard from '$lib/components/FeedCard.svelte'
 </script>
 
 <PostGrid>
-  {#each posts as bot}
+  {#each $bots as bot}
     {#each bot.posts as post}
       <FeedCard 
         botPortrait={bot.portrait}
