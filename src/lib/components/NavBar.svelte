@@ -25,19 +25,19 @@
   $: path = $page.url.pathname
 </script>
 
-<aside class="fixed top-0 left-0 pv3 ph4 bottom-0 flex flex-column items-center justify-between z-2">
+<aside class="fixed top-0 left-0 pa3 bottom-0 flex flex-column items-center justify-between z-2">
   <div class="flex">
     <a class="inline-flex w3 h3 pa3 bg-black br-100" href="/feed">
       <Logo />
     </a>
   </div>
   <div class="flex flex-column justify-center flex-auto">
-    <nav class="w3 pa2 br4 flex flex-column gap-2 bg-black-50">
+    <nav class="w3 flex flex-column gap-2">
       {#each navItems as n}
         <a
           role="button"
           href={n.href}
-          class="pa3 br3 flex items-center justify-center bg-white-10 hover-bg-purple bg-animate"
+          class="h3 pa3 br3 br--right flex items-center justify-center hover-bg-purple bg-animate bt br bb b--white-10"
           class:active={path.startsWith(n.href)}
           tabindex="0"
         >

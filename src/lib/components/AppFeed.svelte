@@ -13,6 +13,7 @@
         botLink={bot.profileSlug}
         postTitle={post.title}
         postImage={post.image}
+        postIcon={post.icon}
         postDescription={post.description}
         postSlug={post.slug}
         postCategory={post.category}

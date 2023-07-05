@@ -1,7 +1,7 @@
 <script>
   import MiniProfile from '$lib/components/profiles/MiniProfile.svelte'
 
-  export let botPortrait, botName, botLink, postTitle, postImage, postSlug, postCategory, postDescription
+  export let botPortrait, botName, botLink, postTitle, postImage, postIcon, postSlug, postCategory, postDescription
 </script>
 
 <article class="relative pa3 br4 flex flex-column gap-3 ba b--white-10">
@@ -17,6 +17,6 @@
       <div class="aspect-ratio--object cover" style="background:url('/images/{postImage}') center"></div>
     </figure>
   </a>
-  <MiniProfile image="/images/{postImage}" name={postTitle} link="/post/{postSlug}" />
+  <MiniProfile image="/images/{postIcon}" name={postTitle} link="/post/{postSlug}" />
   <span>{postDescription}</span>
 </article>

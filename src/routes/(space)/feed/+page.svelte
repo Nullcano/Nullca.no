@@ -1,8 +1,8 @@
 <script>
 	import * as config from '$lib/config'
 	import AppFeed from '$lib/components/AppFeed.svelte'
-	import CategoryList from '$lib/components/CategoryList.svelte';
-	import Divider from '$lib/components/Divider.svelte';
+	import CategoryList from '$lib/components/CategoryList.svelte'
+	import Divider from '$lib/components/Divider.svelte'
 </script>
 
 <svelte:head>
@@ -12,7 +12,7 @@
 <section>
 	<CategoryList />
 	<Divider />
-	<AppFeed />	
+	<AppFeed />
 </section>
 
 <style>

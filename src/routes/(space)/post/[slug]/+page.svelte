@@ -26,7 +26,7 @@
 <article>
 	{#if post}
 		<div class="mb4 flex items-end justify-between">
-			<TitleIconText text={post.title} icon="/images/{post.image}" />
+			<TitleIconText text={post.title} icon="/images/{post.icon}" />
 			<div class="flex items-center gap-2">
 				{#each post.tags as tag}
 					<a class="pv1 ph2 br-pill ba b--white-10 ttc" href="/tags/{tag}">{tag}</a>

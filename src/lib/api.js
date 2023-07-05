@@ -1,5 +1,20 @@
 export const posts = [
   {
+    slug: 'nullcano-logotypes',
+    title: 'Nullcano logotypes',
+    description: 'Logotypes for Nullcano.',
+    tags: ['graphics','logos','icons'],
+    publisher: 'Novastar',
+    category: 'Graphics',
+    featured: false,
+    launchable: false,
+    icon: 'logotypes-icon.png',
+    image: 'logotypes.png',
+    content: `
+      <p>In the digital age, where brands strive for uniqueness and recognition, a well-designed and memorable logotype has become a vital element of successful branding. The Nullcano Logotype Collection is a portfolio showcase of my innovative and captivating logotypes, crafted with meticulous attention to detail and a deep understanding of brand identity.</p>
+      <p>Designed specifically for technology-focused applications, this logotype features a clean and futuristic typographic treatment. The choice of a monospace font communicates the brand's association with the tech industry, while the incorporation of circuit board-like patterns within the letterforms adds a distinct technological touch.</p>
+    `
+  }, {
     slug: 'nullcano',
     title: 'Nullcano',
     description: 'My personal website where I showcase my projects.',
