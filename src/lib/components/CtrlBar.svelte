@@ -9,7 +9,7 @@
 
 <aside class="fixed top-0 right-0 pa3 bottom-0 flex flex-column items-center justify-between z-1">
   <div class="orb w3 h3 ba b--white-10 br-100"></div>
-  <div></div>
+  <div></div>  
   <div class="w3 h3 pa2 flex items-center justify-center bg-black-50 br-100 tc pointer" on:click={scrollUp} on:keydown={scrollUp}>
     GO UP
   </div>
