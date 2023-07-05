@@ -7,6 +7,7 @@
   import UserMessage from '$lib/components/UserMessage.svelte';
   import BotMessage from '$lib/components/BotMessage.svelte';
   import UserInput from '$lib/components/UserInput.svelte';
+  import TitleIconText from '$lib/components/titles/TitleIconText.svelte';
 
   let element;
   let help = false;
@@ -168,35 +169,18 @@
   <title>{$selectedBot.name} &middot; Chat &middot; Nullcano</title>
 </svelte:head>
 
-<div class="w-100 grid grid-x-auto-fill" style="height:calc(100% - 4rem)">
-  <div class="w5 br b--white-10">
-    {#if isTyping}
-      <ChatBots disabled={true} />
-      {:else}
-      <ChatBots />
-    {/if}
+<div class="mb4 flex items-end justify-between">
+  <TitleIconText text="Chatting with {$selectedBot.name}" icon={$selectedBot.portrait} />
+  <div>
+    <a class="pv2 ph3 br2 ba b--white-10" href={$selectedBot.profileSlug}>Profile</a>
+    <span class="pv2 ph3 br2 ba b--white-10 pointer" on:click={() => help = !help} on:keypress={() => help = !help}>Help</span>
   </div>
-  <div class="flex flex-column min-h-100">
+</div>
+<Divider />
+<div class="mt3 w-100 vh-50 flex gap-3">
+  <div class="w-100 w-two-thirds-l h-100 br4 flex flex-column ba b--white-10">
     {#if $selectedBot}
-      <div class="title ph3 h3 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span>Chatting with</span>
-          <Avatar image={$selectedBot.portrait} text={$selectedBot.name} size="s" variant="rounded" />
-          <span>{$selectedBot.name}</span>
-          <a class="small-button" href={$selectedBot.profileSlug}>Profile</a>
-        </div>
-        <div class="toggle-help" on:click={() => help = !help} on:keypress={() => help = !help}>
-          <span>?</span>
-        </div>
-      </div>
-      <Divider />
-      {#if help}
-        <div class="help h3">
-          <span>At the moment, Null AI is not particularly useful. However, please stay tuned for upcoming features such as additional commands, gamification, and more.</span>
-          <div class="close-help" on:click={() => help = !help} on:keypress={() => help = !help}>X</div>
-        </div>
-      {/if}
-      <div class="messages-provider h-100 overflow-y-scroll" bind:this={element}>
+      <div class="messages-provider min-h-100 overflow-y-scroll" bind:this={element}>
         <div class="messages">
           {#each $selectedBot.chat as message, i}
             {#if message.sender === 'user'}
@@ -210,44 +194,25 @@
           {/if}
         </div>
       </div>
-      <Divider />
       <UserInput on:submit={handleUserInput} />
+    {/if}
+  </div>
+  <div class="w-100 w-third-l">
+    {#if help}
+      <div class="relative pa2 f6">
+        <span>At the moment, Null AI is not particularly useful. However, please stay tuned for upcoming features such as additional commands, gamification, and more.</span>
+        <div class="absolute top-0 right-0 pointer" on:click={() => help = !help} on:keypress={() => help = !help}>X</div>
+      </div>
+    {/if}
+    {#if isTyping}
+      <ChatBots disabled={true} />
+      {:else}
+      <ChatBots />
     {/if}
   </div>
 </div>
 
 <style>
-  .small-button {
-    margin-inline-start: 1rem;
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-    border: 1px solid rgba(255, 255, 255, .1);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-  }
-  .help {
-    position: relative;
-    height: min-content;
-    padding: 1rem 3rem 1rem 1rem;
-    background-color: var(--light-20);
-    font-size: 14px;
-  }
-  .toggle-help, .close-help {
-    width: 2rem;
-    height: 2rem;
-    display: grid;
-    place-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  .toggle-help {
-    color: var(--dark-60);
-  }
-  .close-help {
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
-  }
   .messages {
     min-height: 100%;
     display: flex;

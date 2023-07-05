@@ -14,7 +14,7 @@
   export let disabled = false
 </script>
 
-<ul class="list ma0 pa2 flex flex-column">
+<ul class="list ma0 pa0 flex flex-column">
   {#each $bots as bot}
     {#if bot.interactive}
       <a 
