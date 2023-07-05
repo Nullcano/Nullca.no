@@ -5,13 +5,13 @@
 </script>
 
 {#if link}
-  <a class="mini-profile relative pa2 pr3 flex items-center self-start white bg-black-50 b--white-10 br-pill" href="{link}">
-    <Avatar image={image} size="s" variant={'circle'} />
-    <div class="ml2">{name}</div>
-  </a>
+  <div class="relative flex items-center gap-2 self-start white">
+    <Avatar image={image} size="s" variant={'circle'} link={link} text={name} />
+    <a href={link}>{name}</a>
+  </div>
 {:else}
-  <div class="mini-profile relative pa2 pr3 flex items-center self-start white bg-black-50 b--white-10 br-pill">
-    <Avatar image={image} size="s" variant={'circle'} />
-    <div class="ml2">{name}</div>
+  <div class="relative flex items-center gap-2 self-start white">
+    <Avatar image={image} size="s" variant={'circle'} link={null} text={name} />
+    <span>{name}</span>
   </div>
 {/if}

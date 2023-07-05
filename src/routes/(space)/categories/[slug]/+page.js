@@ -1,8 +1,8 @@
-import { posts } from '$lib/api';
+import { initialBots } from '$lib/bots';
 
 export async function load({ params }) {
-	return {
-		posts: await posts.filter(p => p.category.toLowerCase() === params.slug),
+  return {
+    bot: await initialBots.filter((bot) => bot.category.toLowerCase() === params.slug),
 		slug: await params.slug
-	};
+  }
 }

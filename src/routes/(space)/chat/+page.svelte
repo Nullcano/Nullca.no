@@ -1,5 +1,6 @@
 <script>
   import ChatBots from '$lib/components/ChatBots.svelte'
+  import TitleIconText from '$lib/components/titles/TitleIconText.svelte'
 </script>
 
 <svelte:head>
@@ -10,11 +11,10 @@
   <div class="sidebar">
     <ChatBots />
   </div>
-  <div class="content">
-    <div class="title">
-      <div class="ai-profile">
-        <span>Select an AI to chat with</span>  
-      </div>
+  <div class="content pa3">
+    <TitleIconText text="Null Chat" icon="/images/icons/null-chat.svg" />
+    <div class="ai-profile">
+      <span>Select an AI to chat with</span>  
     </div>
   </div>
 </div>
@@ -34,15 +34,6 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-  }
-  .title {
-    height: 4rem;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--dark-20);
-    border-radius: 1rem;
   }
   .ai-profile {
     display: flex;

@@ -10,9 +10,6 @@
 </svelte:head>
 
 <section>
-	<figure style="background-image: url('/images/holo-skeleton.webp')">
-		<h2 class="measure display f2">Continuously pushing boundaries and igniting creativity in digital design to ensure its vibrant existence...</h2>
-	</figure>
 	<CategoryList />
 	<Divider />
 	<AppFeed />	
@@ -23,16 +20,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
-	}
-	figure {
-		position: relative;
-		padding: 3rem;
-		border-radius: 1.5rem;
-		display: flex;
-		align-items: center;
-		background-position-y: -6rem;
-		overflow: hidden;
-		pointer-events: none;
 	}
 	@media only screen and (max-width: 60em) {
 		section {

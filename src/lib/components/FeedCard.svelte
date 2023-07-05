@@ -1,68 +1,22 @@
 <script>
-  import Avatar from '$lib/components/media/Avatar.svelte'
   import MiniProfile from '$lib/components/profiles/MiniProfile.svelte'
 
   export let botPortrait, botName, botLink, postTitle, postImage, postSlug, postCategory, postDescription
 </script>
 
-<article class="card relative flex">
-  <aside class="w3 mr3">
-    <Avatar image={botPortrait} text={botName} link={botLink} size="m" variant="circle" />
-  </aside>
-  <div class="w-100">
-    <div class="meta">
-      <a href={botLink}>
-        <strong>{botName}</strong>
-      </a>
-      <span>published to</span>    
+<article class="relative pa3 br4 flex flex-column gap-3 ba b--white-10">
+  {#if botName}
+    <div class="flex items-center gap-2">
+      <MiniProfile image={botPortrait} name={botName} link={botLink} />
+      <span>&rArr;</span>
       <MiniProfile image="/images/{postCategory.toLowerCase()}.png" name={postCategory} link="/categories/{postCategory.toLowerCase()}" />
     </div>
-    <a href="/projects/{postSlug}" class="embed">
-      <strong>{postTitle}</strong>
-      <span>{postDescription}</span>
-      <figure>
-        <img src="/images/{postImage}" alt={postTitle} />
-      </figure>
-    </a>
-  </div>
+  {/if}
+  <a href="/post/{postSlug}" class="flex flex-column gap-3">
+    <figure class="aspect-ratio aspect-ratio--16x9 br4 ba b--white-10 overflow-hidden">
+      <div class="aspect-ratio--object cover" style="background:url('/images/{postImage}') center"></div>
+    </figure>
+  </a>
+  <MiniProfile image="/images/{postImage}" name={postTitle} link="/post/{postSlug}" />
+  <span>{postDescription}</span>
 </article>
-
-<style>
-  .meta {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-  }
-  .embed {
-    max-width: 32rem;
-    margin-top: .5rem;
-    padding: 1rem;
-    background-color: rgba(0,0,0,.5);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-  }
-  strong {
-    font-weight: 600;
-  }
-  figure {
-    position: relative;
-    padding: .5rem;
-    width: 100%;
-    height: 0;
-    padding-bottom: 50%;
-    border-radius: 1rem;
-    border: 1px solid rgba(255,255,255,.1);
-    display: grid;
-    place-content: center;
-    overflow: hidden;
-  }
-  figure img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-</style>

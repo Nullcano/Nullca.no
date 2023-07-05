@@ -1,4 +1,4 @@
-@import 'https://api.fontshare.com/v2/css?f[]=nunito@300,700,600,800,200,400,500&f[]=bebas-neue@400&f[]=jet-brains-mono@300,700,800,200,500,400,600&display=swap';
+@import 'https://api.fontshare.com/v2/css?f[]=nunito@300,700,600,800,200,400,500&f[]=jet-brains-mono@300,700,800,200,500,400,600&f[]=nippo@700,400&display=swap';
 
 html {
   line-height: 1.15;
@@ -96,6 +96,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -147,15 +148,18 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
+  appearance: button;
   font: inherit;
 }
 
@@ -1187,7 +1191,7 @@ svg {
 }
 
 .display {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Nippo', sans-serif;
 }
 
 .serif {
@@ -1262,6 +1266,7 @@ code,
 .input-reset {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
 }
 
 .button-reset::-moz-focus-inner,

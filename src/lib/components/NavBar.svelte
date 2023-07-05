@@ -1,11 +1,15 @@
 <script>
+  import Logo from '$lib/components/Logo.svelte'
+  import ProfileButton from '$lib/components/ProfileButton.svelte'
+
   import { page } from '$app/stores'
+
   let path
 
   let navItems = [
     {
-      href: '/projects',
-      title: 'Projects',
+      href: '/feed',
+      title: 'Feed',
       icon: `/images/icons/projects.svg`,
     }, {
       href: '/apps',
@@ -21,19 +25,28 @@
   $: path = $page.url.pathname
 </script>
 
-<nav class="w-100 fixed bg-white-10 bd-blur bb b--white-10 z-1">
-  <ul class="list ma0 mw9 center flex">
-    {#each navItems as n}
-      <a
-        role="button"
-        href={n.href}
-        class="pa3 br-pill grid grid-x-auto-fill gap-2 items-center hover-bg-white-10 bg-animate"
-        class:active={path.startsWith(n.href)}
-        tabindex="0"
-      >
-        <div class="w1 h1 cover" style="background-image:url({n.icon})"></div>
-        <span>{n.title}</span>
-      </a>
-    {/each}
-  </ul>
-</nav>
+<aside class="fixed top-0 left-0 pv3 ph4 bottom-0 flex flex-column items-center justify-between z-2">
+  <div class="flex">
+    <a class="inline-flex w3 h3 pa3 bg-black br-100" href="/feed">
+      <Logo />
+    </a>
+  </div>
+  <div class="flex flex-column justify-center flex-auto">
+    <nav class="w3 pa2 br4 flex flex-column gap-2 bg-black-50">
+      {#each navItems as n}
+        <a
+          role="button"
+          href={n.href}
+          class="pa3 br3 flex items-center justify-center bg-white-10 hover-bg-purple bg-animate"
+          class:active={path.startsWith(n.href)}
+          tabindex="0"
+        >
+          <img class="w1 h1" src={n.icon} alt={n.title} />
+        </a>
+      {/each}
+    </nav>
+  </div>
+  <div class="db">
+    <ProfileButton />
+  </div>
+</aside>

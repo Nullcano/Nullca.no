@@ -1,10 +1,11 @@
 <script>
-  import { bots } from '$lib/bots.js'
-  import FeedCard from '$lib/components/FeedCard.svelte';
+  import { posts } from '$lib/api.js'
+  import PostGrid from '$lib/components/PostGrid.svelte'
+  import FeedCard from '$lib/components/FeedCard.svelte'
 </script>
 
-<div class="feed">
-  {#each $bots as bot}
+<PostGrid>
+  {#each posts as bot}
     {#each bot.posts as post}
       <FeedCard 
         botPortrait={bot.portrait}
@@ -18,12 +19,4 @@
       />
     {/each}
   {/each}
-</div>
-
-<style>
-  .feed {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-</style>
+</PostGrid>

@@ -1,7 +1,7 @@
 <script>
 	import * as config from '$lib/config'
-	import ProjectGrid from '$lib/components/ProjectGrid.svelte';
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import PostGrid from '$lib/components/PostGrid.svelte';
+	import FeedCard from '$lib/components/FeedCard.svelte';
 	export let data
 </script>
 
@@ -10,28 +10,21 @@
 </svelte:head>
 
 <section>
-	<h2>Projects tagged "{data.slug}"</h2>
-	<ProjectGrid>
+	<h2 class="display ma0 f2 fw4 ttu">{data.slug} Posts</h2>
+	<PostGrid>
 		{#each data.posts as post}
-			<a href="/projects/{post.slug}">
-				<ProjectCard icon={post.icon} title={post.title} image={post.image} body={post.description} />
-			</a>
+			<FeedCard 
+				botPortrait={null}
+				botName={null}
+				botLink={null}
+				postTitle={post.title}
+				postImage={post.image}
+				postDescription={post.description}
+				postSlug={post.slug}
+				postCategory={post.category}
+			/>
 		{/each}
 		<div></div>
 		<div></div>
-	</ProjectGrid>
+	</PostGrid>
 </section>
-
-<style>
-	h2 {
-		margin: 0;
-	}
-	a {
-		display: block;
-		color: inherit;
-		text-decoration: none;
-	}
-	a:hover {
-		color: var(--light-100);
-	}
-</style>

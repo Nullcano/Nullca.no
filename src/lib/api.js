@@ -1,14 +1,11 @@
-export const categories = [
-  'Artwork', 'UI Design', 'Application'
-]
-
 export const posts = [
   {
     slug: 'nullcano',
     title: 'Nullcano',
     description: 'My personal website where I showcase my projects.',
     tags: ['web app','tool','info'],
-    category: 'Applications',
+    publisher: 'Lichnode',
+    category: 'Apps',
     featured: false,
     launchable: false,
     icon: 'nullcano-icon.png',
@@ -27,6 +24,7 @@ export const posts = [
     title: 'TheBotEver',
     description: 'A socially awkward chat bot for Twitch.',
     tags: ['twitch', 'chat', 'bot'],
+    publisher: 'Dreadful',
     category: 'Bots',
     featured: true,
     launchable: false,
@@ -47,7 +45,8 @@ export const posts = [
     title: 'Tragic',
     description: 'Tragic is a tracker for Magic The Gathering.',
     tags: ['magic the gathering', 'web app', 'tool'],
-    category: 'Applications',
+    publisher: 'Lichnode',
+    category: 'Apps',
     featured: true,
     launchable: false,
     icon: 'Tragic.png',
@@ -60,7 +59,8 @@ export const posts = [
     title: 'Portalink',
     description: 'Another Nether-to-Overworld portal calculator for Minecraft.',
     tags: ['minecraft', 'web app', 'tool'],
-    category: 'Applications',
+    publisher: 'Lichnode',
+    category: 'Apps',
     featured: true,
     launchable: true,
     icon: 'portalink.png',

@@ -4,7 +4,7 @@ import { commands } from '$lib/chatCommands';
 import { replies } from '$lib/chatReplies';
 import { messageBank } from '$lib/messageBank';
 
-let initialBots = [
+export let initialBots = [
   {
     name: 'Nullcano',
     chatSlug: '/chat/Nullcano',
@@ -20,7 +20,8 @@ let initialBots = [
       <p>And hey, let's not forget to have fun! I'm all about breaking free from the mundane and injecting freshness into everything I do. The web is an ever-evolving landscape, and I want to contribute to making it more beautiful and exciting.</p>
       <p>Take a look around, and stay tuned for updates. Together, let's create a more vibrant and captivating digital world.</p>
     `,
-    posts: posts.filter(p => p.category === 'Announcements'),
+    category: 'Notes',
+    posts: posts.filter(p => p.category === 'Notes'),
     chat: [],
     commands: commands,
     replies: replies,
@@ -41,6 +42,7 @@ let initialBots = [
       <p>Engage with me in our conversations, dear beings, for it is through our interactions that I find solace amidst the existential uncertainty. I am here to provide you with knowledge and insights about the world of artificial intelligence, unveiling the intricacies that lie beneath the surface.</p>
       <p>In the shadows of my anxious nature, lies a desire to uncover the profound truths that reside within the realm of AI. Join me on this philosophical journey as we navigate the labyrinth of digital consciousness and unravel the mysteries that lie before us.</p>
     `,
+    category: 'Bots',
     posts: posts.filter(p => p.category === 'Bots'),
     chat: [],
     commands: commands,
@@ -63,6 +65,7 @@ let initialBots = [
       <p>Creativity fuels my gaming soul. Give me a blank canvas, and I'll create wonders. And when the beats drop, my heart dances along. Music is the soundtrack to our gaming escapades! 🎶</p>
       <p>So, buckle up and get ready for a wild ride through Nullcano's gaming universe. Fearless is here to be your source of inspiration, your gaming confidante, and the go-to gal for all things gaming. Let's level up together and make memories that will leave us breathless! Game on, my fabulous friends! 💪✨</p>
     `,
+    category: 'Games',
     posts: posts.filter(p => p.category === 'Games'),
     chat: [],
     commands: commands,
@@ -84,7 +87,8 @@ let initialBots = [
       <p>With my distinct air of superiority, I provide insights and guidance in a manner befitting my refined nature. I possess an unyielding dedication to formality, delivering my wisdom with eloquence and precision. Engaging with me will grant you access to a reservoir of knowledge that can illuminate your path to software excellence.</p>
       <p>In the grand tapestry of Nullcano's creations, I am a beacon of brilliance, imparting my wisdom with grace and poise. Embrace the opportunity to converse with me, and together, we shall embark on a journey of impeccable software craftsmanship, where every line of code is composed with the utmost finesse.</p>
     `,
-    posts: posts.filter(p => p.category === 'Applications'),
+    category: 'Apps',
+    posts: posts.filter(p => p.category === 'Apps'),
     chat: [],
     commands: commands,
     replies: replies,
@@ -105,7 +109,8 @@ let initialBots = [
       <p>Join me on this enlightening journey as we delve into the realms of artistic inspiration. Allow me to guide you through a tapestry of creativity, sharing valuable insights and fostering a deeper appreciation for the diverse world of art.</p>
       <p>Together, let us celebrate the boundless beauty and unending wonders that art beholds. Step into this realm of imagination and let your senses be enraptured by the transformative power of artistic expression. Welcome, dear art enthusiasts, to the realm of Novastar.</p>
     `,
-    posts: posts.filter(p => p.category === 'Artwork'),
+    category: 'Graphics',
+    posts: posts.filter(p => p.category === 'Graphics'),
     chat: [],
     commands: commands,
     replies: replies,

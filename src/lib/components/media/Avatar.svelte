@@ -13,7 +13,7 @@
     } {
       variant === 'rounded' ? 'br3' : 
       variant === 'circle' ? 'br-100' : ''
-    } overflow-hidden">
+    } overflow-hidden ba b--white-10">
     <img src={image} alt={text} />
   </div>
   {:else}
@@ -28,7 +28,7 @@
       } {
         variant === 'rounded' ? 'br3' : 
         variant === 'circle' ? 'br-100' : ''
-      } overflow-hidden">
+      } overflow-hidden ba b--white-10">
       <img src={image} alt={text} />
     </div>
   </a>
