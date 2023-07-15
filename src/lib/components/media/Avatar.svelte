@@ -7,9 +7,9 @@
     {
       size === 'xs' ? 'w1 h1' :
       size === 's' ? 'w2 h2' :
-      size === 'm' ? 'w3 h3' :
-      size === 'l' ? 'w4 h4' :
-      size === 'xl' ? 'w5 h5' : ''
+      size === 'm' ? 'w3 h3 bw1' :
+      size === 'l' ? 'w4 h4 bw2' :
+      size === 'xl' ? 'w5 h5 bw3' : ''
     } {
       variant === 'rounded' ? 'br3' : 
       variant === 'circle' ? 'br-100' : ''
@@ -22,9 +22,9 @@
       {
         size === 'xs' ? 'w1 h1' :
         size === 's' ? 'w2 h2' :
-        size === 'm' ? 'w3 h3' :
-        size === 'l' ? 'w4 h4' :
-        size === 'xl' ? 'w5 h5' : ''
+        size === 'm' ? 'w3 h3 bw1' :
+        size === 'l' ? 'w4 h4 bw2' :
+        size === 'xl' ? 'w5 h5 bw3' : ''
       } {
         variant === 'rounded' ? 'br3' : 
         variant === 'circle' ? 'br-100' : ''
@@ -33,3 +33,11 @@
     </div>
   </a>
 {/if}
+
+<style>
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

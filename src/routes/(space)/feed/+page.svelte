@@ -9,23 +9,8 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<section>
-	<CategoryList />
+<CategoryList />
+<div class="mt3">
 	<Divider />
-	<AppFeed />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-	@media only screen and (max-width: 60em) {
-		section {
-			grid-template-columns: auto;
-			grid-template-rows: auto auto;
-			gap: 1rem;
-		}
-	}
-</style>
+</div>
+<AppFeed />

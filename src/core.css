@@ -1981,12 +1981,20 @@ code,
   background-color: rgba(255, 255, 255, .1);
 }
 
-.bg-black {
-  background-color: #000;
+.bg-dark-10 {
+  background-color: hsl(216,16%,5%);
 }
-
-.bg-near-black {
+.bg-dark-20 {
   background-color: hsl(216,16%,8%);
+}
+.bg-dark-30 {
+  background-color: hsl(216,16%,11%);
+}
+.bg-dark-40 {
+  background-color: hsl(216,16%,14%);
+}
+.bg-dark-50 {
+  background-color: hsl(216,16%,17%);
 }
 
 .bg-dark-gray {

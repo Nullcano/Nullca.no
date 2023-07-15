@@ -1,27 +1,21 @@
 <script>
-  import TopBar from '$lib/components/TopBar.svelte'
-	import NavBar from '$lib/components/NavBar.svelte'
-	import CtrlBar from '$lib/components/CtrlBar.svelte'
+	import TopBar from '$lib/components/topbar/TopBar.svelte'
+	import Sidebar from '$lib/components/sidebar/Sidebar.svelte'
+	import Chat from '$lib/components/Chat/Chat.svelte'
 	import '../../app.css'
 </script>
 
-<div class="app flex min-vh-100">
-	<NavBar />
+<div class="min-vh-100">
 	<TopBar />
-	<main class="w-100 mw9 center">
-		<slot></slot>
-	</main>
-	<CtrlBar/>
+	<div class="grid grid-x-auto-fill">
+		<Sidebar />
+		<div class="grid grid-x-fill-auto">
+			<main class="ma4">
+				<section class="mw8 center">
+					<slot></slot>
+				</section>
+			</main>
+			<Chat />
+		</div>
+	</div>
 </div>
-
-<style>
-	.app {
-		flex-direction: column;
-		flex: 1 1 0%;
-		display: flex;
-		max-width: 100%;
-	}
-	main {
-		padding: 8rem;
-	}
-</style>

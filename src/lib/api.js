@@ -1,17 +1,47 @@
+export const categories = [
+  {
+    name: 'Notes',
+    desc: 'Explore unscheduled articles covering a range of topics, including emerging technologies, site updates, and intriguing musings.'
+  },
+  {
+    name: 'Apps',
+    desc: 'A diverse collection of web applications, tools, and experiments that blend art and code, pushing the boundaries of user experiences.'
+  },
+  {
+    name: 'UI-UX',
+    desc: 'Discover prototypes, mock-ups, frameworks, and design kits that harmonize aesthetics and functionality, enhancing the digital experience.'
+  },
+  {
+    name: 'Graphics',
+    desc: 'Unveil a selection of graphics, including logos, icons, illustrations, and digital artwork, enriching digital identities and narratives.'
+  },
+  {
+    name: 'Games',
+    desc: 'Experience engaging clicker-based browser games with gameplay mechanics and intriguing narratives that captivate and entertain.'
+  },
+  {
+    name: 'Bots',
+    desc: 'Engage in dialogues and experiences with AI for assistance, information, entertainment and tailored experiences.'
+  }
+];
+
 export const posts = [
   {
     slug: 'nullcano-logotypes',
-    title: 'Nullcano logotypes',
+    title: 'Nullcano Logotypes',
     description: 'Logotypes for Nullcano.',
     tags: ['graphics','logos','icons'],
-    publisher: 'Novastar',
-    category: 'Graphics',
+    category: {
+      name: 'Graphics',
+      desc: 'Digital graphics, illustrations and other artwork created by Nullcano.'
+    },
     featured: false,
     launchable: false,
     icon: 'logotypes-icon.png',
     image: 'logotypes.png',
     content: `
       <p>In the digital age, where brands strive for uniqueness and recognition, a well-designed and memorable logotype has become a vital element of successful branding. The Nullcano Logotype Collection is a portfolio showcase of my innovative and captivating logotypes, crafted with meticulous attention to detail and a deep understanding of brand identity.</p>
+      <img src="/images/logotypes.png" alt="Nullcano Logotypes" />
       <p>Designed specifically for technology-focused applications, this logotype features a clean and futuristic typographic treatment. The choice of a monospace font communicates the brand's association with the tech industry, while the incorporation of circuit board-like patterns within the letterforms adds a distinct technological touch.</p>
     `
   }, {
@@ -19,8 +49,10 @@ export const posts = [
     title: 'Nullcano',
     description: 'My personal website where I showcase my projects.',
     tags: ['web app','tool','info'],
-    publisher: 'Lichnode',
-    category: 'Apps',
+    category: {
+      name: 'Apps',
+      desc: 'Web applications and experiments created by Nullcano.'
+    },
     featured: false,
     launchable: false,
     icon: 'nullcano-icon.png',
@@ -39,8 +71,10 @@ export const posts = [
     title: 'TheBotEver',
     description: 'A socially awkward chat bot for Twitch.',
     tags: ['twitch', 'chat', 'bot'],
-    publisher: 'Dreadful',
-    category: 'Bots',
+    category: {
+      name: 'Bots',
+      desc: 'Various AI and bots created by Nullcano.'
+    },
     featured: true,
     launchable: false,
     icon: 'TheBotEver.png',
@@ -60,8 +94,10 @@ export const posts = [
     title: 'Tragic',
     description: 'Tragic is a tracker for Magic The Gathering.',
     tags: ['magic the gathering', 'web app', 'tool'],
-    publisher: 'Lichnode',
-    category: 'Apps',
+    category: {
+      name: 'Apps',
+      desc: 'Web applications and experiments created by Nullcano.'
+    },
     featured: true,
     launchable: false,
     icon: 'Tragic.png',
@@ -74,8 +110,10 @@ export const posts = [
     title: 'Portalink',
     description: 'Another Nether-to-Overworld portal calculator for Minecraft.',
     tags: ['minecraft', 'web app', 'tool'],
-    publisher: 'Lichnode',
-    category: 'Apps',
+    category: {
+      name: 'Apps',
+      desc: 'Web applications and experiments created by Nullcano.'
+    },
     featured: true,
     launchable: true,
     icon: 'portalink.png',

@@ -1,23 +1,23 @@
 <script>
-  import { bots } from '$lib/bots.js'
+  import { posts } from '$lib/api.js'
   import PostGrid from '$lib/components/PostGrid.svelte'
   import FeedCard from '$lib/components/FeedCard.svelte'
+  $: getPosts = posts
 </script>
 
 <PostGrid>
-  {#each $bots as bot}
-    {#each bot.posts as post}
+  {#each getPosts as post}
+    {#if post}
       <FeedCard 
-        botPortrait={bot.portrait}
-        botName={bot.name}
-        botLink={bot.profileSlug}
         postTitle={post.title}
         postImage={post.image}
         postIcon={post.icon}
         postDescription={post.description}
         postSlug={post.slug}
-        postCategory={post.category}
+        postCategory={post.category.name}
       />
-    {/each}
+      {:else}
+      <code>loading</code>
+    {/if}
   {/each}
 </PostGrid>

@@ -3,6 +3,7 @@
 	import { client } from '$lib/client'
 	import TitleIconText from '$lib/components/titles/TitleIconText.svelte'
 	import Divider from '$lib/components/Divider.svelte'
+	import Avatar from '$lib/components/media/Avatar.svelte'
 
   export let data
 	let post = data.post
@@ -25,31 +26,27 @@
 
 <article>
 	{#if post}
-		<div class="mb4 flex items-end justify-between">
-			<TitleIconText text={post.title} icon="/images/{post.icon}" />
-			<div class="flex items-center gap-2">
-				{#each post.tags as tag}
-					<a class="pv1 ph2 br-pill ba b--white-10 ttc" href="/tags/{tag}">{tag}</a>
-				{/each}
-				{#if post.launchable}
-					<a class="ml4 pv2 ph3 br2 ba b--purple" href="/launch/{post.slug}" on:click={handleAchievement}>Launch App</a>
-				{/if}
+		<div class="page-cover w-100 h5 br4 br--top cover" style="background: url('/images/{post.image}') center"></div>
+		<div class="pa4 br4 br--bottom bg-dark-20">
+			<div class="relative" style="margin-top:-6rem">
+				<Avatar image="/images/{post.image}" size="l" variant="circle" link={null} text={post.title} />
+			</div>
+			<div class="flex justify-between">
+				<h1 class="display fw4">{post.title}</h1>
+				<div class="flex items-center gap-2">
+					{#each post.tags as tag}
+						<a class="pv1 ph2 br-pill ba b--white-10 ttc" href="/tags/{tag}">{tag}</a>
+					{/each}
+					{#if post.launchable}
+						<a class="ml4 pv2 ph3 br2 ba b--purple" href="/launch/{post.slug}" on:click={handleAchievement}>Launch App</a>
+					{/if}
+				</div>
+			</div>
+			<div class="measure lh-copy">
+				{@html post.content}
 			</div>
 		</div>
-		<Divider />
-    <div class="post measure lh-copy">
-      {@html post.content}
-    </div>
-	{:else}
+		{:else}
 		<p>Loading...</p>
 	{/if}
 </article>
-
-<style>
-	article {
-		position: relative;
-	}
-	p {
-		margin-block: .5rem 1rem;
-	}
-</style>

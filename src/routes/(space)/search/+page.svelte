@@ -29,7 +29,7 @@
 
 
 <!-- svelte-ignore a11y-autofocus -->
-<input type="text" placeholder="Search Projects..." bind:value={searchInput} on:input={handleSearch} autofocus />
+<input class="display f4" type="text" placeholder="Search Nullca.no..." bind:value={searchInput} on:input={handleSearch} autofocus />
 
 <PostGrid>
   {#if searchResults.length > 0}
@@ -61,7 +61,6 @@
     -moz-appearance: none;
     -webkit-appearance: none;
 		font-size: 1.5rem;
-		text-transform: capitalize;
     color: inherit;
     border: 0;
     background: transparent;

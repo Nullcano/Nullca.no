@@ -1,0 +1,1 @@
+<h1 class="display fw4">Help Center</h1>

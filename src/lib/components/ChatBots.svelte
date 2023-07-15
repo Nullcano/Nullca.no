@@ -22,7 +22,7 @@
         href={bot.chatSlug}
         class:active={path === bot.chatSlug}
         class:disabled={disabled == true}
-        class="pa2 mb2 grid grid-x-auto-fill gap-3 items-center bg-black-50 bg-animate br3"
+        class="pa2 mb2 grid grid-x-auto-fill gap-3 items-center bg-black-30 bg-animate br3"
         data-sveltekit-preload-data="off"
         tabindex="0"
         on:click={() => selectBot(bot)}>
