@@ -5,7 +5,7 @@
   let categories = ['Notes', 'Apps', 'UI-UX', 'Graphics', 'Games', 'Bots']
 </script>
 
-<aside class="bg-dark-30">
+<aside class="br b--dark-gray">
   <div class="flex flex-column">
     {#each categories as category}
     {@const totalPosts = posts.filter(post => post.category.name == category).length}

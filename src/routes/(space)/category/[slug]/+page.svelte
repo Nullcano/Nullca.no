@@ -13,9 +13,9 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<section>
-	<div class="page-cover w-100 h5 br4 br--top cover" style="background: url('/images/covers/{data.slug.toLowerCase()}.png') center"></div>
-	<div class="pa4 br4 br--bottom bg-dark-20">
+<section class="br4 overflow-hidden ba b--dark-gray">
+	<div class="page-cover w-100 h5 br4 br--top cover bb b--dark-gray" style="background: url('/images/covers/{data.slug.toLowerCase()}.png') center"></div>
+	<div class="pa4  br--bottom">
 		<div class="relative" style="margin-top:-6rem">
 			<Avatar image="/images/{data.slug.toLowerCase()}.png" size="l" variant="circle" link={null} text={data.slug} />
 		</div>

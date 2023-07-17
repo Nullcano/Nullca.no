@@ -7,7 +7,7 @@
 <div class="mh3 mb3 grid grid-x-fill-auto gap-2 self-end">
   <div class="w-100">
     <div class="tr">You</div>
-    <div class="mt2 pa2 br3 bg-white-10">
+    <div class="mt2 pa2 br3 bg-white-10 ba b--dark-gray">
       <span>{text}</span>
     </div>
   </div>

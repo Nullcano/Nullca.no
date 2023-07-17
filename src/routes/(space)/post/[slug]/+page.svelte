@@ -24,10 +24,10 @@
   <meta property="og:title" content="{post?.title} - {config.title}" />
 </svelte:head>
 
-<article>
+<article class="br4 ba b--dark-gray overflow-hidden">
 	{#if post}
-		<div class="page-cover w-100 h5 br4 br--top cover" style="background: url('/images/{post.image}') center"></div>
-		<div class="pa4 br4 br--bottom bg-dark-20">
+		<div class="page-cover w-100 h5 cover bb b--dark-gray" style="background: url('/images/{post.image}') center"></div>
+		<div class="pa4">
 			<div class="relative" style="margin-top:-6rem">
 				<Avatar image="/images/{post.image}" size="l" variant="circle" link={null} text={post.title} />
 			</div>
@@ -35,7 +35,7 @@
 				<h1 class="display fw4">{post.title}</h1>
 				<div class="flex items-center gap-2">
 					{#each post.tags as tag}
-						<a class="pv1 ph2 br-pill ba b--white-10 ttc" href="/tags/{tag}">{tag}</a>
+						<a class="pv1 ph2 br-pill ba b--dark-gray ttc" href="/tags/{tag}">{tag}</a>
 					{/each}
 					{#if post.launchable}
 						<a class="ml4 pv2 ph3 br2 ba b--purple" href="/launch/{post.slug}" on:click={handleAchievement}>Launch App</a>

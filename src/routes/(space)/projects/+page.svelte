@@ -9,6 +9,6 @@
 
 <h1 class="display fw4">Projects</h1>
 
-<div class="pa4 br4 bg-dark-20">
+<div class="pa3 br4 ba b--dark-gray overflow-hidden">
 	<AppFeed />
 </div>

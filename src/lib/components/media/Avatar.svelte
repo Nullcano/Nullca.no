@@ -7,13 +7,13 @@
     {
       size === 'xs' ? 'w1 h1' :
       size === 's' ? 'w2 h2' :
-      size === 'm' ? 'w3 h3 bw1' :
-      size === 'l' ? 'w4 h4 bw2' :
-      size === 'xl' ? 'w5 h5 bw3' : ''
+      size === 'm' ? 'w3 h3' :
+      size === 'l' ? 'w4 h4' :
+      size === 'xl' ? 'w5 h5' : ''
     } {
       variant === 'rounded' ? 'br3' : 
       variant === 'circle' ? 'br-100' : ''
-    } overflow-hidden ba b--white-10">
+    } overflow-hidden ba b--dark-gray">
     <img src={image} alt={text} />
   </div>
   {:else}
@@ -22,13 +22,13 @@
       {
         size === 'xs' ? 'w1 h1' :
         size === 's' ? 'w2 h2' :
-        size === 'm' ? 'w3 h3 bw1' :
-        size === 'l' ? 'w4 h4 bw2' :
-        size === 'xl' ? 'w5 h5 bw3' : ''
+        size === 'm' ? 'w3 h3' :
+        size === 'l' ? 'w4 h4' :
+        size === 'xl' ? 'w5 h5' : ''
       } {
         variant === 'rounded' ? 'br3' : 
         variant === 'circle' ? 'br-100' : ''
-      } overflow-hidden ba b--white-10">
+      } overflow-hidden ba b--dark-gray">
       <img src={image} alt={text} />
     </div>
   </a>

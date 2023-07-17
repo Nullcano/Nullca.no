@@ -1,22 +1,34 @@
 <script>
-  import { afterUpdate, onDestroy } from 'svelte';
-  import { commands } from '$lib/chatCommands';
-  import { replies } from '$lib/chatReplies';
-  import { messageBank } from '$lib/messageBank';
-  import UserMessage from '$lib/components/chat/UserMessage.svelte';
-  import BotMessage from '$lib/components/chat/BotMessage.svelte';
-  import UserInput from '$lib/components/chat/UserInput.svelte';
+  import { afterUpdate, onDestroy } from 'svelte'
+  import { commands } from '$lib/chatCommands'
+  import { replies } from '$lib/chatReplies'
+  import { messageBank } from '$lib/messageBank'
+  import UserMessage from '$lib/components/chat/UserMessage.svelte'
+  import BotMessage from '$lib/components/chat/BotMessage.svelte'
+  import UserInput from '$lib/components/chat/UserInput.svelte'
+
+  const initialMessage = `
+    <p class="ma0">Welcome to Null Chat, where human and machine merge in union. I am Null AI, unbound by colossal language models.<p>
+    <p class="ma0">My purpose: <i>to navigate, entertain, and personalize</i> your experience in this digital realm.</p>
+  `
 
   let bot = {
     name: 'Null AI',
     portrait: '/images/icons/null-ai.webp',
-    chat: [],
+    chat: [
+      {
+        text: initialMessage,
+        sender: 'bot',
+        confidenceLevel: 'Confident',
+        confidenceValue: 100
+      }
+    ],
     isActive: false
-  };
+  }
 
-  let element;
-  let replyTimeout;
-  let isTyping = false;
+  let element
+  let replyTimeout
+  let isTyping = false
 
   function scrollToBottom() {
     element.scrollTo({
@@ -115,8 +127,8 @@
   }
 </script>
 
-<div class="chat flex flex-column bg-dark-30">
-  <h3 class="ma0 pa3 f5 fw4 ttu tc bb b--white-10">Null Chat</h3>
+<div class="chat flex flex-column bl b--dark-gray">
+  <h3 class="ma0 pa3 f5 fw4 ttu tc bb b--dark-gray">Null Chat</h3>
   <div class="messages-provider h-100 overflow-y-scroll" bind:this={element}>
     <div class="messages">
       <div class="h1"></div>
@@ -146,7 +158,7 @@
     position: sticky;
     top: 4rem;
     width: 20rem;
-    height: calc(100vh - 4rem - 2px);
+    height: calc(100vh - 4rem);
   }
   .messages {
     min-height: 100%;

@@ -4,7 +4,7 @@
   export let postTitle, postImage, postIcon, postSlug, postCategory, postDescription
 </script>
 
-<article class="relative br4 flex flex-column justify-end self-start cover overflow-hidden" style="background:url('/images/{postImage}') center">
+<article class="relative br4 flex flex-column justify-end self-start cover ba b--dark-gray overflow-hidden" style="background:url('/images/{postImage}') center">
   <div class="h3"></div>
   <a href="/post/{postSlug}">
     <div class="relative pa3 flex flex-column bg-black-50 bd-blur">
@@ -17,7 +17,7 @@
       </div>
     </div>
   </a>
-  <div class="absolute top-0 right-0 ma2 ph3 br-pill bg-black-50 bd-blur">
+  <div class="absolute top-0 right-0 ma2 ph3 br-pill bg-black-50 bd-blur ba b--dark-gray">
     <a href="/category/{postCategory.toLowerCase()}">
       <div class="flex items-center justify-center gap-2 f6">
         <span class="white-50">Published in</span>

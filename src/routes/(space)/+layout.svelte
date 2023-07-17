@@ -5,11 +5,12 @@
 	import '../../app.css'
 </script>
 
-<div class="min-vh-100">
+<div class="relative min-vh-100">
+	<div class="noise"></div>
 	<TopBar />
-	<div class="grid grid-x-auto-fill">
+	<div class="relative h-100 grid grid-x-auto-fill">
 		<Sidebar />
-		<div class="grid grid-x-fill-auto">
+		<div class="relative grid grid-x-fill-auto">
 			<main class="ma4">
 				<section class="mw8 center">
 					<slot></slot>
@@ -19,3 +20,16 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.noise {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('/images/noise.gif');
+		mix-blend-mode: multiply;
+		opacity: .5;
+	}
+</style>

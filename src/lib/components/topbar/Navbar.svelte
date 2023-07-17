@@ -60,13 +60,13 @@
         <circle cx="18" cy="10" r="2" fill="currentColor"/>
       </svg>
     </a>
-    <div class="menu dn absolute left-0 w5 br3 bg-dark-30 z-2">
-      <nav class="pa2 flex flex-column">
+    <div class="menu dn absolute left-0 w5 br3 bd-blur ba b--dark-gray z-2">
+      <nav class="pa2 flex flex-column gap-2">
         {#each rest as n}
           <a
             role="button"
             href={n.href}
-            class="pa3 br3 flex items-center gap-3 white-50 hover-white hover-bg-black-20 bg-animate"
+            class="pa3 br3 flex items-center gap-3 white-50 hover-white hover-bg-black-20 bg-animate ba b--dark-gray"
             class:active={path.startsWith(n.href)}
             tabindex="0"
           >

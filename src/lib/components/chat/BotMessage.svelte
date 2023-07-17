@@ -22,8 +22,8 @@
         {/if}
       </div>
     </div>
-    <div class="mt2 pa2 br3 bg-black-20">
-      {text}
+    <div class="mt2 pa2 br3 bg-black-20 ba b--dark-gray">
+      {@html text}
     </div>
   </div>
 </div>

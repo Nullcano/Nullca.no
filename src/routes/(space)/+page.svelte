@@ -8,7 +8,11 @@
 </svelte:head>
 
 <section>
-	<div class="pa4 br4 bg-dark-20">
+	<div class="ph4 pv5">
+		<h1 class="ma0 display fw4 f-headline ttu">Nullcano</h1>
+		<span class="display f1 ttu white-50">AKA. Steffen IRL.</span>
+	</div>
+	<div class="pa3 br4 ba b--dark-gray">
 		<AppFeed />
 	</div>
 </section>
