@@ -1,7 +1,7 @@
 <script>
 	import TopBar from '$lib/components/topbar/TopBar.svelte'
 	import Sidebar from '$lib/components/sidebar/Sidebar.svelte'
-	import Chat from '$lib/components/Chat/Chat.svelte'
+	import Chat from '$lib/components/chat/Chat.svelte'
 	import '../../app.css'
 </script>
 
