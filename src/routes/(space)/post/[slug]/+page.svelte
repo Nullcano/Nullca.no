@@ -1,20 +1,10 @@
 <script>
   import * as config from '$lib/config'
-	import { client } from '$lib/client'
 	import CloseButton from '$lib/components/site/CloseButton.svelte'
 	import Avatar from '$lib/components/media/Avatar.svelte'
 
   export let data
 	let post = data.post
-
-	function handleAchievement() {
-		if ($client.achievements[0].unlocked) {
-			return
-		}
-		$client.achievements[0].unlocked = true
-		$client.coin += $client.achievements[0].reward
-		$client.currentXP += $client.achievements[0].xp
-	}
 </script>
 
 <svelte:head>
@@ -41,9 +31,9 @@
 					{/each}
 					{#if post.launchable}
 						{#if post.hasUrl != null}
-							<a class="ml4 pv2 ph3 br2 ba b--purple" href={post.hasUrl} target="_blank" on:click={handleAchievement}>Launch App</a>
+							<a class="ml4 pv2 ph3 br2 ba b--purple" href={post.hasUrl} target="_blank">Launch App</a>
 						{:else}
-							<a class="ml4 pv2 ph3 br2 ba b--purple" href="/launch/{post.slug}" on:click={handleAchievement}>Launch App</a>
+							<a class="ml4 pv2 ph3 br2 ba b--purple" href="/launch/{post.slug}">Launch App</a>
 						{/if}
 					{/if}
 				</div>
