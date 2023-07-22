@@ -1,8 +1,7 @@
 <script>
   import * as config from '$lib/config'
 	import { client } from '$lib/client'
-	import TitleIconText from '$lib/components/titles/TitleIconText.svelte'
-	import Divider from '$lib/components/Divider.svelte'
+	import CloseButton from '$lib/components/site/CloseButton.svelte'
 	import Avatar from '$lib/components/media/Avatar.svelte'
 
   export let data
@@ -24,9 +23,12 @@
   <meta property="og:title" content="{post?.title} - {config.title}" />
 </svelte:head>
 
-<article class="br4 ba b--dark-gray overflow-hidden">
+<article class="relative br4 ba b--dark-gray overflow-hidden">
 	{#if post}
 		<div class="page-cover w-100 h5 cover bb b--dark-gray" style="background: url('/images/{post.image}') center"></div>
+		<a href="/" class="absolute top-0 right-0 ma3">
+			<CloseButton />
+		</a>
 		<div class="pa4">
 			<div class="relative" style="margin-top:-6rem">
 				<Avatar image="/images/{post.image}" size="l" variant="circle" link={null} text={post.title} />
@@ -38,7 +40,11 @@
 						<a class="pv1 ph2 br-pill ba b--dark-gray ttc" href="/tags/{tag}">{tag}</a>
 					{/each}
 					{#if post.launchable}
-						<a class="ml4 pv2 ph3 br2 ba b--purple" href="/launch/{post.slug}" on:click={handleAchievement}>Launch App</a>
+						{#if post.hasUrl != null}
+							<a class="ml4 pv2 ph3 br2 ba b--purple" href={post.hasUrl} target="_blank" on:click={handleAchievement}>Launch App</a>
+						{:else}
+							<a class="ml4 pv2 ph3 br2 ba b--purple" href="/launch/{post.slug}" on:click={handleAchievement}>Launch App</a>
+						{/if}
 					{/if}
 				</div>
 			</div>

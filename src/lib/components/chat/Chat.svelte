@@ -158,7 +158,7 @@
     position: sticky;
     top: 4rem;
     width: 20rem;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 4rem - 1px);
   }
   .messages {
     min-height: 100%;

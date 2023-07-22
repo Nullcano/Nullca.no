@@ -8,7 +8,7 @@
 </svelte:head>
 
 <section>
-	<div class="ph4 pv5">
+	<div class="h5 flex flex-column justify-center">
 		<h1 class="ma0 display fw4 f-headline ttu">Nullcano</h1>
 		<span class="display f1 ttu white-50">AKA. Steffen IRL.</span>
 	</div>

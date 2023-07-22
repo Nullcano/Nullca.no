@@ -27,6 +27,24 @@ export const categories = [
 
 export const posts = [
   {
+    slug: 'dystopian-games',
+    title: 'Dystopian Games',
+    description: 'Explore all dystopian games.',
+    tags: ['graphics','logos','icons'],
+    category: {
+      name: 'Apps',
+      desc: 'Web applications and experiments created by Nullcano.'
+    },
+    featured: false,
+    launchable: true,
+    hasUrl: 'https://dystopiangames.netlify.app',
+    icon: 'dystopian-games.png',
+    image: 'dystopian-games.png',
+    content: `
+      <p>"Dystopian Games" is an innovative and immersive exploration platform that allows users to delve into a curated collection of video games specifically tagged with dystopian themes. This project aims to create a comprehensive and interactive hub for gamers, enthusiasts, and researchers interested in exploring the dark and thought-provoking world of dystopian gaming experiences.</p>
+      <img src="/images/dystopian-games.png" alt="Dystopian Games" />
+    `
+  }, {
     slug: 'nullcano-logotypes',
     title: 'Nullcano Logotypes',
     description: 'Logotypes for Nullcano.',

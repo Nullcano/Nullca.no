@@ -3,6 +3,7 @@
 	import PostGrid from '$lib/components/PostGrid.svelte'
 	import FeedCard from '$lib/components/FeedCard.svelte'
 	import Avatar from '$lib/components/media/Avatar.svelte'
+	import CloseButton from '$lib/components/site/CloseButton.svelte'
 
 	export let data
 
@@ -13,9 +14,12 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<section class="br4 overflow-hidden ba b--dark-gray">
+<section class="relative br4 overflow-hidden ba b--dark-gray">
 	<div class="page-cover w-100 h5 br4 br--top cover bb b--dark-gray" style="background: url('/images/covers/{data.slug.toLowerCase()}.png') center"></div>
-	<div class="pa4  br--bottom">
+	<a href="/" class="absolute top-0 right-0 ma3">
+		<CloseButton />
+	</a>
+	<div class="pa4 br--bottom">
 		<div class="relative" style="margin-top:-6rem">
 			<Avatar image="/images/{data.slug.toLowerCase()}.png" size="l" variant="circle" link={null} text={data.slug} />
 		</div>

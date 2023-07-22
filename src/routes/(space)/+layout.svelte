@@ -11,7 +11,7 @@
 	<div class="relative h-100 grid grid-x-auto-fill">
 		<Sidebar />
 		<div class="relative grid grid-x-fill-auto">
-			<main class="ma4">
+			<main class="ma3">
 				<section class="mw8 center">
 					<slot></slot>
 				</section>
@@ -28,8 +28,10 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		opacity: .5;
+	}
+	.noise {
 		background-image: url('/images/noise.gif');
 		mix-blend-mode: multiply;
-		opacity: .5;
 	}
 </style>

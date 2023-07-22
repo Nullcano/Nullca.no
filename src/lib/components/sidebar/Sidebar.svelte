@@ -9,15 +9,15 @@
   <div class="flex flex-column">
     {#each categories as category}
     {@const totalPosts = posts.filter(post => post.category.name == category).length}
-    <a class="pa3 hover-bg-white-10" href="/category/{category.toLowerCase()}">
-      <div class="cat-item relative w-100 grid grid-x-auto-fill items-center gap-3">
-        <Avatar image="/images/{category.toLowerCase()}.png" size="s" variant={'circle'} link={null} text={category} />
-        <div class="meta flex flex-column gap-1">
-          <div>{category}</div>
-          <div class="white-50">{totalPosts} articles</div>
+      <a class="ph3 hover-bg-white-10" href="/category/{category.toLowerCase()}">
+        <div class="cat-item relative w-100 h3 grid grid-x-auto-fill items-center gap-3">
+          <Avatar image="/images/{category.toLowerCase()}.png" size="s" variant={'circle'} link={null} text={category} />
+          <div class="meta flex flex-column gap-1">
+            <div>{category}</div>
+            <div class="white-50">{totalPosts} articles</div>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
     {/each}
   </div>
 </aside>

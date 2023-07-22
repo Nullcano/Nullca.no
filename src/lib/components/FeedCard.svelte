@@ -5,7 +5,7 @@
 </script>
 
 <article class="relative br4 flex flex-column justify-end self-start cover ba b--dark-gray overflow-hidden" style="background:url('/images/{postImage}') center">
-  <div class="h3"></div>
+  <div class="h4"></div>
   <a href="/post/{postSlug}">
     <div class="relative pa3 flex flex-column bg-black-50 bd-blur">
       <div style="margin-top:-3rem">
@@ -13,7 +13,7 @@
       </div>
       <div class="mt2">
         <div class="display f4">{postTitle}</div>
-        <div class="desc mt2 white-50">{postDescription}</div>  
+        <div class="desc mt2 white-50 f6">{postDescription}</div>  
       </div>
     </div>
   </a>

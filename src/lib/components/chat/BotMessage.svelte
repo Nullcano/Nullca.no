@@ -8,7 +8,7 @@
   export let confidenceValue;
 </script>
 
-<div class="mh3 mb3 grid grid-x-auto-fill gap-2 self-start">
+<div class="message relative mh3 mb3 grid grid-x-auto-fill gap-2 self-start">
   <Avatar image={portrait} text={name} link={null} size="s" variant="circle" />
   <div class="w-100">
     <div class="flex gap-2">
@@ -37,5 +37,14 @@
   }
   .confused {
     color: hsl(345, 100%, 50%);
+  }
+
+  .message {
+    animation: appear .2s linear forwards;
+  }
+
+  @keyframes appear {
+    from { left: -100% }
+    to { left: 0 }
   }
 </style>

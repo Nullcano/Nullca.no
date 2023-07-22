@@ -7,15 +7,15 @@
     {
       title: 'Feed',
       href: '/',
-      icon: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5H11.5V4.5H0.5V0.5ZM7.5 18.5H27.5V22.5H7.5V18.5ZM0.5 27.5H20.5V31.5H0.5V27.5ZM31.5 9.5V13.5H23.5V9.5H31.5ZM7.5 9.5H18.5V13.5H7.5V9.5ZM16.5 0.5H27.5V4.5H16.5V0.5Z" stroke="currentColor" fill="none" /></svg>`,
+      icon: `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 0L0 2V8H16V0H2ZM14 2H2V6H14V2Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 8.00002L0 10V16H16L16 8L2 8.00002ZM14 10H2V14H14V10Z" fill="currentColor"/></svg>`,
     }, {
       title: 'Projects',
       href: '/projects',
-      icon: `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 8L16 5.47932V0L8 8Z" fill="currentColor"/><path d="M8 8L5.5 0L0 0.0158166L8 8Z" fill="currentColor"/><path d="M8 8L0 10.4892V16L8 8Z" fill="currentColor"/><path d="M8 8L10.5 16H16L8 8Z" fill="currentColor"/></svg>`,
+      icon: `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 16H0V4L4 0H16V16ZM2 14V5L5 2H14V14H2Z" fill="currentColor"/><path d="M3 6H13V13H3V6Z" fill="currentColor"/></svg>`,
     }, {
       title: 'Applications',
       href: '/apps',
-      icon: `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 8L0 7V1.06667L1 0H7L8 1L9 0H15L16 1.06667V7L15 8L16 9V14.9333L15 16H9L8 15L7 16H1L0 14.9333V9L1 8ZM1 15H7V9H1V15ZM9 15H15V9H9V15ZM7 1.00833L1 1.05833V7H7V1.00833ZM15 7V1H9V7H15Z" fill="currentColor"/></svg>`,
+      icon: `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 7.43866e-05L0 2.00007V8.00007L8 8V0L2 7.43866e-05ZM6 2L2 2.00007V6.00007L6 6V2Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 8.0001L0 10.0001V16.0001L8 16L8 8L2 8.0001ZM6 10L2 10.0001V14.0001L6 14V10Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10 9.91821e-05L8 2.0001V8L16 8.00002V2.47955e-05L10 9.91821e-05ZM14 2.00002L10 2.0001V6.0001L14 6.00003V2.00002Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10 8.00012L8 10.0001L8 16L16 16L16 8.00002L10 8.00012ZM14 10L10 10.0001V14.0001L14 14V10Z" fill="currentColor"/></svg>`,
     }, {
       title: 'Site Updates',
       href: '/updates',
@@ -27,7 +27,7 @@
     }, {
       title: 'Help Center',
       href: '/help',
-      icon: `<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.8 6.8H10.2V2.26667L6.8 0L6.8 6.8Z" fill="currentColor"/><path d="M6.8 10.2V6.8H2.26667L0 10.2H6.8Z" fill="currentColor"/><path d="M10.2 10.2H6.8V14.7333L10.2 17V10.2Z" fill="currentColor"/><path d="M10.2 6.8V10.2H14.7333L17 6.8H10.2Z" fill="currentColor"/></svg>`,
+      icon: `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9H7V14L9 16V9H14L16 7H9V2L7 0V7H2L0 9Z" fill="currentColor"/></svg>`,
     }
   ]
 
@@ -37,7 +37,7 @@
   $: path = $page.url.pathname
 </script>
 
-<nav class="flex gap-2">
+<nav class="flex items-center gap-2">
   {#each firstThree as n}
     <a
       role="button"
@@ -46,7 +46,7 @@
       class:active={path.startsWith(n.href)}
       tabindex="0"
     >
-      <div class="w1">
+      <div class="w2 h2 pa2 br3 bg-black-50">
         {@html n.icon}
       </div>
       <span>{n.title}</span>
@@ -60,13 +60,13 @@
         <circle cx="18" cy="10" r="2" fill="currentColor"/>
       </svg>
     </a>
-    <div class="menu dn absolute left-0 w5 br3 bd-blur ba b--dark-gray z-2">
+    <div class="menu dn absolute left-0 w5 br3 bg-black-50 bd-blur ba b--dark-gray z-2">
       <nav class="pa2 flex flex-column gap-2">
         {#each rest as n}
           <a
             role="button"
             href={n.href}
-            class="pa3 br3 flex items-center gap-3 white-50 hover-white hover-bg-black-20 bg-animate ba b--dark-gray"
+            class="pa3 br3 flex items-center gap-3 white-50 hover-white hover-bg-white-10 bg-animate ba b--dark-gray"
             class:active={path.startsWith(n.href)}
             tabindex="0"
           >
