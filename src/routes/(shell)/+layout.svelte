@@ -1,5 +1,5 @@
 <script>
-  import TopBar from '$lib/components/TopBar.svelte'
+  import TopBar from '$lib/components/topbar/TopBar.svelte'
 	import '../../app.css'
 </script>
 
