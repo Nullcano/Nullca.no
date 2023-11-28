@@ -8,23 +8,21 @@
   export let confidenceValue;
 </script>
 
-<div class="message relative mh3 mb3 grid grid-x-auto-fill gap-2 self-start">
-  <Avatar image={portrait} text={name} link={null} size="s" variant="circle" />
-  <div class="w-100">
-    <div class="flex gap-2">
-      <span class="white-50">{name}</span>
-      <div class="flex gap-2 confidence {confidenceLevel.toLowerCase()} nowrap">
-        <img class="w1 h1" src={"/images/" + confidenceLevel.toLowerCase() + ".svg"} alt={confidenceLevel} />
-        {#if confidenceLevel !== "Confused"}
-          <span class="db">{confidenceValue}% {confidenceLevel}</span>
-        {:else}
-          <span class="db">{confidenceLevel}</span>
-        {/if}
-      </div>
+<div class="message relative mb3 measure flex flex-column gap-2 self-start">
+  <div class="flex items-center gap-2">
+    <Avatar image={portrait} text={name} link={null} size="s" variant="circle" />
+    <span>{name}</span>
+    <div class="flex gap-2 confidence {confidenceLevel.toLowerCase()} nowrap">
+      <img class="w1 h1" src={"/images/" + confidenceLevel.toLowerCase() + ".svg"} alt={confidenceLevel} />
+      {#if confidenceLevel !== "Confused"}
+        <span class="db">{confidenceValue}% {confidenceLevel}</span>
+      {:else}
+        <span class="db">{confidenceLevel}</span>
+      {/if}
     </div>
-    <div class="mt2 pa2 br3 bg-black-20 ba b--dark-gray">
-      {@html text}
-    </div>
+  </div>
+  <div class="pa3 br4 bg-black self-end">
+    <span class="lh-copy">{@html text}</span>
   </div>
 </div>
 

@@ -1,37 +1,24 @@
 <script>
-	import TopBar from '$lib/components/topbar/TopBar.svelte'
-	import Sidebar from '$lib/components/sidebar/Sidebar.svelte'
-	import Chat from '$lib/components/chat/Chat.svelte'
+	import AppMenu from '$lib/components/topbar/AppMenu.svelte'
 	import '../../app.css'
 </script>
 
-<div class="relative min-vh-100">
-	<div class="noise"></div>
-	<TopBar />
-	<div class="relative h-100 grid grid-x-auto-fill">
-		<Sidebar />
-		<div class="relative grid grid-x-fill-auto">
-			<main class="ma3">
-				<section class="mw8 center">
-					<slot></slot>
-				</section>
-			</main>
-			<Chat />
-		</div>
-	</div>
+<div class="layout relative">
+	<AppMenu />
+	<main>
+		<slot></slot>
+	</main>
 </div>
 
 <style>
-	.noise {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: .5;
+	.layout {
+		padding: .5rem;
+		display: grid;
+		grid-template-rows: auto 1fr;
+		gap: .5rem;
 	}
-	.noise {
-		background-image: url('/images/noise.gif');
-		mix-blend-mode: multiply;
+	main {
+		height: calc(100vh - 5.5rem);
+		overflow: hidden;
 	}
 </style>

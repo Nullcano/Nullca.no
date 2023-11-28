@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>About - {config.title}</title>
+	<title>Profile - {config.title}</title>
 </svelte:head>
 
 <section class="br4 ba b--white-10 overflow-hidden">

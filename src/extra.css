@@ -1,0 +1,24 @@
+@import 'https://api.fontshare.com/v2/css?f[]=nunito@300,700,600,800,200,400,500&f[]=jet-brains-mono@300,700,800,200,500,400,600&f[]=nippo@700,400&display=swap';
+
+:where(html) {
+  --dark-10: hsl(216,16%,8%);
+  --dark-20: hsl(216,16%,12%);
+  --dark-30: hsl(216,16%,16%);
+  --dark-40: hsl(216,16%,20%);
+  --dark-50: hsl(216,16%,24%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Nippo', sans-serif;
+}
+
+code, .code {
+  font-family: 'Jet Brains Mono', monospace;
+}
+
+.gap-1 { gap: .25rem }
+.gap-2 { gap: .5rem }
+.gap-3 { gap: 1rem }
+.gap-4 { gap: 2rem }
+.gap-5 { gap: 4rem }

@@ -1,5 +1,5 @@
 <script>
-  export let icon, title, image, body
+  export let title, image, body
 </script>
 
 <div class="card-provider">
@@ -8,11 +8,6 @@
       <img src="/images/{image}" alt={title}>
     </figure>
     <header>
-      <div class="icon-provider">
-        <div class="icon">
-          <img src="/images/{icon}" alt={icon}>
-        </div>
-      </div>
       <h3 class="title">{title}</h3>
     </header>
     <div class="body">
@@ -42,16 +37,6 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 1rem;
-  }
-  .icon-provider {
-    position: relative;
-  }
-  .icon {
-    position: relative;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 8rem;
-    overflow: hidden;
   }
   h3 {
     margin: 0;

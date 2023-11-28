@@ -1,51 +1,7 @@
-@import 'core.css';
+@import 'tachyons.min.css';
+@import 'extra.css';
 
 ::selection {
 	background-color: black;
 	color: white;
-}
-
-.icon img {
-	width: 100%;
-}
-.achievements {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1.5rem;
-}
-.achievements li {
-	width: 15rem;
-	height: 5rem;
-	background-color: var(--light-20);
-	display: grid;
-	place-content: center;
-}
-.achievements li.locked {
-	width: 5rem;
-	height: 5rem;
-	background-color: var(--light-10);
-}
-
-.article-tags a {
-	color: hsl(330, 100%, 50%);
-	text-decoration: none;
-}
-.article-tags a:hover {
-	color: hsl(330, 100%, 75%);
-	text-decoration: none;
-}
-
-.bio p {
-	margin-bottom: 1rem;
-}
-
-@keyframes fluid {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 0 -500%;
-	}
 }

@@ -16,11 +16,11 @@
   }
 </script>
 
-<form class="h3 grid grid-x-fill-auto items-center bt b--dark-gray" on:submit={handleSubmit}>
-  <input class="input-reset pa3 bg-transparent bn outline-0 white sans-serif" type="text" name="message" placeholder="Message Null AI" {value} {disabled} />
-  <button class="link w3 h3 button-reset br-100 bg-transparent white-50 hover-white-10 animate bn pointer" type="submit">
-    <svg class="w2 h2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <path d="m0 16 12 4 4 12L32 0zm14.016 2.016 12-12L16 24z" fill="currentColor" />
+<form class="flex items-center gap-2" on:submit={handleSubmit}>
+  <input class="input-reset w-100 pa3 br4 bg-black bn outline-0 white sans-serif" type="text" name="message" placeholder="Message Null AI" {value} {disabled} />
+  <button class="pa2 link button-reset br4 bg-black white-50 hover-white-10 animate bn pointer" type="submit">
+    <svg class="h2" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L16 8L0 16L5.33333 8L0 0ZM5.44772 4.80915L7.57495 8L5.44772 11.1908L11.8294 8L5.44772 4.80915Z" fill="currentColor"/>
     </svg>
   </button>
 </form>

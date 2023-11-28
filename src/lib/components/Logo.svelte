@@ -1,5 +1,4 @@
-<svg class="w2" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.54823V2.45177L5 0L10 2.45177V9.54823L5 12L0 9.54823ZM1 8.94212V3.05788L5 1.09646L9 3.05788V8.94212L5 10.9035L1 8.94212Z" fill="white"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 10.9035V5.01929H4V10.9035H3Z" fill="white"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.98071V1.09646H7V6.98071H6Z" fill="white"/>
-</svg>
+<a href="/" class="link pa2 white dim flex items-center gap-3">
+  <svg class="h2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 48"><path fill="#fff" fill-rule="evenodd" d="M10 42c0 4 2 6 6 6h12c4 0 6-2 6-6v-2c0-.935.895-2 2-2h2c4 0 6-2.396 6-5.2V16c0-4-2-6-6-6h-2c-1.105 0-2-1.065-2-2V6c0-4-2-6-6-6H16c-4 0-6 2-6 6v2c0 1-.895 2-2 2H6c-4 0-6 2-6 6v16c0 4 2 6 6 6h2c1.105 0 2 1.065 2 2v2Zm6 2c-1 0-2-1-2-2v-2c0-3-3-6-6-6H6c-1.105 0-2-1.065-2-2V16c0-1 1-2 2-2h2c3 0 6-3 6-6V6c0-1 1-2 2-2h12c1 0 2 1 2 2v2c0 3 3 6 6 6h2c1 0 2 1 2 2v16c0 1-1 2-2 2h-2c-3 0-6 3.196-6 6v2c0 1-1 2-2 2H16ZM8 34c0 3 3 6 6 6h16c3 0 6-3 6-6V14c0-3-2.686-6-6-6H14c-3.314 0-6 3-6 6v20Zm7 2c-2 0-3-1-3-3V15c0-2 1-3 3-3h14c2 0 3 1 3 3v18c0 2-1 3-3 3H15Z" clip-rule="evenodd"/><path fill="#fff" fill-rule="evenodd" d="M8 30V18c4 0 10-6 10-10h8v4l2.072 4L28 32l-2 4v4h-8c0-4-6-10-10-10Zm8-14 12.018 12L28 32H18c-4 0-6-2-6-6v-6c0-1.571 2.429-4 4-4Z" clip-rule="evenodd"/><path fill="#fff" fill-rule="evenodd" d="M16 32V16l2-4V8h8c0 4 6 10 10 10v12c-4 0-10 6-10 10h-8v-4l-2-4Zm0-12v-4h10c4 0 6 2 6 6v6c0 2-2 4-4 4L16 20Z" clip-rule="evenodd"/></svg>
+  <span class="f4">Nullcano</span>
+</a>
