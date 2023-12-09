@@ -27,6 +27,26 @@ export const categories = [
 
 export const posts = [
   {
+    slug: 'snag',
+    title: 'Sprintnavngenerator (SNAG)',
+    description: 'A sprint name generator in Norwegian.',
+    tags: ['web app','tool','productivity'],
+    category: {
+      name: 'Apps',
+      desc: 'A sprint name generator in Norwegian.'
+    },
+    featured: false,
+    launchable: true,
+    hasUrl: 'https://sprintname.netlify.app',
+    icon: 'snag-icon.png',
+    image: 'snag.png',
+    content: `
+      <p>SNAG is a sprint name generator primarily utilizing Norwegian words and terms.</p>
+      <p>This application serves various purposes, including generating sprint names, project names, references and codes, providing inspiration, and simply for enjoyment.</p>
+      <p>It's important to be aware that all names generated are entirely random, and some of them may appear meaningless or potentially offensive to certain individuals.</p>
+      <p>SNAG boasts a database of over 100,000 words to ensure a diverse and expansive selection of generated names.</p>
+    `
+  }, {
     slug: 'dystopian-games',
     title: 'Dystopian Games',
     description: 'Explore all dystopian games.',

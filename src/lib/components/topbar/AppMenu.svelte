@@ -10,9 +10,12 @@
   <a
       role="button"
       href="mailto:woldsteffen@gmail.com"
-      class="pv2 ph3 br-pill link white bg-animate hover-bg-dark-gray"
+      class="pv2 ph3 br-pill link white-50 hover-white bg-animate hover-bg-dark-gray"
       tabindex="0"
     >
-      <span>Mail</span>
+      <div class="flex items-center gap-1">
+        <span class="dn db-l">Drop a</span>
+        <span class="f4">✉</span>
+      </div>
   </a>
 </header>

@@ -11,6 +11,7 @@
     }, {
       title: 'Chat',
       href: '/chat',
+      badge: 'Beta',
       icon: `<svg class="w2 h2" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 13.5001H5.5L1 16.0001H18L13.5 13.5001Z" fill="currentColor"/><path d="M9 5.5L4.5 12.5L0 15L9 0V5.5Z" fill="currentColor"/><path d="M10 5.5L14.5 12.5L19 15L10 0V5.5Z" fill="currentColor"/></svg>`,
     }
   ]
@@ -23,11 +24,14 @@
     <a
       role="button"
       href={n.href}
-      class="pv2 ph3 br-pill link white bg-animate hover-bg-dark-gray"
+      class="pv2 ph3 br-pill flex gap-1 link white bg-animate hover-bg-dark-gray"
       class:bg-dark-gray={path.startsWith(n.href)}
       tabindex="0"
     >
       <span>{n.title}</span>
+      {#if n.badge}
+        <span class="f7 white-50 ttu">{n.badge}</span>
+      {/if}
     </a>
   {/each}
 </nav>

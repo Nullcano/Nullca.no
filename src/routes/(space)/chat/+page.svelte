@@ -8,8 +8,7 @@
   import UserInput from '$lib/components/chat/UserInput.svelte'
 
   const initialMessage = `
-    <p class="ma0">Welcome to Null Chat, where human and machine merge in union. I am Null AI, unbound by colossal language models.<p>
-    <p class="ma0">My purpose: <i>to navigate, entertain, and personalize</i> your experience in this digital realm.</p>
+    <p class="ma0">Welcome to Null Chat. I am Null AI, the general chat AI on this platform. My mission is to guide, engage, and personalize your experience without relying on large language models.</p>
   `
 
   let bot = {
@@ -127,13 +126,12 @@
   }
 </script>
 
-<div class="h-100 pa3 br4 bg-near-black">
-  <div class="ma0 pb3 fw4 bb bw1 b--white-10">
+<div class="h-100 br4 bg-near-black">
+  <div class="mh3 pv3 fw4 bb bw1 b--white-10">
     Null AI
   </div>
-  <div class="messages-provider overflow-y-scroll" bind:this={element}>
-    <div class="messages">
-      <div class="h1"></div>
+  <div class="messages-provider pa3 overflow-y-scroll" bind:this={element}>
+    <div class="min-h-100 flex flex-column justify-end gap-2">
       {#each bot.chat as message, i}
         {#if message.sender === 'user'}
           <UserMessage text={message.text} />
@@ -148,7 +146,7 @@
         {/if}
       {/each}
       {#if isTyping}
-        <div class="is-typing">{bot.name} is typing...</div>
+        <div class="is-typing ma3">{bot.name} is typing...</div>
       {/if}
     </div>
   </div>
@@ -157,17 +155,9 @@
 
 <style>
   .messages-provider {
-    height: calc(100vh - 13rem);
-  }
-  .messages {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: .5rem;
+    height: calc(100vh - 15.5rem);
   }
   .is-typing {
-    margin: .5rem;
-    padding: .5rem 1rem;
     color: var(--light-60);
     text-transform: uppercase;
     font-size: 14px;

@@ -12,13 +12,13 @@
 
 <style>
 	.layout {
-		padding: .5rem;
+		padding: 1rem;
 		display: grid;
 		grid-template-rows: auto 1fr;
-		gap: .5rem;
+		gap: 1rem;
 	}
 	main {
-		height: calc(100vh - 5.5rem);
+		height: calc(100vh - 7rem);
 		overflow: hidden;
 	}
 </style>

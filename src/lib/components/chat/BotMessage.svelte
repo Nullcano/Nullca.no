@@ -21,7 +21,7 @@
       {/if}
     </div>
   </div>
-  <div class="pa3 br4 bg-black self-end">
+  <div class="pa3 br4 bg-black self-start">
     <span class="lh-copy">{@html text}</span>
   </div>
 </div>

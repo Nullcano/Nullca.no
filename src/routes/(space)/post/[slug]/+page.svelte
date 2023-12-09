@@ -16,7 +16,7 @@
 <article class="relative br4 ba b--dark-gray overflow-hidden">
 	{#if post}
 		<div class="page-cover w-100 h5 cover bb b--dark-gray" style="background: url('/images/{post.image}') center"></div>
-		<a href="/" class="absolute top-0 right-0 ma3">
+		<a href="/projects" class="absolute top-0 right-0 ma3">
 			<CloseButton />
 		</a>
 		<div class="pa4">
